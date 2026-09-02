@@ -1,0 +1,644 @@
+*Lt_1a
+*Lt_1a_00000026
+mov %V_b0, 5
+
+mov %V_b1, 1
+
+mov %V_b2, 1
+
+unknown46 1
+removeBG
+playSFX "SE00_10",0,100
+bgload "BG22A5","0","0"
+mov %V_fa, 4
+
+clock "15","17"
+showTextbox
+[NONE|1]转动门把，电梯的门缓缓打开。\
+[t1a000|1]【广播】
+[NONE|0]“ＳｙｓｔｅｍＲｅｓｕｍｅ”\
+[NONE|1]机械化的广播声音响起，对我而言没多大意义。\
+[NONE|1]【武】
+[NONE|0]“可是……难道已经没电了？”\
+[NONE|1]按了按钮，ＰＤＡ并没有反应。\
+[NONE|1]多亏了这个ＰＤＡ的显示荧幕光源，我才发现了紧急用
+[NONE|0]的手动开门装置……\
+[NONE|1]【武】
+[NONE|0]“喔咿……还活着吗？”\
+[NONE|1]我对着那个女孩说。\
+fgload 1,"TU17ADM","320",3
+showTextbox
+[t1a001|1]【女孩】
+[NONE|0]“……嗯嗯……”\
+[NONE|1]她看起来有点疲惫的样子。\
+[NONE|1]楼层一片寂静。\
+[NONE|1]不知从哪传来水声。\
+[NONE|1]某种低沉的声音……\
+[NONE|1]可是，并不是人的感觉。\
+[NONE|1]【武】
+[NONE|0]“怎么了？”\
+fgload 1,"TU18ADM","320",3
+showTextbox
+[t1a002|1]【女孩】
+[NONE|0]“……嗯……嗯？”\
+[NONE|1]【武】
+[NONE|0]“总之，先看看有没有其他人。”\
+removeFG "1","3"
+bgload "BG26A1R","0","2"
+playBGM "13","100"
+showTextbox
+[NONE|1]走出通道。\
+[NONE|1]大部分的门都紧闭着，像是在阻止我们侵入似地。\
+[NONE|1]看到了路标指示版，决定依据它巡逻各个房间。\
+bgload "BG25A3","0","2"
+bgload "BG21A3","0","2"
+showTextbox
+[NONE|1]来到一个辽阔的空间。\
+[NONE|1]名为‘休憩空间’。\
+[NONE|1]满地散落着包包、单脚的鞋子、纪念品的购物袋等等。\
+[NONE|1]还是没有其他人影。\
+[NONE|1]广场中央的圆形空间里，拉下了相当厚重的铁卷门。\
+[NONE|1]【武】
+[NONE|0]“……唉呀……哈哈哈。”\
+[NONE|1]无趣的干笑，连我自己都这么觉得。\
+[NONE|1]【武】
+[NONE|0]“该不会这里还在施工吧？”\
+[NONE|1]【武】
+[NONE|0]“所以才会都没人……嗯……没错。”\
+fgload 1,"TU06ADM","320",3
+showTextbox
+[NONE|1]【女孩】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“去下一个地方看看。”\
+removeFG "1","3"
+bgload "BG25A1","0","2"
+showTextbox
+[NONE|1]往原来道路的前端走去。\
+[NONE|1]拉垂在通道上的门，紧紧封闭着。\
+[NONE|1]【武】
+[NONE|0]“这个门打不开吗？”\
+fgload 1,"TU18ADM","320",3
+showTextbox
+[t1a003|1]【女孩】
+[NONE|0]“不行吧？　好像也没有开关……”\
+[NONE|1]选择仅有少许开放的通路，慢慢地闲晃着。\
+[NONE|1]这段期间完全没遇到任何人。\
+[NONE|1]总有一种……好像走在被设计过的路线上的感觉……\
+removeFG "1","3"
+bgload "BG07A1","0","2"
+showTextbox
+[NONE|1]因为通道旁边的门开启着，我们进去了里头。\
+[NONE|1]热门名产－鲔鱼塔滋塔三明治的商店。\
+[NONE|1]商店里头还飘散着刚烤出炉的三明治味道。\
+[NONE|1]【武】
+[NONE|0]“大叔，平常半价的三明治来二个！”\
+[NONE|1]【武】
+[NONE|0]“……嗯……没人在吗？　大叔？”\
+[NONE|1]【武】
+[NONE|0]“竟然丢下店铺不管，真是会摸鱼啊……呵呵……”\
+[NONE|1]【武】
+[NONE|0]“咦？　怎么没其他的客人啊！”\
+[NONE|1]【武】
+[NONE|0]“景气不太好的样子喔……唉呀……”\
+fgload 1,"TU01ADM","320",3
+showTextbox
+[NONE|1]【女孩】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“可是我肚子饿了啊……”\
+[NONE|1]【武】
+[NONE|0]“一直来来回回走路……”\
+[NONE|1]【武】
+[NONE|0]“朋友竟然丢下我不管……”\
+[NONE|1]【武】
+[NONE|0]“喂，你也觉得很过分对吧？”\
+fgload 1,"TU08ADM","320",3
+showTextbox
+[t1a004|1]【女孩】
+[NONE|0]“……没感觉。”\
+[t1a005|1]【女孩】
+[NONE|0]“你的事情，怎样都无所谓……”\
+[NONE|1]【武】
+[NONE|0]“是是，是喔……”\
+removeFG "1","3"
+bgload "BG25A3","0","2"
+showTextbox
+[NONE|1]回到通道上，在十字路口拐弯处寻找别的房间。\
+bgload "BG26A3L","0","2"
+showTextbox
+[NONE|1]不管哪里……都是相同的景象。\
+[NONE|1]【武】
+[NONE|0]“大家都躲到哪里去啦？”\
+[NONE|1]【武】
+[NONE|0]“也许是想要吓唬我们。”\
+fgload 1,"TU01ADM","320",3
+showTextbox
+[t1a006|1]【女孩】
+[NONE|0]“为什么？　为什么会这样想？”\
+[NONE|1]【武】
+[NONE|0]“这个嘛……总觉得嘛……”\
+[NONE|1]不开口说些什么话，总觉得无法静下来。\
+[NONE|1]如果一直沉默不语，会不会又回到刚刚那片黑闇中呢。\
+removeFG "1","3"
+bgload "BG04A1","0","2"
+showTextbox
+[NONE|1]接下来进入的房间里……构筑着遗迹的模样。\
+[NONE|1]‘Ｌｅｍｕｒｉａｎｉｓｃｈｅ　Ｒｕｉｎｅ（雷姆利
+[NONE|0]亚遗迹）’……\
+[NONE|1]气氛充满寂静。\
+[NONE|1]要不是脚边散落着纸片，几乎就要让人觉得这里从来没
+[NONE|0]有人来过。\
+[NONE|1]【武】
+[NONE|0]“在哪里啊……”\
+[NONE|1]【武】
+[NONE|0]“喔咿……”\
+[NONE|1]【武】
+[NONE|0]“别太过分啦……”\
+[NONE|1]【武】
+[NONE|0]“大家都在哪里啊！！”\
+[NONE|1]【武】
+[NONE|0]“……好无情喔……”\
+fgload 1,"TU01ADM","320",3
+showTextbox
+[NONE|1]【女孩】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+removeFG "1","3"
+bgload "BG26A3L","0","2"
+clock "15","39"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“唉……”\
+[NONE|1]【武】
+[NONE|0]“为什么都没有人出来……？”\
+[NONE|1]我当场蹲坐了下来。\
+[NONE|1]没有任何意义，就是觉得呼吸困难。\
+[NONE|1]冒着冷汗。\
+[NONE|1]【武】
+[NONE|0]“你觉得呢？　发生什么事了？　为什么都没有人？”\
+fgload 1,"TU05ADM","320",3
+showTextbox
+[t1a007|1]【女孩】
+[NONE|0]“嗯……我只确定一件事……”\
+[NONE|1]她正经着脸色告诉我。\
+[t1a008|1]【女孩】
+[NONE|0]“此事非同小可。”\
+[t1a009|1]【女孩】
+[NONE|0]“这样下去……”\
+[t1a010|1]【女孩】
+[NONE|0]“非常危险……”\
+fgload 1,"TU08ADM","320",3
+showTextbox
+[t1a011|1]【女孩】
+[NONE|0]“是吧？”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[NONE|1]宁静的瞳孔，她看着我。\
+hideTextbox
+playSFX "SE07_12",0,90
+stopBGM
+showTextbox
+[NONE|1]不知从哪里听到低沉的吼声。\
+[NONE|1]我不由自主咽了口水……\
+[NONE|1]毫不犹豫、上下晃着脑袋点头……\
+removeFG "1","3"
+playSFX "SE01_04",0,100
+removeBG
+showTextbox
+[NONE|1]下一瞬间，女孩飞也似地向通道那头冲去！！\
+hideTextbox
+playBGM "16","100"
+showTextbox
+[NONE|1]我也马上站起来跟在后头。\
+[NONE|1]虽然已经体力透支，还是尽力挤出力量不断地向前冲。\
+[NONE|1]通道边有个小小的入口，我跟她顺势跳了进去。\
+bgload "BG29A1","0","2"
+playSFX "SE01_06",0,100
+showTextbox
+[NONE|1]往上。\
+[NONE|1]尽全力用最快的速度向上爬。\
+removeBG
+playSFX "SE01_06",0,95
+bgload "BG29A1","0","2"
+showTextbox
+[NONE|1]不管是多喘地……一路奔跑。\
+removeBG
+playSFX "SE01_06",0,90
+bgload "BG29A1","0","2"
+showTextbox
+[NONE|1]头也不回地奔跑。\
+removeBG
+playSFX "SE01_06",0,90
+bgload "BG29A1","0","1"
+showTextbox
+[NONE|1]奔跑……\
+removeBG
+playSFX "SE01_08",1,100
+waitForSFX
+playSFX "SE00_13",0,100
+showTextbox
+[NONE|1]到达了最高一层阶梯，拍敲着通往浮岛的紧急舱口。\
+[NONE|1]门打不开。\
+[NONE|1]【武】
+[NONE|0]“可恶，快开啊！”\
+hideTextbox
+playSFX "SE06_00",0,100
+showTextbox
+[NONE|1]喀当！！\
+[NONE|1]建筑物在摇晃。\
+playSFX "SE10_18",0,100
+showTextbox
+[NONE|1]舱口发出令人讨厌的声音，门把不自然地弯曲着。\
+[NONE|1]【武】
+[NONE|0]“！？”\
+[t1a012|1]【女孩】
+[NONE|0]“这里！！”\
+[NONE|1]女孩叫着。\
+bgload "BG29A1","0","2"
+showTextbox
+[NONE|1]马上又返回刚刚爬上来的阶梯。\
+[NONE|1]已经没有时间一阶阶慢慢下了。\
+[NONE|1]朝眼前通道的方向奋力一跳。\
+hideTextbox
+playSFX "SE01_08",0,100
+unknown20 5
+showTextbox
+[NONE|1]强烈的冲击震在膝盖上，已经顾不了这么多了。\
+bgload "BG25A1","0","2"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“喝喝……”\
+[NONE|1]【武】
+[NONE|0]“呼呼……”\
+[NONE|1]喘气着……深呼吸。\
+[NONE|1]【武】
+[NONE|0]“吸喝……呼……”\
+[NONE|1]【武】
+[NONE|0]“吸喝……呼……”\
+[NONE|1]【武】
+[NONE|0]“吸吸呼……吸吸呼……”\
+[NONE|1]【武】
+[NONE|0]“安产祈愿、砰砰叩砰……”\
+fgload 1,"TU08ADM","320",3
+showTextbox
+[t1a013|1]【女孩】
+[NONE|0]“……？”\
+[NONE|1]女孩的表情一点也没改变。\
+[NONE|1]（这家伙跑了这么大段路，竟然不会喘……）\
+bgload "BG01A1","0","2"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“嗯……你不休息吗？”\
+[NONE|1]【武】
+[NONE|0]“我想休息了……”\
+fgload 1,"TU05ADM","320",3
+showTextbox
+[t1a014|1]【女孩】
+[NONE|0]“请便……”\
+[NONE|1]【武】
+[NONE|0]“……是喔。”\
+removeFG "1","3"
+showTextbox
+[NONE|1]我坐在地板上。\
+[NONE|1]女孩顺着通路的那一端慢慢走去。\
+[NONE|1]窗外几百条色彩鲜明的鱼群，悠然自在地游着。\
+[NONE|1]这个房间好安静。\
+[NONE|1]只有二个人……我跟她。\
+[NONE|1]对了，我还不知道她是谁。\
+[NONE|1]虽然对我说‘随便我’……\
+[NONE|1]可是……刚刚的确想跟我一起逃走的吧。\
+[NONE|1]到底她怎么打算呢。\
+[NONE|1]我……完全不知道……\
+fgload 1,"TU04ADS","176",3
+showTextbox
+[t1a015|1]【女孩】
+[NONE|0]“……谁？”\
+[NONE|1]忽地，我听到这个声音抬起头。\
+[NONE|1]她不是在对我说话。\
+[NONE|1]【武】
+[NONE|0]“嗯……有谁在吗？”\
+[NONE|1]站起来，我问着。\
+fgload 1,"TU18ADS","176",3
+showTextbox
+[NONE|1]【女孩】
+[NONE|0]“…………”\
+[NONE|1]女孩站在那个地方，她的眼睛顺着通路的那一头，瞪着
+[NONE|0]前方。\
+[NONE|1]我也顺势看过去。\
+removeFG "1","3"
+bgload "EV_SO05A","0","1"
+clock "15","54"
+showTextbox
+[NONE|1]刚刚完全没感觉到有人的空间里，站着一位像是职员的
+[NONE|0]女性。\
+[NONE|1]根本没听到脚步声。\
+[NONE|1]（咦？）\
+[NONE|1]（这个人是什么时候在那里的？）\
+[t1a016|1]【职员】
+[NONE|0]“……请……”\
+[t1a017|1]【职员】
+[NONE|0]“不行，请快点离开……”\
+[t1a018|1]【职员】
+[NONE|0]“请离开……麻烦……”\
+[t1a019|1]【职员】
+[NONE|0]“危险，发生危险……”\
+[NONE|1]她看起来有些精神错乱的样子。\
+[NONE|1]【武】
+[NONE|0]“喔咿喔咿……怎么了？　有什么危险？　不要慌张，
+[NONE|0]请跟我们说明……”\
+[t1a020|1]【职员】
+[NONE|0]“游客尽快……迅速避难……意外的……事故。”\
+[t1a021|1]【职员】
+[NONE|0]“Ｌｅｖｅｌ……Ｄａｔａ……Ｔｉｅｆ……Ｂｌａｕ
+[NONE|0]”\
+[NONE|1]她喃喃自语地重复着。\
+[t1a022|1]【职员】
+[NONE|0]“请快逃……快逃……”\
+hideTextbox
+stopBGM
+showTextbox
+[t1a023|1]【职员】
+[NONE|0]“拜托……请快逃！！”\
+hideTextbox
+stopSFX
+playBGM "10","100"
+playSFX "SE07_08",0,100
+removeBG
+bgload "EV_SO05B","0","2"
+unknown20 5
+showTextbox
+[NONE|1]喀唰啊啊啊啊！！\
+hideTextbox
+mov %V_4f, 0
+
+mov %V_3b, 1
+
+mov %V_3c, %V_VAR_c7_0_6
+
+mov %V_3d, 2
+
+mov %V_3e, 2
+
+mov %V_3f, %V_VAR_c3_0_6
+
+mov %V_40, 1
+
+unknown20 12
+playSFX "SE02_09",0,100
+showTextbox
+[NONE|1]咚铿！！\
+[NONE|1]【武】
+[NONE|0]“呜哇啊啊啊啊啊啊！！！”\
+[NONE|1]玻璃破了。\
+[NONE|1]大量的水……海水──\
+[NONE|1]还有数以千计的鱼群──\
+hideTextbox
+mov %V_41, 6
+
+mov %V_42, 68
+
+mov %V_50, 0
+
+unknown20 45
+mov %V_4f, 0
+
+mov %V_3b, 1
+
+mov %V_3c, %V_VAR_c7_0_6
+
+mov %V_3d, 4
+
+mov %V_3e, 2
+
+mov %V_3f, %V_VAR_c3_0_6
+
+mov %V_40, 2
+
+playSFX "SE02_11L",0,100
+showTextbox
+[NONE|1]眼看就要朝着我袭来！\
+removeBG
+stopSFX
+unknown21 11
+unknown21 13
+*Lt_1a_0000063a
+
+playSFX "SE02_11L",0,100
+removeBG
+showTextbox
+[t1a024|1]【女孩】
+[NONE|0]“你在做什么，快点！”\
+[NONE|1]【武】
+[NONE|0]“喔……喔呜！！”\
+hideTextbox
+specialEffect 0,1
+mov %V_41, 6
+
+mov %V_42, 68
+
+mov %V_50, 0
+
+unknown20 45
+mov %V_4f, 0
+
+mov %V_3b, 1
+
+mov %V_3c, %V_VAR_c7_0_6
+
+mov %V_3d, 3
+
+mov %V_3e, 2
+
+mov %V_3f, %V_VAR_c3_0_6
+
+mov %V_40, 1
+
+unknown20 12
+playSFX "SE02_11L",0,95
+bgload "EV_TU04A","6","2"
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]惊人的压力与破坏力。\
+[NONE|1]一波波袭来的浪涛淹没了所有东西。\
+[NONE|1]散落在地上的馆内简介小册子、某人的提包、路线简介
+[NONE|0]的看板，全部的全部……都被吞没了。\
+[NONE|1]（那个海水……到底是时速几公里啊……？）\
+[NONE|1]我还在思考愚蠢的问题。\
+[NONE|1]（而且，我又是以时速几公里的速度在跑？）\
+[NONE|1]可不能保证不会被追上。\
+hideTextbox
+playSFX "SE02_11L",0,100
+showTextbox
+[NONE|1]【武】
+[NONE|0]“呜哇！　呜哇！　呜哇啊！”\
+[NONE|1]我拼命踢踏着地板。\
+[NONE|1]踢踏在空中。\
+[NONE|1]脚边已经有水流过来了。\
+hideTextbox
+delay 30
+showTextbox
+[NONE|1]【武】
+[NONE|0]“哇啊喀……”\
+hideTextbox
+showTextbox
+[NONE|1]……滑了一跤。\
+[NONE|1]糟了！\
+[NONE|1]跌倒的下一瞬间，我就会跟那些鱼群一起快乐的海水浴
+[NONE|0]了！\
+[t1a025|1]【女孩】
+[NONE|0]“真是麻烦的家伙……！”\
+hideTextbox
+mov %V_4f, 0
+
+mov %V_3b, 1
+
+mov %V_3c, %V_VAR_c3_0_6
+
+mov %V_3d, 2
+
+mov %V_3e, 2
+
+mov %V_3f, %V_VAR_c3_0_6
+
+mov %V_40, 2
+
+bgload "EV_TU04B","0","2"
+showTextbox
+[NONE|1]就这样浮在半空。\
+[NONE|1]女孩用力拉扯着跌倒的我的手腕，毫不犹疑向前冲。\
+[NONE|1]柔软优美的身段不断跑着……\
+[NONE|1]以一种……我差点以为正在坐车的速度。\
+[NONE|1]我在想……我的手腕会不会脱臼了。\
+[NONE|1]令人讶异的惊人力量。\
+playSFX "SE02_11L",0,95
+showTextbox
+[t1a026|1]【职员】
+[NONE|0]“这里！　快点，快点！”\
+[t1a027|1]【女孩】
+[NONE|0]“我知道！”\
+[NONE|1]【武】
+[NONE|0]“！？”\
+[NONE|1]更可怕的事情是，刚刚的那个女职员竟然跑在我们前面
+[NONE|0]，替我们指引方向。\
+[NONE|1]尽管如此……\
+[NONE|1]在前头依然看到滚滚而来的浊流……\
+removeBG
+unknown21 11
+unknown21 13
+mov %V_41, 11
+
+mov %V_42, 9
+
+mov %V_50, 0
+
+unknown20 45
+playSFX "SE02_11L",0,90
+bgload "BG25A1","0","2"
+delay 60
+bgload "BG25B1","0","1"
+removeBG
+playSFX "SE00_04",0,95
+bgload "BG22A1","0","2"
+multifgload2 1,2,"00000000","TU03ADS","00000000","SO14ADS",176,464,3
+showTextbox
+[t1a028|1]【女孩】
+[NONE|0]“啧……”\
+[t1a029|1]【职员】
+[NONE|0]“不行，这里不能通行！　快回去！”\
+fgload 1,"TU04ADS","176",3
+showTextbox
+[t1a030|1]【女孩】
+[NONE|0]“没时间了！”\
+hideTextbox
+playSFX "SE01_04",0,100
+multiremoveFG2 "83","04","00","3"
+specialEffect 6,0
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+mov %V_41, 11
+
+mov %V_42, 9
+
+mov %V_50, 0
+
+unknown20 45
+bgload "BG27A1","0","2"
+showTextbox
+[NONE|1]从斜坡冲进别条通路。\
+[NONE|1]【武】
+[NONE|0]“可恶，到底哪里才能出去！？”\
+[NONE|1]大家丝毫不敢停下脚步，继续寻找出口。\
+bgload "BG28A1L","0","2"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“尽头……！”\
+multifgload2 1,2,"00000000","TU18ADM","00000000","SO14ADM",128,512,3
+showTextbox
+[t1a031|1]【女孩】
+[NONE|0]“这里能进去吗？能进去吧？”\
+[t1a032|1]【职员】
+[NONE|0]“是的！”\
+fgload 1,"TU08ADM","128",3
+showTextbox
+[t1a033|1]【女孩】
+[NONE|0]“走吧！！”\
+hideTextbox
+specialEffect 2,1
+multiremoveFG2 "83","04","00","0"
+unknown21 13
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+playSFX "SE10_19",0,100
+showTextbox
+[NONE|1]【武】
+[NONE|0]“啊，这里有通路……呜啊！？”\
+hideTextbox
+stopSFX
+*Lt_1a_00000a28
+
+removeBG
+playSFX "SE02_11L",0,100
+showTextbox
+[NONE|1]踢破铁丝网一冲进去，那里是类似大型排气通风管的地
+[NONE|0]方。\
+[NONE|1]斜坡状的管线路径，斜面的真空管。\
+[NONE|1]几乎是滚在陡峭的斜坡上向下冲。\
+[NONE|1]背后就是狂乱怒吼的浪涛。\
+[NONE|1]不，根本已经被卷入水流中。\
+[NONE|1]我……还有那个谁，全都漂流在其中。\
+[NONE|1]四面八方旋转着，已经分不清楚上下了。\
+[NONE|1]然后我们被丢在下一楼层的通道上。\
+hideTextbox
+playSFX "SE00_04",1,100
+waitForSFX
+playSFX "SE02_11L",0,90
+showTextbox
+[NONE|1]千钧一发，伴随着沉重声音，背后的通风管关上了铁卷
+[NONE|0]门。\
+[NONE|1]终于止住了水流……\
+removeBG
+stopSFX
+stopBGM
+delay 120
+bgload "BG26B1R","0","0"
+showTextbox
+[NONE|1]…………\
+[NONE|1]啊啊…………\
+[NONE|1]地面。\
+[NONE|1]有地板。\
+[NONE|1]得救了。\
+[NONE|1]不是在水里。\
+[NONE|1]生还了。\
+[NONE|1]太好了……\
+[NONE|1]…………\
+[NONE|1]（太好了？）\
+hideTextbox
+mov %V_b3, 0
+
+goto *Lt_1b
+

@@ -1,0 +1,612 @@
+*Lsc1a
+*Lsc1a_00000029
+mov %V_b0, 5
+
+mov %V_b1, 1
+
+mov %V_b2, 1
+
+fgload 2,"SA08ADM","512",3
+showTextbox
+[c1s000|1]【玛由】
+[NONE|0]“呜嗯……我只有一个人呀？”\
+fgload 1,"YU07BWM","128",3
+showTextbox
+[c1s001|1]【玛由】
+[NONE|0]“没有其他人……”@
+
+csel "是喔……", *L_pre_sc1a_0000009a,"真的？", *L_pre_sc1a_000000ad
+*L_pre_sc1a_0000009a
+ mov %V_b3, 0
+ goto *LchoiceId_1203_9
+
+*L_pre_sc1a_000000ad
+ mov %V_b3, 1
+ goto *LchoiceId_1203_9
+
+*LchoiceId_1203_9
+if %V_b3 == 0 goto *Lsc1a_0000009a
+
+if %V_b3 == 1 goto *Lsc1a_000000ad
+
+*Lsc1a_0000009a
+mov %V_b3, 1
+
+goto *Ls_1a2
+*Lsc1a_000000ad
+add %V_ba, 1
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“真的？”\
+[c1s002|1]【玛由】
+[NONE|0]“嗯……”\
+[NONE|1]【少年】
+[NONE|0]“真的没有其他人？”\
+fgload 2,"SA04ADM","512",3
+showTextbox
+[c1s003|1]【玛由】
+[NONE|0]“就说没有了。”\
+[NONE|1]【少年】
+[NONE|0]“旁边的电梯也没有？”\
+fgload 2,"SA05ADM","512",3
+showTextbox
+[c1s004|1]【玛由】
+[NONE|0]“呜……应该没有其他人坐了吧？”\
+[c1s005|1]【玛由】
+[NONE|0]“因为我一直大声呼救，就是没有人回应我。”\
+[NONE|1]为什么？　我实在很在意刚刚听到的第二个声音。\
+[NONE|1]【少年】
+[NONE|0]“我再确认一次就好……”\
+[NONE|1]【少年】
+[NONE|0]“真的除了沙罗之外，没有其他人搭电梯了？”\
+multifgload2 1,2,"00000000","YU06BWM","00000000","SA06ADM",128,512,3
+showTextbox
+[c1s006|1]【沙罗】
+[NONE|0]“──咦！？”\
+[NONE|1]【少年】
+[NONE|0]“果然还是有吧？”\
+[c1s007|1]【沙罗】
+[NONE|0]“没，没有啊……没有……呀……”\
+[NONE|1]【少年】
+[NONE|0]“呀……？”\
+fgload 2,"SA03ADM","512",3
+showTextbox
+[c1s008|1]【沙罗】
+[NONE|0]“为什么……？”\
+[c1s009|1]【沙罗】
+[NONE|0]“……为什么……你知道？”\
+[NONE|1]【少年】
+[NONE|0]“？”\
+[c1s010|1]【沙罗】
+[NONE|0]“我的……”\
+[c1s011|1]【沙罗】
+[NONE|0]“我的……名字……”\
+stopBGM
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“名，名字……？”\
+fgload 1,"YU05BWM","128",3
+showTextbox
+[c1s012|1]【优】
+[NONE|0]“咦？　这么说来……奇怪了，我们还没跟你说过玛由
+[NONE|0]的本名啊……”\
+[NONE|1]一瞬间，我的视界开始摇晃。\
+playBGM "16","100"
+showTextbox
+[NONE|1]身体的中心好像有个诡异物体蠢蠢欲动。\
+[NONE|1]它蔓延在互通串连的神经中，一下子就遍布身体四处。\
+fgload 2,"SA04ADM","512",3
+showTextbox
+[c1s013|1]【沙罗】
+[NONE|0]“嗯！？　为什么！？”\
+fgload 2,"SA05ADM","512",3
+showTextbox
+[c1s014|1]【沙罗】
+[NONE|0]“你认识……我！？”\
+hideTextbox
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]松永沙罗──\
+[NONE|1]
+[NONE|1]是的，没错……她的名字是‘松永沙罗’。\
+[NONE|1]可是……为什么……\
+[NONE|1]──为什么我会知道她的名字！\
+hideTextbox
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“不知道……我不知道……”\
+[NONE|1]抱着头，拼命地摇头。\
+fgload 2,"SA04ADM","512",3
+showTextbox
+[c1s015|1]【沙罗】
+[NONE|0]“什么意思！？”\
+[NONE|1]【少年】
+[NONE|0]“不知道……”\
+[c1s016|1]【沙罗】
+[NONE|0]“怎么可能不知道！？”\
+[NONE|1]【少年】
+[NONE|0]“不知道……不知道……不知道……”\
+[c1s017|1]【沙罗】
+[NONE|0]“喂！　老实回答！”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[c1s018|1]【沙罗】
+[NONE|0]“为什么认识我！？”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+fgload 2,"SA05ADM","512",3
+showTextbox
+[c1s019|1]【沙罗】
+[NONE|0]“你……”\
+fgload 2,"SA03ADM","512",3
+showTextbox
+[c1s020|1]【沙罗】
+[NONE|0]“……是谁？”\
+[NONE|1]【少年】
+[NONE|0]“我就说我不知道啊！”\
+[NONE|1]【少年】
+[NONE|0]“我根本连我自己都不知道！　真的不知道啊！”\
+[NONE|1]【少年】
+[NONE|0]“为什么会……知道……你的名字……”\
+[NONE|1]太阳穴开始隐隐作痛。\
+[NONE|1]身体的力量渐渐衰弱。\
+[NONE|1]我像是被抽干一般，当场蹲了下来。\
+fgload 1,"YU06BWM","128",3
+showTextbox
+[c1s021|1]【优】
+[NONE|0]“等，等等……难道又是老毛病发作了！？”\
+fgload 1,"YU03BWM","128",3
+showTextbox
+[c1s022|1]【优】
+[NONE|0]“别逼他了，真是的……”\
+[NONE|1]优的声音听起来好遥远。\
+fgload 2,"SA13ADM","512",3
+showTextbox
+[c1s023|1]【沙罗】
+[NONE|0]“发作是指……？”\
+fgload 1,"YU17BWM","128",3
+showTextbox
+[c1s024|1]【优】
+[NONE|0]“他……”\
+[c1s025|1]【优】
+[NONE|0]“……丧失记忆了。”\
+fgload 2,"SA06ADM","512",3
+showTextbox
+[c1s026|1]【沙罗】
+[NONE|0]“丧失记忆？”\
+[c1s027|1]【优】
+[NONE|0]“嗯……”\
+[c1s028|1]【优】
+[NONE|0]“所以不管怎么问都没有用，他想不起来的……”\
+[c1s029|1]【优】
+[NONE|0]“勉强他去想的话……”\
+[NONE|1]【少年】
+[NONE|0]“呜呜……呜啊啊……”\
+fgload 1,"YU07BWM","128",3
+showTextbox
+[c1s030|1]【优】
+[NONE|0]“嗯……就会变成这样。”\
+fgload 2,"SA03ADM","512",3
+showTextbox
+[NONE|1]【沙罗】
+[NONE|0]“…………”\
+fgload 1,"YU04BWM","128",3
+showTextbox
+[c1s031|1]【优】
+[NONE|0]“来，站起来！　撑着点！”\
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]优抓起我的肩膀，抱着拉起我。\
+fgload 1,"YU05BWL","320",3
+showTextbox
+[c1s032|1]【优】
+[NONE|0]“可以吗？　仔细听……好好看着我……”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+fgload 1,"YU07BWL","320",3
+showTextbox
+[c1s033|1]【优】
+[NONE|0]“我想，你现在是因为迷失了自己的世界，所以害怕着
+[NONE|0]。”\
+[c1s034|1]【优】
+[NONE|0]“因为没有记忆……因为看不见过去……”\
+[c1s035|1]【优】
+[NONE|0]“失去过去的你，感觉就像失去了自己的存在价值……
+[NONE|0]所以才感到恐惧。”\
+fgload 1,"YU01BWL","320",3
+showTextbox
+[c1s036|1]【优】
+[NONE|0]“可是……其实没什么好怕的。”\
+[c1s037|1]【优】
+[NONE|0]“你现在在这里”\
+[c1s038|1]【优】
+[NONE|0]“站在我的面前”\
+[c1s039|1]【优】
+[NONE|0]“不管发生了什么事情，你也不会消失。”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+showTextbox
+[c1s040|1]【优】
+[NONE|0]“嗯？　好好看着我的眼睛？”\
+[c1s041|1]【优】
+[NONE|0]“是的……”\
+fgload 1,"YU02BWL","320",3
+showTextbox
+[c1s042|1]【优】
+[NONE|0]“那么……笑一下吧？”\
+[NONE|1]【少年】
+[NONE|0]“……咦？”\
+fgload 1,"YU01BWL","320",3
+showTextbox
+[c1s043|1]【优】
+[NONE|0]“笑吧，笑一下……”\
+[NONE|1]我意识着，牵动脸颊的肌肉。\
+fgload 1,"YU08BWL","320",3
+showTextbox
+[c1s044|1]【优】
+[NONE|0]“不行不行，再笑再笑……笑啊……”\
+[NONE|1]我加强着意识，用力牵动脸颊的肌肉。\
+fgload 1,"YU01BWL","320",3
+showTextbox
+[c1s045|1]【优】
+[NONE|0]“呜～嗯……虽然笑得有点勉强……嗯……好吧。”\
+[c1s046|1]【优】
+[NONE|0]“怎么样？　过去的事……已经无所谓了吧？”@
+
+csel "嗯", *L_pre_sc1a_00000394,"不行", *L_pre_sc1a_000003b9
+*L_pre_sc1a_00000394
+ mov %V_b3, 0
+ goto *LchoiceId_1203_11
+
+*L_pre_sc1a_000003b9
+ mov %V_b3, 1
+ goto *LchoiceId_1203_11
+
+*LchoiceId_1203_11
+if %V_b3 == 0 goto *Lsc1a_00000394
+
+if %V_b3 == 1 goto *Lsc1a_000003b9
+
+*Lsc1a_00000394
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“嗯……”\
+[NONE|1]我回答着。\
+showTextbox
+[c1s047|1]【优】
+[NONE|0]“嗯……过去是没有关系的。”\
+[c1s048|1]【优】
+[NONE|0]“重要的是现在能不能开心地笑……”\
+[c1s049|1]【优】
+[NONE|0]“那个才是你存在的证明……”\
+[c1s050|1]【优】
+[NONE|0]“所以笑吧？”\
+fgload 1,"YU02BWL","320",3
+showTextbox
+[c1s051|1]【优】
+[NONE|0]“你原本应该也很爱笑的吧？”\
+[NONE|1]随着优的微笑牵引，我的脸颊自然地放松了。\
+[NONE|1]优轻轻抚摸着我的头发……\
+[NONE|1]在她的掌心下，疼痛像是被吸走一样地消失了。\
+goto *Lsc1a_000005ac
+*Lsc1a_000003b9
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“不行……”\
+fgload 1,"YU07BWL","320",3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“又不是优自己的事情，当然可以说得那么简单……”\
+fgload 1,"YU05BWL","320",3
+showTextbox
+[c1s052|1]【优】
+[NONE|0]“可是，你却能够说出口了。”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[c1s053|1]【优】
+[NONE|0]“你知道为什么吗？”\
+fgload 1,"YU01BWL","320",3
+showTextbox
+[c1s054|1]【优】
+[NONE|0]“你意识到了‘现在’，所以才能说出口。”\
+[NONE|1]【少年】
+[NONE|0]“现在？”\
+[c1s055|1]【优】
+[NONE|0]“人类只能生存于现在、这个一瞬间。”\
+[c1s056|1]【优】
+[NONE|0]“过去或未来都如同虚幻……”\
+fgload 1,"YU05BWL","320",3
+showTextbox
+[c1s057|1]【优】
+[NONE|0]“想要捕捉那个没有实体的幻影……是没有任何意义的
+[NONE|0]。”\
+fgload 1,"YU01BWL","320",3
+showTextbox
+[c1s058|1]【优】
+[NONE|0]“所以现在只能用新的感觉，开心地笑吧……”\
+fgload 1,"YU02BWL","320",3
+showTextbox
+[c1s059|1]【优】
+[NONE|0]“来……笑吧？”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+hideTextbox
+fgload 1,"YU04BWL","320",3
+playBGM "18","100"
+showTextbox
+[c1s060|1]【优】
+[NONE|0]“快笑吧！”\
+[NONE|1]【少年】
+[NONE|0]“就算你这么说……”\
+fgload 1,"YU05BWL","320",3
+showTextbox
+[c1s061|1]【优】
+[NONE|0]“不笑的话……要挖玛由的鼻孔喔？”\
+[c1s062|1]【沙罗】
+[NONE|0]“……啊？”\
+removeFG "1","3"
+multifgload2 1,2,"00000000","YU02BWM","00000000","SA08ADM",176,464,3
+showTextbox
+[c1s063|1]【优】
+[NONE|0]“哎～呀哎～呀……钻～钻～钻……”\
+[NONE|1]边说着，优真的那样做了。\
+fgload 2,"SA06ADM","464",3
+showTextbox
+[c1s064|1]【沙罗】
+[NONE|0]“不，不要啊！　学姐！”\
+[c1s065|1]【优】
+[NONE|0]“钻～挖～钻……”\
+fgload 2,"SA03ADM","464",3
+showTextbox
+[c1s066|1]【沙罗】
+[NONE|0]“啊……啊啊……学，学姐……学姐……学姐……”\
+[c1s067|1]【沙罗】
+[NONE|0]“学姐的指尖伸到我的鼻孔啦……”\
+[c1s068|1]【优】
+[NONE|0]“钻～挖～钻……”\
+fgload 2,"SA01ADM","464",3
+showTextbox
+[c1s069|1]【沙罗】
+[NONE|0]“然后学姐跟我已经融为一体……”\
+[c1s070|1]【优】
+[NONE|0]“钻～挖～钻……”\
+fgload 2,"SA14ADM","464",3
+showTextbox
+[c1s071|1]【沙罗】
+[NONE|0]“你到底想做什么啊～！”\
+playSFX "SE05_01",0,100
+fgload 1,"YU08BWM","176",0
+showTextbox
+[NONE|1]──乓砰。\
+[NONE|1]学妹打了学姐的头。\
+[NONE|1]看到这个模样，我自然而然地放松了脸颊。\
+fgload 1,"YU09BWM","176",3
+showTextbox
+[c1s072|1]【优】
+[NONE|0]“呀哈……笑了笑了！”\
+fgload 2,"SA09ADM","464",3
+showTextbox
+[c1s073|1]【沙罗】
+[NONE|0]“真的呀，呀哈哈哈哈……啊哈哈哈哈哈……”\
+fgload 2,"SA04ADM","464",3
+showTextbox
+[c1s074|1]【沙罗】
+[NONE|0]“──咦，你以为这很好笑吗！？”\
+fgload 2,"SA05ADM","464",3
+showTextbox
+[c1s075|1]【沙罗】
+[NONE|0]“怎么想插别人的鼻孔，无聊死了……”\
+fgload 1,"YU08BWM","176",3
+showTextbox
+[c1s076|1]【优】
+[NONE|0]“嗯呵呵呵呵”\
+[NONE|1]看着两个人的斗嘴，我的疼痛不自觉地消失了。\
+[NONE|1]嗯……不过就某种意义上，那也是个‘很痛’的斗嘴吧
+[NONE|0]……\
+*Lsc1a_000005ac
+
+hideTextbox
+specialEffect 12,0
+stopBGM
+delay 30
+bgload "BG26B3R","6","2"
+playBGM "1","100"
+mov %V_ab, %V_VAR_c0_38
+
+clock "17","49"
+showTextbox
+[NONE|1]已经完全冷静的我，跟她们两人一起寻找出口。\
+[NONE|1]当然，沙罗相当讶异馆内的巨大改变。\
+fgload 1,"SA06ADM","320",3
+showTextbox
+[s1a292|1]【沙罗】
+[NONE|0]“这是怎么了？”\
+[s1a293|1]【沙罗】
+[NONE|0]“为什么到处都浸水？”\
+fgload 1,"SA05ADM","320",3
+showTextbox
+[s1a294|1]【沙罗】
+[NONE|0]“而且，好像都没有人……”\
+removeFG "1","3"
+showTextbox
+[NONE|1]优边走，边向身边的沙罗说明刚刚的经过。\
+[NONE|1]‘优在ＬｅＭＵ打工的事情’\
+[NONE|1]‘我倒在商店的事情’\
+[NONE|1]‘警报发布、ＬｅＭＵ全部净空、开始进水的事情’\
+[NONE|1]沙罗哑然地听着优说话。\
+[NONE|1]就这样，说完不久之后……\
+[NONE|1]优没有任何预警，突然想到似地说了这些话。\
+multifgload2 1,2,"00000000","YU07BWM","00000000","SA01ADM",128,512,3
+showTextbox
+[c1s077|1]【优】
+[NONE|0]“可是，说不可思议，还真是不可思议……”\
+fgload 2,"SA06ADM","512",3
+showTextbox
+[c1s078|1]【沙罗】
+[NONE|0]“咦？　什么？”\
+[c1s079|1]【优】
+[NONE|0]“刚刚少年说过的话……”\
+[c1s080|1]【优】
+[NONE|0]“玛由应该没有看过他吧？”\
+fgload 2,"SA08ADM","512",3
+showTextbox
+[c1s081|1]【沙罗】
+[NONE|0]“是的……”\
+fgload 1,"YU05BWM","128",3
+showTextbox
+[c1s082|1]【优】
+[NONE|0]“可是他却知道玛由的名字……”\
+[c1s083|1]【优】
+[NONE|0]“也就是说，这个少年丧失的记忆中，有跟玛由相关的
+[NONE|0]资料吧？”\
+fgload 1,"YU07BWM","128",3
+showTextbox
+[c1s084|1]【优】
+[NONE|0]“为什么呢？”\
+fgload 2,"SA03ADM","512",3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“…………”\
+fgload 1,"YU03BWM","128",3
+showTextbox
+[c1s085|1]【优】
+[NONE|0]“如果说相反了……”\
+fgload 2,"SA08ADM","512",3
+showTextbox
+[c1s086|1]【优】
+[NONE|0]“玛由知道这个少年，可是少年因为丧失记忆不记得玛
+[NONE|0]由了……”\
+[c1s087|1]【优】
+[NONE|0]“如果是这样，就很正常……”\
+fgload 1,"YU01BWM","128",3
+showTextbox
+[c1s088|1]【优】
+[NONE|0]“怎么想都觉得那样的顺序是相反了”\
+fgload 2,"SA05ADM","512",3
+showTextbox
+[c1s089|1]【沙罗】
+[NONE|0]“顺序啊……”\
+fgload 2,"SA06ADM","512",3
+showTextbox
+[c1s090|1]【沙罗】
+[NONE|0]“啊，我知道了！　搞不好是这样喔？”\
+fgload 1,"YU07BWM","128",3
+showTextbox
+[c1s091|1]【优】
+[NONE|0]“？”\
+fgload 2,"SA02ADM","512",3
+showTextbox
+[c1s092|1]【沙罗】
+[NONE|0]“这个少年──其实从很久以前开始，就是松永沙罗的
+[NONE|0]超级迷！”\
+[c1s093|1]【沙罗】
+[NONE|0]“虽然我没发现，可是他却一直躲在暗处注意着我。”\
+[c1s094|1]【沙罗】
+[NONE|0]“这样想，就能说明这个状况啦。”\
+fgload 1,"YU03BWM","128",3
+showTextbox
+[c1s095|1]【优】
+[NONE|0]“偷窥狂是吗？”\
+fgload 2,"SA01ADM","512",3
+showTextbox
+[c1s096|1]【沙罗】
+[NONE|0]“嗯嗯……就是这个。”\
+fgload 2,"SA02ADM","512",3
+showTextbox
+[c1s097|1]【沙罗】
+[NONE|0]“嗯？　对吧？　你在偷窥我喔？”\
+[NONE|1]【少年】
+[NONE|0]“不要因为我没有记忆就随便乱说！”\
+fgload 2,"SA05ADM","512",3
+showTextbox
+[c1s098|1]【沙罗】
+[NONE|0]“不是吗？”\
+[NONE|1]【少年】
+[NONE|0]“不是啊！”\
+fgload 1,"YU05BWM","128",3
+showTextbox
+[c1s099|1]【优】
+[NONE|0]“嗯……玛由？　再问你一次……”\
+[c1s100|1]【优】
+[NONE|0]“你真的对少年没有印象？”\
+[c1s101|1]【沙罗】
+[NONE|0]“印象啊……？”\
+fgload 2,"SA08ADM","512",3
+showTextbox
+[c1s102|1]【沙罗】
+[NONE|0]“呜～嗯……呜～嗯……”\
+[NONE|1]沙罗贴近我的脸，仔细地注视着我。\
+[NONE|1]感觉得到气息的距离。\
+fgload 2,"SA05ADM","512",3
+showTextbox
+[c1s103|1]【沙罗】
+[NONE|0]“被你这么一问，好像……”\
+stopBGM
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“咦？”\
+fgload 1,"YU06BWM","128",3
+showTextbox
+[c1s104|1]【优】
+[NONE|0]“咦？”\
+fgload 2,"SA02ADM","512",3
+showTextbox
+[c1s105|1]【沙罗】
+[NONE|0]“不……骗人的，骗人……开开玩笑。”\
+fgload 2,"SA17ADM","512",3
+showTextbox
+[c1s106|1]【沙罗】
+[NONE|0]“应该算是没有吧”\
+fgload 1,"YU07BWM","128",3
+showTextbox
+[NONE|1]──‘算是没有’？？？\
+[NONE|1]什么意思？\
+[NONE|1]难道沙罗真的认识我？\
+[NONE|1]我的内心又开始动摇。\
+[NONE|1]想起刚刚第一次见到沙罗的时候。\
+hideTextbox
+specialEffect 18,1
+bgload "EV_SA01A","6","2"
+unknown20 32
+mov %V_ab, %V_VAR_c0_19
+
+mov %V_ac, 0
+
+unknown21 13
+showTextbox
+[NONE|1]当时……我的确感到有些熟悉。\
+[NONE|1]总觉得类似的场景，以前好像也发生过。\
+[NONE|1]也许我们以前真的见过面。\
+[NONE|1]我还是无法确定。\
+[NONE|1]就算知道名字，即使觉得熟悉……我就是没有记忆。\
+hideTextbox
+unknown20 32
+specialEffect 18,1
+mov %V_ac, 0
+
+unknown21 13
+bgload "BG26B3R","6","2"
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]沙罗的笑容好远好远，不管我怎么伸手，就是触碰不到
+[NONE|0]。\
+hideTextbox
+specialEffect 18,0
+mov %V_b3, 2
+
+goto *Ls_1a2
+

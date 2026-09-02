@@ -1,0 +1,1017 @@
+*Lsy4b
+*Lsy4b_00000036
+mov %V_b0, 5
+
+mov %V_b1, 4
+
+mov %V_b2, 4
+
+hideTextbox
+specialEffect 12,0
+stopBGM
+unknown46 0
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+playBGM "3","100"
+mov %V_fa, 76
+
+showTextbox
+[NONE|1]一边寻找着优，我开始重整思绪。\
+bgload "IMG01B","0","2"
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]现在我所知道的……是以下六点。\
+hideTextbox
+showTextbox
+[NONE|1]１：距今３４年前，优的父亲‘田中阳一’疑似死亡。\
+[NONE|1]２：而且距今１５年前，优的母亲‘田中雪江’也去世
+[NONE|0]了。\
+[NONE|1]３：优听母亲说过‘１７年前阳一先生失踪’的事情。\
+hideTextbox
+showTextbox
+[NONE|1]４：据优的说法，她的母亲目前仍在ＬｅＭＵ施设内进
+[NONE|0]行考古学的研究。\
+[NONE|1]５：另外，根据路人Ａ与路人Ｂ的发言内容，得知阳一
+[NONE|0]与雪江两人育有一女。\
+[NONE|1]６：最后两人的死因皆与某个称为‘ＴｉｅｆＢｌａｕ
+[NONE|0]’的有关系。\
+hideTextbox
+hideTextbox
+specialEffect 6,0
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]到底，由此推敲出来的真相会是什么？\
+hideTextbox
+bgload "BG26A3L","6","2"
+mov %V_ab, %V_VAR_c0_23
+
+clock "10","24"
+showTextbox
+[NONE|1]我走在通道上，沙罗从转角处转身出现。\
+fgload 1,"SA06ADM","320",3
+showTextbox
+[y4a477|1]【沙罗】
+[NONE|0]“啊，少年……”\
+[NONE|1]【少年】
+[NONE|0]“优呢？”\
+fgload 1,"SA17ADM","320",3
+showTextbox
+[NONE|1]左右摇头的沙罗。\
+[y4a478|1]【沙罗】
+[NONE|0]“她说她现在想要静一静”\
+[NONE|1]【少年】
+[NONE|0]“是喔……怎么办……”\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[y4a479|1]【沙罗】
+[NONE|0]“嗯……少年，你一定要帮学姐喔。”\
+[NONE|1]【少年】
+[NONE|0]“那当然”\
+[NONE|1]【少年】
+[NONE|0]“可是该怎么做？”\
+[y4a480|1]【沙罗】
+[NONE|0]“去学姐那里安慰她一下”\
+[NONE|1]【少年】
+[NONE|0]“呃？　为什么？　优不是想要一个人……”\
+fgload 1,"SA04ADM","320",3
+showTextbox
+[y4a481|1]【沙罗】
+[NONE|0]“就是这个时候才需要一个男人温柔地拥抱啊”\
+[NONE|1]【少年】
+[NONE|0]“不过沙罗你刚刚去了不是也没用？”\
+[y4a482|1]【沙罗】
+[NONE|0]“我是女的，你是男的……你看，效果完全不同吧？”\
+[NONE|1]【少年】
+[NONE|0]“这根本没有关系吧”\
+fgload 1,"SA08ADM","320",3
+showTextbox
+[y4a483|1]【沙罗】
+[NONE|0]“那个……不管有多坚强，女孩子永远都在等喔？”\
+[NONE|1]【少年】
+[NONE|0]“等什么？”\
+fgload 1,"SA02ADM","320",3
+showTextbox
+[y4a484|1]【沙罗】
+[NONE|0]“那还要问吗？”\
+[NONE|1]【少年】
+[NONE|0]“？”\
+[y4a485|1]【沙罗】
+[NONE|0]“拯救自己的英雄啊！”\
+[NONE|1]（什、什么！？）\
+[NONE|1]我吓了一跳。\
+[y4a486|1]【沙罗】
+[NONE|0]“一直一直都在等！”\
+[y4a487|1]【沙罗】
+[NONE|0]“在等白马王子！”\
+[y4a488|1]【沙罗】
+[NONE|0]“女生就是这样的生物！！”\
+[NONE|1]只觉得一阵昏眩，我提出反驳。\
+[NONE|1]【少年】
+[NONE|0]“我不是英雄也不是王子”\
+*Lsy4b_000001a7
+
+if  %V_df == 0     goto *Lsy4b_000001d3
+
+scriptLocationId 33
+*Lsy4b_000001bc
+
+fgload 1,"SA11ADM","320",3
+showTextbox
+[y4a489|1]【沙罗】
+[NONE|0]“咦？　说‘我的名字叫做王子殿下’的，不知道是哪
+[NONE|0]一位喔？”\
+[NONE|1]【少年】
+[NONE|0]“拜托你忘了这件事吧……”\
+*Lsy4b_000001d3
+
+fgload 1,"SA05ADM","320",3
+showTextbox
+[y4a490|1]【沙罗】
+[NONE|0]“哼！　难道少年讨厌学姐？”\
+[NONE|1]【少年】
+[NONE|0]“怎么可能”\
+fgload 1,"SA04ADM","320",3
+showTextbox
+[y4a491|1]【沙罗】
+[NONE|0]“那就去啊！！！”\
+[NONE|1]沙罗伸出手，指着道路的那一头。\
+[NONE|1]【少年】
+[NONE|0]“知、知道了……”\
+[NONE|1]在沙罗的强迫下，我答应了。\
+[NONE|1]【少年】
+[NONE|0]“可是我想问一件事情”\
+fgload 1,"SA05ADM","320",3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“为什么是我？”\
+[NONE|1]说到男生的话，武也可以。\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[y4a492|1]【沙罗】
+[NONE|0]“因为我决定”\
+[NONE|1]【少年】
+[NONE|0]“啊？”\
+[y4a493|1]【沙罗】
+[NONE|0]“是啊，是我决定的……我偏袒少年呀。”\
+[NONE|1]【少年】
+[NONE|0]“？？？？”\
+fgload 1,"SA02ADM","320",3
+showTextbox
+[y4a494|1]【沙罗】
+[NONE|0]“对了，对你的厚爱……应该不会让我失望吧？”\
+[NONE|1]奸诈地笑着的沙罗。\
+[y4a495|1]【沙罗】
+[NONE|0]“不要让她更难过喔，好吗？”\
+hideTextbox
+specialEffect 12,0
+stopBGM
+bgload "BG02A1","6","2"
+playBGM "19","100"
+mov %V_ab, %V_VAR_c0_23
+
+clock "10","31"
+showTextbox
+[NONE|1]问了沙罗地点，我就来到这里。\
+[NONE|1]在旋转海豚的座位上，看到了优的背影。\
+[NONE|1]她低着头。\
+[NONE|1]紧紧地，握着座位……\
+[NONE|1]【少年】
+[NONE|0]“优……”\
+[NONE|1]出声叫她，我慢慢走近她。\
+[NONE|1]优只把脸转过来，用非常认真的表情恳求着我。\
+fgload 1,"YU03BDM","320",3
+showTextbox
+[y4a496|1]【优】
+[NONE|0]“拜托……现在先不要跟我说话。”\
+[y4a497|1]【优】
+[NONE|0]“别到我这里”\
+[y4a498|1]【优】
+[NONE|0]“现在的我一定会……说出很难听的话……”\
+[NONE|1]【少年】
+[NONE|0]“不可能不管你的”\
+[NONE|1]这是毫不虚伪的真心话。\
+[NONE|1]【优】
+[NONE|0]“…………”\
+[NONE|1]我就坐在优旁边的座位上。\
+removeFG "1","3"
+fgload 1,"YU03BDL","320",3
+showTextbox
+[NONE|1]然后，我忽然想起什么似地开始说了。\
+[NONE|1]【少年】
+[NONE|0]“遇见我的时候，优不是说过了……”\
+[NONE|1]【少年】
+[NONE|0]“‘ＩａｍＹＯＵ！’”\
+[NONE|1]【少年】
+[NONE|0]“我是你”\
+[NONE|1]【少年】
+[NONE|0]“你是我”\
+[NONE|1]【少年】
+[NONE|0]“‘Ｙｏｕ　ａｒｅ　ｍｅ’”\
+[NONE|1]【少年】
+[NONE|0]“不是一个人”\
+[NONE|1]虽然我不是白马王子……我一个人什么都不会做……\
+[NONE|1]【少年】
+[NONE|0]“不要一个人烦恼，我们一起思考。”\
+[NONE|1]如果两个人一起的话……应该没问题。\
+[y4a499|1]【优】
+[NONE|0]“少年……”\
+[NONE|1]我用力点点头。\
+[NONE|1]【少年】
+[NONE|0]“嗯……优？　我们目前知道的事情有哪些？”\
+[y4a500|1]【优】
+[NONE|0]“爸爸可能……去世的消息……”\
+[y4a501|1]【优】
+[NONE|0]“那是不可能的！因为因为……妈妈说是１７年前！”\
+[y4a502|1]【优】
+[NONE|0]“可是我是在１６年前出生的啊！”\
+[NONE|1]【少年】
+[NONE|0]“不是这样的……”\
+fgload 1,"YU04BDL","320",3
+showTextbox
+[y4a503|1]【优】
+[NONE|0]“是的！　而且还说……连妈妈都已经死了！”\
+[y4a504|1]【优】
+[NONE|0]“别开玩笑了！　才没有这回事！　根本是矛盾！！”\
+[y4a505|1]【优】
+[NONE|0]“１５年前……１５年前！　是我３岁的时候！　我已
+[NONE|0]经懂事了！”\
+[y4a506|1]【优】
+[NONE|0]“就在我来这里之前，妈妈还在我眼前蹦蹦跳跳的！”\
+[NONE|1]【少年】
+[NONE|0]“应该没错”\
+[y4a507|1]【优】
+[NONE|0]“不是‘应该没错’，是‘没错’！！”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[y4a508|1]【优】
+[NONE|0]“到底怎么了……？”\
+fgload 1,"YU13BDL","320",3
+showTextbox
+[y4a509|1]【优】
+[NONE|0]“什么是错的、什么是对的？”\
+[y4a510|1]【优】
+[NONE|0]“养育我的人到底是谁？？”\
+[y4a511|1]【优】
+[NONE|0]“我的爸爸……是谁？　去了哪里……？？？”\
+[y4a512|1]【优】
+[NONE|0]“我已经……不知道了……”\
+[NONE|1]像是崩溃的堤防一样，优拼命吐出忍耐已久的苦痛，一
+[NONE|0]直说着。\
+[NONE|1]【少年】
+[NONE|0]“等等……先冷静一下。”\
+fgload 1,"YU04BDL","320",3
+showTextbox
+[y4a513|1]【优】
+[NONE|0]“我已经很冷静了！”\
+[NONE|1]【少年】
+[NONE|0]“优已经失去冷静的判断力了”\
+[y4a514|1]【优】
+[NONE|0]“我一直都很冷静！”\
+[y4a515|1]【优】
+[NONE|0]“好吗？　答案已经很明白！”\
+[y4a516|1]【优】
+[NONE|0]“爸爸在１７年前失踪，音讯全无……可是现在还活在
+[NONE|0]某个地方。”\
+[y4a517|1]【优】
+[NONE|0]“妈妈也活着，现在在家等着我回去。”\
+[y4a518|1]【优】
+[NONE|0]“只有这个真相！永久不变的定理！　不需要证明！”\
+[NONE|1]【少年】
+[NONE|0]“你的判断太仓促了”\
+[y4a519|1]【优】
+[NONE|0]“我受不了了！你也跟那个垃圾雷米一样故障了吗！”\
+[NONE|1]【少年】
+[NONE|0]“笨蛋！　故障的是优啊！”\
+[y4a520|1]【优】
+[NONE|0]“你说什么！？”\
+[NONE|1]【少年】
+[NONE|0]“优是个聪明的女孩子吧？”\
+[y4a521|1]【优】
+[NONE|0]“到底是哪一个啊！”\
+[NONE|1]【少年】
+[NONE|0]“而且……也应该是个坚强的女孩。”\
+*Lsy4b_00000305
+
+if  %V_e3 != 0     goto *Lsy4b_00000323
+
+scriptLocationId 34
+*Lsy4b_0000031a
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“‘知识不是为了防御──而是为了攻击’。”\
+[NONE|1]【少年】
+[NONE|0]“我第一次遇到会这样说的女孩子。”\
+[NONE|1]【少年】
+[NONE|0]“这样的女孩不是软弱的。”\
+goto *Lsy4b_00000328
+*Lsy4b_00000323
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“‘学问是虚幻的’”\
+[NONE|1]【少年】
+[NONE|0]“即使知道没有用，却还是想知道更多的知识。”\
+[NONE|1]【少年】
+[NONE|0]“懦弱者是不可能做这种事”\
+*Lsy4b_00000328
+
+fgload 1,"YU05BDL","320",3
+showTextbox
+[NONE|1]【优】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“这些事情该怎么办？”\
+[NONE|1]【少年】
+[NONE|0]“就是要冷静地思考出一个一个的头绪啊……”\
+[NONE|1]【少年】
+[NONE|0]“就像一如往常的优那样……”\
+[NONE|1]【少年】
+[NONE|0]“优感到混乱的，是因为情报有所出入？”\
+[NONE|1]【少年】
+[NONE|0]“是感觉哪里有问题吗？”\
+[NONE|1]【少年】
+[NONE|0]“那么……什么是真、什么是错，就从了解它们开始整
+[NONE|0]理吧。”\
+[NONE|1]【少年】
+[NONE|0]“优……你的知识充沛。”\
+[NONE|1]【少年】
+[NONE|0]“能够找出答案的材料，你应该具备十足了。”\
+[NONE|1]【少年】
+[NONE|0]“对优来说，应该知道到底是不是谎言吧。”\
+[NONE|1]【优】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“嗯？”\
+[NONE|1]【优】
+[NONE|0]“………………………………”\
+fgload 1,"YU13BDL","320",3
+showTextbox
+[NONE|1]优的视线别开我，紧咬着唇。\
+[NONE|1]终于低下头，思考似地闭上了眼睛。\
+[NONE|1]她一定正在思考着，接受这个突如其来的现实，至少将
+[NONE|0]它当成一个可能性。\
+fgload 1,"YU11BDL","320",3
+showTextbox
+[y4a522|1]【优】
+[NONE|0]“是啊……我好奇怪呢。”\
+[NONE|1]终于……优慢慢抬起头……\
+fgload 1,"YU01BDL","320",3
+showTextbox
+[y4a523|1]【优】
+[NONE|0]“真的好奇怪”\
+[y4a524|1]【优】
+[NONE|0]“抱歉”\
+[NONE|1]轻轻低下头来。\
+[NONE|1]【少年】
+[NONE|0]“嗯……”\
+hideTextbox
+specialEffect 24,0
+stopBGM
+playBGM "15","100"
+removeFG "1","0"
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]然后，终于开始推论了。@
+[NONE|1]首先，我们先从很明确的地方开始解析。\
+hideTextbox
+bgload "BG02A2","0","2"
+showTextbox
+[NONE|1]Ｔｉｅｆ　Ｂｌａｕ（简称为ＴＢ）到底是什么？@
+[NONE|1]曾经在全世界肆虐，致死率极高的恶性病毒──优替我
+[NONE|0]说明了。\
+[NONE|1]首次发现，是距今三十几年前的事情。@
+[NONE|1]的确，如果假设３４年前阳一先生以及１５年前雪江女
+[NONE|0]士受到感染，时间上来说并不奇怪。\
+[NONE|1]此外，１０年前ＷＨＯ世界卫生组织宣布这个ＴＢ已经
+[NONE|0]绝迹。\
+hideTextbox
+showTextbox
+[NONE|1]那么无法理解的……就是有关阳一与雪江的死亡时间。@
+[NONE|1]优出生的１６年前，阳一的死亡到底是怎么一回事？\
+[NONE|1]一直将优养育成人的母亲──@
+[NONE|1]──也就是前天还见到面的母亲，怎么会在１５年前已
+[NONE|0]经死亡？\
+[NONE|1]目前可以归纳出四个可能性。\
+hideTextbox
+showTextbox
+[NONE|1]１：阳一并没有死亡，只是在１７年前失踪。@
+[NONE|1]而且雪江还活着。\
+[NONE|1]２：阳一并没有死亡，只是在１７年前失踪。@
+[NONE|1]可是，雪江已经在１５年前死亡。\
+[NONE|1]３：阳一在３４年前死亡，雪江依然健在。\
+[NONE|1]４：阳一在３４年前，雪江在１５年前死亡。\
+hideTextbox
+showTextbox
+[NONE|1]到底哪个是真、哪个是假？@
+[NONE|1]优与我，越来越混乱。@
+[NONE|1]只好一个一个来检视了。\
+hideTextbox
+showTextbox
+[NONE|1]成立以上假设的资料，可以分为以下四点。\
+[NONE|1]甲：空收集的‘有关田中雪江死亡的众多档案’@
+[NONE|1]乙：Ａ与Ｂ的闲聊内容（阳一死亡论点的唯一证明）\
+[NONE|1]丙：优的母亲所说的内容（阳一失踪论点的唯一证明）@
+[NONE|1]丁：优的母亲确实存在的实体\
+hideTextbox
+bgload "BG11A2","0","2"
+showTextbox
+[NONE|1]我们前往警备室，再次确认‘田中雪江死亡的相关档案
+[NONE|0]’。\
+[NONE|1]虽然只有这个证据，但是很不幸地……雪江的死亡是事
+[NONE|0]实。\
+[NONE|1]不过我们先不提这个雪江是不是优真正的母亲……\
+hideTextbox
+showTextbox
+[NONE|1]根据这个资料，可能性只剩第２与第４。\
+[NONE|1]‘２：阳一并没有死亡，只是在１７年前失踪，可是…\
+[NONE|0]………雪江已经在１５年前死亡。’\
+[NONE|1]‘４：阳一在３４年前、雪江在１５年前皆死亡。’\
+hideTextbox
+showTextbox
+[NONE|1]另外，假设雪江已经死亡，那么优的母亲就是一直在说
+[NONE|0]谎。\
+[NONE|1]此时，先不讨论同姓同名的问题。\
+[NONE|1]如果明白雪江在说谎，那么阳一失踪论点的可信度就相
+[NONE|0]当低。\
+[NONE|1]顺势推演，第４点的假设可能性就相当高。\
+[NONE|1]‘４：阳一在３４年前、雪江在１５年前皆死亡’\
+hideTextbox
+hideTextbox
+specialEffect 12,0
+stopBGM
+playBGM "3","100"
+bgload "BG11A1","6","2"
+fgload 1,"YU03BDM","320",0
+mov %V_ab, %V_VAR_c0_23
+
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“呜～～～～～嗯！”\
+[y4a525|1]【优】
+[NONE|0]“这样的话……那么……他们两个人……”\
+[NONE|1]【少年】
+[NONE|0]“不，等等！　要下定论还太早了。”\
+[y4a526|1]【优】
+[NONE|0]“可是……”\
+[NONE|1]【少年】
+[NONE|0]“你真是性急，我们的推理还没结束呀？”\
+[NONE|1]然后……\
+hideTextbox
+stopBGM
+mov %V_41, 11
+
+mov %V_42, 4
+
+mov %V_50, 0
+
+unknown20 45
+showTextbox
+[NONE|1]照明开始明灭地闪烁。\
+[NONE|1]【少年】
+[NONE|0]“你看吧，连电灯都这样说……”\
+fgload 1,"YU02BDM","320",3
+showTextbox
+[y4a527|1]【优】
+[NONE|0]“真的耶……哈哈哈……”\
+hideTextbox
+specialEffect 3,0
+unknown21 13
+removeFG "1","0"
+overlayImage "00000000","BG11A2",6,2
+fgload 1,"YU02BDM","320",0
+mov %V_ab, %V_VAR_c0_31
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“关掉了……”\
+fgload 1,"YU03BDM","320",3
+showTextbox
+[y4a528|1]【优】
+[NONE|0]“这是在附和我们说的，是吗？”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+bgload "BG11A1","0","2"
+showTextbox
+[NONE|1]终于……灯亮了。\
+[NONE|1]【少年】
+[NONE|0]“照明好像有一点问题？”\
+hideTextbox
+playBGM "18","100"
+fgload 1,"YU01BDM","320",3
+showTextbox
+[y4a529|1]【优】
+[NONE|0]“是呀”\
+[NONE|1]【少年】
+[NONE|0]“难道又要停电了？”\
+fgload 1,"YU05BDM","320",3
+showTextbox
+[y4a530|1]【优】
+[NONE|0]“咦－－！　还要再修理啊～～？”\
+[NONE|1]【少年】
+[NONE|0]“就免了吧”\
+fgload 1,"YU02BDM","320",3
+showTextbox
+[y4a531|1]【优】
+[NONE|0]“这次让仓成一个人去修吧？”\
+[NONE|1]【少年】
+[NONE|0]“啊……你真过分。”\
+fgload 1,"YU08BDM","320",3
+showTextbox
+[y4a532|1]【优】
+[NONE|0]“啊哈哈哈……”\
+[NONE|1]多亏了这样无意义的闲聊抬杠，优的心情似乎比较好了
+[NONE|0]。\
+[NONE|1]【少年】
+[NONE|0]“那么……嗯……”\
+[NONE|1]【少年】
+[NONE|0]“……嗯？”\
+[NONE|1]远方传来叫唤的声音。\
+[y4a533|1]【武】
+[NONE|0]“喔～～咿！　优～～～！　你在哪里啊～～～！！”\
+fgload 1,"YU06BDM","320",3
+showTextbox
+[y4a534|1]【优】
+[NONE|0]“咦？　仓成的声音？”\
+[NONE|1]【少年】
+[NONE|0]“嗯……好像在找优？”\
+removeFG "1","3"
+fgload 1,"YU02BDS","320",3
+showTextbox
+[y4a535|1]【优】
+[NONE|0]“呀喔～～！　仓成～～！　我在这里～～～啊！”\
+[NONE|1]不久……武来了。\
+removeFG "1","3"
+multifgload2 1,4,"00000000","YU15BDS","00000000","KB11ADS",176,464,3
+showTextbox
+[y4a536|1]【武】
+[NONE|0]“喔，在这里啊……找好久了。”\
+fgload 4,"KB01ADS","464",3
+showTextbox
+[y4a537|1]【武】
+[NONE|0]“原来少年也在这里，最近你们很常在一起耶？”\
+[NONE|1]【少年】
+[NONE|0]“是吗？”\
+fgload 1,"YU16BDS","176",3
+showTextbox
+[y4a538|1]【优】
+[NONE|0]“呵呵～你很在意？”\
+fgload 4,"KB08ADS","464",3
+showTextbox
+[y4a539|1]【武】
+[NONE|0]“不是，一点也不……”\
+fgload 1,"YU18BDS","176",3
+showTextbox
+[y4a540|1]【优】
+[NONE|0]“啊嗯？　赶快说在意！”\
+fgload 4,"KB11ADS","464",3
+showTextbox
+[y4a541|1]【武】
+[NONE|0]“嗯呜……我很在意。”\
+fgload 1,"YU16BDS","176",3
+showTextbox
+[y4a542|1]【优】
+[NONE|0]“嗯呵呵……你听了一定会很惊讶，其实……”\
+[y4a543|1]【优】
+[NONE|0]“我跟少年已经在一起了～～嗯……”\
+fgload 4,"KB06ADS","464",3
+showTextbox
+[y4a544|1]【武】
+[NONE|0]“愕啊－－－！！”\
+[NONE|1]【少年】
+[NONE|0]“愕啊啊啊－－－－！！！！！！”\
+[y4a545|1]【武】
+[NONE|0]“真、真的吗！？”\
+[NONE|1]【少年】
+[NONE|0]“我不知道我不知道我不知道，我不知道我不知道。”\
+[NONE|1]拼命摇着头的我。\
+[y4a546|1]【武】
+[NONE|0]“吓死我了～～～”\
+fgload 4,"KB11ADS","464",3
+showTextbox
+[y4a547|1]【武】
+[NONE|0]“呃，我是很吃惊……啦……”\
+fgload 1,"YU18BDS","176",3
+showTextbox
+[y4a548|1]【优】
+[NONE|0]“拜托！　少来一副放心的样子，那是我的台词才对吧
+[NONE|0]！”\
+[y4a549|1]【武】
+[NONE|0]“反正你还不是要说‘那是开玩笑的喔～’？”\
+fgload 1,"YU17BDS","176",3
+showTextbox
+[y4a550|1]【优】
+[NONE|0]“呜嗯……”\
+[y4a551|1]【武】
+[NONE|0]“真是无趣，说点别的吧？”\
+[y4a552|1]【优】
+[NONE|0]“好……”\
+[NONE|1]【少年】
+[NONE|0]“嗯……有什么事情吗？”\
+fgload 4,"KB01ADS","464",3
+showTextbox
+[y4a553|1]【武】
+[NONE|0]“啊啊……我现在要去修理发电机，要来帮忙吗？”\
+[NONE|1]【少年】
+[NONE|0]“修理发电机？”\
+fgload 1,"YU15BDS","176",3
+showTextbox
+[y4a554|1]【优】
+[NONE|0]“难道又停电了？”\
+[NONE|1]没想到这是真的。\
+fgload 4,"KB11ADS","464",3
+showTextbox
+[y4a555|1]【武】
+[NONE|0]“不，应该没有这么严重，不过……想要去确认一下状
+[NONE|0]况。”\
+[NONE|1]【少年】
+[NONE|0]“对了，刚刚照明有灭了一下。”\
+multifgload2 1,4,"00000000","YU01BDS","00000000","KB01ADS",176,464,3
+showTextbox
+[y4a556|1]【武】
+[NONE|0]“是吧？”\
+[y4a557|1]【武】
+[NONE|0]“嗯……虽然没什么大不了，可是还是要去检查。”\
+[y4a558|1]【武】
+[NONE|0]“而且这是空命令的”\
+[NONE|1]【少年】
+[NONE|0]“呼嗯……”\
+fgload 4,"KB11ADS","464",3
+showTextbox
+[y4a559|1]【武】
+[NONE|0]“优帮忙吗？”\
+fgload 1,"YU17BDS","176",3
+showTextbox
+[y4a560|1]【优】
+[NONE|0]“呜……呜嗯……好啊……”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[NONE|1]看来……优还没恢复原状。\
+[NONE|1]只是勉强自己在应付着。\
+[NONE|1]要是勉强她一起去修理，也许会受伤吧。\
+[NONE|1]【少年】
+[NONE|0]“嗯……武？　修理的话，我来吧……”\
+multifgload2 1,4,"00000000","YU03BDS","00000000","KB07ADS",176,464,3
+showTextbox
+[y4a561|1]【武】
+[NONE|0]“啊嗯？　少年你？”\
+[NONE|1]【优】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“因为优现在……那个……有点累的样子。”\
+[y4a562|1]【武】
+[NONE|0]“可是……你不是不太懂机械？”\
+[NONE|1]【少年】
+[NONE|0]“没关系，我会尽全力。”\
+[NONE|1]【少年】
+[NONE|0]“所以就麻烦你让我帮忙吧。”\
+[y4a563|1]【武】
+[NONE|0]“呜嗯……”\
+hideTextbox
+specialEffect 12,0
+stopBGM
+multiremoveFG2 "85","04","00","0"
+showTextbox
+[NONE|1]拼命说服的结果，我还是去帮忙了。\
+[NONE|1]检查作业就在晚饭后开始进行。\
+[NONE|1]可是……\
+hideTextbox
+delay 120
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“痛痛痛……好痛啊……武。”\
+hideTextbox
+playBGM "1","100"
+bgload "BG09A1","6","2"
+fgload 1,"KB01ADM","320",0
+mov %V_ab, %V_VAR_c0_23
+
+clock "16","7"
+showTextbox
+[s4a099|1]【武】
+[NONE|0]“这么一点痛要忍耐啊，这才是男人。”\
+[NONE|1]露出故意捉弄的笑容，咚咚地敲打我裹着石膏的右手。\
+[NONE|1]压缩模型与特殊成形塑胶所做成的石膏，比想像中的还
+[NONE|0]要轻巧方便。\
+[NONE|1]在空的指示下，武替我装上的。\
+[NONE|1]空似乎还有别的事情要做，跟武留下指示后就离开了。\
+fgload 1,"KB02ADM","320",3
+showTextbox
+[s4a100|1]【武】
+[NONE|0]“哎呀……真厉害，你当时那个动作还真是戏剧性十足
+[NONE|0]。”\
+[NONE|1]【少年】
+[NONE|0]“吵死了，就是脚滑了啊，谁叫武要丢工具给我。”\
+fgload 1,"KB08ADM","320",3
+showTextbox
+[s4a101|1]【武】
+[NONE|0]“不可以说别人的坏话啊，我可没有叫你拿工具。”\
+[NONE|1]【少年】
+[NONE|0]“什么都没拿就跳下去的，是武吧……”\
+fgload 1,"KB01ADM","320",3
+showTextbox
+[s4a102|1]【武】
+[NONE|0]“反正，如果下次还要修理就会用到啊，我本来就是要
+[NONE|0]把它放在那里的。”\
+[NONE|1]狡辩……\
+[NONE|1]【少年】
+[NONE|0]“啊啊……知道了啦，反正是我很笨……”\
+[NONE|1]我看着被压缩石膏包裹着的右腕。\
+[NONE|1]修理发电机的时候，我因为拿着太重的工具，重心不稳
+[NONE|0]，就从发电机上面摔了下来。\
+fgload 1,"KB02ADM","320",3
+showTextbox
+[s4a103|1]【武】
+[NONE|0]“哎呀……别这么沮丧，空说骨折得很漂亮，所以会好
+[NONE|0]很快的。”\
+[NONE|1]【少年】
+[NONE|0]“说得好像跟你无关……”\
+fgload 1,"KB11ADM","320",3
+showTextbox
+[s4a104|1]【武】
+[NONE|0]“嗯……这个……”\
+[NONE|1]武将装了数种抗生剂、解热镇痛剂、营养剂的安瓶，装
+[NONE|0]在乍看之下像手枪的浸透注射器。\
+fgload 1,"KB08ADM","320",3
+showTextbox
+[s4a105|1]【武】
+[NONE|0]“来……手腕给我。”\
+[NONE|1]武拿着注射器压在我的左腕。\
+hideTextbox
+specialEffect 12,0
+stopBGM
+delay 120
+bgload "BG21B1","6","2"
+playBGM "2","100"
+unknown20 44
+mov %V_ab, %V_VAR_c0_23
+
+hideTextbox
+mov %V_13, 1
+
+clock "19","35"
+showTextbox
+[NONE|1]晚上到了。@
+[NONE|1]老样子的夜晚时刻。\
+[NONE|1]我们还是老样子，吃着武做的塔滋塔三明治来填饱肚子
+[NONE|0]。\
+hideTextbox
+showTextbox
+[NONE|1]因为想要改变一下用餐气氛，决定在休憩空间的池子那
+[NONE|0]里铺上餐垫。\
+[NONE|1]这样多少可以感受到一点野餐的气氛。@
+[NONE|1]附带一提，这个餐垫是纪念品卖场的商品。\
+[NONE|1]所以印有ＬｅＭＵ的标志与妙妙（ＬｅＭＵ吉祥物）。\
+hideTextbox
+showTextbox
+[NONE|1]空虽然不需要用餐，但还是跟我们坐在一起，开心地微
+[NONE|0]笑着。\
+[NONE|1]只有这样也很快乐。@
+[NONE|1]沙罗刚刚才为了多拿一些饮料去商店一趟。\
+[NONE|1]优不在这里。@
+[NONE|1]身体好像有点不舒服，在医疗室睡觉。\
+hideTextbox
+showTextbox
+[NONE|1]所以，等一下沙罗会把三明治拿过去给她。@
+[NONE|1]也许是闻到了味道吧，月海翩然现身。\
+[NONE|1]她一副无辜的表情，一屁股就坐在妙妙的脸上，直接拿
+[NONE|0]起三明治。\
+[NONE|1]武当然念了几句话，月海却不理会。@
+[NONE|1]只是一个人静静地吃着三明治。\
+[NONE|1]我下意识地看着这样的她。\
+hideTextbox
+showTextbox
+[NONE|1]“…………”\
+[NONE|1]
+showTextbox
+[NONE|1]我还在意着那句话。\
+hideTextbox
+showTextbox
+[NONE|1]
+[s3d025|1]　　　　　　　　　　　　七天内……\
+[s3d026|1]　　　　　　　　　──你将会死亡。\
+hideTextbox
+showTextbox
+[NONE|1]在那之后，月海几乎没有跟我们说到任何话。\
+[NONE|1]现在的她，在想什么？\
+[NONE|1]正当我这么想的时候……\
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+stopBGM
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[y4a564|1]【沙罗】
+[NONE|0]“呀－－－－－－！！”\
+[NONE|1]商店的方向传来沙罗尖锐的惨叫声。\
+[y4a565|1]【沙罗】
+[NONE|0]“老、老鼠啊～～～！！！”\
+playBGM "18","100"
+showTextbox
+[NONE|1]一听到这句话的武，先撇开月海向商店走去。\
+[NONE|1]我跟空也追在后面。\
+bgload "BG07B1","0","2"
+showTextbox
+[NONE|1]商店的一部分食粮（纸箱封住的东西）被吃掉了。\
+[NONE|1]【少年】
+[NONE|0]“呜哇……这下可惨了……”\
+multifgload2 1,4,"00000000","SA05ADM","00000000","KB05ADM",128,512,3
+showTextbox
+[y4a566|1]【沙罗】
+[NONE|0]“这边的东西好像全毁了……”\
+[NONE|1]【少年】
+[NONE|0]“上次的热狗也是老鼠干的吗？”\
+fgload 1,"SA06ADM","128",3
+showTextbox
+[y4a567|1]【沙罗】
+[NONE|0]“咦！？　可是那不是放在冰箱里吗？”\
+[NONE|1]是的，当然冰箱里的其他东西是没事。\
+[NONE|1]要真是这样……只能饿肚子了吧。\
+removeFG "1","3"
+fgload 1,"SO07ADM","128",3
+showTextbox
+[y4a568|1]【空】
+[NONE|0]“不过……ＬｅＭＵ竟然会有老鼠……真令人惊讶。”\
+[NONE|1]【武】
+[NONE|0]“……………………”\
+[NONE|1]脸色难看的武，正在愤慨着。\
+[NONE|1]生气得说不出话来，脸色发红、全身颤抖着。\
+multiremoveFG2 "85","04","00","3"
+fgload 1,"TU10ADM","320",3
+showTextbox
+[y4a569|1]【月海】
+[NONE|0]“呵呵……呵呵呵呵……”\
+[NONE|1]看着这个景象，咯咯地笑着的月海。\
+[NONE|1]【少年】
+[NONE|0]“有什么好笑的？”\
+[y4a570|1]【月海】
+[NONE|0]“那当然是……”\
+[y4a571|1]【月海】
+[NONE|0]“你的脸”\
+removeFG "1","3"
+showTextbox
+[NONE|1]说着，指着武的脸。\
+fgload 1,"KB04ADS","320",3
+showTextbox
+[NONE|1]──噗啧！\
+[y4a572|1]【武】
+[NONE|0]“真是的！　气死我了！！”\
+[y4a573|1]【武】
+[NONE|0]“我一定要抓到那只老鼠，把它拿去喂鲨鱼！！”\
+removeBG
+showTextbox
+[NONE|1]随即，忽然动作的武，说要制作捕鼠用的陷阱。\
+[NONE|1]我胡乱地附和着武的陷阱制作和设置。\
+[NONE|1]为了让武冷静下来，只有这个方法了。\
+[NONE|1]我勉强操纵着骨折的右腕，还是帮着武。\
+[NONE|1]此外，武所做的陷阱，其实是拿仓库里现有的东西拼凑
+[NONE|0]来的。\
+[NONE|1]那个可以称为什么陷阱……我实在不会说。\
+hideTextbox
+stopBGM
+bgload "BG26B3L","0","2"
+clock "23","51"
+showTextbox
+[NONE|1]全部完成的时候，已经是深夜了。\
+[NONE|1]身心俱疲。\
+[NONE|1]我走向优那里。\
+[NONE|1]除了担心她的状况之外，也因为之前的推理才进行到一
+[NONE|0]半。\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[y4a574|1]【沙罗】
+[NONE|0]“啊……找到少年了！”\
+playBGM "2","100"
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“咦？　找我有事？”\
+[y4a575|1]【沙罗】
+[NONE|0]“嗯……少年你啊？　纳秋学姐要我传话给你。”\
+[NONE|1]【少年】
+[NONE|0]“优？”\
+[NONE|1]【少年】
+[NONE|0]“我现在就要去优那里啊”\
+[y4a576|1]【沙罗】
+[NONE|0]“学姐已经离开了，现在应该不在医疗室啰？”\
+[NONE|1]【少年】
+[NONE|0]“她的状况怎么样？”\
+[y4a577|1]【沙罗】
+[NONE|0]“嗯……她说已经好多了。”\
+[NONE|1]【少年】
+[NONE|0]“是喔……那太好了。”\
+[NONE|1]【少年】
+[NONE|0]“那么？　有什么传话？”\
+fgload 1,"SA06ADM","320",3
+showTextbox
+[y4a578|1]【沙罗】
+[NONE|0]“啊，对对……嗯嗯……这个……”\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[y4a579|1]【沙罗】
+[NONE|0]“她说了‘我现在要去老地方，少年也来’……”\
+[NONE|1]【少年】
+[NONE|0]“老地方？”\
+fgload 1,"SA08ADM","320",3
+showTextbox
+[y4a580|1]【沙罗】
+[NONE|0]“她说这样跟你说，你就会懂了呀？”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[NONE|1]（老地方……）\
+[NONE|1]（对了，难道是那里……？）\
+fgload 1,"SA02ADM","320",3
+showTextbox
+[y4a581|1]【沙罗】
+[NONE|0]“喂喂？”\
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“嗯？　什么？”\
+[y4a582|1]【沙罗】
+[NONE|0]“我都没发现，原来你们已经进展这么快啦？”\
+[y4a583|1]【沙罗】
+[NONE|0]“这么快就有深夜的约会耶”\
+[y4a584|1]【沙罗】
+[NONE|0]“哎呀哎呀～忌妒呀忌妒呀～”\
+[NONE|1]【少年】
+[NONE|0]“……？”\
+[NONE|1]她到底在说什么？\
+[NONE|1]推理还没结束啊……\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[y4a585|1]【沙罗】
+[NONE|0]“到底少年是用什么方法安慰学姐的？”\
+[y4a586|1]【沙罗】
+[NONE|0]“能够一下子就把学姐给瞬间秒杀了，一定是用了什么
+[NONE|0]厉害招数吧？”\
+[NONE|1]【少年】
+[NONE|0]“我又没有杀优”\
+fgload 1,"SA12ADM","320",3
+showTextbox
+[y4a587|1]【沙罗】
+[NONE|0]“又来了又来了～一直都在装傻喔～”\
+fgload 1,"SA02ADM","320",3
+showTextbox
+[y4a588|1]【沙罗】
+[NONE|0]“嗯～？　教我一点点嘛？”\
+[y4a589|1]【沙罗】
+[NONE|0]“是那种技巧、还是这种技巧？”\
+fgload 1,"SA09ADM","320",3
+showTextbox
+[y4a590|1]【沙罗】
+[NONE|0]“讨厌～啦……不行啰～再说下去就是１８禁了～”\
+[NONE|1]‘１８禁’是什么？\
+[NONE|1]【少年】
+[NONE|0]“虽然我不懂你在说什么，不过……应该不能说……”\
+fgload 1,"SA06ADM","320",3
+showTextbox
+[y4a591|1]【沙罗】
+[NONE|0]“什、什么！　一下子就进展到那种无法启齿的事情了
+[NONE|0]！？”\
+[NONE|1]【少年】
+[NONE|0]“啊？”\
+fgload 1,"SA02ADM","320",3
+showTextbox
+[y4a592|1]【沙罗】
+[NONE|0]“然后呢？　然后呢？”\
+[y4a593|1]【沙罗】
+[NONE|0]“真是的！　就跟你说没关系！我不会跟别人说的。”\
+[NONE|1]【少年】
+[NONE|0]“………………”\
+fgload 1,"SA08ADM","320",3
+showTextbox
+[y4a594|1]【沙罗】
+[NONE|0]“不行？”\
+[NONE|1]不知为何……感受到危险信号的我，决定演出日光东照
+[NONE|0]宫的三猿动作。\
+[NONE|1]不看……不说……不听。\
+[NONE|1]现在我好羡慕那些猴子。\
+hideTextbox
+specialEffect 12,0
+removeBG
+stopBGM
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]沙罗终于放弃回去了，我也前往优等我的地方。\
+[NONE|1]优说的‘老地方’。\
+[NONE|1]应该就是在…………\
+mov %V_b3, 0
+
+goto *Lsy5a
+

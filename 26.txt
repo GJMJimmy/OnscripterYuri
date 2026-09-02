@@ -1,0 +1,1274 @@
+*Lss4a
+*Lss4a_00000016
+
+unknown46 0
+mov %V_fa, 92
+
+mov %V_b0, 5
+
+mov %V_b1, 4
+
+mov %V_b2, 4
+
+bgload "BG26B1R","0","1"
+playBGM "16","100"
+clock "1","36"
+showTextbox
+[NONE|1]我在ＬｅＭＵ里踱步闲晃。\
+[NONE|1]只因为在那件事情之后，我不想和武、优在一起。\
+[NONE|1]不知怎么地，只要跟他们在同一个地方就会觉得不自在
+[NONE|0]。\
+[NONE|1]边走边想着，要找个优与武不会来的地方。\
+[NONE|1]那个时候，心中的无名怒火到底是什么……\
+[NONE|1]我为什么会这么生气……\
+[NONE|1]为什么……\
+[NONE|1]月海她那看着沙罗的冰冷视线。\
+[NONE|1]拼命忍耐，坚持不肯退让的沙罗……\
+[NONE|1]在那一瞬间，我心中全涌而起的感情是什么……\
+[NONE|1]再一点点，我想……我就要知道那是什么了。\
+[NONE|1]以往我所丧失的记忆如同笼罩浓雾一般。\
+[NONE|1]我现在却感觉到它只隔着一层薄纱，就在那附近了。\
+[NONE|1]可是，我却拨不开那层纱。\
+[NONE|1]越思考，记忆就越往迷雾的那一方远去。\
+[NONE|1]到底我的过去有什么……\
+[NONE|1]还是什么都不知道，我继续在ＬｅＭＵ中漫步……\
+hideTextbox
+specialEffect 12,0
+bgload "BG05A1","6","2"
+mov %V_ab, %V_VAR_c0_38
+
+showTextbox
+[NONE|1]忽地，好像听到某个人的声音，我走进那个房间。\
+[NONE|1]一整面夜空开拓的空间，有几个球形的巨大行星……\
+[NONE|1]然后在那中间，漂浮着一个大型鲸鱼。\
+[NONE|1]这里是宇宙鲸鱼之屋。\
+[NONE|1]鲸鱼、还有这个星空，当然都是人造的景物。\
+[NONE|1]虽然是人造景致，这个空间的辽阔感，却让一直被关在
+[NONE|0]密闭空间的我放松了些许的紧张。\
+[NONE|1]处于长时间的紧张状态，受困在密闭的空间里。\
+[NONE|1]而且……什么记忆也没有的状态下……\
+[NONE|1]我忽然发现，这些事情已经不经意地压得我喘不过气来
+[NONE|0]。\
+[NONE|1]我出神地看着这个景色。\
+[NONE|1]…………\
+hideTextbox
+stopBGM
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“咦……”\
+[NONE|1]鲸鱼上面有什么东西在动。\
+[NONE|1]定眼一看。\
+[NONE|1]【少年】
+[NONE|0]“沙罗……？”\
+[NONE|1]我快速地找到鲸鱼旁边的行星，走向可以登上那颗行星
+[NONE|0]的阶梯。\
+hideTextbox
+specialEffect 6,0
+delay 30
+bgload "BG05A3","6","2"
+fgload 1,"SA11ADL","320",0
+playBGM "6","97"
+mov %V_ab, %V_VAR_c0_31
+
+showTextbox
+[NONE|1]我走到鲸鱼的鼻端，跟沙罗并肩坐着。\
+[NONE|1]不过，鲸鱼或海豚的鼻腔是位于头顶的位置，将这里说
+[NONE|0]成鼻端似乎有些不恰当……\
+[NONE|1]我们的头上有着无数的星星闪烁着。\
+[NONE|1]手一伸，仿佛就能触碰的星空。\
+[NONE|1]实际上，如果站起来再伸直手臂，我想应该就能碰到星
+[NONE|0]星了吧。\
+[NONE|1]因为那是投影在天花板上的虚构夜空。\
+[NONE|1]说到虚构，这只鲸鱼也是。\
+[NONE|1]虽然不知道使用了什么技术，这只虚构鲸鱼的皮肤质感
+[NONE|0]，看来就像真的一样。\
+[NONE|1]不过……难道我有摸过真的鲸鱼吗？\
+[NONE|1]要不然，为什么我会有一种‘鲸鱼的皮肤就像这样’自
+[NONE|0]然而然的印象呢？\
+hideTextbox
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]
+[NONE|1]一想到这里，这个无记忆的状况又更神秘。\
+[NONE|1]平常与反常，常识与非常识，我想全部应该都是由记忆
+[NONE|0]去判断的吧。\
+hideTextbox
+showTextbox
+[NONE|1]譬如──@
+[NONE|1]现在眼前突然出现一个摇滚风格的男人，@
+[NONE|1]即使他说‘我是你的父亲’，我一定不会相信他的话。\
+[NONE|1]这是因为我到目前为止，从来没有跟类似摇滚风的人见
+[NONE|0]过面……\
+hideTextbox
+showTextbox
+[NONE|1]可是，到底有没有见过摇滚风的人，我又没办法确认…
+[NONE|0]………\
+[NONE|1]一旦试着这么想……@
+[NONE|1]只能说……我会自然而然地这样思考事情是很神奇的。\
+hideTextbox
+showTextbox
+[NONE|1]我的记忆确实放在我脑袋的抽屉中。
+[NONE|1]而且现在也仍然储存着。
+[NONE|1]可是，我能打开的抽屉数量却有限。
+[NONE|1]５月１日以前的抽屉，我甚至找都找不到。
+hideTextbox
+showTextbox
+[NONE|1]不过无所谓……
+[NONE|1]只要有人随意打开我的抽屉，
+[NONE|1]眼前的景象，不管是平常或反常，常识或非常识，我还
+[NONE|0]是都能正确判断。
+hideTextbox
+showTextbox
+[NONE|1]不，应该说……会替我判断。
+[NONE|1]我是没有钥匙的金库看守者。
+showTextbox
+[NONE|1]金库中的财宝不是我的……
+hideTextbox
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]不过，这个鲸鱼制作的精巧，不只是在皮肤的质感。\
+[NONE|1]鲸鱼曾经活着。\
+[NONE|1]至少我是这么想的。\
+[NONE|1]游在星空中的鲸鱼。\
+[NONE|1]脊椎随着波浪起伏，反覆着水面上的跃动。\
+[NONE|1]柔软的嘴巴，时张时闭，有时还会膨胀。\
+[NONE|1]大约每３分钟就会从鼻腔喷出温热的鼻息。\
+[NONE|1]海水像雾一般飘邈。\
+[NONE|1]坐在鲸鱼鼻端的我跟沙罗，当然随着它的行动浮载浮沉
+[NONE|0]……\
+[NONE|1]不过，这是一个即使放手也不用害怕的慢动作。\
+[NONE|1]就像是缓缓的摇晃一样……\
+[NONE|1]我们随着鲸鱼航向宇宙。\
+[NONE|1]现在是在往古古星的途中。\
+[NONE|1]沙罗从口袋中拿出了什么东西。\
+[NONE|1]旧式的煤油打火机。\
+hideTextbox
+removeFG "1","3"
+bgload "EV_SA05A","0","2"
+showTextbox
+[NONE|1]点起打火机。\
+[NONE|1]摇曳的火焰照耀着沙罗的脸庞。\
+[NONE|1]为什么会随身携带打火机？\
+[NONE|1]应该不是想抽烟吧。\
+[NONE|1]要问她吗？\
+[NONE|1]刚这么想的时候，沙罗摊开另一只手掌。\
+[NONE|1]刚刚的坠炼。\
+[NONE|1]细细的锁炼缠绕在食指上，坠子在手中摇晃。\
+[NONE|1]沙罗将火靠近坠子，出神地看着它。\
+[NONE|1]嘴角和缓。\
+[NONE|1]沙罗静静地，像是恍惚一般。\
+[NONE|1]坠子上镶着镜子。\
+[NONE|1]镜子反射着打火机的火焰，有些刺眼。\
+[NONE|1]难道……\
+[NONE|1]沙罗对着镜中反射的自己，看得恍惚了？\
+[NONE|1]我不自觉笑了出来。\
+[s4a000|1]【沙罗】
+[NONE|0]“嗯？　有什么好笑的？”\
+[NONE|1]【少年】
+[NONE|0]“因为……”\
+[NONE|1]【少年】
+[NONE|0]“因为你看着自己的脸在开心的笑啊。”\
+[s4a001|1]【沙罗】
+[NONE|0]“才、才不是！”\
+[NONE|1]【少年】
+[NONE|0]“沙罗……没想到你这么自恋喔？”\
+[s4a002|1]【沙罗】
+[NONE|0]“就说不是了！”\
+[NONE|1]边说着，沙罗啪地关起打火机的盖子。\
+bgload "BG05A3","0","2"
+fgload 1,"SA04ADL","320",3
+showTextbox
+[NONE|1]那一刹那，我发现了奇妙的一件事。\
+[NONE|1]一瞬间，镜中所映照的火焰被分割成两个。\
+[NONE|1]难道镜面上有着裂痕。\
+[NONE|1]【少年】
+[NONE|0]“嗯？　那个坠子可以借我看吗？”\
+fgload 1,"SA05ADL","320",3
+showTextbox
+[s4a003|1]【沙罗】
+[NONE|0]“是可以……”\
+fgload 1,"SA01ADL","320",3
+showTextbox
+[s4a004|1]【沙罗】
+[NONE|0]“不会弄掉吧？”\
+[NONE|1]鲸鱼的身体仍然上下摇晃着。\
+[NONE|1]沙罗是在担心这个吧。\
+[NONE|1]【少年】
+[NONE|0]“不会的”\
+removeFG "1","3"
+showTextbox
+[NONE|1]我说着，接过沙罗的坠子。\
+bgload "EV_ET02A","0","2"
+showTextbox
+[NONE|1]将锁炼一圈圈地缠在手指头上，靠近脸看着。\
+[NONE|1]没错，镜子裂了。\
+[NONE|1]不只是裂了，还有一小块碎片不见了。\
+[NONE|1]我用指尖轻轻抚着那个缺口。\
+[NONE|1]恐怕是刚刚月海摔落的冲击才裂开的。\
+[NONE|1]遗失的碎片，也许还在那个房间里吧。\
+[NONE|1]锋利切口的触感，让我的胸口隐隐作痛。\
+[NONE|1]我的指尖离开了镜子，摊在手掌上递给沙罗。\
+[NONE|1]沙罗什么都没说，在我掌心啪地点了打火机。\
+[NONE|1]──吱。\
+[NONE|1]火花飞散，亮起光芒。\
+bgload "EV_ET02B","0","1"
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“啊……”\
+[NONE|1]不经意地，我叫出声来。\
+[NONE|1]镜面上隐约浮现出３Ｄ立体影像。\
+bgload "BG05A3","0","2"
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“这个是镭射全影像坠子？”\
+fgload 1,"SA06ADL","320",3
+showTextbox
+[s4a005|1]【沙罗】
+[NONE|0]“咦？”\
+fgload 1,"SA03ADL","320",3
+showTextbox
+[s4a006|1]【沙罗】
+[NONE|0]“是、是啊……”\
+hideTextbox
+removeFG "1","3"
+bgload "EV_ET02B","0","2"
+showTextbox
+[NONE|1]那个镭射全影像是一个人影。\
+[NONE|1]应该说是半身照吧？\
+[NONE|1]肩膀以上的影像，表情鲜明地浮现着。\
+[NONE|1]是用镭射全影像机器制作的吧。\
+hideTextbox
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]镭射全影像机器，就是指在喜欢的坠子或钥匙圈上，烧
+[NONE|0]录３Ｄ镭射全影像的机械。\
+[NONE|1]我记得在ＬｅＭＵ里也放置了好几台称为‘３Ｄ影像拍
+[NONE|0]贴’的机器。\
+hideTextbox
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]──忽然唤醒了这样的记忆。\
+[NONE|1]跟刚刚一样，只要有个线索，就会呼唤出相关的记忆。\
+[NONE|1]即使这种事情明明可以很容易就想起来……\
+[NONE|1]阻止自己再想下去，我再次看着坠子上的影像。\
+[NONE|1]既然是镭射全影像，当然可以看得更仔细。\
+[NONE|1]变换镜面角度，他的脸也会跟着改变。\
+[NONE|1]他，我刚刚说的影像……是的，那是个男性。\
+[NONE|1]我所不认识的男性。\
+[NONE|1]也许，那是在我脑中的金库或抽屉中，都没有储存的容
+[NONE|0]貌。\
+[NONE|1]那张脸一点印象都没有。\
+[NONE|1]【少年】
+[NONE|0]“这个是谁？”\
+[NONE|1]【沙罗】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“嗯？”\
+[NONE|1]【沙罗】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“难道是男朋友？”\
+[NONE|1]【沙罗】
+[NONE|0]“…………”\
+[NONE|1]沙罗没有回答。\
+[NONE|1]她的表情像是冻结一样地僵硬。\
+[NONE|1]【少年】
+[NONE|0]“男朋友吧？”\
+[NONE|1]我再问一次。\
+[NONE|1]是的，沙罗并不是看着自己的脸出神。\
+[NONE|1]只要是看着喜欢的男朋友影像，不论是谁都会微笑的。\
+[NONE|1]特别是在这样的深海底……\
+[NONE|1]【少年】
+[NONE|0]“嘿……很帅啊。”\
+[NONE|1]我有些许调侃的意味说着。\
+[NONE|1]事实上，他是个令人忌妒的男人。\
+[NONE|1]‘呀，ｈｏｎｅｙ～没精神喔～’我仿佛听到温柔的呼
+[NONE|0]唤声。\
+[NONE|1]只是，有一点让我感到在意……\
+[NONE|1]他的影像为什么是单色显示。\
+[NONE|1]嗯……最近是有在流行复古，也有人刻意做出单调或古
+[NONE|0]旧的影像。\
+[NONE|1]这样说来，其实也没有什么好奇怪的。\
+bgload "BG05A3","0","2"
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“嗯？　什么时候开始交往的？”\
+[NONE|1]我关了打火机，叠在坠子上面，递给沙罗。\
+fgload 1,"SA03ADL","320",3
+showTextbox
+[NONE|1]沙罗却没有接过去。\
+[NONE|1]仍旧一动也不动地，好像连呼吸都要忘了。\
+[NONE|1]【少年】
+[NONE|0]“嗯……沙罗？　沙罗？”\
+[NONE|1]【少年】
+[NONE|0]“喔～咿……沙罗～！”\
+[NONE|1]我握着没有还的坠子，摇摇沙罗的肩膀。\
+[NONE|1]沙罗还是没有反应。\
+[NONE|1]就在这个时候……\
+stopBGM
+playSFX "SE02_16",0,100
+showTextbox
+[NONE|1]──噗咻！\
+[NONE|1]鲸鱼吐气了。\
+fgload 1,"SA06ADL","320",0
+showTextbox
+[s4a007|1]【沙罗】
+[NONE|0]“呀啊！”\
+hideTextbox
+removeFG "1","0"
+playSFX "SE05_05",0,100
+showTextbox
+[NONE|1]沙罗一弹起来，我的身体感受到猛烈的拥抱。\
+[NONE|1]对沙罗来说，也许那只是因为太过惊吓的抓抱。\
+[NONE|1]但这个姿势怎么看，就是身体贴在一起。\
+[NONE|1]就因为这样，一个重心不稳，我再加上沙罗……从光滑
+[NONE|0]的鲸鱼皮肤上滑了下来。\
+[NONE|1]星星越来越远。\
+removeBG
+showTextbox
+[NONE|1]宇宙空间是无重力的说法，难道是假的？\
+bgload "BG05A1","0","3"
+playSFX "SE05_10",1,100
+waitForSFX
+unknown20 5
+showTextbox
+[NONE|1]还没想到的时候，我的身体已经落在坚硬的地板上。\
+[NONE|1]我仰躺着，脸上飘降来细细的雾气。\
+[NONE|1]沙罗就在我身上一动也不动。\
+[NONE|1]只在耳边听到细微的气息。\
+[s4a008|1]【沙罗】
+[NONE|0]“着陆成功？”\
+[NONE|1]沙罗抬起头，保持这样的姿势靠近地窥视着我的脸。\
+fgload 1,"SA02ADL","320",3
+showTextbox
+[s4a009|1]【沙罗】
+[NONE|0]“欢迎来到古古星”\
+hideTextbox
+specialEffect 12,0
+removeBG
+delay 30
+mov %V_ab, %V_VAR_c0_23
+
+mov %V_fa, 93
+
+chapterCutin "00000000","cal_504"
+hideTextbox
+specialEffect 6,0
+bgload "BG26A1L","6","2"
+playBGM "2","100"
+mov %V_ab, %V_VAR_c0_38
+
+clock "10","12"
+showTextbox
+[NONE|1]结果……我还是没把坠子交还给她。\
+[NONE|1]我为了寻找缺口的那一部分，来到了这个场所。\
+hideTextbox
+specialEffect 6,0
+playSFX "SE00_03",0,95
+bgload "BG09A1","6","2"
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]昨天月海跟沙罗争吵的地方。\
+[NONE|1]碎片应该掉在这个房间的某处。\
+[NONE|1]找到缺角的碎片，尽可能镶坠子恢复原状。\
+[NONE|1]要是这样还回去，沙罗一定会很开心。\
+[NONE|1]边想着沙罗开心的表情，我跪在地上，连角落都不放过
+[NONE|0]地仔细寻找着。\
+hideTextbox
+specialEffect 12,0
+stopBGM
+delay 60
+playBGM "1","100"
+mov %V_ab, %V_VAR_c0_38
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“呜～嗯……好奇怪～”\
+[s4a010|1]【？？】
+[NONE|0]“有什么好奇怪的？”\
+fgload 1,"KB07ADM","320",3
+showTextbox
+[NONE|1]惊讶地抬起头来，发现武就站在那里。\
+[s4a011|1]【武】
+[NONE|0]“在找什么？”\
+[NONE|1]【少年】
+[NONE|0]“呜……呜嗯……”\
+[NONE|1]【少年】
+[NONE|0]“其实……”\
+[NONE|1]我如此这般地说明着，将缺角的坠子给武看。\
+fgload 1,"KB01ADM","320",3
+showTextbox
+[s4a012|1]【武】
+[NONE|0]“原来如此，的确是缺了一块。”\
+[NONE|1]【少年】
+[NONE|0]“嗯……”\
+[NONE|1]【少年】
+[NONE|0]“可以的话，帮忙一起找吗？”\
+fgload 1,"KB03ADM","320",3
+showTextbox
+[s4a013|1]【武】
+[NONE|0]“啊啊……找东西也没什么大不了的……”\
+[s4a014|1]【武】
+[NONE|0]“不过在这之前，先问你一件事情？”\
+[NONE|1]【少年】
+[NONE|0]“什么事？”\
+fgload 1,"KB08ADM","320",3
+showTextbox
+[s4a015|1]【武】
+[NONE|0]“你说的那个男人影像到底在哪里啊？”\
+[NONE|1]【少年】
+[NONE|0]“哪里……”\
+[NONE|1]【少年】
+[NONE|0]“就在这里啊”\
+[NONE|1]我看着镜中。\
+[NONE|1]【少年】
+[NONE|0]“啊……咦！？”\
+[NONE|1]【少年】
+[NONE|0]“消失了……”\
+fgload 1,"KB05ADM","320",3
+showTextbox
+[NONE|1]武一副纳闷的样子看着我。\
+[NONE|1]【少年】
+[NONE|0]“真的有啊！　昨天都还在这里的……”\
+[NONE|1]【少年】
+[NONE|0]“咦～？　为什么啊？”\
+fgload 1,"KB01ADM","320",3
+showTextbox
+[s4a016|1]【武】
+[NONE|0]“嗯……算了。”\
+[s4a017|1]【武】
+[NONE|0]“沙罗的男朋友是怎样，我一点兴趣都没有……”\
+fgload 1,"KB08ADM","320",3
+showTextbox
+[s4a018|1]【武】
+[NONE|0]“不，订正。”\
+[s4a019|1]【武】
+[NONE|0]“可能有一点，或者没有吧，不过……”\
+[s4a020|1]【武】
+[NONE|0]“不管是哪个，总之坠子上有缺角是不变的事实。”\
+fgload 1,"KB01ADM","320",3
+showTextbox
+[s4a021|1]【武】
+[NONE|0]“而且这个坠子也是沙罗很宝贝的东西”\
+[s4a022|1]【武】
+[NONE|0]“所以……我就帮忙找碎片吧。”\
+[NONE|1]【少年】
+[NONE|0]“啊，谢谢……”\
+fgload 1,"KB02ADM","320",3
+showTextbox
+[s4a023|1]【武】
+[NONE|0]“别输啰～少年！”\
+[NONE|1]【少年】
+[NONE|0]“啊？？？”\
+[NONE|1]武拍拍我的肩膀，开始在地板上找起碎片。\
+removeFG "1","3"
+showTextbox
+[s4a024|1]【武】
+[NONE|0]“嗯……谢礼不知道能拿到多少喔？”\
+[NONE|1]【少年】
+[NONE|0]“谢礼？”\
+fgload 1,"KB05ADM","320",3
+showTextbox
+[s4a025|1]【武】
+[NONE|0]“我找到碎片的谢礼啊”\
+[NONE|1]【少年】
+[NONE|0]“什么……你打算勒索沙罗喔？”\
+fgload 1,"KB04ADM","320",3
+showTextbox
+[s4a026|1]【武】
+[NONE|0]“怎么会！”\
+[s4a027|1]【武】
+[NONE|0]“付钱的人又不是沙罗！”\
+[NONE|1]【少年】
+[NONE|0]“为、为什么？”\
+fgload 1,"KB02ADM","320",3
+showTextbox
+[s4a028|1]【武】
+[NONE|0]“呜～呜～喔嗯喔嗯～不可以拖太久才付喔～”\
+[NONE|1]【少年】
+[NONE|0]“……啊，什么啊？”\
+removeFG "1","3"
+fgload 1,"KB02ADL","320",3
+showTextbox
+[s4a029|1]【武】
+[NONE|0]“你打算居功吧？”\
+[NONE|1]武像蛇一样扭动身体，来到了我的面前。\
+[s4a030|1]【武】
+[NONE|0]“即使是我找到了，你也打算当作是自己找到的吧？”\
+[NONE|1]【少年】
+[NONE|0]“才，才没有……”\
+removeFG "1","3"
+fgload 1,"KB08ADS","176",3
+showTextbox
+[s4a031|1]【武】
+[NONE|0]“‘呀咿……沙罗？’”\
+removeFG "1","3"
+fgload 1,"KB01ADS","464",3
+showTextbox
+[s4a032|1]【武】
+[NONE|0]“‘有何指教呢？　少年……’”\
+removeFG "1","3"
+fgload 1,"KB04ADS","176",3
+showTextbox
+[s4a033|1]【武】
+[NONE|0]“‘拿走这个，磕头吧……’”\
+removeFG "1","3"
+fgload 1,"KB02ADS","464",3
+showTextbox
+[s4a034|1]【武】
+[NONE|0]“‘啊，这个是我昨天借给你的坠子，哎呀？　缺口的
+[NONE|0]地方修好了！’”\
+removeFG "1","3"
+fgload 1,"KB02ADS","176",3
+showTextbox
+[s4a035|1]【武】
+[NONE|0]“‘喔嗯……感谢我吧！　为了你，我可是拼了命在找
+[NONE|0]！’”\
+removeFG "1","3"
+fgload 1,"KB03ADS","464",3
+showTextbox
+[s4a036|1]【武】
+[NONE|0]“‘少年，你一个人找到的吗？’”\
+removeFG "1","3"
+fgload 1,"KB08ADS","176",3
+showTextbox
+[s4a037|1]【武】
+[NONE|0]“‘废话！你在说什么！　当然是我自己一个人找到的
+[NONE|0]啊！’”\
+removeFG "1","3"
+fgload 1,"KB02ADS","464",3
+showTextbox
+[s4a038|1]【武】
+[NONE|0]“‘啊……好棒喔，少年……太感谢你了。’”\
+removeFG "1","3"
+fgload 1,"KB01ADM","320",3
+showTextbox
+[s4a039|1]【武】
+[NONE|0]“……嗯……大概就是这样的发展。”\
+fgload 1,"KB04ADM","320",3
+showTextbox
+[s4a040|1]【武】
+[NONE|0]“是吧，你这个滑头！”\
+[NONE|1]【少年】
+[NONE|0]“随便你怎么说，不过你根本搞错角色了吧？　我跟沙
+[NONE|0]罗都是……”\
+[s4a041|1]【武】
+[NONE|0]“别管那些细节”\
+fgload 1,"KB01ADM","320",3
+showTextbox
+[s4a042|1]【武】
+[NONE|0]“我会支持你的”\
+[NONE|1]【少年】
+[NONE|0]“就说没必要了……”\
+fgload 1,"KB02ADM","320",3
+showTextbox
+[s4a043|1]【武】
+[NONE|0]“说好，说好啦～！”\
+[s4a044|1]【武】
+[NONE|0]“我啊……最喜欢这种任务了。”\
+[NONE|1]【少年】
+[NONE|0]“这种，是哪种啊？”\
+fgload 1,"KB01ADM","320",3
+showTextbox
+[s4a045|1]【武】
+[NONE|0]“怎么说呢……就是爱的丘比特呀？”\
+[NONE|1]【少年】
+[NONE|0]“丘比特才不会要钱”\
+fgload 1,"KB07ADM","320",3
+showTextbox
+[s4a046|1]【武】
+[NONE|0]“嗯……的确是。”\
+fgload 1,"KB01ADM","320",3
+showTextbox
+[s4a047|1]【武】
+[NONE|0]“那么，再来就帮我忙怎么样？”\
+[NONE|1]【少年】
+[NONE|0]“帮忙？”\
+fgload 1,"KB08ADM","320",3
+showTextbox
+[s4a048|1]【武】
+[NONE|0]“发电机的状况有点奇怪”\
+[s4a049|1]【武】
+[NONE|0]“嗯……没什么大不了的，不过还是要去检查一下。”\
+fgload 1,"KB03ADM","320",3
+showTextbox
+[s4a050|1]【武】
+[NONE|0]“而且这是空的命令”\
+[NONE|1]【少年】
+[NONE|0]“这样的话，不用给你谢礼我就去帮忙。”\
+fgload 1,"KB02ADM","320",3
+showTextbox
+[s4a051|1]【武】
+[NONE|0]“喔……ｔｈａｎｋ　ｙｏｕ。”\
+hideTextbox
+specialEffect 12,0
+stopBGM
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]结果……并没有找到碎片……\
+[NONE|1]武跟我全身沾满灰尘地站在原地。\
+hideTextbox
+specialEffect 0,0
+bgload "BG09A1","6","2"
+playBGM "2","100"
+playSFX "SE00_03",0,95
+mov %V_ab, %V_VAR_c0_31
+
+showTextbox
+[NONE|1]这个时候门开了，是沙罗进来了。\
+multifgload2 1,2,"00000000","SA02ADM","00000000","KB03ADM",128,512,3
+showTextbox
+[s4a052|1]【沙罗】
+[NONE|0]“啊，你们在这里啊。”\
+[s4a053|1]【沙罗】
+[NONE|0]“坠子……我应该是借放在少年那里吧？”\
+[NONE|1]【少年】
+[NONE|0]“啊……嗯……”\
+[NONE|1]我不得已，只有把坠子直接交还给沙罗。\
+fgload 1,"SA08ADM","128",3
+showTextbox
+[NONE|1]沙罗此时才发现，惊讶地看着满身尘埃的我跟武。\
+[s4a054|1]【沙罗】
+[NONE|0]“对了，你们在这里做什么？”\
+fgload 2,"KB07ADM","512",3
+showTextbox
+[NONE|1]我没有说话，与武互望着。\
+fgload 2,"KB11ADM","512",3
+showTextbox
+[s4a055|1]【武】
+[NONE|0]“其实……是在找碎片。”\
+fgload 1,"SA05ADM","128",3
+showTextbox
+[s4a056|1]【沙罗】
+[NONE|0]“碎片？　那是什么？”\
+showTextbox
+[s4a057|1]【武】
+[NONE|0]“就是那个坠子的缺角部分”\
+[s4a058|1]【武】
+[NONE|0]“本来想要帮你修好”\
+fgload 1,"SA01ADM","128",3
+showTextbox
+[s4a059|1]【沙罗】
+[NONE|0]“那个……没关系啦。”\
+[NONE|1]有些不好意思的沙罗。\
+[NONE|1]咦？\
+[NONE|1]咦咦？？？\
+[NONE|1]虽然不知道为什么，不过……武什么时候变成了提案人
+[NONE|0]啊，拜托。\
+[NONE|1]他不是要帮我吗？\
+fgload 1,"SA08ADM","128",3
+showTextbox
+[s4a060|1]【沙罗】
+[NONE|0]“而且……这里绝对找不到那个碎片的。”\
+[NONE|1]【少年】
+[NONE|0]“为什么？”\
+fgload 1,"SA05ADM","128",3
+showTextbox
+[s4a061|1]【沙罗】
+[NONE|0]“因为这个缺角……一开始就有了。”\
+fgload 2,"KB13ADM","512",3
+showTextbox
+[s4a062|1]【武】
+[NONE|0]“一开始？”\
+fgload 1,"SA01ADM","128",3
+showTextbox
+[s4a063|1]【沙罗】
+[NONE|0]“嗯……”\
+[s4a064|1]【沙罗】
+[NONE|0]“从有记忆以来，我就有了这个坠子。”\
+[s4a065|1]【沙罗】
+[NONE|0]“这个缺角的部分，已经是很久以前的事情了。”\
+[NONE|1]【少年】
+[NONE|0]“是喔……这样啊……”\
+fgload 2,"KB03ADM","512",3
+showTextbox
+[s4a066|1]【武】
+[NONE|0]“难怪找不到”\
+[s4a067|1]【武】
+[NONE|0]“唉～～”\
+fgload 1,"SA08ADM","128",3
+showTextbox
+[NONE|1]武的叹息声回响整个医疗室。\
+hideTextbox
+specialEffect 18,0
+delay 30
+mov %V_fa, 94
+
+bgload "BG26A1L","6","2"
+mov %V_ab, %V_VAR_c0_31
+
+clock "13","34"
+showTextbox
+[NONE|1]午饭过后……重新问了武有关发电机的状况。\
+[NONE|1]原来是之前修理的地方有些不稳，电源产生不稳定。\
+[NONE|1]武敲定了修理的时间，说还有事情就走掉了。\
+[NONE|1]我在这段等待的时间里，也不知道要做什么，随意走在
+[NONE|0]一条通道上。\
+hideTextbox
+stopBGM
+showTextbox
+[NONE|1]忽然，隐约听到有人的声音。\
+[NONE|1]这个是……唱歌？\
+[NONE|1]是谁？\
+[NONE|1]我朝那个歌声的方向走去。\
+stopBGM
+showTextbox
+[NONE|1]没有人……\
+[NONE|1]声音也听不到了。\
+[NONE|1]可是……我的确听到了声音啊。\
+[NONE|1]难道……\
+bgload "EV_SA06A","0","2"
+showTextbox
+[NONE|1]一探头看了增减压室中的阴影处，发现了沙罗。\
+[NONE|1]沙罗坐在厚实的玻璃窗前，看着相同的坠子。\
+[NONE|1]要跟她打招呼吗？　正这么想着的时候。\
+[NONE|1]沙罗毫不犹豫地……\
+[NONE|1]开始唱起像是歌词的东西。\
+bgload "EV_SA06B","0","2"
+showTextbox
+[s4a068|1]【沙罗】
+[NONE|0]“长弓背中扛……明月之妖精……”\
+[s4a069|1]【沙罗】
+[NONE|0]“梦中徙步来……长夜无可待……”\
+[s4a070|1]【沙罗】
+[NONE|0]“今宵伴君行……月夜观囃子……”\
+[s4a071|1]【沙罗】
+[NONE|0]“待君早日还……长夜无可待……”\
+[s4a072|1]【沙罗】
+[NONE|0]“我欲长睡之……为我阖上眼……”\
+[s4a073|1]【沙罗】
+[NONE|0]“我欲长睡之……母亲怀抱中……”\
+showTextbox
+[NONE|1]歌声结束。
+overlayImage "00000000","EV_SA06C",0,1
+showTextbox
+[NONE|1]沙罗掉下了眼泪。\
+showTextbox
+[NONE|1]现在不是跟她打招呼的时候。\
+[NONE|1]就这样……我准备离开。\
+hideTextbox
+specialEffect 0,1
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]忽然，眼前重叠了别的光景。\
+[NONE|1]少女坐在同一个位置哭泣着。\
+[NONE|1]太过担心，禁不出叫出声来……\
+[NONE|1]谁？　是谁？\
+[NONE|1]到底这是什么！\
+[NONE|1]到底我怎么了！\
+[s4a074|1]【沙罗】
+[NONE|0]“谁……？”\
+hideTextbox
+specialEffect 0,1
+bgload "EV_SA06C","6","2"
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]随着这个声音，这个光景消失了。\
+[NONE|1]一边隐瞒刚刚瞬间发生的事情，我一边回答着。\
+[NONE|1]【少年】
+[NONE|0]“是我，沙罗……”\
+[NONE|1]【少年】
+[NONE|0]“抱歉……因为我觉得不应该打扰你。”\
+bgload "BG10A1","0","2"
+playBGM "2","97"
+showTextbox
+[NONE|1]沙罗偷偷地擦掉眼泪……\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[s4a075|1]【沙罗】
+[NONE|0]“咦？　什么事啊？”\
+[NONE|1]一如往常的开朗语调。\
+[NONE|1]沙罗和我面对面坐着。\
+[NONE|1]【少年】
+[NONE|0]“这首歌……以前也唱过吧？”\
+[NONE|1]【少年】
+[NONE|0]“应该是二天前，在发电室前面吧？”\
+fgload 1,"SA08ADM","320",3
+showTextbox
+[s4a076|1]【沙罗】
+[NONE|0]“记忆力真好喔？”\
+fgload 1,"SA02ADM","320",3
+showTextbox
+[s4a077|1]【沙罗】
+[NONE|0]“要是连这种小事都记得，怎么会突然丧失记忆呢。”\
+[NONE|1]沙罗边说边笑。\
+[NONE|1]【少年】
+[NONE|0]“这首歌叫子守歌吧？”\
+fgload 1,"SA05ADM","320",3
+showTextbox
+[s4a078|1]【沙罗】
+[NONE|0]“嗯……听过吗？”\
+[NONE|1]我摇头。\
+[NONE|1]这是一首根本没听过的歌。\
+[s4a079|1]【沙罗】
+[NONE|0]“真的？　不知道吗？”\
+[NONE|1]我装出思考的样子。\
+[NONE|1]我知道……即使我想了，也想不出来。\
+fgload 1,"SA03ADM","320",3
+showTextbox
+[s4a080|1]【沙罗】
+[NONE|0]“是吗……这样啊……”\
+[NONE|1]沙罗寂寞地喃喃自语，视线落在左手中指上的坠子。\
+[NONE|1]【少年】
+[NONE|0]“啊……”\
+[NONE|1]【少年】
+[NONE|0]“对了，我有一件事想问你。”\
+fgload 1,"SA08ADM","320",3
+showTextbox
+[s4a081|1]【沙罗】
+[NONE|0]“？”\
+[NONE|1]我将刚刚发生，坠子中的男人影像消失的事情，告诉了
+[NONE|0]沙罗。\
+[NONE|1]【少年】
+[NONE|0]“昨天明明才看见的……”\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[s4a082|1]【沙罗】
+[NONE|0]“啊啊……这是因为这里是室内。”\
+[NONE|1]【少年】
+[NONE|0]“咦？　什么意思？”\
+[NONE|1]【少年】
+[NONE|0]“昨天看到的地方，不是也在ＬｅＭＵ？”\
+[s4a083|1]【沙罗】
+[NONE|0]“不对，那里不是室内。”\
+[NONE|1]【少年】
+[NONE|0]“？”\
+fgload 1,"SA05ADM","320",3
+showTextbox
+[s4a084|1]【沙罗】
+[NONE|0]“那里是宇宙空间对吧？”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+fgload 1,"SA02ADM","320",3
+showTextbox
+[s4a085|1]【沙罗】
+[NONE|0]“那是开玩笑的……”\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[s4a086|1]【沙罗】
+[NONE|0]“秘密揭晓啰……其实是这样的。”\
+[NONE|1]说着，沙罗从口袋拿出打火机。\
+[NONE|1]将打火机的照明靠近坠子。\
+[NONE|1]【少年】
+[NONE|0]“啊”\
+[NONE|1]昨天看到的男人模样又隐约地浮现出来了。\
+[NONE|1]比起昨天的影像，略为不鲜明。\
+[NONE|1]恐怕是因为这里的照明吧。\
+[NONE|1]那个鲸鱼房间几乎全黑，所以才能看到比现在更清晰的
+[NONE|0]影像，一定是这样。\
+[NONE|1]【少年】
+[NONE|0]“也就是说……没靠近火就看不到了？”\
+[NONE|1]我问着。\
+[s4a087|1]【沙罗】
+[NONE|0]“嗯……”\
+fgload 1,"SA05ADM","320",3
+showTextbox
+[s4a088|1]【沙罗】
+[NONE|0]“打火机的火焰、太阳的光芒……”\
+[NONE|1]【少年】
+[NONE|0]“太阳？”\
+fgload 1,"SA08ADM","320",3
+showTextbox
+[s4a089|1]【沙罗】
+[NONE|0]“是的，虽然不知道是怎样的构造，不过在萤光灯下就
+[NONE|0]看不到了，不可思议吧？”\
+hideTextbox
+removeFG "1","3"
+stopBGM
+showTextbox
+[NONE|1]原来如此，所以沙罗才随身携带打火机。\
+[NONE|1]只是为了看到这个影像……\
+[NONE|1]沙罗关上打火机。\
+[NONE|1]关了又点。\
+[NONE|1]点了又关、点了又关……\
+[NONE|1]沙罗出神地望着男友的影像。\
+hideTextbox
+playBGM "22","100"
+fgload 1,"SA17ADM","320",3
+showTextbox
+[s4a090|1]【沙罗】
+[NONE|0]“我……没有爸妈。”\
+[NONE|1]唐突地，沙罗说了这件事。\
+[s4a091|1]【沙罗】
+[NONE|0]“在我很小的时候去世了”\
+[s4a092|1]【沙罗】
+[NONE|0]“从有记忆以来，就是没有爸妈的……”\
+[s4a093|1]【沙罗】
+[NONE|0]“原本一直都这么理所当然地认为，所以我……”\
+[NONE|1]【少年】
+[NONE|0]“是吗……”\
+[NONE|1]我不知道该怎么回答。\
+[NONE|1]想不出恰当的字眼。\
+fgload 1,"SA03ADM","320",3
+showTextbox
+[s4a094|1]【沙罗】
+[NONE|0]“就把这个坠子当成唯一的信物”\
+[NONE|1]【少年】
+[NONE|0]“那么……那个男人……”\
+[s4a095|1]【沙罗】
+[NONE|0]“应该是爸爸吧”\
+[s4a096|1]【沙罗】
+[NONE|0]“虽然我不清楚，但我是这么认为的。”\
+[NONE|1]长长的沉默之后，我说了。\
+[NONE|1]【少年】
+[NONE|0]“我也是啊”\
+fgload 1,"SA06ADM","320",3
+showTextbox
+[s4a097|1]【沙罗】
+[NONE|0]“咦？”\
+[NONE|1]【少年】
+[NONE|0]“我没有记忆”\
+[NONE|1]【少年】
+[NONE|0]“想不起父亲或母亲的事情”\
+[NONE|1]【少年】
+[NONE|0]“就算在路上遇到了，也不见得认得出来。”\
+[NONE|1]【少年】
+[NONE|0]“就算能平安逃出去……”\
+[NONE|1]【少年】
+[NONE|0]“我也无家可归”\
+[NONE|1]【少年】
+[NONE|0]“所以……我也一样。”\
+[NONE|1]【少年】
+[NONE|0]“跟没有爸妈的意思是一样的。”\
+fgload 1,"SA03ADM","320",3
+showTextbox
+[NONE|1]【沙罗】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“对了，该走了。”\
+fgload 1,"SA08ADM","320",3
+showTextbox
+[s4a098|1]【沙罗】
+[NONE|0]“？”\
+[NONE|1]【少年】
+[NONE|0]“等一下要去帮武”\
+[NONE|1]【少年】
+[NONE|0]“发电机好像有点问题……”\
+[NONE|1]我站了起来。\
+[NONE|1]正准备踏出房间，我想到一件事情。\
+[NONE|1]【少年】
+[NONE|0]“不好意思，能再跟你借一次那个坠子跟打火机吗？”\
+hideTextbox
+fgload 1,"SA02ADM","320",3
+specialEffect 12,0
+stopBGM
+delay 120
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“痛痛痛，好痛啊……武。”\
+hideTextbox
+playBGM "1","100"
+bgload "BG09A1","6","2"
+fgload 1,"KB01ADM","320",0
+mov %V_ab, %V_VAR_c0_23
+
+clock "16","7"
+showTextbox
+[s4a099|1]【武】
+[NONE|0]“这么一点痛要忍耐啊，这才是男人。”\
+[NONE|1]露出故意捉弄的笑容，咚咚地敲打我裹着石膏的右手。\
+[NONE|1]压缩模型与特殊成形塑胶所做成的石膏，比想像中的还
+[NONE|0]要轻巧方便。\
+[NONE|1]在空的指示下，武替我装上的。\
+[NONE|1]空似乎还有别的事情要做，跟武留下指示后就离开了。\
+fgload 1,"KB02ADM","320",3
+showTextbox
+[s4a100|1]【武】
+[NONE|0]“哎呀……真厉害，你当时那个动作还真是戏剧性十足
+[NONE|0]。”\
+[NONE|1]【少年】
+[NONE|0]“吵死了，就是脚滑了啊，谁叫武要丢工具给我。”\
+fgload 1,"KB08ADM","320",3
+showTextbox
+[s4a101|1]【武】
+[NONE|0]“不可以说别人的坏话啊，我可没有叫你拿工具。”\
+[NONE|1]【少年】
+[NONE|0]“什么都没拿就跳下去的是武吧”\
+fgload 1,"KB01ADM","320",3
+showTextbox
+[s4a102|1]【武】
+[NONE|0]“反正，如果下次还要修理就会用到了啊，我本来就是
+[NONE|0]要把它放在那里的。”\
+[NONE|1]狡辩……\
+[NONE|1]【少年】
+[NONE|0]“啊啊……知道了啦，反正是我很笨……”\
+[NONE|1]我看着被压缩石膏包裹着的右腕。\
+[NONE|1]修理发电机的时候，我因为拿着太重的工具，一个重心
+[NONE|0]不稳，就从发电机上面摔了下来。\
+fgload 1,"KB02ADM","320",3
+showTextbox
+[s4a103|1]【武】
+[NONE|0]“哎呀……别这么沮丧，空说骨折得很漂亮，所以很快
+[NONE|0]就会好了。”\
+[NONE|1]【少年】
+[NONE|0]“说得好像跟你无关……”\
+fgload 1,"KB11ADM","320",3
+showTextbox
+[s4a104|1]【武】
+[NONE|0]“嗯……这个……”\
+[NONE|1]武将装了数种抗生剂、解热镇痛剂、营养剂的安瓶，装
+[NONE|0]在乍看之下像手枪的浸透注射器。\
+fgload 1,"KB08ADM","320",3
+showTextbox
+[s4a105|1]【武】
+[NONE|0]“来……手腕给我。”\
+[NONE|1]武拿着注射器压在我的左腕。\
+[NONE|1]──噗咻！\
+fgload 1,"KB01ADM","320",3
+showTextbox
+[s4a106|1]【武】
+[NONE|0]“好……这样就好了。”\
+[NONE|1]【少年】
+[NONE|0]“谢谢……武。”\
+[s4a107|1]【武】
+[NONE|0]“因为骨折的关系，可能会发烧，嗯……不过已经打针
+[NONE|0]了。”\
+showTextbox
+[s4a108|1]【武】
+[NONE|0]“不管怎样，药效也会让你想睡觉……嗯……就先安分
+[NONE|0]点吧。”\
+[NONE|1]【少年】
+[NONE|0]“嗯……”\
+showTextbox
+[s4a109|1]【武】
+[NONE|0]“那我也要走啰”\
+[NONE|1]【少年】
+[NONE|0]“啊……等等……武……”\
+fgload 1,"KB07ADM","320",3
+showTextbox
+[s4a110|1]【武】
+[NONE|0]“嗯？　什么？”\
+[NONE|1]【少年】
+[NONE|0]“那个……想要给你看个东西。”\
+[s4a111|1]【武】
+[NONE|0]“什么？”\
+[NONE|1]【少年】
+[NONE|0]“这个”\
+[NONE|1]我对着武，伸手拿出沙罗的坠子。\
+fgload 1,"KB05ADM","320",3
+showTextbox
+[s4a112|1]【武】
+[NONE|0]“什么啊……又是这个。”\
+[NONE|1]【少年】
+[NONE|0]“嗯……我想要你再看一次。”\
+[s4a113|1]【武】
+[NONE|0]“真麻烦”\
+[NONE|1]虽然这么说着，武还是接过坠子。\
+[NONE|1]这次武应该能看到了。\
+[NONE|1]然后，我准备要骗他说‘这就是沙罗的男朋友！’。\
+fgload 1,"KB01ADM","320",3
+showTextbox
+[s4a114|1]【武】
+[NONE|0]“呼嗯……”\
+[NONE|1]武看了坠子好一会。\
+[NONE|1]反过来看、弄斜着看。\
+[NONE|1]然后……\
+fgload 1,"KB07ADM","320",3
+showTextbox
+[s4a115|1]【武】
+[NONE|0]“什么啊，还是看不到啊……”\
+[NONE|1]【少年】
+[NONE|0]“咦……不可能……啊！”\
+[NONE|1]【少年】
+[NONE|0]“对了”\
+[NONE|1]我拿出打火机，靠近坠子点起火。\
+[NONE|1]让坠子映照着亮光。\
+[NONE|1]【少年】
+[NONE|0]“这样呢？”\
+fgload 1,"KB05ADM","320",3
+showTextbox
+[s4a116|1]【武】
+[NONE|0]“你在玩我喔？”\
+[NONE|1]【少年】
+[NONE|0]“咦？”\
+[s4a117|1]【武】
+[NONE|0]“为什么用打火机就看得到”\
+[NONE|1]【少年】
+[NONE|0]“因为……就是看得到啊……”\
+fgload 1,"KB06ADM","320",3
+showTextbox
+[s4a118|1]【武】
+[NONE|0]“啊？”\
+[NONE|1]【少年】
+[NONE|0]“看得很清楚！　这里有个男人的脸啊？”\
+fgload 1,"KB07ADM","320",3
+showTextbox
+[NONE|1]【武】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+fgload 1,"KB02ADM","320",3
+showTextbox
+[s4a119|1]【武】
+[NONE|0]“啊……真的真的。”\
+[s4a120|1]【武】
+[NONE|0]“看到了，这是个好帅的男生！”\
+[NONE|1]【少年】
+[NONE|0]“嗯……那就是沙罗的男朋友喔？”\
+[s4a121|1]【武】
+[NONE|0]“呵呵～这家伙真不错！”\
+fgload 1,"KB01ADM","320",3
+showTextbox
+[s4a122|1]【武】
+[NONE|0]“我说……是从什么时候开始跟沙罗交往的？”\
+[s4a123|1]【武】
+[NONE|0]“还是说……这是个映照未来的不可思议镜子？”\
+[NONE|1]【少年】
+[NONE|0]“啊？　你在说什么？”\
+fgload 1,"KB08ADM","320",3
+showTextbox
+[s4a124|1]【武】
+[NONE|0]“这个镜子里，除了我没有别人啊……”\
+[s4a125|1]【武】
+[NONE|0]“有的话，我就是沙罗的男朋友了。”\
+[NONE|1]【少年】
+[NONE|0]“笨蛋！　武怎么会是沙罗的男朋友！”\
+fgload 1,"KB04ADM","320",3
+showTextbox
+[s4a126|1]【武】
+[NONE|0]“是你说的啊”\
+[s4a127|1]【武】
+[NONE|0]“映照在这里的是沙罗的男朋友啊？”\
+[NONE|1]【少年】
+[NONE|0]“可是！　不是那个自己反射在镜面上的脸！　是说那
+[NONE|0]个浮出来的立体影像！”\
+[s4a128|1]【武】
+[NONE|0]“可是什么３Ｄ影像，这里都没有浮出来啊！笨蛋！”\
+[NONE|1]【少年】
+[NONE|0]“我就看到啦！”\
+fgload 1,"KB05ADM","320",3
+showTextbox
+[s4a129|1]【武】
+[NONE|0]“看到了？哪只眼睛看到啦！　你看，光光的～光光的
+[NONE|0]啊～”\
+[NONE|1]我越过武的肩膀，窥视坠子里面。\
+[NONE|1]【少年】
+[NONE|0]“你看！　就在这里啊！”\
+[NONE|1]我指着那个浮出的男人影像。\
+fgload 1,"KB08ADM","320",3
+showTextbox
+[s4a130|1]【武】
+[NONE|0]“那是我吧？”\
+[NONE|1]【少年】
+[NONE|0]“你在这里面！　镜面中的才是武！”\
+[NONE|1]【少年】
+[NONE|0]“可是不是那个！　是浮在这个手边的影像啊！”\
+fgload 1,"KB04ADM","320",3
+showTextbox
+[s4a131|1]【武】
+[NONE|0]“就跟你说没有啊……”\
+[s4a132|1]【武】
+[NONE|0]“──到底要说几次啊，蠢蛋！！！”\
+playSFX "SE00_03",0,95
+showTextbox
+[NONE|1]就在一来一往的争执中，优来了。\
+[s4a133|1]【优】
+[NONE|0]“在吵什么？　检查完了吗？”\
+removeFG "1","3"
+multifgload2 1,2,"00000000","YU07BDM","00000000","KB04ADM",128,512,3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“优，来管管这个笨蛋。”\
+[s4a134|1]【武】
+[NONE|0]“那是我的台词吧！”\
+[s4a135|1]【优】
+[NONE|0]“发生什么事了？”\
+[NONE|1]我让优看看那个坠子。\
+[NONE|1]当然……点着打火机。\
+fgload 2,"KB05ADM","512",3
+showTextbox
+[s4a136|1]【武】
+[NONE|0]“映在那里的，是沙罗未来的老公喔……”\
+[NONE|1]【少年】
+[NONE|0]“别那样说，不要随便乱传。”\
+fgload 1,"YU06BDM","128",3
+showTextbox
+[s4a137|1]【优】
+[NONE|0]“哟嘿～是喔？”\
+multifgload2 1,2,"00000000","YU02BDM","00000000","KB07ADM",128,512,3
+showTextbox
+[s4a138|1]【优】
+[NONE|0]“那么玛由可能要去做变性手术了，呵喔……”\
+[s4a139|1]【优】
+[NONE|0]“或者，是我去……”\
+fgload 1,"YU08BDM","128",3
+showTextbox
+[s4a140|1]【优】
+[NONE|0]“不要～呜……我才不要～嗯……”\
+[NONE|1]【少年】
+[NONE|0]“啊？”\
+fgload 1,"YU05BDM","128",3
+showTextbox
+[s4a141|1]【优】
+[NONE|0]“这个不过是镜子啊”\
+[s4a142|1]【优】
+[NONE|0]“不是影像吧？”\
+[NONE|1]【少年】
+[NONE|0]“就是影像！　有个男人的脸浮着啊！？”\
+fgload 2,"KB05ADM","512",3
+showTextbox
+[NONE|1]啊啊……我该怎么说才好啊……\
+[NONE|1]【少年】
+[NONE|0]“你看，就在这里啊！　这里！　这里！”\
+[NONE|1]这次我越过优的肩膀，指着坠子。\
+[NONE|1]【优】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+fgload 1,"YU03BDM","128",3
+showTextbox
+[s4a143|1]【优】
+[NONE|0]“没事吧，少年？　老毛病发作了？”\
+[NONE|1]【少年】
+[NONE|0]“真的？　真的……没看到？”\
+[s4a144|1]【优】
+[NONE|0]“嗯……”\
+fgload 2,"KB07ADM","512",3
+showTextbox
+[s4a145|1]【武】
+[NONE|0]“啊啊……”\
+[NONE|1]【少年】
+[NONE|0]“看不到这个男人？”\
+multifgload2 1,2,"00000000","YU17BDM","00000000","KB13ADM",128,512,3
+showTextbox
+[NONE|1]优与武互望。\
+[NONE|1]看不见……\
+[NONE|1]优与武看不见……\
+[NONE|1]可是，到底为什么呢……？\
+hideTextbox
+specialEffect 24,0
+stopBGM
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+delay 90
+mov %V_b3, 0
+
+goto *Lss5a
+

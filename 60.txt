@@ -1,0 +1,68 @@
+*Lt_ep
+*Lt_ep_00000016
+mov %V_b0, 0
+
+mov %V_b1, 0
+
+mov %V_b2, 0
+
+unknown46 1
+playBGM "22","100"
+overlayImage "00000000","kuro_bg",0,1
+delay 30
+mov %V_3a, 2
+
+unknown20 47
+specialEffect 3,1
+multiremoveFG2 "87","04","00","3"
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+unknown46 2
+delay 180
+bgload "EV_CO03D","0","0"
+mov %V_fa, 48
+
+hideTextbox
+mov %V_13, 1
+
+bgload "EV_CO03A","0","0"
+unknown20 44
+showTextbox
+[NONE|1]
+showTextbox
+[NONE|1]ＥｉｎｅＧｅｓｃｈｉｃｈｔｅｓｅｔ－
+[NONE|0]ｚｔａｕｆ\
+delay 180
+overlayImage "00000000","EV_CO11A",0,0
+showTextbox
+[NONE|1]　１Ｍａｉ，２０３４ｆｏｒｔ．\
+[NONE|1]（历史将在２０３４年５月１日继续）\
+delay 180
+overlayImage "00000000","EV_CO11B",0,0
+delay 180
+playSFX "SE10_29",0,100
+specialEffect 36,0
+mov %V_ac, 1
+
+unknown21 16
+showTextbox
+[NONE|1]
+hideTextbox
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+hideTextbox
+mov %V_13, 0
+
+delay 180
+delay 180
+stopSFX
+stopBGM
+mov %V_11, 1
+
+unknown37 "00000000","POST16"
+
+mov %V_tsuWS,1
+
+fin

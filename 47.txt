@@ -1,0 +1,1848 @@
+*Lt_3a
+*Lt_3a_00000042
+mov %V_b0, 5
+
+mov %V_b1, 3
+
+mov %V_b2, 3
+
+unknown46 1
+mov %V_fa, 15
+
+chapterCutin "00000000","cal_503"
+playBGM "2","100"
+bgload "BG17A1","0","2"
+clock "5","49"
+showTextbox
+[NONE|1]从打盹中醒来。\
+[NONE|1]坚硬冰冷的触感……\
+[NONE|1]我想起我趴在桌上打瞌睡的事情。\
+[NONE|1]而且，比起昨天睡得更充实。\
+[NONE|1]【武】
+[NONE|0]“呀，早安……”\
+fgload 1,"YU01ADM","320",3
+showTextbox
+[t3a000|1]【优】
+[NONE|0]“啊啊，早安……仓成。”\
+[NONE|1]优已经先起床了。\
+[NONE|1]【武】
+[NONE|0]“现在几点了？”\
+[t3a001|1]【优】
+[NONE|0]“５点５０分……”\
+[NONE|1]【武】
+[NONE|0]“你这么早就起来啦。”\
+fgload 1,"YU05ADM","320",3
+showTextbox
+[t3a002|1]【优】
+[NONE|0]“你在说什么……还不是因为你在打鼾……”\
+fgload 1,"YU13ADM","320",3
+showTextbox
+[NONE|1]说着，优伸着懒腰。\
+fgload 1,"YU08ADM","320",3
+showTextbox
+[t3a003|1]【优】
+[NONE|0]“……不过，一直精神紧绷也很累，趁能睡的时候睡觉
+[NONE|0]也对。”\
+fgload 1,"YU01ADM","320",3
+showTextbox
+[t3a004|1]【优】
+[NONE|0]“就是这种状况下……才更要好好睡觉。”\
+[t3a005|1]【优】
+[NONE|0]“要是发生万一，脑袋转不过来怎么办？”\
+[NONE|1]【武】
+[NONE|0]“什么啊……不是跟我昨天说的一样吗？”\
+fgload 1,"YU02ADM","320",3
+showTextbox
+[t3a006|1]【优】
+[NONE|0]“嗯……哎呀……”\
+[NONE|1]不清楚回答，优只是笑着。\
+[t3a007|1]【优】
+[NONE|0]“既然起床了，不去洗脸吗？”\
+[NONE|1]【武】
+[NONE|0]“啊啊，是啊……”\
+[NONE|1]【武】
+[NONE|0]“嗯……啊啊！　难道你又……！！”\
+[NONE|1]我摸着脸颊。\
+[t3a008|1]【优】
+[NONE|0]“没事，我什么都没写啦。”\
+removeFG "1","3"
+showTextbox
+[NONE|1]慢慢起身看着四周。\
+[NONE|1]可儿将几张椅子并列在一起做成床，睡在上面。\
+[NONE|1]她的枕边窝着ＰＩＰＩ。\
+[NONE|1]那个小家伙可能也睡着了吧。\
+[NONE|1]我站起来，走过可儿身边，打开门。\
+playSFX "SE00_01",0,100
+bgload "BG25B3","0","2"
+fgload 1,"KA02ADM","320",3
+showTextbox
+[t3a009|1]【少年】
+[NONE|0]“呀”\
+[NONE|1]【武】
+[NONE|0]“……早安，少年。”\
+fgload 1,"KA01ADM","320",3
+showTextbox
+[t3a010|1]【少年】
+[NONE|0]“武看起来不太舒服啊。”\
+[NONE|1]【武】
+[NONE|0]“没啦……只是还想睡。”\
+[t3a011|1]【少年】
+[NONE|0]“前天、昨天发生了好多事，太累了吗？？”\
+[NONE|1]【武】
+[NONE|0]“没事的，只是还没清醒，待会见……”\
+hideTextbox
+removeFG "1","3"
+delay 30
+playSFX "SE01_03",0,95
+showTextbox
+[NONE|1]往洗手间的方向走去。\
+[NONE|1]地上的积水，又浸湿了我好不容易才干的鞋子。\
+[NONE|1]沉重的袜子，紧紧黏贴在脚板的触感。\
+[NONE|1]虽然讨厌还是得穿着。\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“啊！　讨厌啊！！”\
+hideTextbox
+playSFX "SE02_02",0,100
+showTextbox
+[NONE|1]刹啪！！\
+[NONE|1]豪爽地从脚边捞起水，拍打着脸。\
+[NONE|1]【武】
+[NONE|0]“呜哇～好冷～……”\
+[NONE|1]发抖着，同时全身也醒了过来。\
+[NONE|1]爽快的早晨就从洗脸开始，我又重新认知了。\
+bgload "BG17A1","0","2"
+showTextbox
+[NONE|1]回到会议室，大家提到差不多该去吃饭了。\
+[NONE|1]【武】
+[NONE|0]“月海跟空不在，这样好吗？？”\
+fgload 1,"YU01ADM","320",3
+showTextbox
+[t3a012|1]【优】
+[NONE|0]“是呀……不过，等会应该就会出现了吧。”\
+[NONE|1]【武】
+[NONE|0]“嗯……那两个人是常常这样没错。”\
+removeFG "1","3"
+showTextbox
+[NONE|1]我决定把还在睡的可儿叫醒。\
+[NONE|1]【武】
+[NONE|0]“喔咿……起床啰，早上了。”\
+[NONE|1]轻轻摇着肩膀。\
+fgload 1,"CO08ADM","320",3
+showTextbox
+[t3a013|1]【可儿】
+[NONE|0]“呼呀……嗯嗯……”\
+[NONE|1]可儿搓揉着眼睛，起身坐着。\
+fgload 1,"CO05ADM","320",3
+showTextbox
+[t3a014|1]【可儿】
+[NONE|0]“啊，哥哥早安……”\
+[NONE|1]【武】
+[NONE|0]“……啊？　哥哥？”\
+[NONE|1]【武】
+[NONE|0]“啊，是喔……可儿有哥哥是吧，可是我不是你哥哥喔
+[NONE|0]……”\
+fgload 1,"CO07ADM","320",3
+showTextbox
+[t3a015|1]【可儿】
+[NONE|0]“不对……哥哥……”\
+[t3a016|1]【可儿】
+[NONE|0]“再不快点，上课要迟到了喔……”\
+[NONE|1]可儿还在半梦半醒中。\
+[NONE|1]【武】
+[NONE|0]“上课？　迟到？”\
+[NONE|1]【武】
+[NONE|0]“你在说什么呀？”\
+fgload 1,"CO01ADM","320",3
+showTextbox
+[t3a017|1]【可儿】
+[NONE|0]“就是这样规定的啊……”\
+[NONE|1]【武】
+[NONE|0]“那个……”\
+[NONE|1]【武】
+[NONE|0]“不要一直赖床，要去吃饭了，吃饭……”\
+fgload 1,"CO06ADM","320",3
+showTextbox
+[t3a018|1]【可儿】
+[NONE|0]“啊……ＯＫ，武咚……”\
+hideTextbox
+specialEffect 12,0
+removeFG "1","3"
+removeBG
+stopBGM
+mov %V_ab, %V_VAR_c0_16
+
+playBGM "18","100"
+bgload "BG07B1","0","2"
+clock "6","15"
+showTextbox
+[NONE|1]大家一起来到商店。\
+[NONE|1]【武】
+[NONE|0]“大家吃热狗好吗？”\
+multifgload2 1,2,"00000000","CO06ADM","00000000","YU06ADM",128,512,3
+showTextbox
+[t3a019|1]【可儿】
+[NONE|0]“热狗？”\
+[t3a020|1]【优】
+[NONE|0]“这里有热狗啊？”\
+[NONE|1]【武】
+[NONE|0]“冰箱里头还有一些，是我偷留一手的菜单啊。”\
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]今天也仍然由我担任厨师。\
+fgload 1,"YU05ADM","320",3
+showTextbox
+[t3a021|1]【优】
+[NONE|0]“喂～仓成，还没好啊～？”\
+fgload 1,"YU13ADM","320",3
+showTextbox
+[t3a022|1]【优】
+[NONE|0]“肚子怎么那么空啊～”\
+[t3a023|1]【优】
+[NONE|0]“饿得前胸贴后背啰～”\
+fgload 1,"YU05ADM","320",3
+showTextbox
+[t3a024|1]【优】
+[NONE|0]“再饿下去……就要变成２次元（平面）人啰。”\
+[t3a025|1]【优】
+[NONE|0]“空空荡荡的肚皮喔。”\
+[NONE|1]【武】
+[NONE|0]“吵死了，闭嘴啦。”\
+fgload 1,"YU08ADM","320",3
+showTextbox
+[t3a026|1]【优】
+[NONE|0]“啊哈哈……”\
+removeFG "1","3"
+showTextbox
+[NONE|1]仿造潜水艇模型的塔滋塔商店，我就在那里。\
+[NONE|1]正用平底锅，吱吱地煎着法兰克福香肠。\
+[NONE|1]因为是卖三明治，所以才把店头弄成像潜水艇的样子？
+[NONE|0]还是只是因为很时髦的关系？\
+[NONE|1]为什么我一直想这些没意义的事情啊………\
+[NONE|1]边想边做之间，四周已经飘散浓厚的香味。\
+[NONE|1]在涂了奶油略为温热过的面包上放着香肠。\
+[NONE|1]【武】
+[NONE|0]“来喔，想吃的人过来排队喔！”\
+fgload 1,"CO01ADM","320",3
+showTextbox
+[t3a027|1]【可儿】
+[NONE|0]“可儿排第一个。”\
+[NONE|1]【武】
+[NONE|0]“喔喔！？　请请……”\
+fgload 1,"CO02ADM","320",3
+showTextbox
+[t3a028|1]【可儿】
+[NONE|0]“Ｔｈａｎｋ　ｙｏｕ”\
+removeFG "1","3"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“蕃茄酱跟黄芥末免费附赠喔。”\
+fgload 1,"KA01ADM","320",3
+showTextbox
+[t3a029|1]【少年】
+[NONE|0]“啊，我也要一个……”\
+removeFG "1","3"
+multifgload2 1,2,"00000000","YU15ADM","00000000","KA11ADM",128,512,3
+showTextbox
+[t3a030|1]【优】
+[NONE|0]“拜托排队喔，下一个是我。”\
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]这大概就是这个场所一般的景象吧。\
+[NONE|1]虽然还找不出我们能够脱困的方法。\
+[NONE|1]可是必须停止悲观想法。\
+fgload 1,"KA01ADM","320",3
+showTextbox
+[t3a031|1]【少年】
+[NONE|0]“不知道为什么……你好像很乐观啊？”\
+[NONE|1]【武】
+[NONE|0]“咦？　我？　该说快乐吗……快乐吧！　看得出来吗
+[NONE|0]？”\
+[NONE|1]我擦拭着闷热流出的汗。\
+removeFG "1","3"
+multifgload2 1,2,"00000000","CO02ADM","00000000","KA11ADM",128,512,3
+showTextbox
+[t3a032|1]【可儿】
+[NONE|0]“嗯……有一种朝气蓬勃的感觉！”\
+[NONE|1]【武】
+[NONE|0]“该说那是什么感觉呢……就是有趣吧，经营小吃店！
+[NONE|0]”\
+fgload 2,"KA07ADM","512",3
+showTextbox
+[t3a033|1]【少年】
+[NONE|0]“经营……小吃店啊……”\
+[NONE|1]少年笑着。\
+fgload 2,"KA11ADM","512",3
+showTextbox
+[t3a034|1]【可儿】
+[NONE|0]“武咚真的好像摆路边摊的大哥哥喔。”\
+[NONE|1]【武】
+[NONE|0]“喔……谢谢光临，不收你的钱了。”\
+fgload 1,"CO01ADM","128",3
+showTextbox
+[t3a035|1]【可儿】
+[NONE|0]“难不成难不成，你的前世真的是卖热狗的啊。”\
+[NONE|1]【武】
+[NONE|0]“这位客人你真是会说话呀……”\
+removeFG "2","3"
+fgload 2,"YU12ADM","512",3
+showTextbox
+[t3a036|1]【优】
+[NONE|0]“不对，可儿……比起热狗先生……”\
+fgload 2,"YU05ADM","512",3
+showTextbox
+[t3a037|1]【优】
+[NONE|0]“……他更适合当三明治超人喔。”\
+[NONE|1]【武】
+[NONE|0]“优你啊……”\
+fgload 2,"YU08ADM","512",3
+showTextbox
+[t3a038|1]【优】
+[NONE|0]“啊哈哈……”\
+[NONE|1]【武】
+[NONE|0]“……哈哈哈”\
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]能够吃到热腾腾的热狗，岂只是一个棒字可以形容。\
+[NONE|1]只要一点小事，就能让我们觉得开心。\
+[NONE|1]就像现在我们正快乐地度过这短短的用餐时间。\
+hideTextbox
+stopBGM
+clock "6","38"
+showTextbox
+[NONE|1]在大家开怀地笑过之后……\
+hideTextbox
+playBGM "13","100"
+fgload 1,"KA06ADS","320",3
+showTextbox
+[t3a039|1]【少年】
+[NONE|0]“啊……！”\
+[NONE|1]少年忽然抬头看着天花板。\
+fgload 1,"KA14ADS","320",3
+showTextbox
+[t3a040|1]【少年】
+[NONE|0]“啊，那个……？？”\
+[NONE|1]像是在凝望什么东西，视线定在半空中目不转睛。\
+removeFG "1","3"
+fgload 1,"KA14ADM","320",3
+showTextbox
+[NONE|1]【武】
+[NONE|0]“喔咿……怎么了吗？”\
+[NONE|1]我唤了一声。\
+[NONE|1]然后随着少年的视线看向天花板。\
+[NONE|1]那里没有什么异状……\
+fgload 1,"KA13ADM","320",3
+showTextbox
+[t3a041|1]【少年】
+[NONE|0]“是什么呢……”\
+[t3a042|1]【少年】
+[NONE|0]“虽然我不知道那是什么，但是我看到了。”\
+[NONE|1]【武】
+[NONE|0]“看到了？　看到什么？”\
+[t3a043|1]【少年】
+[NONE|0]“呜呜……不是的，与其说是看到了……”\
+[t3a044|1]【少年】
+[NONE|0]“倒不如说有种不好的预感……在二楼的某个地方。”\
+[NONE|1]【武】
+[NONE|0]“你在说什么啊？”\
+[t3a045|1]【少年】
+[NONE|0]“嗯……再重新检查一次楼面会比较好──”\
+[NONE|1]因为少年看着半空中说着，我摇摇他的肩膀。\
+removeFG "1","3"
+fgload 1,"KA06ADL","320",3
+showTextbox
+[NONE|1]他忽然回过神来。\
+[NONE|1]【武】
+[NONE|0]“别太在意了，有事情的话，空会先警告我们的不是吗
+[NONE|0]？”\
+fgload 1,"KA03ADL","320",3
+showTextbox
+[t3a046|1]【少年】
+[NONE|0]“嗯……的确是这样没错，可是……”\
+[NONE|1]【武】
+[NONE|0]“看来你也太累了。”\
+removeFG "1","3"
+showTextbox
+[NONE|1]不知从哪里，月海忽然现身。\
+fgload 1,"TU01ADM","320",3
+showTextbox
+[t3a047|1]【月海】
+[NONE|0]“发生什么事了？”\
+[NONE|1]【武】
+[NONE|0]“没啊……大家都在吃热狗，来……也有你的。”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]月海沉默地接过去。\
+hideTextbox
+stopBGM
+removeFG "1","3"
+playBGM "3","100"
+playSFX "SE08_06",0,100
+showTextbox
+[NONE|1]打开包装纸的声音。\
+[NONE|1]我注意着她的举动。\
+[NONE|1]吞咽着口水等待着……\
+[NONE|1]月海将包装又放回商店的柜台上……\
+[NONE|1]然后，右手拿着番茄酱，左手拿着黄芥末的罐子，用力
+[NONE|0]捏着挤出一堆。\
+[NONE|1]【武】
+[NONE|0]“喔，喔咿……月海。”\
+fgload 1,"TU01ADM","320",3
+showTextbox
+[t3a048|1]【月海】
+[NONE|0]“什么？”\
+[NONE|1]热狗的一大半面都染成黄色。\
+[NONE|1]【武】
+[NONE|0]“加那么多黄芥末……会死人的……”\
+fgload 1,"TU11ADM","320",3
+showTextbox
+[t3a049|1]【月海】
+[NONE|0]“……是吗？”\
+[NONE|1]月海咬着热狗。\
+fgload 1,"TU13ADM","320",3
+showTextbox
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“对、对吧？　很辣？　麻了吧？”\
+fgload 1,"TU14ADM","320",3
+showTextbox
+[t3a050|1]【月海】
+[NONE|0]“没有啊”\
+[NONE|1]【武】
+[NONE|0]“没有觉得因为芥末加过头，而味道失败了？”\
+fgload 1,"TU13ADM","320",3
+showTextbox
+[t3a051|1]【月海】
+[NONE|0]“……没……感觉吧。”\
+[NONE|1]随后又沉默地吃着。\
+[NONE|1]可是我还是注意到了。\
+[NONE|1]我觉得她的眼眶泛着泪光。\
+[NONE|1]【武】
+[NONE|0]“别勉强自己了。”\
+fgload 1,"TU01ADM","320",3
+showTextbox
+[t3a052|1]【月海】
+[NONE|0]“没有勉强，已经吃光了……”\
+[NONE|1]【武】
+[NONE|0]“是吗……”@
+
+csel "今天早上去哪里了？", *L_pre_t_3a_0000067c,"还要再来一个吗？", *L_pre_t_3a_000006e1
+*L_pre_t_3a_0000067c
+ mov %V_b3, 0
+ goto *LchoiceId_1203_170
+
+*L_pre_t_3a_000006e1
+ mov %V_b3, 1
+ goto *LchoiceId_1203_170
+
+*LchoiceId_1203_170
+if %V_b3 == 0 goto *Lt_3a_0000067c
+
+if %V_b3 == 1 goto *Lt_3a_000006e1
+
+*Lt_3a_0000067c
+
+showTextbox
+[NONE|1]【武】
+[NONE|0]“对了，你今天早上去哪里了？”\
+fgload 1,"TU05ADM","320",3
+showTextbox
+[t3a053|1]【月海】
+[NONE|0]“……怎么了？　为什么要问这个？”\
+[NONE|1]【武】
+[NONE|0]“睡觉前，不是都还跟大家在一起吗？”\
+[NONE|1]【武】
+[NONE|0]“可是早上起床之后就没看到你……”\
+fgload 1,"TU08ADM","320",3
+showTextbox
+[t3a054|1]【月海】
+[NONE|0]“这个……”\
+[t3a055|1]【月海】
+[NONE|0]“跟你没关系吧。”\
+[NONE|1]【武】
+[NONE|0]“才不是没关系。”\
+[NONE|1]【武】
+[NONE|0]“我可是早餐负责人呀，我想知道你有没有吃过早餐啊
+[NONE|0]。”\
+fgload 1,"TU05ADM","320",3
+showTextbox
+[t3a056|1]【月海】
+[NONE|0]“已经吃过了，可以吧。”\
+[NONE|1]【武】
+[NONE|0]“咦？　啊啊……是这样没错啦。”\
+[NONE|1]【武】
+[NONE|0]“该说在意，还是担心……”\
+[NONE|1]【武】
+[NONE|0]“我只是在想‘月海她怎么了吗～’”\
+[NONE|1]【武】
+[NONE|0]“到底会去哪里，总是跑去哪里？”\
+[NONE|1]【武】
+[NONE|0]“我只是单纯想知道罢了。”\
+[NONE|1]【武】
+[NONE|0]“啊，对了……是不是想要一个人独处呀。”\
+fgload 1,"TU17ADM","320",3
+showTextbox
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]不变的是，她还是无视别人的问题。\
+[NONE|1]【武】
+[NONE|0]“嗯……不想回答也无所谓啦。”\
+goto *Lt_3a_00000736
+*Lt_3a_000006e1
+add %V_b7, 1
+
+showTextbox
+[NONE|1]【武】
+[NONE|0]“嗯……还要再来一个吗？　我再做。”\
+fgload 1,"TU17ADM","320",3
+showTextbox
+[t3a057|1]【月海】
+[NONE|0]“不用了”\
+[NONE|1]【武】
+[NONE|0]“因为刚刚月海吃的津津有味，好像应该让你吃饱一点
+[NONE|0]。”\
+[NONE|1]【武】
+[NONE|0]“而且刚刚那个番茄酱跟黄芥末弄得跟山一样高，我想
+[NONE|0]……应该吃不出原味吧？”\
+fgload 1,"TU05ADM","320",3
+showTextbox
+[t3a058|1]【月海】
+[NONE|0]“什么味道都可以。”\
+[NONE|1]【武】
+[NONE|0]“这样不好！”\
+[NONE|1]【武】
+[NONE|0]“这可是我的自信杰作！”\
+[NONE|1]【武】
+[NONE|0]“我希望你能觉得好吃！”\
+fgload 1,"TU15ADM","320",3
+showTextbox
+[t3a059|1]【月海】
+[NONE|0]“已经吃饱了，不必了……”\
+[t3a060|1]【月海】
+[NONE|0]“因为我吃饱了……”\
+[NONE|1]【武】
+[NONE|0]“……哼嗯”\
+[NONE|1]【武】
+[NONE|0]“那样的话……就算了。”\
+*Lt_3a_00000736
+
+hideTextbox
+stopBGM
+playSFX "SE06_04",0,100
+mov %V_4f, 51
+
+mov %V_3b, 1
+
+mov %V_3c, %V_VAR_cb_0_6
+
+mov %V_3d, 7
+
+mov %V_3e, 2
+
+mov %V_3f, %V_VAR_c6_0_6
+
+mov %V_40, 4
+
+unknown20 12
+showTextbox
+[NONE|1]冬嗡嗡嗡！！\
+fgload 1,"TU06ADM","320",3
+showTextbox
+[NONE|1]突如其来，低沉的金属音响起。\
+[NONE|1]像是被闷着的厚沉响声。\
+hideTextbox
+unknown21 11
+playBGM "4","100"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“怎、怎么了！？”\
+[t3a061|1]【月海】
+[NONE|0]“有点……在晃动……”\
+[NONE|1]月海环顾四周，像是在找什么。\
+[NONE|1]在不远处歇息的少年与可儿，也往这里走来。\
+removeFG "1","3"
+multifgload3 "00000000","CO06ADS","00000000","KA08ADS","00000000","TU03ADS",128,320,512,3
+showTextbox
+[NONE|1]【武】
+[NONE|0]“嗯……少年，刚刚那个是？”\
+[t3a062|1]【少年】
+[NONE|0]“我也不知道……”\
+[NONE|1]【武】
+[NONE|0]“难道跟刚刚你的‘不好预感’有什么关系？”\
+fgload 2,"KA03ADS","320",3
+showTextbox
+[NONE|1]少年摇着头。\
+[t3a063|1]【少年】
+[NONE|0]“不知道，问空就知道了吧……”\
+[t3a064|1]【空】
+[NONE|0]“叫我吗？”\
+multiremoveFG2 "87","04","00","3"
+fgload 1,"SO01ADM","320",3
+showTextbox
+[NONE|1]忽然空从半空中出现身影，从我们眼前落下。\
+[t3a065|1]【可儿】
+[NONE|0]“啊，空！”\
+[NONE|1]【武】
+[NONE|0]“喔喔……空刚刚去哪里了啊？”\
+fgload 1,"SO03ADM","320",3
+showTextbox
+[t3a066|1]【空】
+[NONE|0]“不好意思，睡过头了。”\
+[NONE|1]空有些不好意思地支吾着。\
+[NONE|1]【武】
+[NONE|0]“睡过头？　可是你……”\
+[NONE|1]【武】
+[NONE|0]“……算了，先不管这个了。”\
+[t3a067|1]【少年】
+[NONE|0]“嗯……刚刚发生什么事了？　有个奇怪的声音。”\
+fgload 1,"SO10ADM","320",3
+showTextbox
+[t3a068|1]【空】
+[NONE|0]“支撑楼层的部分转轴发生了扭曲。”\
+[t3a069|1]【少年】
+[NONE|0]“可是昨天没有找到任何征兆……”\
+[t3a070|1]【空】
+[NONE|0]“是的，没有事先计算到这点，应该是被海流的乱流所
+[NONE|0]影响。”\
+[NONE|1]【武】
+[NONE|0]“有多严重？”\
+fgload 1,"SO05ADM","320",3
+showTextbox
+[t3a071|1]【空】
+[NONE|0]“我想应该在误差的范围内……嗯……请等一下。”\
+fgload 1,"SO10ADM","320",3
+showTextbox
+[t3a072|1]【空】
+[NONE|0]“索非亚休德克的仓库里，压力控制用的管线发生了异
+[NONE|0]状。”\
+[NONE|1]【武】
+[NONE|0]“压力控制用的管线？”\
+[t3a073|1]【空】
+[NONE|0]“被包覆在ＬｅＭＵ的多重隔墙里，用来调整内部压力
+[NONE|0]的管子。”\
+fgload 1,"SO03ADM","320",3
+showTextbox
+[t3a074|1]【空】
+[NONE|0]“如果有破损的话，以我的力量是无法修复的。”\
+[t3a075|1]【空】
+[NONE|0]“因为异状轻微，应该是不要紧……不过……还是去确
+[NONE|0]认仓库状况会比较好，能够麻烦你们吗？”\
+[NONE|1]【武】
+[NONE|0]“啊，交给我吧。”\
+[NONE|1]我马上点头。\
+removeFG "1","3"
+multifgload2 1,2,"00000000","SO17ADM","00000000","TU01ADM",128,512,3
+showTextbox
+[t3a076|1]【月海】
+[NONE|0]“我也一起去。”\
+[NONE|1]令人意外地，月海竟然主动报名。\
+[NONE|1]【武】
+[NONE|0]“月海？　可以吗？”\
+[t3a077|1]【月海】
+[NONE|0]“要修理的话，会需要工具之类的吧？　我知道很多修
+[NONE|0]理技巧。”\
+[NONE|1]【武】
+[NONE|0]“是吗……我知道了，麻烦你了。”\
+multiremoveFG2 "83","04","00","3"
+multiremoveFG3 "2","0","1"
+multifgload3 "00000000","CO15ADS","00000000","SO11ADS","00000000","KA11ADS",128,320,512,3
+showTextbox
+[t3a078|1]【可儿】
+[NONE|0]“可儿也去帮忙～”\
+[pipi_00|1]【ＰＩＰＩ】
+[NONE|0]“汪”\
+[NONE|1]【武】
+[NONE|0]“ＯＫ，那沙罗也一起来吧……咦？优去哪里了？”\
+[NONE|1]放眼望去，优不在这里。\
+fgload 4,"KA08ADS","512",3
+showTextbox
+[t3a079|1]【少年】
+[NONE|0]“刚刚摇晃的时候，她去控制室进行确认了。”\
+fgload 2,"SO01ADS","320",3
+showTextbox
+[t3a080|1]【空】
+[NONE|0]“那就刚好跟我擦身而过了。”\
+[t3a081|1]【少年】
+[NONE|0]“我去通知她，武你们要上楼了。”\
+[NONE|1]【武】
+[NONE|0]“好，那么少年……交给你了，也帮我们从控制室观察
+[NONE|0]情况，看是不是有疏忽了……”\
+fgload 2,"SO15ADS","320",3
+showTextbox
+[t3a082|1]【空】
+[NONE|0]“如果有什么事情，请用雷米呼叫我。”\
+[t3a083|1]【少年】
+[NONE|0]“知道了，我走了！！”\
+hideTextbox
+playSFX "SE01_00",0,95
+removeFG "4","3"
+showTextbox
+[NONE|1]少年踏着水花奔驰在通道上。\
+multiremoveFG2 "83","04","00","3"
+multiremoveFG3 "0","1","2"
+bgload "BG29A1","0","2"
+clock "6","57"
+playSFX "SE01_07",0,95
+showTextbox
+[NONE|1]快步爬上紧急阶梯。\
+[NONE|1]虽然说不用太紧张，但还是不敢大意。\
+[NONE|1]月海扛着沉重的工具箱，静静地往上爬。\
+[NONE|1]可儿跟ＰＩＰＩ跟在后头。\
+[NONE|1]【武】
+[NONE|0]“对了，空……”\
+[NONE|1]我询问在身边滑行移动的空。\
+fgload 1,"SO01ADL","320",3
+showTextbox
+[t3a084|1]【空】
+[NONE|0]“是的，仓成……什么事？”\
+[NONE|1]【武】
+[NONE|0]“刚刚你说你‘睡过头’了……？”\
+fgload 1,"SO08ADL","320",3
+showTextbox
+[t3a085|1]【空】
+[NONE|0]“啊啊，对不起……”\
+[NONE|1]空脸红地难以启齿。\
+[t3a086|1]【空】
+[NONE|0]“其实今天早上，放置我的资料库的伺服器，自动执行
+[NONE|0]了定期检查……”\
+fgload 1,"SO09ADL","320",3
+showTextbox
+[t3a087|1]【空】
+[NONE|0]“那个复原处理似乎相当繁琐，我轻忽了事前的检查，
+[NONE|0]真是不好意思……”\
+[NONE|1]【武】
+[NONE|0]“呼嗯……这样啊。”\
+[NONE|1]【武】
+[NONE|0]“……哈哈哈哈”\
+[NONE|1]我不知为何笑了。\
+fgload 1,"SO06ADL","320",3
+showTextbox
+[t3a088|1]【空】
+[NONE|0]“啊，那个……嗯呜……我有什么奇怪吗？”\
+[NONE|1]空慌张了。\
+[NONE|1]【武】
+[NONE|0]“不是啦，只是觉得原来空也会这样睡过头啊，觉得很
+[NONE|0]有趣。”\
+fgload 1,"SO03ADL","320",3
+showTextbox
+[t3a089|1]【空】
+[NONE|0]“啊……有趣是吗……”\
+[NONE|1]【武】
+[NONE|0]“该怎么说？　……很可爱啊。”\
+fgload 1,"SO06ADL","320",3
+showTextbox
+[t3a090|1]【空】
+[NONE|0]“啊，‘可爱’……是吗！？”\
+[NONE|1]【武】
+[NONE|0]“嗯”\
+[t3a091|1]【空】
+[NONE|0]“那个……睡过头是可爱的？？”\
+[t3a092|1]【空】
+[NONE|0]“无法理解……”\
+[NONE|1]空瞪大了眼睛。\
+[NONE|1]也许这是她资料库中语法不顺的词汇语法吧。\
+fgload 1,"SO03ADL","320",3
+showTextbox
+[t3a093|1]【空】
+[NONE|0]“我为大家添了那么多麻烦……”\
+[NONE|1]【武】
+[NONE|0]“可是大家却不生气，也完全不在意。”\
+[NONE|1]【武】
+[NONE|0]“因为我们知道……空真的有在为大家努力啊。”\
+fgload 1,"SO08ADL","320",3
+showTextbox
+[t3a094|1]【空】
+[NONE|0]“啊，是的，谢谢……”\
+[NONE|1]空虽然感到有些困扰，还是很开心的样子。\
+[NONE|1]这实在也很有趣。\
+[t3a095|1]【空】
+[NONE|0]“是喔……可爱……是吗……？”\
+[NONE|1]第一次的反应。\
+[NONE|1]这样的动作，能不叫‘可爱’吗。\
+hideTextbox
+specialEffect 12,0
+removeFG "1","3"
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+bgload "BG26A3R","0","2"
+showTextbox
+[NONE|1]抵达了索非亚休德克。\
+[NONE|1]楼层中看不出任何异状，可是却发现了不知从何传来的
+[NONE|0]细微咻咻声。\
+[NONE|1]我们往那个声音的方向前进。\
+multiremoveFG3 "1","0","2"
+multifgload3 "00000000","SO03ADS","00000000","CO11ADS","00000000","TU11ADS",128,320,512,3
+showTextbox
+[NONE|1]【武】
+[NONE|0]“不过，明明昨天什么事都没有发生啊……”\
+[NONE|1]【武】
+[NONE|0]“突然发生了异状，你觉得应该是为什么？”\
+[t3a096|1]【空】
+[NONE|0]“是啊，的确跟预期的不一样……”\
+fgload 2,"CO06ADS","320",3
+showTextbox
+[t3a097|1]【可儿】
+[NONE|0]“是不是因为大家突然跳起来？”\
+[NONE|1]可儿不经意的说。\
+fgload 1,"SO15ADS","128",3
+showTextbox
+[NONE|1]【武】
+[NONE|0]“咦？”\
+fgload 2,"CO01ADS","320",3
+showTextbox
+[t3a098|1]【可儿】
+[NONE|0]“嗯……就是大家玩得很疯狂……”\
+[t3a099|1]【可儿】
+[NONE|0]“所以ＬｅＭＵ才会倾斜的？”\
+[NONE|1]【武】
+[NONE|0]“怎、怎么可能……”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+multifgload2 2,4,"00000000","CO15ADS","00000000","TU10ADS",320,512,3
+showTextbox
+[t3a100|1]【月海】
+[NONE|0]“呵呵……或许吧。”\
+[NONE|1]月海笑了。\
+fgload 4,"TU12ADS","512",3
+showTextbox
+[t3a101|1]【月海】
+[NONE|0]“可是，只要修理就会没事了。”\
+[t3a102|1]【可儿】
+[NONE|0]“嗯……说得也是，月海，对吗？”\
+[t3a103|1]【月海】
+[NONE|0]“嗯嗯……别担心啊，可儿……”\
+fgload 2,"CO02ADS","320",3
+showTextbox
+[t3a104|1]【可儿】
+[NONE|0]“太好啦－－－太好啦－－”\
+[t3a105|1]【可儿】
+[NONE|0]“哔哔唧哔……噗噗咕噗……”\
+[pipi_04|1]【ＰＩＰＩ】
+[NONE|0]“汪汪！”\
+hideTextbox
+specialEffect 6,0
+multiremoveFG2 "87","04","00","3"
+multiremoveFG3 "0","1","2"
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+bgload "MAP2F_A1","0","3"
+mov %V_45, 0
+
+mov %V_46, 10
+
+unknown20 48
+delay 180
+unknown21 15
+overlayImage "00000000","MAP2F_A1",0,3
+removeBG
+playSFX "SE09_02L",0,90
+bgload "BG25A3","0","2"
+showTextbox
+[NONE|1]我们站在咻咻声来源的房间前面。\
+[NONE|1]【武】
+[NONE|0]“那个声音应该是从仓库传来的。”\
+fgload 1,"SO01ADM","320",3
+showTextbox
+[t3a106|1]【空】
+[NONE|0]“先扫描仓库内。”\
+removeFG "1","3"
+showTextbox
+[NONE|1]空说着，消失踪影。\
+[NONE|1]【武】
+[NONE|0]“一打开，会不会就蒸气大爆发啊？”\
+[NONE|1]我问着月海，月海则是凝视着门。\
+fgload 1,"TU18ADM","320",3
+showTextbox
+[t3a107|1]【月海】
+[NONE|0]“这个……”\
+fgload 1,"TU15ADM","320",3
+showTextbox
+[t3a108|1]【月海】
+[NONE|0]“应该没关系？”\
+[NONE|1]【武】
+[NONE|0]“你知道？　难道……”\
+fgload 1,"TU17ADM","320",3
+showTextbox
+[t3a109|1]【月海】
+[NONE|0]“我只是随口说说而已。”\
+removeFG "1","3"
+showTextbox
+[NONE|1]空从门口的地方忽地现出身影。\
+multifgload2 1,2,"00000000","TU15ADM","00000000","SO10ADM",128,512,3
+showTextbox
+[t3a110|1]【空】
+[NONE|0]“确认过了”\
+[t3a111|1]【空】
+[NONE|0]“气压正常、没有有毒气体扩散，室内气温、湿度正在
+[NONE|0]缓缓上升中。”\
+[t3a112|1]【空】
+[NONE|0]“部分管子破损、有些漏水，水深最深处约为１０公分
+[NONE|0]左右。”\
+fgload 1,"TU08ADM","128",3
+showTextbox
+[t3a113|1]【月海】
+[NONE|0]“如果是这样的话，就不严重了……”\
+fgload 2,"SO11ADM","512",3
+showTextbox
+[t3a114|1]【空】
+[NONE|0]“嗯……是的……”\
+[NONE|1]【武】
+[NONE|0]“进去吧，修理好应该就没问题了吧？”\
+fgload 2,"SO01ADM","512",3
+showTextbox
+[t3a115|1]【空】
+[NONE|0]“是的，拜托了……”\
+hideTextbox
+specialEffect 0,0
+playSFX "SE09_02L",0,95
+bgload "BG13B1","0","2"
+mov %V_fa, 16
+
+unknown20 19
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]打开门。\
+[NONE|1]看到发出咻咻声的墙壁。\
+[NONE|1]压力控制用的管线产生些许龟裂，喷出的水像雾一样飞
+[NONE|0]舞着。\
+[NONE|1]只有这个程度的话，应该不用担心。\
+[NONE|1]应该能马上修好。\
+playSFX "SE10_22",0,95
+showTextbox
+[NONE|1]月海打开工具箱，开始拿出几个器具。\
+fgload 1,"TU01ADM","320",3
+showTextbox
+[NONE|1]【武】
+[NONE|0]“该怎么做？”\
+[t3a116|1]【月海】
+[NONE|0]“管线稍微扭曲了……要用工具把它栓回来，可以帮我
+[NONE|0]扶着管子吗？”\
+[NONE|1]【武】
+[NONE|0]“啊啊，了解！”\
+removeFG "1","3"
+multifgload2 1,2,"00000000","TU15ADM","00000000","CO11ADM",128,512,3
+showTextbox
+[t3a117|1]【可儿】
+[NONE|0]“可儿呢？”\
+[t3a118|1]【月海】
+[NONE|0]“那头……有个连接这个管线的控制阀，知道吗？　请
+[NONE|0]你帮我放松它。”\
+fgload 2,"CO12ADM","512",3
+showTextbox
+[t3a119|1]【可儿】
+[NONE|0]“好的，了解！”\
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]大家开始作业。\
+playSFX "SE10_20",0,95
+showTextbox
+[NONE|1]开开关关好几个管线的控制阀、安装管子、熔接填充缺
+[NONE|0]口……\
+playSFX "SE09_02L",0,90
+showTextbox
+[NONE|1]【武】
+[NONE|0]“你做得很顺手。”\
+fgload 1,"TU01ADS","320",3
+showTextbox
+[t3a120|1]【月海】
+[NONE|0]“什么？”\
+[NONE|1]【武】
+[NONE|0]“熔接啊……你在哪里学的？”\
+[t3a121|1]【月海】
+[NONE|0]“想知道？”\
+[NONE|1]【武】
+[NONE|0]“呀，这个……”\
+fgload 1,"TU08ADS","320",3
+showTextbox
+[t3a122|1]【月海】
+[NONE|0]“尽是问些没意义的话，这就是你的坏习惯。”\
+removeFG "1","3"
+showTextbox
+[NONE|1]不能再多问了。\
+[NONE|1]空静静地在一旁看着我们。\
+playSFX "SE03_01",0,95
+showTextbox
+[NONE|1]终于，房间角落的对讲机响了。\
+playSFX "SE09_02L",0,90
+showTextbox
+[NONE|1]【武】
+[NONE|0]“咦？　什么人呼叫？”\
+fgload 1,"SO03ADM","320",3
+showTextbox
+[t3a123|1]【空】
+[NONE|0]“不好意思，各位……是田中在呼叫我，我必须要过去
+[NONE|0]一趟──”\
+[NONE|1]【武】
+[NONE|0]“啊，去吧……这里应该没事了。”\
+fgload 1,"SO01ADM","320",3
+showTextbox
+[t3a124|1]【空】
+[NONE|0]“好的，那么就麻烦你们了。”\
+removeFG "1","3"
+fgload 1,"SO01ADS","320",3
+showTextbox
+[NONE|1]空靠近对讲机，像是被吸进话筒一样地消失踪影。\
+removeFG "1","3"
+showTextbox
+[NONE|1]虽然知道空会瞬间移动……还是觉得那是个奇妙的景象
+[NONE|0]。\
+fgload 1,"TU08ADM","320",3
+showTextbox
+[t3a125|1]【月海】
+[NONE|0]“武？　别发呆啊……麻烦下一个管线。”\
+[NONE|1]【武】
+[NONE|0]“咦？　啊啊，知道了……”\
+removeFG "1","3"
+showTextbox
+[t3a126|1]【月海】
+[NONE|0]“首先，是蓝色的控制阀──”\
+[NONE|1]脚边的水仍未减少，排水帮浦虽然在运转，也许是排水
+[NONE|0]的管线坏掉了。\
+[t3a127|1]【月海】
+[NONE|0]“然后，再扭转红色的控制阀──”\
+[NONE|1]虽然已经修好几个管线，咻咻的蒸气声仍然不停止。\
+[t3a128|1]【月海】
+[NONE|0]“然后可儿你先等一下。”\
+[t3a129|1]【可儿】
+[NONE|0]“嗯……准备ＯＫ了。”\
+fgload 1,"TU08ADM","320",3
+showTextbox
+[t3a130|1]【月海】
+[NONE|0]“武，按照我刚刚说的顺序转控制阀。”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+fgload 1,"TU01ADM","320",3
+showTextbox
+[t3a131|1]【月海】
+[NONE|0]“喂，武……有在听吗？”\
+[NONE|1]【武】
+[NONE|0]“咦？　嗯……我知道了，抱歉抱歉，蓝色、红色的顺
+[NONE|0]序是吧？”\
+[t3a132|1]【月海】
+[NONE|0]“是的，松开……然后关闭。”\
+removeFG "1","3"
+showTextbox
+[NONE|1]我握着眼前的蓝色控制阀。\
+[NONE|1]松开它……\
+[NONE|1]（咦？　应该转哪个方向啊……？）@
+
+csel "顺时针转", *L_pre_t_3a_00000f5c,"逆时针转", *L_pre_t_3a_00000f9f
+*L_pre_t_3a_00000f5c
+ mov %V_b3, 0
+ goto *LchoiceId_1203_172
+
+*L_pre_t_3a_00000f9f
+ mov %V_b3, 1
+ goto *LchoiceId_1203_172
+
+*LchoiceId_1203_172
+if %V_b3 == 0 goto *Lt_3a_00000f5c
+
+if %V_b3 == 1 goto *Lt_3a_00000f9f
+
+*Lt_3a_00000f5c
+mov %V_eb, 1
+
+showTextbox
+[NONE|1]顺时针转就可以了吧……\
+playSFX "SE10_16",0,95
+showTextbox
+[NONE|1]我用力转着蓝色控制阀。\
+hideTextbox
+playSFX "SE09_02L",0,100
+showTextbox
+[NONE|1]咻咻声越来越大。\
+goto *Lt_3a_00000fde
+*Lt_3a_00000f9f
+add %V_b7, 1
+
+showTextbox
+[NONE|1]逆时针转就对了吧……\
+playSFX "SE10_16",0,95
+showTextbox
+[NONE|1]我用力转着蓝色控制阀。\
+hideTextbox
+playSFX "SE09_02L",0,90
+showTextbox
+[NONE|1]咻咻声越来越小。\
+*Lt_3a_00000fde
+
+showTextbox
+[NONE|1]下一个是要关红色控制阀……\
+[NONE|1]就在旁边。@
+
+csel "顺时针转", *L_pre_t_3a_00001006,"逆时针转", *L_pre_t_3a_00001048
+*L_pre_t_3a_00001006
+ mov %V_b3, 0
+ goto *LchoiceId_1203_174
+
+*L_pre_t_3a_00001048
+ mov %V_b3, 1
+ goto *LchoiceId_1203_174
+
+*LchoiceId_1203_174
+if %V_b3 == 0 goto *Lt_3a_00001006
+
+if %V_b3 == 1 goto *Lt_3a_00001048
+
+*Lt_3a_00001006
+add %V_b7, 1
+
+showTextbox
+[NONE|1]顺时针转就对了吧……\
+playSFX "SE10_16",0,95
+showTextbox
+[NONE|1]我转着红色控制阀。\
+hideTextbox
+playSFX "SE02_00",0,100
+showTextbox
+[NONE|1]管线上喷出的水雾气越来越小。\
+goto *Lt_3a_00001086
+*Lt_3a_00001048
+mov %V_eb, 1
+
+showTextbox
+[NONE|1]逆时针转就对了吧……\
+playSFX "SE10_16",0,95
+showTextbox
+[NONE|1]我转着红色控制阀。\
+hideTextbox
+playSFX "SE02_00",0,100
+showTextbox
+[NONE|1]管线上喷出的水雾气越来越小。\
+*Lt_3a_00001086
+
+showTextbox
+[NONE|1]好，这样应该就可以了。\
+[NONE|1]【武】
+[NONE|0]“ＯＫ！”\
+[t3a133|1]【月海】
+[NONE|0]“可儿，先等一下。”\
+[t3a134|1]【可儿】
+[NONE|0]“嗯”\
+playSFX "SE10_21",0,100
+showTextbox
+[NONE|1]月海用左手遮在眼前，用右手操作着喷嘴。\
+[NONE|1]管线的缺口慢慢愈合。\
+hideTextbox
+stopSFX
+if  %V_eb == 0     goto *Lt_3a_00001176
+
+scriptLocationId 183
+showTextbox
+[t3a135|1]【月海】
+[NONE|0]“武，压着那里的管线，别让它垂掉下来。”\
+[NONE|1]月海边焊接边说着。\
+[NONE|1]【武】
+[NONE|0]“知道了”\
+[NONE|1]我伸手去扶刚刚关起控制阀的管线。\
+hideTextbox
+playSFX "SE02_13",0,100
+showTextbox
+[NONE|1]【武】
+[NONE|0]“好烫！”\
+[NONE|1]一感受到管线的高温，我手反射性地收回。\
+fgload 1,"TU06ADS","320",3
+showTextbox
+[t3a136|1]【月海】
+[NONE|0]“咦？　应该不会啊……控制阀关了吗？”\
+[NONE|1]【武】
+[NONE|0]“啊，关了啊……”\
+fgload 1,"TU03ADS","320",3
+showTextbox
+[t3a137|1]【月海】
+[NONE|0]“真奇怪……”\
+[NONE|1]【武】
+[NONE|0]“总之一定要扶好管线，找个什么东西覆盖一下……”\
+removeFG "1","3"
+showTextbox
+[NONE|1]我看了四周。\
+[NONE|1]然后，一瞬间视线离开了管线。\
+hideTextbox
+playSFX "SE07_09",0,100
+showTextbox
+[NONE|1]啪唧啪唧……啪唧！！\
+[NONE|1]【武】
+[NONE|0]“咦？”\
+[NONE|1]回头往声音方向看去，铁制的管线膨胀欲裂。\
+hideTextbox
+playSFX "SE07_10",0,100
+showTextbox
+[NONE|1]碰咻！！\
+[NONE|1]金属扣环弹出，朝我脸部飞来。\
+[NONE|1]我毫不犹豫地赶紧闪身。\
+[NONE|1]弹出的金属块飞落在地上。\
+[NONE|1]【武】
+[NONE|0]“真危险……啊，唷喔喔！？”\
+hideTextbox
+playSFX "SE07_10",0,95
+showTextbox
+[NONE|1]啪咻！！\
+hideTextbox
+playSFX "SE07_10",0,100
+showTextbox
+[NONE|1]碰咻！！\
+[NONE|1]紧接着又好几个管线扭曲、爆裂。\
+[NONE|1]【武】
+[NONE|0]“呜哇！！”\
+[NONE|1]我慌张地逃离那里。\
+[NONE|1]可是，我转身闪躲的方向那端，却堆积着成堆的旧货柜
+[NONE|0]跟废弃材料。\
+goto *Lt_3a_0000122b
+*Lt_3a_00001176
+
+fgload 1,"TU08ADM","320",3
+showTextbox
+[t3a138|1]【月海】
+[NONE|0]“武，一把这里弄好，马上把那个控制阀复原。”\
+[NONE|1]【武】
+[NONE|0]“啊，了解……”\
+[NONE|1]月海焊接完毕。\
+fgload 1,"TU04ADM","320",3
+showTextbox
+[t3a139|1]【月海】
+[NONE|0]“控制阀！　快！”\
+[NONE|1]【武】
+[NONE|0]“知道了！”\
+hideTextbox
+removeFG "1","3"
+playSFX "SE10_16",0,100
+showTextbox
+[NONE|1]迅速地将控制阀逆向回转。\
+[NONE|1]可以感触到水蒸气正流过。\
+[t3a140|1]【月海】
+[NONE|0]“可儿，那个管线可以了，麻烦下一个。”\
+[t3a141|1]【可儿】
+[NONE|0]“ＯＫ，哪里？”\
+[t3a142|1]【月海】
+[NONE|0]“这个……等一下。”\
+[NONE|1]脚边的水没有减少，还是卷着漩涡流动着。\
+[NONE|1]墙壁上的冷气机也进水，咳噜咳噜地吃着水。\
+playSFX "SE07_03",0,90
+showTextbox
+[NONE|1]而且，冷气机内部似乎已经短路了。\
+[NONE|1]青白色的闪光映入眼帘。\
+[NONE|1]虽然没有触电……\
+[NONE|1]我却开始害怕了。\
+hideTextbox
+specialEffect 1,1
+playSFX "SE07_02",0,100
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]啪兹！！\
+[NONE|1]【武】
+[NONE|0]“！？”\
+[NONE|1]冷气机发出令人厌恶的声音。\
+hideTextbox
+playSFX "SE02_08",0,100
+showTextbox
+[NONE|1]然后出风口开始溢出大量的泥水。\
+[NONE|1]脚边开始感到黏腻。\
+[t3a143|1]【月海】
+[NONE|0]“排水逆流了，小心。”\
+hideTextbox
+showTextbox
+[NONE|1]【武】
+[NONE|0]“呜哇！！”\
+[NONE|1]因为浊泥污水黏脚，我乱了动作。\
+[NONE|1]我慌张地伸手想捉住哪里。\
+[NONE|1]那里却堆积着成堆的旧货柜跟废弃材料。\
+*Lt_3a_0000122b
+
+hideTextbox
+stopBGM
+playSFX "SE05_04",0,100
+mov %V_4f, 51
+
+mov %V_3b, 1
+
+mov %V_3c, %V_VAR_cb_0_6
+
+mov %V_3d, 7
+
+mov %V_3e, 2
+
+mov %V_3f, %V_VAR_c6_0_6
+
+mov %V_40, 4
+
+unknown20 12
+showTextbox
+[NONE|1]喀嘎锵！！\
+hideTextbox
+playSFX "SE07_00",0,100
+mov %V_4f, 0
+
+mov %V_3b, 1
+
+mov %V_3c, %V_VAR_c3_0_6
+
+mov %V_3d, 2
+
+mov %V_3e, 2
+
+mov %V_3f, %V_VAR_c3_0_6
+
+mov %V_40, 2
+
+unknown20 12
+showTextbox
+[NONE|1]废弃建材虽然止住了我的体重，却开始崩塌。\
+[NONE|1]许多货柜跟生锈的管线从上头掉落下来。\
+playSFX "SE07_09",0,95
+showTextbox
+[NONE|1]它掠过我身边，准备往墙边坍塌。\
+[NONE|1]下落物品的正下方──\
+[NONE|1]【武】
+[NONE|0]“！！　可儿危险！！”\
+fgload 1,"CO06ADS","320",3
+showTextbox
+[t3a144|1]【可儿】
+[NONE|0]“咦……？”\
+[t3a145|1]【月海】
+[NONE|0]“快闪！！”\
+hideTextbox
+unknown21 11
+delay 5
+unknown20 5
+specialEffect 1,1
+removeFG "1","3"
+removeBG
+unknown21 0
+mov %V_ab, %V_VAR_c0_16
+
+playSFX "SE07_00",0,100
+removeBG
+showTextbox
+[NONE|1]铁材掉了下来。\
+[NONE|1]旧管线凌乱地四散各处。\
+playSFX "SE02_03",0,90
+showTextbox
+[NONE|1]货柜摔了个粉碎。\
+hideTextbox
+playSFX "SE02_05",0,95
+showTextbox
+[NONE|1]碎片剧烈地打在浅浅的水面。\
+playSFX "SE06_04",0,95
+showTextbox
+[NONE|1]沉重坚硬的重击声响遍房间。\
+[NONE|1]房间整体传来小震动。\
+playSFX "SE02_00",0,100
+showTextbox
+[NONE|1]墙壁上的几条管线因刚刚的冲击而破裂，喷出水来。\
+[NONE|1]刚刚可儿坐的地方……\
+hideTextbox
+specialEffect 0,0
+playBGM "12","100"
+playSFX "SE02_07",0,90
+mov %V_41, 6
+
+mov %V_42, 68
+
+mov %V_50, 0
+
+unknown20 45
+bgload "EV_TU07A","6","2"
+mov %V_ab, %V_VAR_c0_53
+
+showTextbox
+[NONE|1]倒在那里……是月海。\
+[t3a146|1]【可儿】
+[NONE|0]“……！！”\
+[NONE|1]可儿颤抖的手抱着ＰＩＰＩ，茫然地看着眼前的景象。\
+[NONE|1]就在铁材要掉落在可儿身上的前几秒，月海忽然将可儿
+[NONE|0]推开。\
+[NONE|1]挺身而出……保护着她……\
+playSFX "SE02_11L",0,90
+showTextbox
+[NONE|1]【武】
+[NONE|0]“月海！！”\
+[t3a147|1]【月海】
+[NONE|0]“呜……”\
+[NONE|1]月海的右腿被铁材深深插入，而无法移动。\
+[NONE|1]周围有缺口的管线，正飘出散成水蒸气的雾。\
+[NONE|1]排水帮浦无法发挥作用，逆流并不断吐出大量污浊的水
+[NONE|0]。\
+[t3a148|1]【月海】
+[NONE|0]“失败了”\
+[NONE|1]月海扭曲着脸，压着腿。\
+[NONE|1]流出好多血。\
+[NONE|1]将混浊的水染成红褐色……\
+[NONE|1]【武】
+[NONE|0]“喔咿……没事吧！？”\
+[t3a149|1]【月海】
+[NONE|0]“呵呵……你看这样会没事吗？”\
+[t3a150|1]【月海】
+[NONE|0]“真是的，又问蠢问题了。”\
+[NONE|1]【武】
+[NONE|0]“别、别笑啊！　我马上来帮你移开！”\
+[NONE|1]我奔跑到月海的附近，想要抬起铁材。\
+[NONE|1]可是不管多么用力，沉重的铁块就是一动也不动。\
+[NONE|1]【武】
+[NONE|0]“可恶！！”\
+[t3a151|1]【月海】
+[NONE|0]“好像没用……”\
+[NONE|1]水位越来越高，已经淹到了膝盖。\
+[t3a152|1]【可儿】
+[NONE|0]“月海！！”\
+[NONE|1]可儿踌躇地，想过来月海这里。\
+[t3a153|1]【月海】
+[NONE|0]“别过来！”\
+[NONE|1]月海冰冷尖锐的字眼，让可儿瑟缩身体原地不动。\
+[t3a154|1]【月海】
+[NONE|0]“快逃可儿……”\
+[t3a155|1]【月海】
+[NONE|0]“武也快逃……”\
+[t3a156|1]【月海】
+[NONE|0]“再这样下去，这个房间的隔墙会撑不住。”\
+[t3a157|1]【月海】
+[NONE|0]“大家会死掉。”\
+[t3a158|1]【月海】
+[NONE|0]“所以快一点……”\
+[t3a159|1]【月海】
+[NONE|0]“逃吧”\
+[NONE|1]【可儿】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“……笨”\
+[NONE|1]【武】
+[NONE|0]“笨蛋！！　我绝不会丢下你的！！”\
+[t3a160|1]【月海】
+[NONE|0]“那有什么办法？　根本不能走。”\
+[t3a161|1]【月海】
+[NONE|0]“反正这个伤口也太迟了──”\
+[NONE|1]【武】
+[NONE|0]“别胡说八道！！”\
+[NONE|1]我怒斥着。\
+[NONE|1]【武】
+[NONE|0]“怎么可以死在这个地方！”\
+[NONE|1]【武】
+[NONE|0]“喂，可儿！　还在发什么呆！”\
+[t3a162|1]【可儿】
+[NONE|0]“哇，是……是！！”\
+[NONE|1]【武】
+[NONE|0]“用那个对讲机连络！”\
+[NONE|1]可儿拼命撑起瘫软的双脚，跑到对讲机那里。\
+[t3a163|1]【可儿】
+[NONE|0]“不行……坏了！　不管怎么按还是不通！”\
+[NONE|1]【武】
+[NONE|0]“那就快上去啊！　快去叫其他的人过来！”\
+[t3a164|1]【可儿】
+[NONE|0]“知、知道了！！”\
+[NONE|1]可儿虽然迟疑……还是用力点着头冲了出去。\
+[NONE|1]仓库的门关上了。\
+[NONE|1]不久，连那扇门的下缘也开始进水。\
+playSFX "SE02_11L",0,95
+bgload "EV_TU07B","0","0"
+showTextbox
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[NONE|1]淹水。\
+[NONE|1]月海的腰部以下，几乎都在水面下。\
+[NONE|1]水位已经超过我的膝盖。\
+[t3a165|1]【月海】
+[NONE|0]“你为什么不走……”\
+[t3a166|1]【月海】
+[NONE|0]“没意义了……别站在这里，很碍眼啊。”\
+[NONE|1]【武】
+[NONE|0]“就算没意义也要站在这里。”\
+[NONE|1]【武】
+[NONE|0]“我不可能丢下你的。”\
+[t3a167|1]【月海】
+[NONE|0]“为什么？”\
+[NONE|1]【武】
+[NONE|0]“因为我一直被你吐槽，你还没跟我道歉。”\
+[t3a168|1]【月海】
+[NONE|0]“啊啊，是喔……呵呵……你可真有心啊。”\
+[NONE|1]月海无力地笑着。\
+[NONE|1]嘴唇在发抖。\
+[NONE|1]四周都是浊水。\
+[t3a169|1]【月海】
+[NONE|0]“有点冷了……”\
+[NONE|1]【武】
+[NONE|0]“月海……给我清醒一点。”\
+[NONE|1]我努力冷静地说出这句话。\
+[t3a170|1]【月海】
+[NONE|0]“我是说真的。”\
+[NONE|1]【武】
+[NONE|0]“没问题的，伤口很浅……别担心。”\
+[t3a171|1]【月海】
+[NONE|0]“‘没问题’这句话……有什么根据吗？”\
+[t3a172|1]【月海】
+[NONE|0]“能怎么办呢……”\
+[NONE|1]【武】
+[NONE|0]“抱歉，都是我的错，因为我的不注意害你受伤……”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+bgload "IMG06A","0","1"
+playSFX "SE02_11L",0,90
+showTextbox
+[NONE|1]水位已经到达月海的头上。\
+[NONE|1]隔墙的一部分毁坏，海水长驱直入。\
+[NONE|1]水好冰冷，几乎要把身体冻坏了。\
+[NONE|1]水无情地增加。\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]痛苦扭曲的月海。\
+[NONE|1]因为痛苦吧……叹着息。\
+[NONE|1]已经没有时间了。\
+hideTextbox
+playSFX "SE02_05",0,90
+unknown20 44
+showTextbox
+[NONE|1]我心意一决，潜入水底。\
+[NONE|1]睁不开眼睛。\
+[NONE|1]只能靠直觉在水中探索。\
+[NONE|1]（……啊啊啊啊啊啊！！）\
+[NONE|1]（可恶啊！！）\
+[NONE|1]使出浑身解数，用力想搬起压在月海腿部的铁块。\
+[NONE|1]也许是因为浮力，铁块有些微微地浮起。\
+[NONE|1]毫不迟疑地拉开月海的腿。\
+removeBG
+mov %V_ac, 1
+
+unknown21 16
+mov %V_4f, 0
+
+mov %V_3b, 20
+
+mov %V_3c, %V_VAR_c3_0_6
+
+mov %V_3d, 1
+
+mov %V_3e, 30
+
+mov %V_3f, %V_VAR_cc_0_6
+
+mov %V_40, 1
+
+unknown20 12
+playSFX "SE02_11L",0,90
+specialEffectImage "00000000","EV_TU09A",0,2,12,12,775,581
+showTextbox
+[NONE|1]浮出水面，大口深呼吸。\
+[NONE|1]进水没有停止。\
+[NONE|1]水位已经超过我的肩膀。\
+[t3a173|1]【月海】
+[NONE|0]“你……”\
+[t3a174|1]【月海】
+[NONE|0]“笨蛋……”\
+[NONE|1]【武】
+[NONE|0]“别说话，安分点……”\
+[NONE|1]脚受伤的月海无法游泳。\
+[NONE|1]我抱起月海的身体，向出口走去。\
+[NONE|1]可是门已经完全淹没在水中。\
+[t3a175|1]【月海】
+[NONE|0]“嗯……没有人来救我们……”\
+[NONE|1]【武】
+[NONE|0]“叫你别说话了！”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“应该有其他出口，慢慢找……”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“没问题，一定会有办法的。”\
+[t3a176|1]【月海】
+[NONE|0]“又说‘没问题’……真是不负责任啊……”\
+[NONE|1]【武】
+[NONE|0]“吵死了，闭嘴吧。”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[NONE|1]虽然可以强制打开门，可是这么一来……２楼就有浸水
+[NONE|0]的危险了。\
+[NONE|1]我默默地寻找紧急出口。\
+[NONE|1]脚已经踩不到底。\
+[NONE|1]呼吸越来越困难。\
+[NONE|1]已经到了极限。\
+[NONE|1]【武】
+[NONE|0]“……！！”\
+[NONE|1]【武】
+[NONE|0]“扶梯！　房间的角落有梯子，可以通往紧急路口！”\
+[NONE|1]【武】
+[NONE|0]“得救了……月海！”\
+hideTextbox
+specialEffect 6,1
+removeBG
+unknown21 11
+unknown21 13
+stopBGM
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]全力游向扶梯。\
+[NONE|1]背着月海爬上梯子。\
+playSFX "SE00_09",0,100
+showTextbox
+[NONE|1]打开扶梯末端的紧急舱口，将月海的身体向上推。\
+hideTextbox
+playBGM "10","100"
+bgload "BG28A3L","0","2"
+playSFX "SE00_04",0,90
+showTextbox
+[NONE|1]我也赶紧爬上通路，关闭舱口。\
+[NONE|1]浊流的声音越来越远……\
+[NONE|1]可是现在还不是休息的时候。\
+[NONE|1]月海的脚还出血不止。\
+[NONE|1]我背着月海开始狂奔。\
+bgload "BG27A1","0","2"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“可恶，该往哪里……？”\
+[NONE|1]通道的尽头，我已经穷途末路。\
+fgload 1,"SO04ADM","320",3
+showTextbox
+[t3a177|1]【空】
+[NONE|0]“仓成！”\
+[NONE|1]突然，空的影像在我眼前出现。\
+[NONE|1]【武】
+[NONE|0]“空！　月海、月海！！”\
+fgload 1,"SO10ADM","320",3
+showTextbox
+[t3a178|1]【空】
+[NONE|0]“我知道了，可儿已经报告过了。”\
+[t3a179|1]【空】
+[NONE|0]“请带她来医疗室，田中正在准备了。”\
+[NONE|1]【武】
+[NONE|0]“知道了，马上就过去！　怎么走？”\
+[t3a180|1]【空】
+[NONE|0]“返回通道，走下右边的阶梯，往一般通路走……”\
+[NONE|1]【武】
+[NONE|0]“ＯＫ！”\
+hideTextbox
+removeFG "1","3"
+playSFX "SE01_07",0,95
+bgload "BG29A1","0","2"
+bgload "BG25A3","0","2"
+stopSFX
+showTextbox
+[NONE|1]【武】
+[NONE|0]“月海、月海！”\
+[NONE|1]【武】
+[NONE|0]“没问题、没问题了……！”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]月海在我背上痛苦地呻吟着。\
+[NONE|1]虽然她说我不负责任，可是我还是说不出‘不行了，来
+[NONE|0]不及’之类的话。\
+[NONE|1]只要还有一点希望，我绝不放弃。\
+bgload "BG08A1","0","2"
+playSFX "SE00_03",0,95
+bgload "BG09A1","0","2"
+showTextbox
+[NONE|1]冲进医疗室。\
+[NONE|1]让受伤的月海躺在床上。\
+[NONE|1]出血严重……\
+[NONE|1]必须要赶快处理。\
+[NONE|1]【武】
+[NONE|0]“喔咿……该怎么办？”\
+fgload 1,"YU04ADS","320",3
+removeFG "1","3"
+fgload 1,"YU04ADL","320",3
+showTextbox
+[t3a181|1]【优】
+[NONE|0]“闪开！！”\
+[NONE|1]早在房间待命的优，将我推开。\
+[NONE|1]从墙上的医疗器材储柜，拿出止血带绑住月海的大腿部
+[NONE|0]位。\
+fgload 1,"YU05ADL","320",3
+showTextbox
+[t3a182|1]【优】
+[NONE|0]“有些糟糕……”\
+[NONE|1]【武】
+[NONE|0]“她的身体状况呢？　怎么样？”\
+[NONE|1]【武】
+[NONE|0]“不能用那个扫描机检查吗？”\
+[NONE|1]我指着那个‘Ｌ－ＭＲＩ’。\
+fgload 1,"YU14ADL","320",3
+showTextbox
+[t3a183|1]【优】
+[NONE|0]“那个不行，好像故障了。”\
+[t3a184|1]【空】
+[NONE|0]“我来诊断”\
+hideTextbox
+removeFG "1","3"
+playSFX "SE03_02",0,90
+fgload 1,"SO05ADM","320",3
+showTextbox
+[NONE|1]空伸手覆盖月海，半空中浮现虚拟影像。\
+[NONE|1]天花板上的照相机与扫描器移动着……\
+removeFG "1","3"
+multifgload2 1,2,"00000000","SO17ADM","00000000","YU05ADM",128,512,3
+showTextbox
+[t3a185|1]【空】
+[NONE|0]“一样是使用在生物扫描上，虽然不是很详细的检查…
+[NONE|0]………”\
+fgload 1,"SO10ADM","128",3
+showTextbox
+[t3a186|1]【空】
+[NONE|0]“大腿骨受伤，也许是复杂性骨折。”\
+[t3a187|1]【空】
+[NONE|0]“而且动脉断了，必须执行切开缝合。”\
+fgload 2,"YU14ADM","512",3
+showTextbox
+[t3a188|1]【优】
+[NONE|0]“我曾经缝过我的手，虽然是用急救包……”\
+fgload 1,"SO18ADM","128",3
+showTextbox
+[t3a189|1]【空】
+[NONE|0]“那么田中……可以麻烦你吗？”\
+[t3a190|1]【优】
+[NONE|0]“还是可以试试看！　麻醉呢？”\
+[t3a191|1]【空】
+[NONE|0]“准备好了，其他还准备了雷射、钳子、缝合器……所
+[NONE|0]有需要的东西都在这个房间了。”\
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]空移动着电动车，利用电动车的遥控装置收集器具。\
+[NONE|1]优拉开月海的裙子，开始擦拭腿伤。\
+fgload 1,"YU04ADM","320",3
+showTextbox
+[t3a192|1]【优】
+[NONE|0]“仓成！！”\
+[t3a193|1]【优】
+[NONE|0]“别站在那里！　挡路啊！”\
+[NONE|1]优指着出口。\
+[NONE|1]【武】
+[NONE|0]“啊，我知道了，不好意思……麻烦你们了！”\
+fgload 1,"YU05ADM","320",3
+showTextbox
+[t3a194|1]【优】
+[NONE|0]“包在我身上！”\
+[NONE|1]优正经地说着。\
+hideTextbox
+specialEffect 6,0
+removeFG "1","3"
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+stopBGM
+playSFX "SE00_03",0,95
+bgload "BG08A1","0","2"
+showTextbox
+[NONE|1]走出充满紧张气氛的医疗室，忽然才想起疲惫的感觉。\
+[NONE|1]【武】
+[NONE|0]“唉……”\
+[NONE|1]将身体瘫在最近的椅子上。\
+hideTextbox
+playBGM "19","100"
+fgload 1,"CO03ADM","320",3
+showTextbox
+[t3a195|1]【可儿】
+[NONE|0]“啊，武咚……月海……”\
+[NONE|1]可儿抱着ＰＩＰＩ，还是心神不宁地坐在那里。\
+[NONE|1]【武】
+[NONE|0]“因为可儿通知得快………应该没问题吧。”\
+fgload 1,"CO10ADM","320",3
+showTextbox
+[t3a196|1]【可儿】
+[NONE|0]“真的……？”\
+[NONE|1]可儿眼眶湿润。\
+[NONE|1]也许一直哭到刚刚吧。\
+[NONE|1]可是，可儿还是装出笑容。\
+removeFG "1","3"
+fgload 1,"CO10ADL","320",3
+showTextbox
+[t3a197|1]【可儿】
+[NONE|0]“嗯嗯……月海她……”\
+[t3a198|1]【可儿】
+[NONE|0]“月海……没事吧？”\
+[NONE|1]她还有些不安地歪着头询问我。\
+[NONE|1]【武】
+[NONE|0]“啊啊……没事。”\
+[NONE|1]【武】
+[NONE|0]“一定会没事的……”\
+[NONE|1]我紧握拳头。\
+[NONE|1]我也在说给自己听。\
+[NONE|1]没问题的。\
+hideTextbox
+specialEffect 18,0
+removeFG "1","3"
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+delay 120
+bgload "BG08A1","0","1"
+clock "12","23"
+showTextbox
+[NONE|1]我几乎觉得仿佛过了一辈子的时间，优与空一起走出医
+[NONE|0]疗室。\
+[NONE|1]手术完毕──\
+[NONE|1]月海捡回一条命了。\
+multifgload2 1,2,"00000000","YU03ADM","00000000","SO03ADM",128,512,3
+showTextbox
+[t3a199|1]【空】
+[NONE|0]“缝了将近４０针，完全治愈需要二个月。”\
+[t3a200|1]【空】
+[NONE|0]“能够像原本那样走路的话，大概要花好几个月……”\
+[t3a201|1]【空】
+[NONE|0]“在救援来，能够离开ＬｅＭＵ之前，一定要让她安静
+[NONE|0]休息。”\
+[NONE|1]【武】
+[NONE|0]“知道了，谢谢……空。”\
+[NONE|1]【武】
+[NONE|0]“还有……辛苦了，优。”\
+[NONE|1]【优】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“优？　怎么了？”\
+fgload 1,"YU07ADM","128",3
+showTextbox
+[t3a202|1]【优】
+[NONE|0]“……咦？”\
+fgload 1,"YU03ADM","128",3
+showTextbox
+[t3a203|1]【优】
+[NONE|0]“啊……呜……有点疲倦了吧……”\
+[t3a204|1]【优】
+[NONE|0]“因为我没做过这样的大手术啊……”\
+[NONE|1]优随即低下头，不再多说什么。\
+multiremoveFG2 "83","04","00","3"
+fgload 1,"SO10ADM","320",3
+showTextbox
+[t3a205|1]【空】
+[NONE|0]“目前索非亚休德克的仓库进水已经停止。”\
+[t3a206|1]【空】
+[NONE|0]“紧急封闭了通往仓库的全部配管，直接由索非亚休德
+[NONE|0]克截断，不用担心进水的危险了。”\
+[t3a207|1]【空】
+[NONE|0]“以上……报告结束。”\
+hideTextbox
+specialEffect 6,0
+removeFG "1","3"
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+bgload "MAP2F_A2","0","3"
+mov %V_45, 0
+
+mov %V_46, 10
+
+unknown20 48
+delay 180
+unknown21 15
+overlayImage "00000000","MAP2F_A2",0,3
+bgload "MAP2F_B2","0","2"
+delay 180
+removeBG
+removeBG
+stopBGM
+mov %V_b3, 0
+
+goto *Lt_3b
+

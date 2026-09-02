@@ -1,0 +1,255 @@
+;mode800
+*define
+;sprite中前50为临时sp
+;00为基本的变量定义
+;01为各种函数
+;02为开场
+;84为menu
+  caption "Ever17 ver 0.5"
+  globalon
+  ;Clickstr "】。！？…」",2;遇到这些字符时候换行
+  ;linepage
+rmenu "储存",save,"读取",load,"跳至下一选项",skip,"回想",lookback,"消除文字框",windowerase,"回到标题画面",reset,"退出",end
+savename "保存存档","读取存档","存档"
+  rmode 1
+  filelog
+  ;kidokuskip
+;  savedir "sav/"
+  transmode alpha
+  savenumber 20
+  nsa
+
+  defsub setwin0
+  defsub setmenu0
+  defsub clearText
+  defsub unknown46
+  defsub showTextbox
+  defsub hideTextbox
+  defsub unknown20
+  defsub unknown21
+  defsub unknown37
+;37貌似是解锁CG用的
+  defsub scriptLocationId
+  defsub playSFX
+  defsub waitForSFX
+  defsub stopSFX
+  defsub specialeffectimage
+  defsub specialeffect
+  defsub chaptercutin
+  defsub bgload
+  defsub fgload
+  defsub playBGM
+  defsub clock
+  defsub tweenZoom
+  defsub removeFG
+  defsub stopbgm
+  defsub multifgload2
+  defsub multifgload3
+  defsub multiremoveFG2
+  defsub multiremoveFG3
+  defsub removeBG
+  defsub overlayImage
+  defsub fin
+  defsub initvar
+  defsub bgmt
+  defsub bgms
+  defsub cgget
+  defsub cgget2
+  defsub cgview
+  defsub cgview2
+
+  
+;  textgosub *procSub
+  pretextgosub *procPreGo
+;一些数组
+dim ?0[100]
+;一些变量
+  numalias voice,100
+  numalias needClear,101
+  numalias needLocate,102
+  numalias lastPosition,103
+;自己的变量1200-1400号
+  numalias N_effect, 1200
+  numalias F_printName, 1201
+;游戏中用到的变量，从1888开始
+  numalias V_08, 1888
+  numalias V_09, 1889
+  numalias V_0a, 1890
+  numalias V_0b, 1891
+  numalias V_0c, 1892
+  numalias V_0d, 1893
+  numalias V_0e, 1894
+  numalias V_0f, 1895
+  numalias V_10, 1896
+  numalias V_11, 1897
+  numalias V_12, 1898
+  numalias V_13, 96
+;V_13=0通常的文字框；=1全屏的文字框
+  numalias V_14, 1900
+  numalias V_15, 1901
+  numalias V_16, 1902
+  numalias V_17, 1903
+  numalias V_18, 1904
+  numalias V_19, 1905
+;V_19可可篇通关标记
+  numalias V_1a, 1906
+;V_1a貌似是可可篇是否开启的标识（=1开启，=0未开启）
+  numalias V_1b, 1907
+  numalias V_1d, 1908
+;V_1d是否开启POST17
+  numalias V_24, 1909
+  numalias V_25, 1910
+  numalias V_26, 1911
+  numalias V_27, 1912
+  numalias V_28, 1913
+  numalias V_29, 1914
+  numalias V_2a, 1915
+  numalias V_2b, 1916
+  numalias V_2c, 1917
+  numalias V_2d, 1918
+  numalias V_2e, 1919
+  numalias V_2f, 1920
+  numalias V_38, 1921
+  numalias V_39, 1922
+  numalias V_3a, 100
+;貌似V_3a=0少年视点；=1，2武视点
+  numalias V_3b, 1924
+  numalias V_3c, 1925
+  numalias V_3d, 1926
+  numalias V_3e, 1927
+  numalias V_3f, 1928
+  numalias V_40, 1929
+  numalias V_41, 1930
+  numalias V_42, 1931
+  numalias V_43, 1932
+  numalias V_44, 1933
+  numalias V_45, 1934
+  numalias V_46, 1935
+  numalias V_4a, 1936
+  numalias V_4f, 1937
+  numalias V_50, 1938
+  numalias V_VAR_c0_16, 1939
+  numalias V_VAR_c0_17, 1940
+  numalias V_VAR_c0_18, 1941
+  numalias V_VAR_c0_19, 1942
+  numalias V_VAR_c0_21, 1943
+  numalias V_VAR_c0_23, 1944
+  numalias V_VAR_c0_31, 1945
+  numalias V_VAR_c0_38, 1946
+  numalias V_VAR_c0_46, 1947
+  numalias V_VAR_c0_53, 1948
+  numalias V_VAR_c0_61, 1949
+  numalias V_VAR_c1_0_6, 1950
+  numalias V_VAR_c2_0_6, 1951
+  numalias V_VAR_c3_0_6, 1952
+  numalias V_VAR_c5_0_6, 1953
+  numalias V_VAR_c6_0_6, 1954
+  numalias V_VAR_c7_0_6, 1955
+  numalias V_VAR_c8_0_6, 1956
+  numalias V_VAR_ca_0_6, 1957
+  numalias V_VAR_cb_0_6, 1958
+  numalias V_VAR_cc_0_6, 1959
+  numalias V_V_0f, 1960
+  ;0f月海GE
+  numalias V_V_10, 1961
+  ;10空GE
+  numalias V_V_13, 1962
+  ;13优GE
+  numalias V_V_16, 1963
+  ;16沙罗GE
+  numalias V_V_d0, 1964
+  numalias V_V_d1, 1965
+  numalias V_V_d2, 1966
+  numalias V_V_d3, 1967
+  numalias V_V_d4, 1968
+  numalias V_V_d5, 1969
+  numalias V_ab, 44
+  numalias V_ac, 45
+  numalias V_b0, 46
+  numalias V_b1, 47
+  numalias V_b2, 48
+  numalias V_b3, 49
+;V_b3判断选项跳转用的临时变量
+  numalias V_b6, 50
+;V_b6优好感度
+  numalias V_b7, 51
+;V_b7月海好感度
+  numalias V_b8, 52
+;V_b8空好感度
+  numalias V_b9, 53
+;V_b9沙罗好感度
+  numalias V_ba, 54
+;V_ba可可好感度⊙﹏⊙b汗，这东西真的有用？
+  numalias V_bb, 55
+  numalias V_bc, 56
+  numalias V_bd, 57
+  numalias V_bf, 58
+  numalias V_c7, 59
+  numalias V_ce, 60
+  numalias V_d0, 61
+  numalias V_d1, 62
+  numalias V_d2, 63
+  numalias V_d3, 64
+  numalias V_d4, 65
+  numalias V_d5, 66
+  numalias V_d8, 67
+  numalias V_d9, 68
+;V_d9月海线标志
+  numalias V_da, 69
+;V_da空线标志
+  numalias V_db, 70
+  numalias V_dd, 71
+  numalias V_de, 72
+  numalias V_df, 73
+  numalias V_e0, 74
+  numalias V_e1, 75
+  numalias V_e2, 76
+  numalias V_e3, 77
+  numalias V_e4, 78
+  numalias V_e5, 79
+  numalias V_e6, 80
+  numalias V_e7, 81
+  numalias V_e8, 82
+  numalias V_e9, 83
+  numalias V_eb, 84
+  numalias V_ec, 85
+;V_ec空线标志
+  numalias V_ed, 86
+  numalias V_ee, 87
+  numalias V_ef, 88
+  numalias V_f0, 89
+  numalias V_f1, 90
+  numalias V_f2, 91
+  numalias V_f3, 92
+  numalias V_f5, 93
+  numalias V_fa, 94
+;V_fa大概是标识着游戏进度的章节号
+  numalias V_fe, 95
+  numalias V_tsuGE,2000
+  numalias V_soGE,2001
+  numalias V_tsuBE,2002
+  numalias V_tsuWS,2003
+  numalias V_saGE,2004
+  numalias V_yuGE,2005
+  numalias V_saBE,2006
+  numalias V_yuBE,2007
+  numalias V_saWS,2008
+  numalias V_yuWS,2009
+  numalias V_coco,2010
+game
+
+*start
+;setwin0
+setmenu0
+;erasetextwindow 0
+saveon
+bg white,10,1000
+mov %F_printName, 0
+;goto *Lop00
+initvar
+goto *L84_TXT_MENU
+
+
+
+
+

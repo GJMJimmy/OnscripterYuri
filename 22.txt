@@ -1,0 +1,198 @@
+*Lsc2c
+*Lsc2c_00000026
+mov %V_fa, 63
+
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+playBGM "2","100"
+showTextbox
+[NONE|1]之后……\
+[NONE|1]我们集合在休憩空间，吃些东西、开心地聊着天。\
+[NONE|1]话题当然围绕在‘空的ＲＳＤ系统相关之详细内容’。\
+[NONE|1]话题进行当中，我发现了一个很有趣的事情。\
+[NONE|1]那就是……令人意外地，沙罗相当懂电脑。\
+[NONE|1]昨天得知空的正体而感到错愕的沙罗，一听完空的解说
+[NONE|0]，就能马上全盘理解。\
+[NONE|1]有关沙罗的这件事，我是听优这么说的。\
+specialEffect 0,0
+bgload "BG21B1","6","2"
+fgload 1,"YU01ADL","320",0
+mov %V_ab, %V_VAR_c0_31
+
+showTextbox
+[s2c062|1]【优】
+[NONE|0]“玛由啊？　是Ｈａｃｋｅｒ（骇客）。”\
+[NONE|1]【少年】
+[NONE|0]“Ｈａｃｋｅｒ？”\
+fgload 1,"YU03ADL","320",3
+showTextbox
+[s2c063|1]【优】
+[NONE|0]“呜～嗯……怎么说才好呢……可以说是电脑操作专家
+[NONE|0]吧。”\
+fgload 1,"YU05ADL","320",3
+showTextbox
+[s2c064|1]【优】
+[NONE|0]“相当熟悉电脑，尤其是程式设计的能力，她可是不输
+[NONE|0]给专业人士喔。”\
+fgload 1,"YU02ADL","320",3
+showTextbox
+[s2c065|1]【优】
+[NONE|0]“写程式是她的兴趣，上次还厉害到在什么破解竞赛获
+[NONE|0]得优胜呢……”\
+[NONE|1]【少年】
+[NONE|0]“破解比赛？”\
+fgload 1,"YU01ADL","320",3
+showTextbox
+[s2c066|1]【优】
+[NONE|0]“就是破解密码的比赛，先说喔……这可不是犯罪喔。
+[NONE|0]”\
+[s2c067|1]【优】
+[NONE|0]“是由密码技术公司主办，目的是为了确认技术的安全
+[NONE|0]性，所举办的破解比赛……”\
+[s2c068|1]【优】
+[NONE|0]“所以就当场让骇客们攻击自己公司的系统。”\
+fgload 1,"YU08ADL","320",3
+showTextbox
+[s2c069|1]【优】
+[NONE|0]“总之，就把它想成一个密码解读游戏大会吧。”\
+[NONE|1]【少年】
+[NONE|0]“什么是游戏啊？”\
+fgload 1,"YU05ADL","320",3
+showTextbox
+[s2c077|1]【优】
+[NONE|0]“说是游戏，未免也太看扁人了。”\
+fgload 1,"YU01ADL","320",3
+showTextbox
+[s2c078|1]【优】
+[NONE|0]“那可是全世界技术一流的专家所参加的比赛喔。”\
+[s2c079|1]【优】
+[NONE|0]“只要在那场比赛得到优胜，可是世界首屈一指的骇客
+[NONE|0]代表呢。”\
+fgload 1,"YU02ADL","320",3
+showTextbox
+[s2c080|1]【优】
+[NONE|0]“嗯嗯……说是世界第一，也不算言过其实。”\
+[NONE|1]【少年】
+[NONE|0]“世、世界第一！”\
+[NONE|1]【少年】
+[NONE|0]“这太强了吧？”\
+fgload 1,"YU01ADL","320",3
+showTextbox
+[s2c081|1]【优】
+[NONE|0]“是啊”\
+[s2c082|1]【优】
+[NONE|0]“电脑方面……她绝对是个天才。”\
+hideTextbox
+specialEffect 12,0
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]说到这里的时候，ＲＳＤ的解说也告一段落。\
+[NONE|1]最后……空慢条斯理地说了这样的话。\
+hideTextbox
+specialEffect 0,0
+bgload "BG21B1","6","2"
+fgload 1,"SO05ADM","320",0
+mov %V_ab, %V_VAR_c0_31
+
+showTextbox
+[t2c227|1]【空】
+[NONE|0]“其实我……”\
+fgload 1,"SO10ADM","320",3
+showTextbox
+[t2c228|1]【空】
+[NONE|0]“必须藉由‘被看到’的动作，才能产生具体化。”\
+fgload 1,"SO03ADM","320",3
+showTextbox
+[t2c229|1]【空】
+[NONE|0]“也就是说……如果没有人看到我，我就跟不存在是一
+[NONE|0]样的。”\
+fgload 1,"SO05ADM","320",3
+showTextbox
+[t2c230|1]【空】
+[NONE|0]“譬如，在场的五个人一起闭上眼睛的话……”\
+[t2c231|1]【空】
+[NONE|0]“在那一瞬间……我就会消失。”\
+hideTextbox
+specialEffect 12,0
+stopBGM
+removeFG "1","3"
+delay 90
+playBGM "19","100"
+mov %V_ab, %V_VAR_c0_38
+
+showTextbox
+[NONE|1]结束聊天之后，我独自一个人留在休憩空间。\
+[NONE|1]现在是‘自由时间’。\
+[NONE|1]大家一定也是分散在ＬｅＭＵ中，各自过着思考沉静的
+[NONE|0]时光。\
+[NONE|1]集合时间、集合地点已经约好了。\
+[NONE|1]该怎么过现在这段时间？\
+[NONE|1]我无趣地发呆着。\
+[NONE|1]无意识地落下视线。\
+[NONE|1]地板的一面覆盖了海水。\
+[NONE|1]水面上反射着天花板上装设的照明灯光。\
+[NONE|1]那个就像月光一样，绽放皎洁冰冷的光芒。\
+[NONE|1]我把指尖浸到水中。\
+[NONE|1]──啵刹。\
+[NONE|1]荡出了波纹，水面晃动着。\
+[NONE|1]映照的光芒被打乱……然后慢慢回到原状。\
+[NONE|1]我就这样伸出手，想要抓住水面的光。\
+[NONE|1]可是……\
+[NONE|1]紧握的手中只剩一些海水……我碰不到那个光。\
+[NONE|1]不管我重复了几次，就是得不到月亮。\
+[NONE|1]忽然，空刚刚说的话在脑中苏醒。\
+[t2c229|1]【空】
+[NONE|0]“如果没有人看到我，我就跟不存在是一样的。”\
+[NONE|1]我倒在凉椅上，闭上眼睛。\
+hideTextbox
+specialEffect 6,0
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]想着空的事情……\
+[NONE|1]想着想着，我的意识一下子就淹没在打盹中。\
+[NONE|1]………………\
+[NONE|1]…………\
+[NONE|1]……\
+[NONE|1]说是打盹，未免也太久了……\
+[NONE|1]我持续熟睡着。\
+hideTextbox
+specialEffect 0,0
+stopBGM
+bgload "BG21B1","6","2"
+fgload 1,"SO01ADM","320",0
+mov %V_ab, %V_VAR_c0_38
+
+clock "18","43"
+showTextbox
+[NONE|1]一醒来，就看见空。\
+playBGM "8","100"
+showTextbox
+[s2c116|1]【空】
+[NONE|0]“少年，大家都在等你喔？”\
+[NONE|1]空凝望着躺在凉椅上的我的脸，静静地说着。\
+[NONE|1]还没睡醒的状态下，随着空前往集合地点──会议室。\
+bgload "BG25B3","0","2"
+showTextbox
+[NONE|1]呆滞地走着，我想到了。\
+[NONE|1]睡前空说的话──\
+[NONE|1]‘如果没有人看到我，我就跟不存在是一样的。’\
+[NONE|1]不知为何，就是在意这句话。\
+[NONE|1]我问身旁的空为什么会这么说。\
+[NONE|1]然后……空如此回答着。\
+*Lsc2c_000002f8
+
+if  %V_ba == 5     goto *Lsc2c_00000314
+
+scriptLocationId 17
+*Lsc2c_0000030d
+
+goto *Ls_2c
+*Lsc2c_00000314
+
+goto *Lsc2d
+

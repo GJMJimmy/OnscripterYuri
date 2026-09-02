@@ -1,0 +1,2330 @@
+*Lss5a
+*Lss5a_00000022
+
+unknown46 0
+mov %V_fa, 94
+
+mov %V_b0, 0
+
+mov %V_b1, 0
+
+mov %V_b2, 0
+
+bgload "BG37A1","0","1"
+showTextbox
+[NONE|1]射进月光的病房。\
+hideTextbox
+showTextbox
+[NONE|1]不知从哪里听到了这个声音。\
+[NONE|1]嘶吼着，不断不断地越哭越大声。\
+[NONE|1]谁、是谁……\
+[NONE|1]到底是谁……\
+[NONE|1]我……到底……逃过了什么……\
+hideTextbox
+playBGM "13","100"
+showTextbox
+[NONE|1]又在等待……什么？\
+[NONE|1]我在等我吗？\
+[NONE|1]到底，这里是哪里？\
+[NONE|1]这里、这里是……\
+[NONE|1]就在这个时候，景色瘫软地溶化了。\
+hideTextbox
+specialEffect 24,0
+mov %V_bf, 0
+
+unknown20 44
+bgload "IMG04A","6","2"
+mov %V_41, 38
+
+mov %V_42, 7
+
+mov %V_50, 224
+
+unknown20 45
+mov %V_ab, %V_VAR_c0_31
+
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]
+[s5a002|1]　　　　　　　　　　　　　你逃走了！\
+[s5a003|1]　　　丢下那个孩子，你一个人逃走了！\
+hideTextbox
+hideTextbox
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]那个声音在脑袋中回荡。\
+[NONE|1]等等……告诉我！\
+[NONE|1]我是为了什么，又从哪里逃走！\
+[NONE|1]到底我……\
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+showTextbox
+[NONE|1]周围的景色慢慢流转，染上一种令人不舒服的色彩……\
+hideTextbox
+delay 60
+specialEffect 18,0
+delay 120
+unknown21 13
+mov %V_fa, 95
+
+mov %V_b0, 5
+
+mov %V_b1, 5
+
+mov %V_b2, 5
+
+bgload "BG09A2","6","2"
+mov %V_ab, %V_VAR_c0_18
+
+stopBGM
+clock "2","7"
+showTextbox
+[NONE|1]从床上弹跳起来似地，我惊醒了。\
+[NONE|1]医疗室的床铺。\
+[NONE|1]全身湿透。\
+showTextbox
+[NONE|1]──嘶啊！\
+[NONE|1]右腕上传来尖锐的疼痛。\
+[NONE|1]我看着右腕，出神地望着手臂上的石膏。\
+[NONE|1]为什么会有这个……\
+hideTextbox
+playBGM "3","97"
+showTextbox
+[NONE|1]对了，昨天我治疗完骨折之后，就在这里睡着了……\
+[NONE|1]因为药效，迟钝的脑袋恢复了记忆。\
+[NONE|1]也记起了不愉快的梦。\
+[NONE|1]是因为发烧跟药效的影响吧。\
+[NONE|1]一定是这样。\
+[NONE|1]所以才会作那个梦……\
+[NONE|1]我甩甩头，想挥开混浊的意识。\
+[NONE|1]看了一眼墙上的时钟，大概是午夜二点左右。\
+[NONE|1]一般说来，应该是半夜了……\
+[NONE|1]可是，却一点也没有实际的感觉。\
+[NONE|1]被困在这里已经多久了呢……\
+[NONE|1]在不必区分黑夜白昼的空间中度过了这么久，时间的感
+[NONE|0]觉也越来越生疏了。\
+[NONE|1]护着骨折的手腕，我起身。\
+[NONE|1]──喀哩。\
+[NONE|1]左手边，放着沙罗的坠子。\
+[NONE|1]我好像紧握着这个坠子睡着的吧。\
+[NONE|1]【少年】
+[NONE|0]“坠子该还回去了”\
+[NONE|1]我下了床。\
+[NONE|1]虽然右腕还有些发热，武所注射的药效应该还作用着，
+[NONE|0]我的手已经不那么痛了。\
+[NONE|1]只是无法如预期的用力。\
+[NONE|1]枕头旁边，放置着固定手臂的三角巾。\
+[NONE|1]武替我放的吗？　还是优？\
+[NONE|1]不管是谁放的，我总不能晃着疼痛的手腕走路，还是心
+[NONE|0]存感激拿来用吧。\
+[NONE|1]嗯……沙罗在哪里呢……\
+[NONE|1]会不会已经睡了？\
+[NONE|1]对了，沙罗总是睡在哪里？\
+[NONE|1]头脑里，浮现出沙罗在宇宙鲸鱼的画面。\
+[NONE|1]还是先去那里看看吧……\
+[NONE|1]不在那里的话，再去别的地方找也可以。\
+[NONE|1]抱着尚未完全清醒的脑袋，我离开了医疗室。\
+hideTextbox
+specialEffect 12,0
+bgload "BG26B3L","6","2"
+mov %V_ab, %V_VAR_c0_31
+
+showTextbox
+[NONE|1]坐电梯到下一层，前往宇宙鲸鱼。\
+playSFX "SE02_14",0,85
+showTextbox
+[NONE|1]可是……不知从哪里传来啪唰啪唰的水花声音。\
+[NONE|1]发电室……也不是。\
+[NONE|1]看来声音是从配管室的方向传来的样子。\
+[NONE|1]【少年】
+[NONE|0]“是什么？”\
+hideTextbox
+specialEffect 6,0
+removeBG
+playSFX "SE00_01",0,100
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]一进到配管室……\
+hideTextbox
+specialEffect 0,0
+bgload "EV_SA07A","6","2"
+mov %V_ab, %V_VAR_c0_19
+
+stopBGM
+showTextbox
+[NONE|1]－－－－－！\
+[NONE|1]【少年】
+[NONE|0]“沙、沙罗！”\
+[NONE|1]看到那副光景的一瞬间，我什么都没想地就冲进水里。\
+playSFX "SE02_05",0,100
+showTextbox
+[NONE|1]一冲进去，才忽然想起手腕骨折的事情。\
+[NONE|1]总之，我护着右腕游向沙罗。\
+[NONE|1]【少年】
+[NONE|0]“沙罗，抓住我！”\
+[s5a004|1]【沙罗】
+[NONE|0]“咦……什、什么啊，少年……”\
+[NONE|1]【少年】
+[NONE|0]“别说了，快抓住我。”\
+[NONE|1]想伸手抓紧沙罗身体，沙罗却相反地逃离我。\
+[s5a005|1]【沙罗】
+[NONE|0]“拜托……别管我。”\
+[NONE|1]【少年】
+[NONE|0]“咦？　什、什么，沙罗？”\
+[s5a006|1]【沙罗】
+[NONE|0]“就叫你别靠近我了，色狼！”\
+[NONE|1]【少年】
+[NONE|0]“色郎……咦？”\
+[NONE|1]这时候，我终于发现哪里不对劲了。\
+[NONE|1]只要伸直了腿，就可以稳稳地站着。\
+hideTextbox
+specialEffect 0,0
+bgload "BG20B1","6","2"
+fgload 1,"SA01BWM","320",3
+playBGM "6","100"
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“沙、沙罗？”\
+[s5a007|1]【沙罗】
+[NONE|0]“什么啊……”\
+[NONE|1]【少年】
+[NONE|0]“那、那个～你在做什么？”\
+[s5a008|1]【沙罗】
+[NONE|0]“看了就知道啦……”\
+[NONE|1]【少年】
+[NONE|0]“……就是不懂才问你。”\
+[s5a009|1]【沙罗】
+[NONE|0]“就是练习游泳啊”\
+[NONE|1]【少年】
+[NONE|0]“练习……游泳？”\
+[s5a010|1]【沙罗】
+[NONE|0]“是的，所以我才说看了就知道。”\
+hideTextbox
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]
+[NONE|1]　　　　　　　　　　　　　　　谁、谁知道啊！\
+[NONE|1]　那副拼命喘息，在水中啪答啪答地打水的模样。\
+[NONE|1]　　　　　　　　　　任谁都会以为是溺水吧！\
+hideTextbox
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]虽然心中有着反驳，不过嘴巴上还是说……\
+[NONE|1]【少年】
+[NONE|0]“是、是喔……真辛苦……”\
+[NONE|1]只能虚伪敷衍一番。\
+fgload 1,"SA04BWM","320",3
+showTextbox
+[s5a011|1]【沙罗】
+[NONE|0]“嗯，既然被少年看到了，我就告诉你吧。”\
+fgload 1,"SA03BWM","320",3
+showTextbox
+[s5a012|1]【沙罗】
+[NONE|0]“其实我不会游泳”\
+[NONE|1]沙罗继续着那副好像快溺水的模样，边说着。\
+fgload 1,"SA01BWM","320",3
+showTextbox
+[s5a013|1]【沙罗】
+[NONE|0]“反正也没别的方法可以打发时间……而且我在更衣室
+[NONE|0]里发现了泳装。”\
+hideTextbox
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]念头一转，才发现她说的事情……@
+[NONE|1]没错，沙罗正穿着ＬｅＭＵ职员用的连身泳装。\
+[NONE|1]怎么会没注意到呢……@
+[NONE|1]我实在太丢脸，脸不由自主的红了。\
+hideTextbox
+showTextbox
+[NONE|1]不──@
+[NONE|1]只要看到沙罗的模样，绝不会觉得她是在游泳！\
+[NONE|1]而且药效可能还在影响我……@
+[NONE|1]我拼命为自己找藉口。\
+hideTextbox
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]没有发现我的窘状，沙罗自顾地说着。\
+[s5a014|1]【沙罗】
+[NONE|0]“我才想趁现在在这里多练习”\
+[s5a015|1]【沙罗】
+[NONE|0]“而且这里的水一点也不冷”\
+[NONE|1]这么一说才发现，这里的水，比起淹在通道上的水还要
+[NONE|0]温暖。\
+[NONE|1]大概是配管的热气传达到水中。\
+[s5a016|1]【沙罗】
+[NONE|0]“所以我才一个人练习啊”\
+[NONE|1]【少年】
+[NONE|0]“沙罗不是忍者吗？　忍者不是都会游……”\
+fgload 1,"SA04BWM","320",3
+showTextbox
+[s5a017|1]【沙罗】
+[NONE|0]“呜嗯……在下只有游泳不擅长……”\
+[NONE|1]【少年】
+[NONE|0]“是喔……”\
+[s5a018|1]【沙罗】
+[NONE|0]“呜嗯……我只告诉少年你一个人喔……”\
+[s5a019|1]【沙罗】
+[NONE|0]“很遗憾，因为在下不擅长游泳，所以没办法得到忍者
+[NONE|0]执照。”\
+[NONE|1]【少年】
+[NONE|0]“啊，是喔……”\
+fgload 1,"SA09BWM","320",3
+showTextbox
+[s5a020|1]【沙罗】
+[NONE|0]“噗，啊哈哈哈……”\
+[NONE|1]【少年】
+[NONE|0]“什么？”\
+[s5a021|1]【沙罗】
+[NONE|0]“噗噗噗……少年还真的把这笑话当真，呀呀……”\
+[NONE|1]【少年】
+[NONE|0]“咦……啊，笑话！”\
+[s5a022|1]【沙罗】
+[NONE|0]“当然啊……什么忍者啊。”\
+[NONE|1]【少年】
+[NONE|0]“可、可是……”\
+[s5a023|1]【沙罗】
+[NONE|0]“啊哈哈，不过……不会游泳是真的。”\
+fgload 1,"SA01BWM","320",3
+showTextbox
+[s5a024|1]【沙罗】
+[NONE|0]“不知道怎么了，总觉得在这种环境下不会游泳，有一
+[NONE|0]点不安。”\
+[s5a025|1]【沙罗】
+[NONE|0]“也许是因为……我想，只有我一个人不会游泳吧。”\
+fgload 1,"SA03BWM","320",3
+showTextbox
+[s5a026|1]【沙罗】
+[NONE|0]“少年也会游泳吧”\
+[NONE|1]【少年】
+[NONE|0]“我……”\
+[NONE|1]虽然不是很清楚，不过……我刚刚应该是在游泳吧。\
+[NONE|1]这样应该就叫会游泳。\
+[NONE|1]【少年】
+[NONE|0]“嗯……是啊……”\
+fgload 1,"SA01BWM","320",3
+showTextbox
+[s5a027|1]【沙罗】
+[NONE|0]“那刚好，少年可以教我吗？”@
+
+csel "不，这个有点……", *L_pre_ss5a_00000444,"真拿你没办法……", *L_pre_ss5a_000004d6
+*L_pre_ss5a_00000444
+ mov %V_b3, 0
+ goto *LchoiceId_1203_26
+
+*L_pre_ss5a_000004d6
+ mov %V_b3, 1
+ goto *LchoiceId_1203_26
+
+*LchoiceId_1203_26
+if %V_b3 == 0 goto *Lss5a_00000444
+
+if %V_b3 == 1 goto *Lss5a_000004d6
+
+*Lss5a_00000444
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“不，这个有点……”\
+fgload 1,"SA04BWM","320",3
+showTextbox
+[s5a028|1]【沙罗】
+[NONE|0]“咦～为什么～”\
+[NONE|1]【少年】
+[NONE|0]“因为我的手变成这样了……”\
+[NONE|1]事实上，不知道是不是因为刚刚太过勉强的关系，骨折
+[NONE|0]的地方又开始隐隐作痛。\
+fgload 1,"SA01BWM","320",3
+showTextbox
+[s5a029|1]【沙罗】
+[NONE|0]“没关系，只要告诉我哪里有问题就好啦。”\
+[NONE|1]【少年】
+[NONE|0]“不过，沙罗好像不太听实话……”\
+[s5a030|1]【沙罗】
+[NONE|0]“才没有！　我会认真听！”\
+[NONE|1]【少年】
+[NONE|0]“真的？”\
+[s5a031|1]【沙罗】
+[NONE|0]“真的真的，看着我的眼睛！”\
+[NONE|1]【少年】
+[NONE|0]“很混浊……”\
+fgload 1,"SA04BWM","320",3
+showTextbox
+[s5a032|1]【沙罗】
+[NONE|0]“啊～别说啦～！”\
+playSFX "SE02_01",0,95
+showTextbox
+[NONE|1]沙罗向我泼水。\
+[NONE|1]【少年】
+[NONE|0]“哇……骗、骗你的啦……”\
+[s5a033|1]【沙罗】
+[NONE|0]“真是的～惹我生气的话，绝不原谅你。”\
+[NONE|1]【少年】
+[NONE|0]“不要我教你游泳了吗？”\
+[s5a034|1]【沙罗】
+[NONE|0]“啊……呜～少年真狡猾。”\
+[s5a035|1]【沙罗】
+[NONE|0]“若你也是武士的话，就堂堂正正跟我比。”\
+[NONE|1]【少年】
+[NONE|0]“我又不是武士，才不要跟你比。”\
+[s5a036|1]【沙罗】
+[NONE|0]“呜～又在强词夺理。”\
+[NONE|1]【少年】
+[NONE|0]“谁、谁强词夺理……”\
+[s5a037|1]【沙罗】
+[NONE|0]“好～啊……决定好了，少年要教我游泳！”\
+[NONE|1]【少年】
+[NONE|0]“你别自己决定”\
+[s5a038|1]【沙罗】
+[NONE|0]“有什么关系，这就是命运安排的必然结果，前世注定
+[NONE|0]了！”\
+[NONE|1]【少年】
+[NONE|0]“那个～”\
+fgload 1,"SA01BWM","320",3
+showTextbox
+[s5a039|1]【沙罗】
+[NONE|0]“是的，决定了！”\
+[NONE|1]【少年】
+[NONE|0]“你别自己决定”\
+fgload 1,"SA04BWM","320",3
+showTextbox
+[s5a040|1]【沙罗】
+[NONE|0]“啊～男人就是啰啰唆唆！”\
+[s5a041|1]【沙罗】
+[NONE|0]“决定好的事情就别犹豫了～”\
+[NONE|1]【少年】
+[NONE|0]“我说……我什么时候决定的？”\
+[s5a042|1]【沙罗】
+[NONE|0]“现在啊，现在，就是现在我决定好了，已经决定少年
+[NONE|0]要教我游泳！”\
+[NONE|1]总觉得再继续争辩下去，实在太愚蠢了。\
+[NONE|1]【少年】
+[NONE|0]“知道了啦，教你就是了……”\
+[s5a043|1]【沙罗】
+[NONE|0]“是啊，一开始这样说不就好了！”\
+goto *Lss5a_0000052f
+*Lss5a_000004d6
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“真拿你没办法……”\
+[s5a044|1]【沙罗】
+[NONE|0]“咦？”\
+[NONE|1]【少年】
+[NONE|0]“反正都湿透了，就当误上贼船，我就帮你看看吧。”\
+[s5a045|1]【沙罗】
+[NONE|0]“真的！　太好啦～”\
+[s5a046|1]【沙罗】
+[NONE|0]“不过，少年你还真是体贴耶？”\
+[NONE|1]【少年】
+[NONE|0]“咦……没有吧？”\
+[s5a047|1]【沙罗】
+[NONE|0]“啊～！　我知道了。”\
+[NONE|1]【少年】
+[NONE|0]“什、什么？”\
+fgload 1,"SA09BWM","320",3
+showTextbox
+[s5a048|1]【沙罗】
+[NONE|0]“少年迷上了我穿泳装的样子～不～行的喔，不能看！
+[NONE|0]”\
+[NONE|1]【少年】
+[NONE|0]“才、才不是这样……别乱说！”\
+[s5a049|1]【沙罗】
+[NONE|0]“啊～做贼心虚喔！”\
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“好！　算了，不教你了！”\
+fgload 1,"SA03BWM","320",3
+showTextbox
+[s5a050|1]【沙罗】
+[NONE|0]“啊……哇，别走啊，拜托啦～”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[s5a051|1]【沙罗】
+[NONE|0]“不开玩笑就是了～”\
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“绝对不会了？”\
+fgload 1,"SA01BWM","320",3
+showTextbox
+[s5a052|1]【沙罗】
+[NONE|0]“嗯……绝对不会。”\
+[NONE|1]【少年】
+[NONE|0]“呜～嗯……”\
+[s5a053|1]【沙罗】
+[NONE|0]“真的啦！　我对神明、菩萨，还有祖先发誓。”\
+[NONE|1]【少年】
+[NONE|0]“呼……知道啦。”\
+[s5a054|1]【沙罗】
+[NONE|0]“真的？　你应该懂我的意思吧……”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[NONE|1]【沙罗】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“那样的话……”\
+showTextbox
+[s5a055|1]【沙罗】
+[NONE|0]“哇～骗我的，开玩笑的～！　少年～过分～！”\
+[NONE|1]沙罗啪答啪答地移动身体，泛起剧烈的水花。\
+[NONE|1]【少年】
+[NONE|0]“呜哇……知道啦，教你，会教你啦。”\
+[s5a056|1]【沙罗】
+[NONE|0]“哇……太好啰！”\
+[s5a057|1]【沙罗】
+[NONE|0]“你一定会帮我的，我就知道……”\
+[NONE|1]【少年】
+[NONE|0]“那就快饶了我吧……”\
+*Lss5a_0000052f
+
+hideTextbox
+specialEffect 12,0
+stopBGM
+delay 30
+bgload "EV_SA10A","6","2"
+playBGM "18","100"
+playSFX "SE02_14",0,100
+mov %V_ab, %V_VAR_c0_38
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“沙罗……身体不要用力！”\
+[NONE|1]【少年】
+[NONE|0]“再自然一点”\
+[NONE|1]【少年】
+[NONE|0]“沙罗！”\
+[NONE|1]为了压过沙罗拍出来的水声，我大声呐喊。\
+[NONE|1]我已经离开水里。\
+[NONE|1]悬吊着右腕的状态下，实在没办法教什么实际动作。\
+[NONE|1]只能看着沙罗的动作，出声指导她。\
+[NONE|1]可是……不管我怎么说，沙罗的动作还是一样不对。\
+[NONE|1]【少年】
+[NONE|0]“沙罗，那种动作是不可能学会的。”\
+[s5a058|1]【沙罗】
+[NONE|0]“没办法啊！　喝啊……喝啊……”\
+[s5a059|1]【沙罗】
+[NONE|0]“而且，我尽量，照你说的，在做了……”\
+[NONE|1]【少年】
+[NONE|0]“唉……”\
+[NONE|1]【少年】
+[NONE|0]“可是你那么拼命踢水是没用的”\
+[NONE|1]【少年】
+[NONE|0]“应该要和缓一点……”\
+[s5a060|1]【沙罗】
+[NONE|0]“这、这样？”\
+playSFX "SE02_14",0,100
+showTextbox
+[NONE|1]──啪唰啪唰啪唰啪唰啪唰！\
+[NONE|1]比起刚刚，激起了更剧烈的水花。\
+[NONE|1]【少年】
+[NONE|0]“呜哇……沙、沙罗，再慢一点！”\
+[NONE|1]边躲着飞溅过来的水滴，我边说着。\
+[NONE|1]【少年】
+[NONE|0]“沙罗，你不是故意的吧？”\
+[s5a061|1]【沙罗】
+[NONE|0]“怎么可能”\
+[s5a062|1]【沙罗】
+[NONE|0]“那该怎么办啊”\
+[NONE|1]【少年】
+[NONE|0]“就说你要放轻动作啊……”\
+[s5a063|1]【沙罗】
+[NONE|0]“你说要放轻，可是要怎么做，我不知道啊……就是没
+[NONE|0]办法嘛！”\
+[s5a064|1]【沙罗】
+[NONE|0]“哼，少年的教法真烂！”\
+[NONE|1]怒。\
+stopSFX
+hideTextbox
+specialEffect 0,0
+bgload "BG20B1","6","2"
+fgload 1,"SA03BWM","320",3
+mov %V_ab, %V_VAR_c0_18
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“啊啊……知道啦。”\
+fgload 1,"SA04BWM","320",3
+showTextbox
+[s5a065|1]【沙罗】
+[NONE|0]“什么？”\
+[NONE|1]【少年】
+[NONE|0]“其实沙罗不会游也没关系吧？”\
+[s5a066|1]【沙罗】
+[NONE|0]“才不是这样！”\
+[NONE|1]【少年】
+[NONE|0]“呼嗯……是吗？”\
+fgload 1,"SA01BWM","320",3
+showTextbox
+[s5a067|1]【沙罗】
+[NONE|0]“什么？”\
+[NONE|1]【少年】
+[NONE|0]“嗯……沙罗。”\
+[NONE|1]【少年】
+[NONE|0]“真的～很想学会游泳的话。”\
+[NONE|1]【沙罗】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“就应该认真听我说”\
+fgload 1,"SA03BWM","320",3
+showTextbox
+[s5a068|1]【沙罗】
+[NONE|0]“呜……”\
+[NONE|1]【少年】
+[NONE|0]“如果听不下去我说的话……”\
+[NONE|1]【少年】
+[NONE|0]“我就要走了”\
+[s5a069|1]【沙罗】
+[NONE|0]“呜～……”\
+[NONE|1]【少年】
+[NONE|0]“你想要我教你？”\
+[s5a070|1]【沙罗】
+[NONE|0]“……嗯”\
+[NONE|1]【少年】
+[NONE|0]“那你有话要跟我说吗？”\
+fgload 1,"SA04BWM","320",3
+showTextbox
+[s5a071|1]【沙罗】
+[NONE|0]“呜……”\
+[NONE|1]沙罗痛恨地瞪着我。\
+[NONE|1]【少年】
+[NONE|0]“是吗？　那好……”\
+[NONE|1]我作势准备离开。\
+fgload 1,"SA03BWM","320",3
+showTextbox
+[s5a072|1]【沙罗】
+[NONE|0]“啊呜……对、对不起……”\
+[NONE|1]【少年】
+[NONE|0]“什～么？　没听到……”\
+[s5a073|1]【沙罗】
+[NONE|0]“就说对不起了嘛！”\
+[s5a074|1]【沙罗】
+[NONE|0]“我不玩了，教我啦。”\
+fgload 1,"SA01BWM","320",3
+showTextbox
+[s5a075|1]【沙罗】
+[NONE|0]“拜、托、你、啦”\
+[NONE|1]【少年】
+[NONE|0]“你的话语中带着不快～！”\
+fgload 1,"SA04BWM","320",3
+showTextbox
+[s5a076|1]【沙罗】
+[NONE|0]“什么啊……我觉得刚好啊。”\
+fgload 1,"SA01BWM","320",3
+showTextbox
+[s5a077|1]【沙罗】
+[NONE|0]“而且我穿泳装的样子，我觉得很有魅力呀～”\
+[s5a078|1]【沙罗】
+[NONE|0]“跟这样的泳装美少女在一起，好幸福喔……”\
+[NONE|1]【少年】
+[NONE|0]“……一点也不”\
+hideTextbox
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]
+[NONE|1]老实说，沙罗穿泳装的模样，真的让我的心砰砰跳。\
+[NONE|1]可是我绝不能承认，@
+[NONE|1]不想承认了……让沙罗心情太好。\
+hideTextbox
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“为什么沙罗穿泳装，我非得要开心呢？”\
+[s5a079|1]【沙罗】
+[NONE|0]“啊～生气～”\
+hideTextbox
+specialEffect 0,0
+bgload "EV_SA10A","0","2"
+playSFX "SE02_14",0,100
+mov %V_ab, %V_VAR_c0_18
+
+showTextbox
+[NONE|1]沙罗激烈地踢着脚，向我泼水。\
+[NONE|1]【少年】
+[NONE|0]“呜哇……不要这样！”\
+[s5a080|1]【沙罗】
+[NONE|0]“嗯……老实说！　其实你既兴奋又紧张吧～”\
+[NONE|1]【少年】
+[NONE|0]“才没有！　为什么我就要对沙罗……”\
+[NONE|1]自己的心情像是被看穿了一样，脸十分地红。\
+hideTextbox
+specialEffect 0,0
+bgload "BG20B1","6","2"
+fgload 1,"SA01BWM","320",3
+stopSFX
+mov %V_ab, %V_VAR_c0_18
+
+showTextbox
+[s5a081|1]【沙罗】
+[NONE|0]“啊……你看，脸红了～”\
+fgload 1,"SA09BWM","320",3
+showTextbox
+[s5a082|1]【沙罗】
+[NONE|0]“其实很高兴～喔～”\
+[NONE|1]【少年】
+[NONE|0]“才、才没有！”\
+[s5a083|1]【沙罗】
+[NONE|0]“唉～男生嘛……”\
+[NONE|1]【少年】
+[NONE|0]“又怎样”\
+[s5a084|1]【沙罗】
+[NONE|0]“嗯……跟这～样的泳装美少女在一起，只要是健康的
+[NONE|0]男生都会很开心吧。”\
+[NONE|1]【少年】
+[NONE|0]“就～说了，没有……”\
+[s5a085|1]【沙罗】
+[NONE|0]“其实是想再多看一眼吧～”\
+[NONE|1]【少年】
+[NONE|0]“怎、怎么可能。”\
+[NONE|1]【少年】
+[NONE|0]“好吧……我要走啰！”\
+hideTextbox
+specialEffect 6,0
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]像是被看透心思般地羞愧，我真的决定要离开房间。\
+[s5a086|1]【沙罗】
+[NONE|0]“呀啊！”\
+[NONE|1]背后传来沙罗的叫声。\
+hideTextbox
+specialEffect 0,0
+bgload "BG20B1","6","2"
+mov %V_ab, %V_VAR_c0_18
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“沙罗！？”\
+[NONE|1]慌张地回过头。\
+[NONE|1]【少年】
+[NONE|0]“沙罗、沙罗？”\
+[NONE|1]【少年】
+[NONE|0]“怎么了，沙罗！”\
+[NONE|1]脚抽筋了吗！？\
+[NONE|1]慌张地靠近水边。\
+[NONE|1]──忽然。\
+hideTextbox
+specialEffect 0,0
+stopBGM
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+playSFX "SE02_01",0,100
+showTextbox
+[NONE|1]──啪唰！\
+[NONE|1]突如其来的水花模糊了视线。\
+[NONE|1]啊……正这么想着的时候，我的身体漂浮着。\
+playSFX "SE02_05",0,95
+showTextbox
+[NONE|1]──噗！\
+[NONE|1]下一瞬间，我已经在水里了。\
+[NONE|1]【少年】
+[NONE|0]“咳咕！”\
+[NONE|1]突如其来的事件，让我喝下大量的水，水也呛进了鼻子
+[NONE|0]。\
+[NONE|1]鼻子里有着刺刺的疼痛。\
+[NONE|1]我拼了命往上浮。\
+hideTextbox
+specialEffect 0,0
+bgload "BG20B1","6","2"
+mov %V_ab, %V_VAR_c0_18
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“噗喝！　沙罗！！”\
+[s5a087|1]【沙罗】
+[NONE|0]“嗯～什～么，少年……”\
+bgload "EV_SA10A","0","2"
+playBGM "18","97"
+showTextbox
+[NONE|1]沙罗一副不知情的模样，继续练习游泳。\
+[NONE|1]【少年】
+[NONE|0]“嗯……咳呕、咳呕，沙罗太过分了吧！”\
+[NONE|1]我逼近沙罗。\
+[s5a088|1]【沙罗】
+[NONE|0]“噗……呜啊……哈哈，哈哈哈哈……”\
+[NONE|1]【少年】
+[NONE|0]“什么啊？”\
+[s5a089|1]【沙罗】
+[NONE|0]“因为……噗噗噗……这么容易就被拉下来了，呵呵呵
+[NONE|0]呵……”\
+[NONE|1]【少年】
+[NONE|0]“沙、沙罗！”\
+[s5a090|1]【沙罗】
+[NONE|0]“此乃修行，少年君。”\
+[s5a091|1]【沙罗】
+[NONE|0]“噗……啊哈哈哈哈哈！”\
+[NONE|1]看着开怀大笑的沙罗，我如果再生气就显得很蠢。\
+[NONE|1]而且……不知为何我也笑了出来。\
+[NONE|1]【少年】
+[NONE|0]“……噗哧，呵呵……哈哈哈哈哈哈……”\
+[s5a092|1]【沙罗】
+[NONE|0]“哈哈哈哈哈哈！”\
+[NONE|1]【少年】
+[NONE|0]“哈哈哈哈哈哈哈哈！”\
+[NONE|1]沙罗跟我不停地笑着。\
+hideTextbox
+specialEffect 0,0
+bgload "BG20B1","6","2"
+fgload 1,"SA03BWM","320",3
+mov %V_ab, %V_VAR_c0_18
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“那么……”\
+[NONE|1]不知怎么了，收起突发的狂笑，我爬出水来。\
+[s5a093|1]【沙罗】
+[NONE|0]“啊，少年……”\
+[NONE|1]沙罗有些担心地叫着我。\
+[NONE|1]【少年】
+[NONE|0]“那就来吧，沙罗……”\
+[s5a094|1]【沙罗】
+[NONE|0]“啊……嗯……”\
+fgload 1,"SA01BWM","320",3
+showTextbox
+[s5a095|1]【沙罗】
+[NONE|0]“那么，请多多指教……师父！”\
+[NONE|1]【少年】
+[NONE|0]“呜嗯……本山人的修行是很严格的，愿意跟随吗？”\
+[s5a096|1]【沙罗】
+[NONE|0]“是的，师父！”\
+[NONE|1]【少年】
+[NONE|0]“嗯……开始吧。”\
+[s5a097|1]【沙罗】
+[NONE|0]“嗯……”\
+hideTextbox
+specialEffect 0,0
+bgload "EV_SA10A","0","2"
+mov %V_ab, %V_VAR_c0_18
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“好，沙罗……你可能是因为觉得自己不会游泳，所以
+[NONE|0]身体不自觉地僵硬了。”\
+[NONE|1]【少年】
+[NONE|0]“所以先从放松身体开始”\
+[s5a098|1]【沙罗】
+[NONE|0]“不过……我也想照你说的那样做……”\
+[NONE|1]【少年】
+[NONE|0]“呜～嗯……还是很僵硬啊，好像在挥棒一样……”\
+[NONE|1]【少年】
+[NONE|0]“呜─嗯……对了，脚再放慢一点……就像是鱼的动作
+[NONE|0]一样。”\
+[s5a099|1]【沙罗】
+[NONE|0]“鱼……嗯……好，变身成鱼～”\
+[NONE|1]【少年】
+[NONE|0]“沙罗！　没冲劲啊！”\
+[s5a100|1]【沙罗】
+[NONE|0]“呜～因为我抓不到什么印象～”\
+[NONE|1]【少年】
+[NONE|0]“鱼不行的话，海豚或者鲸鱼……总之，尽量柔软缓慢
+[NONE|0]的动作。”\
+[s5a101|1]【沙罗】
+[NONE|0]“嗯～～”\
+[NONE|1]【少年】
+[NONE|0]“不行……还太硬！　再柔软一点。”\
+[NONE|1]【少年】
+[NONE|0]“没有感觉脚在动一样！”\
+[NONE|1]我开始觉得这个状况很快乐。\
+[NONE|1]因为我和总是表现强势的沙罗，现在的立场完全颠倒了
+[NONE|0]。\
+[NONE|1]【少年】
+[NONE|0]“沙罗！”\
+[s5a102|1]【沙罗】
+[NONE|0]“呜呜～～～”\
+hideTextbox
+specialEffect 12,0
+stopBGM
+delay 60
+bgload "BG11A1","6","2"
+playBGM "2","100"
+mov %V_ab, %V_VAR_c0_38
+
+clock "3","40"
+showTextbox
+[NONE|1]我等着沙罗从更衣室出来。\
+[NONE|1]无事可做的手中，把玩着沙罗的坠子。\
+[NONE|1]看着坠子，没有了打火机的照明，只是单纯的镜子。\
+[NONE|1]指尖沿着镜缘滑行。\
+specialEffect 18,1
+bgload "BG10A1","6","2"
+fgload 1,"SA17ADL","320",0
+unknown20 32
+mov %V_ab, %V_VAR_c0_19
+
+delay 1
+mov %V_ac, 0
+
+unknown21 13
+showTextbox
+[NONE|1]想起昨天在增减压室里的沙罗。\
+[s4a090|1]【沙罗】
+[NONE|0]“我没有爸妈”\
+[NONE|1]那时，沙罗寂寞的侧脸……\
+hideTextbox
+unknown20 32
+specialEffect 18,1
+mov %V_ac, 0
+
+unknown21 13
+bgload "BG11A1","6","2"
+fgload 1,"SA01ADM","320",0
+mov %V_ab, %V_VAR_c0_18
+
+showTextbox
+[s5a103|1]【沙罗】
+[NONE|0]“久等了～”\
+fgload 1,"SA08ADM","320",3
+showTextbox
+[s5a104|1]【沙罗】
+[NONE|0]“嗯……怎么了？　表情怪怪的？”\
+[NONE|1]【少年】
+[NONE|0]“嗯……啊啊，没事。”\
+[NONE|1]【少年】
+[NONE|0]“对了，这个……”\
+fgload 1,"SA02ADM","320",3
+showTextbox
+[s5a105|1]【沙罗】
+[NONE|0]“啊，嗯……你一直帮我带着啊。”\
+[s5a106|1]【沙罗】
+[NONE|0]“不过真抱歉～还要你陪我到最后。”\
+[NONE|1]【少年】
+[NONE|0]“明明就是你自己拉着我的……”\
+[NONE|1]我脱口而出。\
+[s5a107|1]【沙罗】
+[NONE|0]“嗯～你说什么～？　少年……”\
+[NONE|1]【少年】
+[NONE|0]“没～有，没说什么……”\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[s5a108|1]【沙罗】
+[NONE|0]“呼～嗯……不过，真的谢谢你……”\
+[s5a109|1]【沙罗】
+[NONE|0]“陪着我到最后……”\
+[NONE|1]【少年】
+[NONE|0]“咦？”\
+[NONE|1]没想到她会再说一次，我惊讶着。\
+[NONE|1]沙罗，那个沙罗竟然老实地跟我道谢。\
+[NONE|1]【少年】
+[NONE|0]“你、你很坦白……”\
+fgload 1,"SA02ADM","320",3
+showTextbox
+[s5a110|1]【沙罗】
+[NONE|0]“嗯……真的很感谢你。”\
+[s5a111|1]【沙罗】
+[NONE|0]“因为，至少在最后，我终于可以游得比较像样了。”\
+fgload 1,"SA08ADM","320",3
+showTextbox
+[s5a112|1]【沙罗】
+[NONE|0]“虽然还不太稳……”\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[s5a113|1]【沙罗】
+[NONE|0]“不过我还是很高兴，你这么认真的教我……”\
+[NONE|1]【少年】
+[NONE|0]“沙罗……”\
+[NONE|1]我有些难为情。\
+[NONE|1]因为我看着老是很强悍的沙罗表现出那样为难的样子，
+[NONE|0]却感到很快乐。\
+[NONE|1]虽然真的在指导游泳，可是之中夹杂捉弄的心态，却也
+[NONE|0]是事实……\
+[NONE|1]可是……沙罗却这么坦白地跟我说‘谢谢’……\
+fgload 1,"SA02ADM","320",3
+showTextbox
+[s5a114|1]【沙罗】
+[NONE|0]“真的谢谢你，少年……”\
+[NONE|1]【少年】
+[NONE|0]“嗯嗯……可是，不可以骄傲喔，那样还不能算是会游
+[NONE|0]喔。”\
+[NONE|1]我感到有些丢脸，转而用一种嘲讽的口气说话。\
+[s5a115|1]【沙罗】
+[NONE|0]“嗯……我知道，有机会的话……再教我喔，少年。”\
+[NONE|1]【少年】
+[NONE|0]“呜……呜嗯。”\
+fgload 1,"SA04ADM","320",3
+showTextbox
+[s5a116|1]【沙罗】
+[NONE|0]“下一次，我一定要会游。”\
+[NONE|1]【少年】
+[NONE|0]“是啊，就差一点了。”\
+fgload 1,"SA02ADM","320",3
+showTextbox
+[s5a117|1]【沙罗】
+[NONE|0]“麻烦你了”\
+[NONE|1]【少年】
+[NONE|0]“啊哈哈哈，嗯……”\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[s5a118|1]【沙罗】
+[NONE|0]“好像有点累了……”\
+[NONE|1]沙罗边说着，将手中的坠子挂到身上。\
+[NONE|1]然后拿起坠子看着。\
+fgload 1,"SA17ADM","320",3
+showTextbox
+[s5a119|1]【沙罗】
+[NONE|0]“哥哥如果在的话，一定也是这样……”\
+[NONE|1]沙罗忽然寂寞地呢喃着。\
+[NONE|1]【少年】
+[NONE|0]“哥哥？”\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[s5a120|1]【沙罗】
+[NONE|0]“嗯……我……”\
+fgload 1,"SA02ADM","320",3
+showTextbox
+[s5a121|1]【沙罗】
+[NONE|0]“有个哥哥……”\
+[s5a122|1]【沙罗】
+[NONE|0]“很帅气、很厉害，我很喜欢他……”\
+fgload 1,"SA03ADM","320",3
+showTextbox
+[s5a123|1]【沙罗】
+[NONE|0]“只是在非常小的时候就分开了……”\
+[NONE|1]【少年】
+[NONE|0]“是喔……”\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[s5a124|1]【沙罗】
+[NONE|0]“不过我们约好了……”\
+[NONE|1]【少年】
+[NONE|0]“约好了？”\
+[s5a125|1]【沙罗】
+[NONE|0]“嗯……约好了。”\
+[s5a126|1]【沙罗】
+[NONE|0]“一定会来接我的……”\
+[NONE|1]【少年】
+[NONE|0]“这样啊”\
+fgload 1,"SA03ADM","320",3
+showTextbox
+[s5a127|1]【沙罗】
+[NONE|0]“嗯……”\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[s5a128|1]【沙罗】
+[NONE|0]“所以……我在等他。”\
+fgload 1,"SA02ADM","320",3
+showTextbox
+[s5a129|1]【沙罗】
+[NONE|0]“等着他来救我……一直都是……”\
+[NONE|1]沙罗的话语，让我想起以前曾有过的幻想。\
+hideTextbox
+specialEffect 6,1
+stopBGM
+removeBG
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+mov %V_ab, %V_VAR_c0_38
+
+showTextbox
+[NONE|1]
+[s3b105|1]　　　　　　　　嗯……我们约好的。\
+[s3b106|1]　在你来接我之前，我会乖乖等的……\
+[s3b107|1]　　　　　　　　会乖乖……等的……\
+[s3b108|1]　　　　　　一直……等……的……\
+hideTextbox
+hideTextbox
+specialEffect 12,0
+removeBG
+mov %V_ac, 0
+
+unknown21 16
+hideTextbox
+mov %V_13, 0
+
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]我拼命想挥开这个幻想……\
+hideTextbox
+specialEffect 0,0
+delay 90
+removeBG
+mov %V_ab, %V_VAR_c0_23
+
+mov %V_fa, 96
+
+chapterCutin "00000000","cal_505"
+hideTextbox
+specialEffect 6,0
+bgload "EV_SO11D","6","2"
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+playSFX "SE09_01L",0,90
+mov %V_ab, %V_VAR_c0_38
+
+showTextbox
+[NONE|1]翌晨，我睡过头了。\
+[NONE|1]原本以为糟糕了……\
+[NONE|1]没想到大家似乎也一样。\
+[NONE|1]睡过头的影响下，早餐时间比平常更晚开始。\
+hideTextbox
+hideTextbox
+specialEffect 12,0
+stopSFX
+mov %V_ac, 0
+
+unknown21 16
+bgload "BG21B1","6","2"
+hideTextbox
+mov %V_13, 0
+
+playBGM "18","100"
+mov %V_ab, %V_VAR_c0_38
+
+clock "8","37"
+showTextbox
+[NONE|1]因为想要改变一下用餐气氛，决定在休憩空间的池子那
+[NONE|0]里（原本曾经是），铺上餐垫。\
+[NONE|1]附带一提，这个餐垫因为是纪念品卖场的商品，所以印
+[NONE|0]有ＬｅＭＵ标志与妙妙（ＬｅＭＵ吉祥物）。\
+[NONE|1]空虽然不必用餐，还是跟我们坐在一起，开心地笑着。\
+[NONE|1]也许是闻到了味道吧，月海悄然现身。\
+[NONE|1]她一副无辜的表情，一屁股就坐在妙妙的脸上，直接拿
+[NONE|0]起三明治。\
+[NONE|1]武当然念了几句话，月海却不理会。\
+[NONE|1]沙罗跟月海的视线没有交集过，像是无视彼此存在的感
+[NONE|0]觉。\
+[NONE|1]看来……还是没合好。\
+[NONE|1]可是也没有发生任何不愉快，大家还是开心地边吃边聊
+[NONE|0]。\
+multifgload2 1,2,"00000000","SA02ADM","00000000","YU02BDM",128,512,3
+showTextbox
+[y5a075|1]【沙罗】
+[NONE|0]“一二，剪刀石头布！”\
+[y5a076|1]【沙罗】
+[NONE|0]“看那边……哟咿！”\
+[NONE|1]【少年】
+[NONE|0]“哇……又输了！”\
+fgload 2,"YU05BDM","512",3
+showTextbox
+[y5a077|1]【优】
+[NONE|0]“少年真弱耶～这已经是１６连败了吧？”\
+[NONE|1]【少年】
+[NONE|0]“咦……好奇怪啊。”\
+[y5a078|1]【优】
+[NONE|0]“太单纯了吧，人家说‘看那边’，你就真的转头看啊
+[NONE|0]？”\
+fgload 1,"SA05ADM","128",3
+showTextbox
+[y5a079|1]【沙罗】
+[NONE|0]“个性太容易被骗啰”\
+[NONE|1]【少年】
+[NONE|0]“才没有，那是我自己意志决定的啦。”\
+fgload 2,"YU01BDM","512",3
+showTextbox
+[y5a080|1]【优】
+[NONE|0]“看那边……哟咿！”\
+[NONE|1]【少年】
+[NONE|0]“──啊！”\
+[NONE|1]我朝向‘那边’。\
+multifgload2 1,2,"00000000","SA07ADM","00000000","YU07BDM",128,512,3
+showTextbox
+[y5a081|1]【优】
+[NONE|0]“因为你丧失记忆，所以判断事物的能力也比一般人低
+[NONE|0]吗？”\
+fgload 2,"YU05BDM","512",3
+showTextbox
+[y5a082|1]【优】
+[NONE|0]“你未免也太容易被眼前的事实给困住了吧”\
+[y5a083|1]【优】
+[NONE|0]“要是不坚持己见一点，不知不觉，就会朝错误方向前
+[NONE|0]进了喔？”\
+[NONE|1]【少年】
+[NONE|0]“我知道了……”\
+fgload 2,"YU01BDM","512",3
+showTextbox
+[y5a084|1]【优】
+[NONE|0]“嗯……算了……”\
+fgload 1,"SA02ADM","128",3
+showTextbox
+[y5a085|1]【沙罗】
+[NONE|0]“失败者的惩罚，来啰……”\
+fgload 2,"YU02BDM","512",3
+showTextbox
+[y5a086|1]【优】
+[NONE|0]“来，交出三明治吧？”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[NONE|1]沉默地交出自己的三明治。\
+[y5a087|1]【沙罗】
+[NONE|0]“呜嗯呜嗯～～～”\
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]在三明治上面，使力挤上黄芥末。\
+[NONE|1]我的塔滋塔已经变成巨大的黄芥末固体。\
+[NONE|1]打从吃之前，嘴巴就开始痛了。\
+[NONE|1]……该说多亏了这个愚蠢的游戏，我根本没空去想别的
+[NONE|0]事情。\
+[NONE|1]忽然……有人从我眼前经过。\
+[NONE|1]是月海。\
+[NONE|1]月海走到武的旁边，伸出右手。\
+multifgload2 1,2,"00000000","TU15ADM","00000000","KB14ADM",128,512,3
+showTextbox
+[y5a088|1]【武】
+[NONE|0]“啊嗯？　手怎么了吗？”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[y5a089|1]【武】
+[NONE|0]“难道要我看你的手？”\
+[y5a090|1]【武】
+[NONE|0]“别开玩笑了！”\
+fgload 1,"TU18ADM","128",3
+showTextbox
+[y5a091|1]【月海】
+[NONE|0]“真是笨蛋”\
+showTextbox
+[y5a092|1]【空】
+[NONE|0]“那个……是不是再来一个的意思啊？”\
+fgload 1,"TU15ADM","128",3
+showTextbox
+[NONE|1]呼应空的补充说明，月海点点头。\
+[NONE|1]她已经吃完第一个塔滋塔的样子。\
+[y5a093|1]【武】
+[NONE|0]“喔喔……真是有胆识……每次都只有这个时候才见到
+[NONE|0]你的人影，竟然还敢要求再来一个……”\
+fgload 2,"KB11ADM","512",3
+showTextbox
+[y5a094|1]【武】
+[NONE|0]“嗯……算了。”\
+fgload 1,"TU18ADM","128",3
+showTextbox
+[y5a095|1]【月海】
+[NONE|0]“没有？　有？　哪一个？”\
+fgload 2,"KB12ADM","512",3
+showTextbox
+[y5a096|1]【武】
+[NONE|0]“有啊，我可是有一个专为月海调味的‘特制塔滋塔’
+[NONE|0]。”\
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“调味？？”\
+[NONE|1]有种不好的预感。\
+[y5a097|1]【武】
+[NONE|0]“敢吃吗……要吃光喔？”\
+fgload 1,"TU17ADM","128",3
+showTextbox
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]无言地接过三明治的月海。\
+[NONE|1]【武】
+[NONE|0]“……………………”\
+[NONE|1]武大剌剌地看着月海拆开包装纸。\
+fgload 1,"TU18ADM","128",3
+showTextbox
+[y5a098|1]【月海】
+[NONE|0]“……看什么？”\
+[y5a099|1]【武】
+[NONE|0]“没啊，实在是个美女，连拆开包装的模样都好美啊…
+[NONE|0]………只是这样……”\
+[y5a100|1]【月海】
+[NONE|0]“无药可救的笨蛋”\
+[y5a101|1]【月海】
+[NONE|0]“嗯……你再死个５０次左右，也许就会变聪明了。”\
+showTextbox
+[NONE|1]【武】
+[NONE|0]“……………………”\
+showTextbox
+[NONE|1]哎呀呀？　没生气吧？\
+[NONE|1]可是他还是笑笑地看着月海吃东西的样子。\
+[NONE|1]有一种即将开战的气氛，我们吞着口水，看着她的样子
+[NONE|0]。\
+fgload 1,"TU17ADM","128",3
+showTextbox
+[NONE|1]月海咬了那个三明治一口。\
+[NONE|1]‘啊～嗯……’\
+[NONE|1]‘……嗯呜……’\
+fgload 1,"TU15ADM","128",3
+showTextbox
+[y5a102|1]【月海】
+[NONE|0]“嗯？”\
+[y5a103|1]【武】
+[NONE|0]“呵呵……”\
+[y5a104|1]【武】
+[NONE|0]“噗哇～～～哈哈哈，呀哈哈呀哈哈～～～”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[y5a105|1]【武】
+[NONE|0]“很棒的味道吧，这个三明治……呀哈哈哈哈……”\
+[NONE|1]武笑得眼泪都流出来。\
+[y5a106|1]【武】
+[NONE|0]“这可是混合了黄芥末、辣椒酱、七味粉、胡椒、鼠尾
+[NONE|0]草、肉豆蔻、肉桂、薄荷、咖哩粉……”\
+[y5a107|1]【武】
+[NONE|0]“加入了玛由滋、番茄酱、砂糖、盐、酱油、猪排酱、
+[NONE|0]醋、香草精华……”\
+fgload 2,"KB13ADM","512",3
+showTextbox
+[y5a108|1]【武】
+[NONE|0]“还有……还有什么啊？　忘了……”\
+fgload 2,"KB11ADM","512",3
+showTextbox
+[y5a109|1]【武】
+[NONE|0]“总之这个味道，混合了所有我找到的调味料跟香料，
+[NONE|0]一共３４种的特制酱汁！”\
+fgload 1,"TU17ADM","128",3
+showTextbox
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[y5a110|1]【优】
+[NONE|0]“等、等等！　这也太过分了吧！？”\
+[y5a111|1]【沙罗】
+[NONE|0]“是、是啊……！”\
+[NONE|1]【少年】
+[NONE|0]“太超过了，武！”\
+fgload 2,"KB04ADM","512",3
+showTextbox
+[y5a112|1]【武】
+[NONE|0]“啰唆！　我对食物的恨意，可是比马里亚纳海沟还深
+[NONE|0]的！”\
+[y5a113|1]【空】
+[NONE|0]“小、小町……快、快点吐出来吧……！”\
+showTextbox
+[y5a114|1]【空】
+[NONE|0]“现在快点拿水啊！　不、不不，还是先拿药……！”\
+fgload 2,"KB01ADM","512",3
+showTextbox
+[y5a115|1]【武】
+[NONE|0]“没事的，只是吃坏肚子，不会死的。”\
+[NONE|1]【少年】
+[NONE|0]“怎么能对女孩子这样！”\
+[NONE|1]我的左手准备揪起武。\
+fgload 1,"TU08ADM","128",3
+showTextbox
+[y5a116|1]【月海】
+[NONE|0]“等等……我无所谓。”\
+[NONE|1]制止着我们，月海说着。\
+fgload 2,"KB06ADM","512",3
+showTextbox
+[y5a117|1]【武】
+[NONE|0]“哼，装不在乎啊！”\
+[y5a118|1]【月海】
+[NONE|0]“根本没关系”\
+fgload 2,"KB02ADM","512",3
+showTextbox
+[y5a119|1]【武】
+[NONE|0]“虽然这么说，其实根本就难吃死了吧？　无所谓吗？
+[NONE|0]老实说吧……”\
+fgload 1,"TU01ADM","128",3
+showTextbox
+[y5a120|1]【月海】
+[NONE|0]“真的没关系，因为……”\
+stopBGM
+showTextbox
+[y5a121|1]【月海】
+[NONE|0]“有一种披萨的味道”\
+fgload 2,"KB07ADM","512",3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[NONE|1]【优】
+[NONE|0]“………………”\
+[NONE|1]【沙罗】
+[NONE|0]“……………………”\
+[NONE|1]【空】
+[NONE|0]“…………………………”\
+playBGM "18","100"
+showTextbox
+[NONE|1]──咦？？\
+fgload 2,"KB03ADM","512",3
+showTextbox
+[y5a122|1]【武】
+[NONE|0]“那个，你刚刚说什么？　什么味道？”\
+[y5a123|1]【月海】
+[NONE|0]“披萨”\
+[y5a124|1]【武】
+[NONE|0]“真的、真的？”\
+[NONE|1]月海点头。\
+showTextbox
+[NONE|1]【武】
+[NONE|0]“…………”\
+[y5a125|1]【月海】
+[NONE|0]“咬咬……”\
+fgload 2,"KB04ADM","512",3
+showTextbox
+[y5a126|1]【武】
+[NONE|0]“等、等等，给我－－－－！　这怎么可能！！”\
+fgload 1,"TU02ADM","128",3
+removeFG "2","3"
+playSFX "SE02_04",0,90
+showTextbox
+[NONE|1]月海轻巧地闪过准备抓她的武……冷不妨地绊倒他。\
+[NONE|1]趁隙，她一口气全部吃光光。\
+fgload 1,"TU01ADM","128",3
+showTextbox
+[y5a127|1]【月海】
+[NONE|0]“吃饱了”\
+[y5a128|1]【月海】
+[NONE|0]“的确是个‘特制塔滋塔’呢？”\
+[NONE|1]【武】
+[NONE|0]“…………………………”\
+[NONE|1]武的突袭行动，最后结局却是‘被复仇’的下场。\
+hideTextbox
+specialEffect 12,0
+stopBGM
+delay 90
+bgload "BG21B1","6","2"
+playBGM "2","97"
+mov %V_ab, %V_VAR_c0_23
+
+clock "9","19"
+showTextbox
+[NONE|1]随后，我整理着休憩空间。\
+[NONE|1]将空罐跟三明治包装纸分别装入垃圾袋。\
+[NONE|1]优跟沙罗一起帮忙。\
+[NONE|1]武说要准备午饭，所以回到商店。\
+[NONE|1]空说要确认雷米，而回到控制室。\
+[NONE|1]月海又不知道消失去哪里了。\
+[NONE|1]…………\
+[NONE|1]正当在捡垃圾的途中。\
+hideTextbox
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]
+[t5b003|1]呀喔！\
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“咦？”\
+multifgload2 1,2,"00000000","SA08ADM","00000000","YU07BDM",128,512,3
+showTextbox
+[y5a129|1]【优】
+[NONE|0]“嗯？　怎么了？”\
+[NONE|1]【少年】
+[NONE|0]“不是……”\
+[NONE|1]【少年】
+[NONE|0]“嗯……谁在叫我吗？”\
+fgload 2,"YU06BDM","512",3
+showTextbox
+[y5a130|1]【优】
+[NONE|0]“嗯？”\
+[y5a131|1]【沙罗】
+[NONE|0]“没有人啊”\
+[NONE|1]【少年】
+[NONE|0]“是吗？　错觉吧……”\
+fgload 1,"SA05ADM","128",3
+showTextbox
+[y5a132|1]【沙罗】
+[NONE|0]“我看你这样说只是想偷懒吧？”\
+[NONE|1]【少年】
+[NONE|0]“才没有，不是这样的……”\
+fgload 2,"YU03BDM","512",3
+showTextbox
+[y5a133|1]【优】
+[NONE|0]“又是老毛病的幻听？”\
+[NONE|1]【少年】
+[NONE|0]“这、这个吗……”\
+fgload 2,"YU05BDM","512",3
+showTextbox
+[y5a134|1]【优】
+[NONE|0]“拜托……撑着点吧？”\
+[y5a135|1]【优】
+[NONE|0]“我知道你是累了……”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]又开始收拾垃圾。\
+hideTextbox
+specialEffect 12,0
+showTextbox
+[NONE|1]终于收拾好垃圾，叠好餐垫，整理结束了。\
+hideTextbox
+multifgload2 1,2,"00000000","SA01ADM","00000000","YU01BDM",128,512,3
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[y5a136|1]【优】
+[NONE|0]“剩下的……大概扫一下了。”\
+fgload 2,"YU11BDM","512",3
+showTextbox
+[y5a137|1]【优】
+[NONE|0]“玛由？　可以麻烦你拿扫把跟畚箕吗？　商店那里应
+[NONE|0]该有。”\
+fgload 1,"SA02ADM","128",3
+showTextbox
+[y5a138|1]【沙罗】
+[NONE|0]“遵命～！”\
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]沙罗跑向商店。\
+[NONE|1]【少年】
+[NONE|0]“我现在才想到，打扫这里的人其实很辛苦呢？”\
+fgload 1,"YU01BDM","320",3
+showTextbox
+[y5a139|1]【优】
+[NONE|0]“让‘人’做的话，当然辛苦……”\
+[y5a140|1]【优】
+[NONE|0]“不过，平常都是由雷米控制的清扫机器人全自动地打
+[NONE|0]扫馆内。”\
+[NONE|1]【少年】
+[NONE|0]“嘿”\
+fgload 1,"YU08BDM","320",3
+showTextbox
+[y5a141|1]【优】
+[NONE|0]“嗯……因为这个事故，我想……那个机器人现在应该
+[NONE|0]在海里变成废铁了。”\
+[NONE|1]【少年】
+[NONE|0]“呼嗯……”\
+hideTextbox
+unknown20 44
+stopBGM
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]
+[t5b017|1]嗯咻，嘿咻……\
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+hideTextbox
+mov %V_13, 0
+
+playBGM "13","100"
+showTextbox
+[NONE|1]（……咦？）\
+[NONE|1]又来了……又听到声音了。\
+fgload 1,"YU07BDM","320",3
+showTextbox
+[y5a142|1]【优】
+[NONE|0]“想想，这个ＬｅＭＵ好像也变成巨大的破铜烂铁了。
+[NONE|0]”\
+[y5a143|1]【优】
+[NONE|0]“之后会怎么处理这里呢……”\
+fgload 1,"YU06BDM","320",3
+showTextbox
+[y5a144|1]【优】
+[NONE|0]“嗯……什么？　怎么了？”\
+[NONE|1]【少年】
+[NONE|0]“呜嗯……”\
+fgload 1,"YU03BDM","320",3
+showTextbox
+[y5a145|1]【优】
+[NONE|0]“难道……又来了？”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[y5a146|1]【优】
+[NONE|0]“唉～已经够了，你去医疗室还是哪里睡觉吧。”\
+[y5a147|1]【优】
+[NONE|0]“这样很严重了……”\
+[NONE|1]不，我是真的听到了……\
+[NONE|1]这次绝对不是错觉。\
+hideTextbox
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]
+[t5b019|1]　　　　　　　　　　划了。\
+[NONE|1]
+[t5b020|1]　　　　　　　刻了……\
+hideTextbox
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]（看，又听见了……）\
+hideTextbox
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]
+[t5b021|1]　　　　这个石像刻着伤痕了。\
+hideTextbox
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]（……石像？）\
+removeFG "1","3"
+showTextbox
+[NONE|1]我看着广场那一端的四个石像。\
+[NONE|1]那里……\
+bgload "EV_CO19C","0","2"
+showTextbox
+[NONE|1]某一座石像的座台上，站着一个女孩子。\
+[NONE|1]像是紧贴着石像，像是紧抱着一样，她就站在那里。\
+[NONE|1]（啊！　她……？）\
+[NONE|1]那个人，就是一天之中被我看到又消失的女孩。\
+[NONE|1]【少年】
+[NONE|0]“你看……优！　那里！”\
+bgload "BG21B1","0","2"
+fgload 1,"YU05BDM","320",3
+showTextbox
+[y5a148|1]【优】
+[NONE|0]“嗯？”\
+[NONE|1]【少年】
+[NONE|0]“看啊！　那个石像的地方！”\
+[y5a149|1]【优】
+[NONE|0]“石像……怎么了？”\
+[NONE|1]【少年】
+[NONE|0]“看啊！　在那里，那个石像那里！　有个女孩！？”\
+fgload 1,"YU13BDM","320",3
+showTextbox
+[y5a150|1]【优】
+[NONE|0]“咦～？？　没有人啊？”\
+[NONE|1]【少年】
+[NONE|0]“就在那里啊！　那里！”\
+[NONE|1]【少年】
+[NONE|0]“啊啊……算了！　我去叫她！”\
+removeFG "1","3"
+showTextbox
+[y5a151|1]【优】
+[NONE|0]“啊，少年！”\
+[NONE|1]我冲向石像。\
+[NONE|1]（可是……为什么她会在这里？）\
+[t5b023|1]【？？】
+[NONE|0]“那是因为……”\
+[t5b024|1]【？？】
+[NONE|0]“我很寂寞”\
+[NONE|1]寂寞？\
+[t5b025|1]【？？】
+[NONE|0]“而且，那个……”\
+[t5b026|1]【？？】
+[NONE|0]“后悔……”\
+[NONE|1]后悔？\
+[NONE|1]（你？　在说什么？）\
+[t5b043|1]【？？】
+[NONE|0]“好，下一个……”\
+[t5b044|1]【？？】
+[NONE|0]“啊！？”\
+[NONE|1]就在这个时候，站在座台上不太稳的女孩，突然重心不
+[NONE|0]稳。\
+bgload "EV_CO19D","0","2"
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“啊……危险！！”\
+playSFX "SE01_00",0,100
+showTextbox
+[NONE|1]我飞冲出去。\
+[NONE|1]全力冲到她的身边。\
+[NONE|1]（──来得及吗！？）\
+removeBG
+stopSFX
+stopBGM
+showTextbox
+[NONE|1]我闭上眼睛，用尽浑身的力量踢踏着地板。\
+[NONE|1]将唯一自由的左手用力伸展出去，准备接住要掉下来的
+[NONE|0]她。\
+playSFX "SE02_02",0,100
+showTextbox
+[NONE|1]──啪唰！\
+[NONE|1]…………\
+[NONE|1]…………\
+[NONE|1]…………\
+[NONE|1]手上没有知觉。\
+[NONE|1]来不及了吗？　还没掉下来吗？\
+[NONE|1]我惶恐地睁开眼睛。\
+bgload "BG21B1","0","0"
+stopSFX
+showTextbox
+[NONE|1]（……咦？）\
+[NONE|1]我的手臂中没有人。\
+[NONE|1]而且，我的四周也没有。\
+[NONE|1]辽阔的周围只有荡漾的水面。\
+[y5a152|1]【优】
+[NONE|0]“你没事吧～？　好像摔得不轻啊……”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+bgload "IT05E","0","2"
+showTextbox
+[NONE|1]抬头向上看。\
+[NONE|1]石像的座台上，当然没有人。\
+[NONE|1]我一言不发地站起来，绕到石像的背后。\
+bgload "IT05F","0","2"
+showTextbox
+[NONE|1]石像的背后有个伤痕。\
+[NONE|1]像是被坚硬突起物之类的东西刻了沟一样的伤痕。\
+[NONE|1]伤痕是个人的样子。\
+[NONE|1]简单的人形，像是铁丝人一样的人偶。\
+[NONE|1]直线的铁丝，加上一个圆圆的脸……\
+[NONE|1]全部一共６个。\
+[NONE|1]仔细一看，在人形的痕迹旁边，还刻着从没看过的两只
+[NONE|0]野兽之类的物体。\
+bgload "IT05E","0","2"
+showTextbox
+[NONE|1]再次抬头看着石像。\
+[NONE|1]那个石像向上斜去的姿态……指着东方。\
+bgload "BG21B1","0","2"
+showTextbox
+[y5a153|1]【沙罗】
+[NONE|0]“咦？　在做什么？　你们两个？”\
+[y5a154|1]【优】
+[NONE|0]“呜～～嗯……这个……”\
+[NONE|1]无视她们两人，我轻抚着石像的伤痕。\
+[NONE|1]忽然，这句话从我嘴巴冒出来。\
+[NONE|1]【少年】
+[NONE|0]“小心脚边”\
+hideTextbox
+mov %V_13, 1
+
+unknown20 44
+showTextbox
+[NONE|1]
+[t5b048|1]　　　　　　　　　嗯…………\
+hideTextbox
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]这一次，也许才是我的幻听吧……\
+hideTextbox
+specialEffect 12,0
+delay 30
+mov %V_fa, 97
+
+bgload "EV_SA13D","6","2"
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+playSFX "SE09_01L",0,90
+mov %V_ab, %V_VAR_c0_46
+
+showTextbox
+[NONE|1]时间一分一秒地流逝……@
+[NONE|1]在这期间，我们多次解散队伍，各自自由行动。\
+[NONE|1]有人搜索馆内、有人试着跟外界联系、有人确认脱困方
+[NONE|0]法的可行度……\
+[NONE|1]大家都不放弃希望，一直用着各种方式想突破这个现况
+[NONE|0]。\
+[NONE|1]可是……努力都是白费的，根本没有任何进展……@
+[NONE|1]一转眼，第５天也将要到傍晚时刻了。\
+hideTextbox
+hideTextbox
+specialEffect 12,0
+stopSFX
+mov %V_ac, 0
+
+unknown21 16
+bgload "BG26A3L","6","2"
+hideTextbox
+mov %V_13, 0
+
+playBGM "4","100"
+mov %V_ab, %V_VAR_c0_38
+
+clock "16","22"
+showTextbox
+[NONE|1]我……\
+[NONE|1]我一个人在ＬｅＭＵ逛着。\
+[NONE|1]我的脑袋中还留着昨天，正确说来……是今天早上沙罗
+[NONE|0]说过的话。\
+[NONE|1]不知怎么地，脑袋就是不清楚。\
+[NONE|1]可是，早餐时的沙罗已经恢复到如同往常一样……\
+[NONE|1]我想……只要散个步，心情就会开朗一些吧……\
+bgload "BG23A1","0","2"
+bgload "BG24A1","0","2"
+playSFX "SE00_02",0,100
+showTextbox
+[NONE|1]一回神，脚步自然地走往宇宙鲸鱼的方向。\
+[NONE|1]搭乘ＥＩ（蛋型浮力式电梯）。\
+bgload "BG24A2","0","2"
+playSFX "SE00_00",1,100
+waitForSFX
+playSFX "SE00_02",0,100
+bgload "BG23B1","0","2"
+showTextbox
+[NONE|1]下降到浸水的三楼。\
+[NONE|1]这里，沙罗就不一定会在了……\
+[NONE|1]我四处张望、思考着。\
+[NONE|1]……就在这个时候。\
+[NONE|1]又再一次目击到‘她’！\
+[NONE|1]【少年】
+[NONE|0]“啊！”\
+[NONE|1]站在通道上，那个娇小的身体。\
+[NONE|1]没有看错。\
+[NONE|1]是她！\
+[NONE|1]我追着那个少女。\
+bgload "BG26B3L","0","2"
+playSFX "SE01_00",0,100
+showTextbox
+[NONE|1]摇曳着裙摆，一直向着那头前进的少女。\
+[NONE|1]简直就像是在逃离我。\
+[NONE|1]【少年】
+[NONE|0]“喔咿！　等等－－－－！”\
+[NONE|1]可是，像是没听到我的叫声一样，她根本没有要停下来
+[NONE|0]的样子。\
+[NONE|1]到底怎么了？\
+[NONE|1]翩然出现，又忽然消失的她。\
+[NONE|1]雷米的生物反应无法侦测到她。\
+[NONE|1]不，只有一次……\
+hideTextbox
+specialEffect 12,1
+stopSFX
+bgload "IT04E","6","2"
+mov %V_ab, %V_VAR_c0_18
+
+showTextbox
+[NONE|1]──‘生物反应：７’\
+hideTextbox
+specialEffect 12,1
+bgload "BG26B3L","6","2"
+mov %V_ab, %V_VAR_c0_18
+
+showTextbox
+[NONE|1]可是越想越奇怪。\
+[NONE|1]只会在我面前出现就算了，几乎无法沟通也就算了……\
+[NONE|1]算了……想也没用。\
+[NONE|1]直接问她才能解决问题。\
+bgload "BG25B3","0","2"
+showTextbox
+[NONE|1]少女进入宇宙鲸鱼。\
+[NONE|1]我也赶紧跟着进去。\
+hideTextbox
+playSFX "SE00_01",0,100
+bgload "BG05A1","0","2"
+stopBGM
+showTextbox
+[NONE|1]却不见少女的踪影。\
+[NONE|1]相反地，跟之前一样，在鲸鱼的鼻端看到了沙罗。\
+[NONE|1]沙罗静静地唱着。\
+fgload 1,"SA17ADS","320",3
+showTextbox
+[s5a130|1]【沙罗】
+[NONE|0]“长弓背中扛……明月之妖精……”\
+[s5a131|1]【沙罗】
+[NONE|0]“梦中徙步来……长夜无可待……”\
+[s5a132|1]【沙罗】
+[NONE|0]“今宵伴君行……月夜观囃子……”\
+[s5a133|1]【沙罗】
+[NONE|0]“待君早日还……长夜无可待……”\
+[s5a134|1]【沙罗】
+[NONE|0]“我欲长睡之……为我阖上眼……”\
+[s5a135|1]【沙罗】
+[NONE|0]“我欲长睡之……母亲怀抱中……”\
+[NONE|1]这个声音，像是融入星空一样地静静回响着。\
+[NONE|1]没来由的悲伤，寂寞的歌声。\
+[NONE|1]我却无法跟沙罗说话……\
+hideTextbox
+specialEffect 24,0
+delay 120
+playSFX "SE06_02",0,100
+bgload "BG09A1","6","2"
+mov %V_ab, %V_VAR_c0_23
+
+clock "20","19"
+showTextbox
+[NONE|1]金属吱叽的不愉快声音使我惊醒。\
+[NONE|1]是因为骨折吗？　还是因为陪沙罗练习游泳的疲惫……\
+[NONE|1]我刚刚因为发烧与倦懒，所以吃下药睡了一阵子。\
+[NONE|1]ＬｅＭＵ整体震动着。\
+[NONE|1]【少年】
+[NONE|0]“发生什么事了？”\
+bgload "BG26A3R","0","2"
+showTextbox
+[NONE|1]走出医疗室的时候，震动还没停止。\
+[NONE|1]警备室应该可以了解情况吧？\
+hideTextbox
+specialEffect 12,0
+bgload "BG11A1","6","2"
+fgload 1,"TU05ADM","320",0
+playBGM "12","100"
+mov %V_ab, %V_VAR_c0_31
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“月海，怎么了？”\
+fgload 1,"TU08ADM","320",3
+showTextbox
+[s5a136|1]【月海】
+[NONE|0]“嗯……我也才刚到。”\
+[NONE|1]月海冷冷地回答。\
+[NONE|1]就在这个时候，空出现在房间里。\
+removeFG "1","3"
+multifgload2 1,2,"00000000","TU08ADM","00000000","SO03ADM",128,512,3
+showTextbox
+[s5a137|1]【空】
+[NONE|0]“小町、少年都在这里吗？”\
+[NONE|1]【少年】
+[NONE|0]“空，发生什么事了？”\
+fgload 2,"SO05ADM","512",3
+showTextbox
+[s5a138|1]【空】
+[NONE|0]“嗯……在宇宙鲸鱼发生浸水情形了。”\
+[s5a139|1]【月海】
+[NONE|0]“浸水？”\
+fgload 2,"SO10ADM","512",3
+showTextbox
+[s5a140|1]【空】
+[NONE|0]“是的，那个房间的隔墙似乎被水压挤破，可能进水了
+[NONE|0]。”\
+[NONE|1]【少年】
+[NONE|0]“没、没事吧？”\
+[s5a141|1]【空】
+[NONE|0]“通往宇宙鲸鱼的门被封闭了，应该不会影响到其他房
+[NONE|0]间。”\
+[NONE|1]【少年】
+[NONE|0]“大家呢？”\
+fgload 2,"SO01ADM","512",3
+showTextbox
+[s5a142|1]【空】
+[NONE|0]“田中跟仓成在控制室”\
+[NONE|1]【少年】
+[NONE|0]“优跟武……那么沙罗呢？”\
+fgload 2,"SO05ADM","512",3
+showTextbox
+[s5a143|1]【空】
+[NONE|0]“松永……最后一次确认，她的位置在宇宙鲸鱼附近的
+[NONE|0]通道上。”\
+fgload 1,"TU06ADM","128",3
+fgload 1,"TU05ADM","128",3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“通道上？”\
+[s5a144|1]【空】
+[NONE|0]“其实那个房间的侦测系统有点问题……所以无法确认
+[NONE|0]。”\
+[s5a145|1]【空】
+[NONE|0]“现在已经完全切断讯号”\
+[NONE|1]【少年】
+[NONE|0]“那、那么……沙罗她！”\
+fgload 2,"SO10ADM","512",3
+showTextbox
+[s5a146|1]【空】
+[NONE|0]“目前ＬｅＭＵ的其他区域都没有发现她的踪影。”\
+[NONE|1]【少年】
+[NONE|0]“什么！　那沙罗……她果然是在那个房间！”\
+hideTextbox
+playSFX "SE00_01",0,100
+specialEffect 6,0
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]实在无法继续待在原地，我冲出了房间。\
+[NONE|1]月海随即跟在后面。\
+hideTextbox
+stopSFX
+bgload "BG23B1","6","2"
+mov %V_ab, %V_VAR_c0_31
+
+showTextbox
+[NONE|1]我跟月海来到宇宙鲸鱼位在的区域。\
+[NONE|1]【少年】
+[NONE|0]“空，通往房间的门能开启吗？”\
+multifgload2 1,2,"00000000","TU08ADM","00000000","SO05ADM",128,512,3
+showTextbox
+[s5a147|1]【空】
+[NONE|0]“不可能的”\
+[NONE|1]【少年】
+[NONE|0]“可是……”\
+fgload 2,"SO10ADM","512",3
+showTextbox
+[s5a148|1]【空】
+[NONE|0]“很抱歉……现在打开这扇门的话，这个区域就会完全
+[NONE|0]浸水了。”\
+[s5a149|1]【空】
+[NONE|0]“发电室一旦浸水，电力就会完全断绝，很抱歉……我
+[NONE|0]不能这么做。”\
+[NONE|1]【少年】
+[NONE|0]“什么啊……可是沙罗她、沙罗她！”\
+fgload 1,"TU01ADM","128",3
+showTextbox
+[s5a150|1]【月海】
+[NONE|0]“冷静点”\
+[NONE|1]【少年】
+[NONE|0]“月海……”\
+fgload 1,"TU15ADM","128",3
+showTextbox
+[s5a151|1]【月海】
+[NONE|0]“空，这附近的避难通道还能通行吧？　从那里可以通
+[NONE|0]往房间吗？”\
+fgload 2,"SO11ADM","512",3
+showTextbox
+[s5a152|1]【空】
+[NONE|0]“我正在查……是的，宇宙鲸鱼正上方的通道还可以通
+[NONE|0]行。”\
+fgload 2,"SO13ADM","512",3
+showTextbox
+[s5a153|1]【空】
+[NONE|0]“可是……从那里无法直接进入宇宙鲸鱼的，因为那里
+[NONE|0]已经完全浸水了。”\
+[s5a154|1]【月海】
+[NONE|0]“潜水进去的话，应该可以通行的。”\
+showTextbox
+[s5a155|1]【空】
+[NONE|0]“可是……”\
+[NONE|1]【少年】
+[NONE|0]“我去，我一定要救沙罗！”\
+multifgload2 1,2,"00000000","TU07ADM","00000000","SO06ADM",128,512,3
+showTextbox
+[s5a156|1]【月海】
+[NONE|0]“你的右手臂那样，想要怎么做？”\
+[NONE|1]【少年】
+[NONE|0]“可、可是……”\
+multifgload2 1,2,"00000000","TU05ADM","00000000","SO03ADM",128,512,3
+showTextbox
+[s5a157|1]【月海】
+[NONE|0]“要是连你也溺水了，大家还是不得不去救你。”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+fgload 1,"TU08ADM","128",3
+showTextbox
+[s5a158|1]【月海】
+[NONE|0]“我去吧”\
+fgload 2,"SO13ADM","512",3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“可是月海……”\
+fgload 1,"TU04ADM","128",3
+showTextbox
+[s5a159|1]【月海】
+[NONE|0]“受伤的人还是闭嘴吧”\
+fgload 1,"TU18ADM","128",3
+showTextbox
+[s5a160|1]【月海】
+[NONE|0]“空，最近的通道入口呢？”\
+showTextbox
+[s5a161|1]【空】
+[NONE|0]“这里出去向右转，前头就有阶梯。”\
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]还没把话听完，月海已经冲出去了。\
+bgload "BG26B1L","0","2"
+playSFX "SE01_00",0,100
+showTextbox
+[NONE|1]我追着月海。\
+[NONE|1]【少年】
+[NONE|0]“月海，为什么……”\
+[s5a162|1]【月海】
+[NONE|0]“……没办法。”\
+[s5a163|1]【月海】
+[NONE|0]“因为是……‘同伴’。”\
+[NONE|1]【少年】
+[NONE|0]“月海……”\
+[NONE|1]月海一口气跑到紧急阶梯，爬上避难通道。\
+[NONE|1]我也马上跟在后面。\
+bgload "BG27A3","0","2"
+playSFX "SE01_06",0,100
+showTextbox
+[NONE|1]当我爬上避难通道时，月海已经往宇宙鲸鱼的方向跑去
+[NONE|0]。\
+[NONE|1]我急忙追上。\
+bgload "BG28A1L","0","2"
+stopSFX
+showTextbox
+[NONE|1]一弯过转角，月海已经打开通往宇宙鲸鱼的紧急舱口，
+[NONE|0]穿进里面。\
+[NONE|1]【少年】
+[NONE|0]“月海！　等等……”\
+[NONE|1]月海瞄了我一眼。\
+fgload 1,"TU08ADS","320",3
+showTextbox
+[s5a164|1]【月海】
+[NONE|0]“在这里等”\
+hideTextbox
+removeFG "1","3"
+playSFX "SE02_05",0,90
+showTextbox
+[NONE|1]只留下这句话，月海跳进紧急舱口。\
+[NONE|1]【少年】
+[NONE|0]“月海！”\
+[NONE|1]【少年】
+[NONE|0]“空，月海没事吧！？”\
+[s5a165|1]【空】
+[NONE|0]“不知道，现在只能相信小町了。”\
+[NONE|1]空的声音回荡着。\
+[NONE|1]用跟平常不一样的紧急广播器，所以传出来的声音有些
+[NONE|0]分割，混合着杂音。\
+[s5a166|1]【空】
+[NONE|0]“田中跟仓成，正在医疗室待命了。”\
+[NONE|1]【少年】
+[NONE|0]“呜嗯……”\
+[NONE|1]我转而探头看着紧急舱口里面。\
+[NONE|1]舱口中，积满了冰冷的水。\
+[NONE|1]我边懊悔着自己只能等待的无力感，却也只能在那里等
+[NONE|0]待。\
+[NONE|1]【少年】
+[NONE|0]“月海拜托了，带回沙罗……”\
+[NONE|1]【少年】
+[NONE|0]“带回沙罗……”\
+hideTextbox
+specialEffect 18,0
+stopBGM
+showTextbox
+[NONE|1]就这样，时间流逝。\
+[NONE|1]也许实际上并没有经过这么长的时间。\
+[NONE|1]可是，对当时的我而言……却像永远一样漫长。\
+hideTextbox
+delay 60
+bgload "EV_SA08A","6","2"
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]月海从水中奋力顺势跳出。\
+[NONE|1]背上背着沙罗……\
+[NONE|1]【少年】
+[NONE|0]“沙、沙罗！！”\
+[s5a167|1]【月海】
+[NONE|0]“喝，喝……总算先把她救出水中了。”\
+[NONE|1]【少年】
+[NONE|0]“呜，嗯……”\
+[NONE|1]我几乎忘了手腕的疼痛，抬起沙罗。\
+[NONE|1]沙罗的身体，像冰一样的冰冷、僵硬。\
+[NONE|1]紧握的拳头中，有着那个坠子。\
+[NONE|1]月海摸了摸沙罗的脖子动脉。\
+[s5a168|1]【月海】
+[NONE|0]“没有……脉搏……”\
+[NONE|1]【少年】
+[NONE|0]“什么！　那沙罗她……”\
+[NONE|1]【少年】
+[NONE|0]“少胡说！”\
+[NONE|1]【少年】
+[NONE|0]“沙罗！　沙罗！　醒醒啊……沙罗！”\
+[NONE|1]摇晃着沙罗冰冷的身体。\
+[NONE|1]慌张的我，被月海冷静地制止着。\
+[s5a169|1]【月海】
+[NONE|0]“总之……先送到医疗室。”\
+hideTextbox
+specialEffect 12,0
+bgload "EV_SA09A","6","2"
+playBGM "15","100"
+mov %V_ab, %V_VAR_c0_38
+
+showTextbox
+[NONE|1]我们将沙罗运往医疗室，搬上诊疗台。\
+[NONE|1]月海迅速地开始做心脏按摩。\
+[NONE|1]优与武利用诊疗台的机械，检查沙罗的状态。\
+[NONE|1]武拿出电击器。\
+[NONE|1]充电完毕的声音响了，武将机器压在沙罗的胸口部位。\
+unknown20 5
+showTextbox
+[NONE|1]──啪噗。\
+[NONE|1]沙罗的身体跳了起来。\
+[NONE|1]月海将手压在沙罗的脖子上，摇摇头。\
+[NONE|1]然后又回到心脏按摩。\
+[s5a170|1]【武】
+[NONE|0]“呜……再一次。”\
+[NONE|1]充电完毕。\
+[NONE|1]然后又再一次通电。\
+[NONE|1]沙罗的脸没有血色，嘴唇发青。\
+[NONE|1]身体僵硬，没有任何反应。\
+[NONE|1]我却只能看着他们三人忙碌着。\
+[NONE|1]我的记忆抽屉中，没有收藏这时候能做的事情。\
+[NONE|1]头中只是不断地浮现一幕幕沙罗的事情，他们三个人的
+[NONE|0]声音听来好模糊。\
+[NONE|1]终于……月海放下原本在按摩心脏的手。\
+[NONE|1]悲痛的表情，离开了沙罗身边。\
+[NONE|1]武也将电击器放回诊察台。\
+[s5a171|1]【优】
+[NONE|0]“怎么会……”\
+[s5a172|1]【武】
+[NONE|0]“真气人……为什么……”\
+[NONE|1]【少年】
+[NONE|0]“怎……么了？”\
+[NONE|1]【少年】
+[NONE|0]“喂……为什么大家停下来了？”\
+[NONE|1]【少年】
+[NONE|0]“嗯……为什么是那副表情……”\
+[s5a173|1]【优】
+[NONE|0]“……少年。”\
+[NONE|1]【少年】
+[NONE|0]“什么……太蠢了！”\
+[NONE|1]【少年】
+[NONE|0]“沙罗、沙罗！”\
+[NONE|1]【少年】
+[NONE|0]“沙罗！　起来啊！　起来……沙罗！”\
+[NONE|1]我开始按压她的心脏。\
+[NONE|1]他们三个人悲痛地看着我的行动。\
+[NONE|1]【少年】
+[NONE|0]“为什么……为什么大家要放弃！”\
+[NONE|1]【少年】
+[NONE|0]“沙罗，别死！　不能这样就死了！”\
+[NONE|1]我拼命按压着沙罗的胸口。\
+hideTextbox
+specialEffect 0,1
+bgload "EV_SA01A","6","2"
+mov %V_ab, %V_VAR_c0_19
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“沙罗！”\
+hideTextbox
+specialEffect 0,1
+bgload "EV_SA03A","6","2"
+mov %V_ab, %V_VAR_c0_19
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“沙罗！　醒醒沙罗！”\
+hideTextbox
+specialEffect 0,1
+bgload "EV_SA11B","6","2"
+mov %V_ab, %V_VAR_c0_19
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“清醒啊！”\
+hideTextbox
+specialEffect 0,1
+bgload "EV_SA09A","6","2"
+mov %V_ab, %V_VAR_c0_31
+
+showTextbox
+[s5a174|1]【优】
+[NONE|0]“少年……”\
+[NONE|1]优搭着我的肩膀。\
+[NONE|1]我挥开她的手，继续做着心脏按摩。\
+hideTextbox
+specialEffect 0,1
+bgload "EV_SA05A","6","2"
+mov %V_ab, %V_VAR_c0_19
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“别死！　沙罗，我们还要一起看星星！”\
+[NONE|1]【少年】
+[NONE|0]“醒来啊！”\
+hideTextbox
+specialEffect 0,1
+bgload "EV_SA06A","6","2"
+mov %V_ab, %V_VAR_c0_19
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“沙罗！”\
+hideTextbox
+specialEffect 0,1
+bgload "EV_SA09A","6","2"
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+mov %V_ab, %V_VAR_c0_38
+
+showTextbox
+[NONE|1]
+[s5a175|1]　　　　　　　为什么我到现在才发现。\
+[s5a176|1]　　　　你……其实一个人逃了……\
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]我听到这个声音。\
+[NONE|1]【少年】
+[NONE|0]“不对，我不会逃！”\
+[NONE|1]【少年】
+[NONE|0]“我一定会帮助沙罗！”\
+[NONE|1]压着沙罗胸口的手更加用力。\
+[NONE|1]肋骨都压得扭曲了。\
+[NONE|1]可是我还是不肯松手。\
+[NONE|1]【少年】
+[NONE|0]“说过了……沙罗！”\
+[NONE|1]【少年】
+[NONE|0]“沙罗！　我会去救你……我说过我会去救你！！”\
+[NONE|1]【少年】
+[NONE|0]“我会去救你的……我说过了啊！”\
+[NONE|1]拜托……沙罗的心脏，动吧！\
+[NONE|1]【少年】
+[NONE|0]“沙罗！”\
+[NONE|1]【少年】
+[NONE|0]“你说……你会乖乖等我的……”\
+[NONE|1]【少年】
+[NONE|0]“你说过……你会等我的啊！”\
+[NONE|1]使劲地，更用力的一压。\
+stopBGM
+unknown20 5
+showTextbox
+[NONE|1]──扑通。\
+[NONE|1]沙罗的嘴边蠕动着，流出水来。\
+[s5a177|1]【沙罗】
+[NONE|0]“咳咳……”\
+[NONE|1]恢复微弱的呼吸，嘴边流出了更多水来。\
+[s5a178|1]【沙罗】
+[NONE|0]“咳咳，咳咳……”\
+[NONE|1]【少年】
+[NONE|0]“沙罗！　沙罗！”\
+[NONE|1]我拼命摇着沙罗的身体。\
+bgload "EV_SA09B","0","0"
+playBGM "19","94"
+showTextbox
+[s5a179|1]【沙罗】
+[NONE|0]“呜……呜呜，啊……”\
+[NONE|1]沙罗的眼睛隐约张开。\
+[NONE|1]【少年】
+[NONE|0]“啊啊……沙罗！”\
+[NONE|1]这一瞬间，医疗室内紧绷的气氛终于和缓下来。\
+[s5a180|1]【沙罗】
+[NONE|0]“啊……呜呜……我……”\
+[NONE|1]【少年】
+[NONE|0]“沙罗、沙罗，太好了……太好了……”\
+hideTextbox
+specialEffect 24,0
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+delay 120
+stopBGM
+mov %V_b3, 0
+
+goto *Lss6a
+

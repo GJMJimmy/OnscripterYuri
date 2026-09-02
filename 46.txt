@@ -1,0 +1,1912 @@
+*Lt_2d
+*Lt_2d_00000062
+
+playBGM "3","100"
+bgload "BG26B3L","0","2"
+unknown46 1
+mov %V_fa, 14
+
+clock "22","2"
+showTextbox
+[NONE|1]天黑了。\
+[NONE|1]海里也变得比刚刚更暗了。\
+[NONE|1]很幸运地，ＬｅＭＵ的灾区并没有扩大。\
+[NONE|1]我们在塔滋塔商店简单吃一吃，就往会议室集合去了。\
+bgload "BG17A1","0","2"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“呼～～～～～～～～～～～～啊”\
+[t2c240|1]【优】
+[NONE|0]“呼～～～～～～～～～～～～啊”\
+[t2c241|1]【少年】
+[NONE|0]“呼～～～～～～～～～～～～啊”\
+[t2c242|1]【月海】
+[NONE|0]“呼～～～～～～～～～～～～啊”\
+[t2c243|1]【空】
+[NONE|0]“呼～～～～～～～～～～～～啊”\
+[NONE|1]我打了个哈欠，其他人跟着一个个被我传染了。\
+fgload 1,"CO07ADM","320",3
+showTextbox
+[t2c244|1]【可儿】
+[NONE|0]“这么看来……”\
+fgload 1,"CO01ADM","320",3
+showTextbox
+[t2c245|1]【可儿】
+[NONE|0]“大家……好像都还很困嘛。”\
+[NONE|1]【武】
+[NONE|0]“还好啦……反正严格说起来，在这里又没事好做。”\
+[NONE|1]可儿是里面唯一最清醒的，正忙着跟ＰＩＰＩ玩倒立的
+[NONE|0]游戏。\
+removeFG "1","3"
+showTextbox
+[NONE|1]其他人都发着呆，坐姿不正地瘫在椅子上打发时间。\
+[NONE|1]没有什么迫切的危机，也没有任何进展。\
+[NONE|1]由于四周没有丝毫的变动，于是时间也几乎整个停滞了
+[NONE|0]。\
+showTextbox
+[t2c246|1]【优】
+[NONE|0]“仓成，你太拘束了……”\
+[NONE|1]优这么说，声音听起来似乎很困。\
+showTextbox
+[t2c247|1]【优】
+[NONE|0]“别再喋喋不休……”\
+[NONE|1]【武】
+[NONE|0]“现在就算在馆内仓皇失措地来回走动，也没有什么意
+[NONE|0]义不是吗？”\
+[NONE|1]【武】
+[NONE|0]“反正……在别人前来救援之前，也只有等下去了不是
+[NONE|0]吗？”\
+[t2c248|1]【优】
+[NONE|0]“啊，对了………”\
+[t2c249|1]【优】
+[NONE|0]“我们要不要干脆暂时出去走走呢……呜，嘿咻……”\
+[NONE|1]扭了扭僵硬的脖子，优站起了身。\
+multifgload2 1,2,"00000000","YU17ADM","00000000","CO11ADM",128,512,3
+showTextbox
+[t2c250|1]【可儿】
+[NONE|0]“优秋，你要去哪里呢？”\
+fgload 1,"YU15ADM","128",3
+showTextbox
+[t2c251|1]【优】
+[NONE|0]“咦？　嗯……也没有特别的目的地啦，散散步也好。
+[NONE|0]”\
+fgload 1,"YU17ADM","128",3
+showTextbox
+[t2c252|1]【优】
+[NONE|0]“不活动活动身体，我只会更累啊……”\
+fgload 2,"CO12ADM","512",3
+showTextbox
+[t2c253|1]【可儿】
+[NONE|0]“嘿呦……那不如跟可儿一起去吧！！”\
+[NONE|1]可儿的眼睛里闪着亮光。\
+[t2c254|1]【优】
+[NONE|0]“要玩赛跑吗……？”\
+fgload 2,"CO13ADM","512",3
+showTextbox
+[t2c255|1]【可儿】
+[NONE|0]“不行吗……？”\
+[t2c256|1]【优】
+[NONE|0]“嗯……好啊，这也没啥不行的。”\
+[NONE|1]优虽然有点不情愿，但也没有觉得不愉快。\
+fgload 2,"CO11ADM","512",3
+showTextbox
+[t2c257|1]【可儿】
+[NONE|0]“那么那么……来玩捉迷藏怎么样！”\
+fgload 1,"YU15ADM","128",3
+showTextbox
+[t2c258|1]【优】
+[NONE|0]“嗯……ＯＫ，我赞成。”\
+[t2c259|1]【优】
+[NONE|0]“啊，可是……两个人怎么玩捉迷藏呢？”\
+multiremoveFG2 "83","04","00","3"
+multiremoveFG3 "2","1","0"
+multifgload3 "00000000","YU15ADS","00000000","CO15ADS","00000000","KA11ADS",128,320,512,3
+showTextbox
+[t2c260|1]【少年】
+[NONE|0]“我也加入吧。”\
+[NONE|1]少年站了起来。\
+removeFG "1","3"
+multifgload2 1,2,"00000000","SO15ADS","00000000","CO11ADS",128,320,3
+showTextbox
+[t2c261|1]【空】
+[NONE|0]“可不可以也算我一份呢？”\
+[NONE|1]空也慢慢向可儿接近。\
+fgload 2,"CO02ADS","320",3
+showTextbox
+[t2c262|1]【可儿】
+[NONE|0]“欢迎欢迎，一起来玩嘛……”\
+[t2c263|1]【空】
+[NONE|0]“好，请多多指教喔。”\
+fgload 4,"KA12ADS","512",3
+showTextbox
+[t2c264|1]【少年】
+[NONE|0]“好啊，我不会输的。”\
+[NONE|1]不知怎么搞的，大家都兴致勃勃的。\
+[NONE|1]大概都太无聊了吧……\
+removeFG "1","3"
+fgload 1,"YU15ADS","128",3
+showTextbox
+[t2c265|1]【优】
+[NONE|0]“那我们要在哪里玩呢？”\
+fgload 2,"CO01ADS","320",3
+showTextbox
+[t2c266|1]【可儿】
+[NONE|0]“嗯……该怎么办……在这个房间内好吗？”\
+[NONE|1]可儿环顾了会议室四周。\
+multiremoveFG2 "87","04","00","3"
+multiremoveFG3 "0","1","2"
+showTextbox
+[NONE|1]我也看了看四周。\
+[NONE|1]只有月海还坐在椅子上，眉头深锁。\
+fgload 1,"TU07ADS","320",3
+showTextbox
+[t2c267|1]【月海】
+[NONE|0]“……唉。”\
+[t2c268|1]【月海】
+[NONE|0]“你们很吵耶……”\
+[NONE|1]月海慵懒地站了起来，往房间的角落一步步走过去……\
+hideTextbox
+removeFG "1","3"
+playSFX "SE04_06",0,100
+bgload "BG17A2","0","2"
+showTextbox
+[NONE|1]啪地一声把房间的灯光电源关掉。\
+[NONE|1]月海再一步步回到原来的位置上，慵懒地坐下来。\
+bgload "EV_TU06B","0","2"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“你干嘛突然关掉，这样不会太暗吗？”\
+[t2c269|1]【月海】
+[NONE|0]“光太刺眼了，没办法冷静。”\
+[t2c270|1]【月海】
+[NONE|0]“这里可是有人想好好休息的……”\
+[NONE|1]【武】
+[NONE|0]“就算是这样，也不用自作主张把电灯都关掉啊。”\
+[NONE|1]【武】
+[NONE|0]“就只为了自己想要好好休息……”\
+[t2c271|1]【月海】
+[NONE|0]“那你呢？”\
+[NONE|1]【武】
+[NONE|0]“咦？”\
+[t2c272|1]【月海】
+[NONE|0]“你不是也想休息吗……？”\
+[NONE|1]【武】
+[NONE|0]“不，你……你干嘛扯到我身上啊。”\
+[t2c273|1]【少年】
+[NONE|0]“啊，是啊……武呢？　你要加入捉迷藏吗？”\
+[NONE|1]捉迷藏……@
+
+csel "不玩", *L_pre_t_2d_000002fd,"玩", *L_pre_t_2d_00000327
+*L_pre_t_2d_000002fd
+ mov %V_b3, 0
+ goto *LchoiceId_1203_163
+
+*L_pre_t_2d_00000327
+ mov %V_b3, 1
+ goto *LchoiceId_1203_163
+
+*LchoiceId_1203_163
+if %V_b3 == 0 goto *Lt_2d_000002fd
+
+if %V_b3 == 1 goto *Lt_2d_00000327
+
+*Lt_2d_000002fd
+add %V_b7, 1
+
+showTextbox
+[NONE|1]【武】
+[NONE|0]“我考虑考虑……我不玩。”\
+[NONE|1]【武】
+[NONE|0]“月海说得没错，我想要稍微休息一下……我不加入。
+[NONE|0]”\
+[NONE|1]【武】
+[NONE|0]“而且我好歹也是成年人，早就不玩什么捉迷藏了。”\
+[t2c274|1]【优】
+[NONE|0]“嘿，说到年纪啊……”\
+[t2c275|1]【优】
+[NONE|0]“你啊……比外表还要老气耶。”\
+[NONE|1]【武】
+[NONE|0]“……什么？”\
+[t2c276|1]【优】
+[NONE|0]“的确，仓成有点迟钝。”\
+[t2c277|1]【优】
+[NONE|0]“玩捉迷藏的话，不就第一个被抓到了吗？”\
+playSFX "SE05_08",0,95
+showTextbox
+[NONE|1]【武】
+[NONE|0]“你胡说八道！”\
+[NONE|1]我快速地站了起来。\
+[t2c278|1]【优】
+[NONE|0]“喔，仓成选手要公开参赛吗？”\
+[t2c279|1]【可儿】
+[NONE|0]“武咚，加入嘛加入嘛……”\
+[NONE|1]【武】
+[NONE|0]“啊，等等……要我加入的话，有句话得说在前头。”\
+[t2c280|1]【少年】
+[NONE|0]“咦？　该不会……你还是不想玩吧？”\
+[t2c281|1]【优】
+[NONE|0]“不参战就打算认输了吗？　软弱的家伙……”\
+[NONE|1]【武】
+[NONE|0]“……好啦，我知道了！　我参加就是了！”\
+[NONE|1]我一个人敌不过多数人。\
+[NONE|1]算了，总比坐在这里愁眉不展的好……\
+[NONE|1]虽然有点不情愿，但还是加入了捉迷藏的行列。\
+goto *Lt_2d_00000342
+*Lt_2d_00000327
+
+showTextbox
+[NONE|1]虽然这游戏实在是太孩子气了……\
+[NONE|1]【武】
+[NONE|0]“不过，反正……”\
+[NONE|1]【武】
+[NONE|0]“一直坐在这里发呆也挺无聊的……”\
+playSFX "SE05_11",0,90
+showTextbox
+[NONE|1]【武】
+[NONE|0]“嘿呦，好！　我参加！！”\
+[NONE|1]我作势站了起来。\
+[t2c282|1]【优】
+[NONE|0]“喔，仓成选手公开参战。”\
+[t2c283|1]【可儿】
+[NONE|0]“收到”\
+*Lt_2d_00000342
+
+bgload "EV_TU06A","0","2"
+showTextbox
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]斜眼看了看我之后，月海以背对向我。\
+[t2c284|1]【少年】
+[NONE|0]“……要不要……不开电灯就这样玩呢？”\
+[NONE|1]少年对我嘀嘀咕咕说道。\
+[NONE|1]【武】
+[NONE|0]“虽然紧急灯光是亮着的，但这样还是太暗了，没关系
+[NONE|0]吗？”\
+[t2c285|1]【少年】
+[NONE|0]“我们也稍微尊重一下月海的意见吧。”\
+[NONE|1]【武】
+[NONE|0]“可是这样跟玩捉迷藏一点都不搭……”\
+hideTextbox
+stopBGM
+bgload "BG17A2","0","2"
+fgload 1,"CO02ADM","320",3
+showTextbox
+[t2c286|1]【可儿】
+[NONE|0]“锵～锵！！”\
+[t2c287|1]【可儿】
+[NONE|0]“可─以─用─手电─筒─啊！！”\
+hideTextbox
+playBGM "9","100"
+showTextbox
+[NONE|1]可儿随着令人摸不着头绪的叫声，取出了手电筒。\
+removeFG "1","3"
+multiremoveFG3 "1","0","2"
+multifgload3 "00000000","SO15ADS","00000000","CO01ADS","00000000","KA11ADS",128,320,512,3
+showTextbox
+[t2c288|1]【可儿】
+[NONE|0]“没错，这样玩‘摸黑捉迷藏’也别有一番趣味是吧？
+[NONE|0]”\
+[NONE|1]把手电筒放在下巴，朝上照着脸的可儿，正在等大家的
+[NONE|0]赞同。\
+[NONE|1]【武】
+[NONE|0]“摸黑捉迷藏？”\
+[t2c289|1]【空】
+[NONE|0]“什么是摸黑捉迷藏？”\
+[t2c290|1]【可儿】
+[NONE|0]“这个嘛……这个嘛……”\
+[t2c291|1]【可儿】
+[NONE|0]“就是大家摸黑选出当鬼的人，然后大家赶快躲起来。
+[NONE|0]”\
+[NONE|1]【武】
+[NONE|0]“这就是捉迷藏吗？　就这样吗～”\
+fgload 2,"CO04ADS","320",3
+showTextbox
+[t2c292|1]【可儿】
+[NONE|0]“不是啦，听我说完嘛！”\
+[NONE|1]【武】
+[NONE|0]“喔，抱歉……”\
+fgload 2,"CO01ADS","320",3
+showTextbox
+[t2c293|1]【可儿】
+[NONE|0]“接着，当鬼的人在房间的某个地方摆个空瓶罐……”\
+[t2c294|1]【可儿】
+[NONE|0]“躲起来的人，要不被鬼察觉地把罐子踢掉！！”\
+[t2c295|1]【可儿】
+[NONE|0]“平安把罐子踢掉的人，就获得了胜利。”\
+[t2c296|1]【可儿】
+[NONE|0]“当鬼发现了其他人时，可以藉由踢罐子来宣告……”\
+[t2c297|1]【可儿】
+[NONE|0]“这样一来……那个被发现的人，若是因为来不及踢罐
+[NONE|0]子，就算输了。”\
+removeFG "1","3"
+fgload 1,"YU16ADS","128",3
+showTextbox
+[t2c298|1]【优】
+[NONE|0]“啊，这不就是‘踢罐子’吗？”\
+[NONE|1]【武】
+[NONE|0]“对啊，那这样大家都知道规则了啊。”\
+fgload 2,"CO06ADS","320",3
+showTextbox
+[t2c299|1]【可儿】
+[NONE|0]“才不呢……这是摸黑捉迷藏喔，摸黑捉迷藏。”\
+fgload 1,"YU15ADS","128",3
+showTextbox
+[t2c300|1]【优】
+[NONE|0]“不就是踢罐子吗？”\
+fgload 2,"CO05ADS","320",3
+showTextbox
+[t2c301|1]【可儿】
+[NONE|0]“摸黑捉迷藏！”\
+fgload 2,"CO04ADS","320",3
+showTextbox
+[t2c302|1]【可儿】
+[NONE|0]“摸－黑－捉－迷－藏！！”\
+[NONE|1]【武】
+[NONE|0]“好了好了，这个节骨眼上，名称是什么都无所谓啦，
+[NONE|0]要不要快点玩？”\
+multiremoveFG2 "87","04","00","3"
+multiremoveFG3 "0","1","2"
+fgload 1,"TU17ADS","320",3
+showTextbox
+[t2c303|1]【月海】
+[NONE|0]“……唉”\
+[NONE|1]当我们热闹鼓噪的时候，月海叹了好大的一口气。\
+fgload 1,"TU08ADS","320",3
+showTextbox
+[t2c304|1]【月海】
+[NONE|0]“吵死了……”\
+removeFG "1","3"
+showTextbox
+[NONE|1]月海静静地从座位上站了起来，从远方的入口离开了这
+[NONE|0]个房间。\
+multifgload3 "00000000","YU17ADS","00000000","CO01ADS","00000000","KA07ADS",128,320,512,3
+showTextbox
+[t2c305|1]【少年】
+[NONE|0]“月海该不会生气了吧？”\
+[NONE|1]【武】
+[NONE|0]“我哪知？　不过算了……”\
+[NONE|1]【武】
+[NONE|0]“反正过些时间，她会再回来这个房间的。”\
+hideTextbox
+multiremoveFG2 "87","04","00","3"
+stopBGM
+showTextbox
+[NONE|1]之后，接下来……\
+[NONE|1]就是猜拳决定谁当鬼了……\
+hideTextbox
+playBGM "18","100"
+showTextbox
+[t2c306|1]【可儿】
+[NONE|0]“剪刀石头布！”\
+[t2c307|1]【可儿】
+[NONE|0]“剪刀石头布！”\
+[t2c308|1]【可儿】
+[NONE|0]“剪刀石头布！”\
+[NONE|1]【武】
+[NONE|0]“哇……我输了！！”\
+multiremoveFG3 "1","2","0"
+multifgload3 "00000000","YU02ADS","00000000","CO02ADS","00000000","SO02ADS",128,320,512,3
+showTextbox
+[t2c309|1]【优】
+[NONE|0]“那么，就决定仓成是第一只鬼！”\
+[t2c310|1]【可儿】
+[NONE|0]“哇哇”\
+[t2c311|1]【空】
+[NONE|0]“好好加油吧……”\
+[NONE|1]大家都不怀好意地笑着看我，可恶。\
+multiremoveFG2 "87","04","00","3"
+multiremoveFG3 "0","1","2"
+fgload 1,"KA02ADM","320",3
+showTextbox
+[t2c312|1]【少年】
+[NONE|0]“好，多多指教啰……武。”\
+[NONE|1]少年将空罐子交给了我。\
+removeFG "1","3"
+fgload 1,"YU02ADM","320",3
+showTextbox
+[t2c313|1]【优】
+[NONE|0]“先说好，３楼全区都可以躲喔！好啊……来吧大家，
+[NONE|0]要赶快躲起来喔！！”\
+[t2c314|1]【优】
+[NONE|0]“准备好了……”\
+[NONE|1]【武】
+[NONE|0]“等、等等啊！”\
+[NONE|1]优举起单手准备发号司令，却被我慌忙地阻止了。\
+fgload 1,"YU01ADM","320",3
+showTextbox
+[NONE|1]【武】
+[NONE|0]“优你刚刚说什么！？”\
+[t2c315|1]【优】
+[NONE|0]“要赶快躲起来喔。”\
+[NONE|1]【武】
+[NONE|0]“不是啦，前面……”\
+fgload 1,"YU02ADM","320",3
+showTextbox
+[t2c316|1]【优】
+[NONE|0]“３楼全区都可以躲。”\
+[NONE|1]【武】
+[NONE|0]“……不会吧！！”\
+[NONE|1]【武】
+[NONE|0]“不是只有会议室里面吗！？”\
+[t2c317|1]【优】
+[NONE|0]“只有这个房间太窄了，可以躲的地方也不多。”\
+[NONE|1]【武】
+[NONE|0]“所以你就改成３楼全区是吗！！”\
+fgload 1,"YU08ADM","320",3
+showTextbox
+[t2c318|1]【优】
+[NONE|0]“啊，不过……当然无法步行到达的区域不包含在内，
+[NONE|0]像紧急走道啦，楼梯等等都不能躲。”\
+[NONE|1]【武】
+[NONE|0]“就算这样……范围也太大了吧！！”\
+[NONE|1]【武】
+[NONE|0]“这样对鬼来说太不利了，独自一人在搜寻大家的时候
+[NONE|0]，一定会被别的家伙赢走的……”\
+fgload 1,"YU05ADM","320",3
+showTextbox
+[t2c319|1]【优】
+[NONE|0]“有什么关系，这种小事……”\
+[NONE|1]【武】
+[NONE|0]“一点都不好，游戏无法成立，这是很确切的问题。”\
+[t2c320|1]【优】
+[NONE|0]“你也未免太会抱怨了吧……”\
+removeFG "1","3"
+multifgload2 1,2,"00000000","YU05ADM","00000000","SO11ADM",128,512,3
+showTextbox
+[t2c321|1]【空】
+[NONE|0]“别吵别吵，这的确是有失公平，该怎么补救好呢……
+[NONE|0]”\
+fgload 2,"SO01ADM","512",3
+showTextbox
+[t2c322|1]【空】
+[NONE|0]“那干脆把３楼的灯光全部关掉……反正，这样一来…
+[NONE|0]………声音就听得更清楚了不是吗？”\
+[t2c323|1]【空】
+[NONE|0]“我会放大声音，这样一来就可以知道，谁在有水的走
+[NONE|0]廊上移动，这样对扮鬼的人来说，是不是就变得比较有
+[NONE|0]利了呢？”\
+[t2c324|1]【空】
+[NONE|0]“然后我也会让大家知道我移动的场所在哪里，我会合
+[NONE|0]成脚步声，把它转换到声音变换机上……”\
+[NONE|1]【武】
+[NONE|0]“ＯＫ，就这么办吧。”\
+fgload 2,"SO06ADM","512",3
+showTextbox
+[t2c325|1]【空】
+[NONE|0]“啊，不过……要是我已经到达罐子边的话，我该怎么
+[NONE|0]做比较好？”\
+[t2c326|1]【少年】
+[NONE|0]“咦？　啊……”\
+[NONE|1]【武】
+[NONE|0]“说得也是，空没办法把罐子踢开！！”\
+[NONE|1]现在才突然想到，或许玩捉迷藏应该要加上禁止瞬间移
+[NONE|0]动这一条才是……\
+removeFG "1","3"
+multifgload2 1,2,"00000000","CO15ADM","00000000","SO11ADM",128,512,3
+showTextbox
+[t2c327|1]【可儿】
+[NONE|0]“那么空……可儿跟你组成一队吧。”\
+[t2c328|1]【可儿】
+[NONE|0]“不管当鬼、或是要跑去躲起来的时候，空都必须跟可
+[NONE|0]儿保持半径１公尺以内的距离。”\
+[t2c329|1]【可儿】
+[NONE|0]“只要这样，可儿就可以踢罐子了……”\
+fgload 1,"CO16ADM","128",3
+showTextbox
+[t2c330|1]【可儿】
+[NONE|0]“好吗？　这个办法？”\
+fgload 2,"SO12ADM","512",3
+showTextbox
+[t2c331|1]【空】
+[NONE|0]“好，拜托你了喔。”\
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]再加上空绝对不可以检查生命反应，以及使用ＬｅＭＵ
+[NONE|0]内的影像显示器……我们就这么约定。\
+[t2c332|1]【少年】
+[NONE|0]“嗯……这样一来一切ＯＫ。”\
+[t2c333|1]【优】
+[NONE|0]“好啊，准备ＯＫ。”\
+[NONE|1]大家似乎也都明白了。\
+removeBG
+stopBGM
+showTextbox
+[NONE|1]我拿着罐子闭着眼睛，在会议室慢慢数到１００。\
+[NONE|1]趁这个时候，大家往楼层的各处散去。\
+hideTextbox
+playBGM "4","100"
+bgload "BG17A2","0","2"
+clock "22","19"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“１００……”\
+[NONE|1]张开眼睛。\
+[NONE|1]把空罐子放在脚边。\
+[NONE|1]我望了望黑鸦鸦的四周，似乎没有人在这里。\
+[NONE|1]（那么，开始找寻大家……）\
+[NONE|1]我朝着比较靠近我的门移动。\
+[NONE|1]鞋子着地的叩叩声，不自然地发着深沉的低声响。\
+[NONE|1]简直就像声纳一样。\
+[NONE|1]（原来如此……‘放大声音’指的就是这个啊……）\
+[NONE|1]整个气氛变得好像在潜水舰里。\
+[NONE|1]为了不搞错自己的声音跟其他人的声音，得好好注意回
+[NONE|0]音。\
+bgload "BG26B4R","0","2"
+showTextbox
+[NONE|1]虽然灯光全都关掉了，但是门却自动开着。\
+[NONE|1]那么……就先往最近的房间去吧……@
+mov %V_bb, 0
+
+
+csel "中央控制室", *L_pre_t_2d_0000071e,"电梯大厅", *L_pre_t_2d_00000807
+*L_pre_t_2d_0000071e
+ mov %V_b3, 0
+ goto *LchoiceId_1203_165
+
+*L_pre_t_2d_00000807
+ mov %V_b3, 1
+ goto *LchoiceId_1203_165
+
+*LchoiceId_1203_165
+if %V_b3 == 0 goto *Lt_2d_0000071e
+
+if %V_b3 == 1 goto *Lt_2d_00000807
+
+*Lt_2d_0000071e
+
+showTextbox
+[NONE|1]去看看控制室吧。\
+*Lt_2d_00000723
+
+hideTextbox
+bgload "MAP3F_A2","0","3"
+mov %V_45, 0
+
+mov %V_46, 6
+
+unknown20 48
+delay 120
+unknown21 15
+overlayImage "00000000","MAP3F_A2",0,3
+removeBG
+bgload "BG15B2","0","2"
+playSFX "SE00_00",0,100
+bgload "BG16A2","0","2"
+showTextbox
+[NONE|1]因为影像显示器的电源被拔掉的关系，整个房间微暗。\
+[NONE|1]仪表板也不能运作。\
+[NONE|1]我探了探柜子跟桌子下面，没有人在。\
+[NONE|1]嗯……躲在这种狭窄的地方，出来会有点麻烦吧……\
+[NONE|1]这么一想，于是放弃搜寻此处，往房间后面走去。\
+playSFX "SE00_00",0,100
+bgload "BG26B4L","0","2"
+if  %V_bb == 0     goto *Lt_2d_000007f3
+
+scriptLocationId 175
+showTextbox
+[NONE|1]接下来要往哪里呢……\
+goto *Lt_2d_000008c0
+*Lt_2d_000007f3
+mov %V_bb, 1
+
+showTextbox
+[NONE|1]也去捡查检查电梯大厅那一带好了。\
+goto *Lt_2d_0000080c
+*Lt_2d_00000807
+
+showTextbox
+[NONE|1]电梯早就无法使用，于是一动也不动。\
+[NONE|1]应该不会有人躲在那里才对……\
+[NONE|1]不，等等……这或许正是我心里的盲点吧。\
+*Lt_2d_0000080c
+
+hideTextbox
+bgload "MAP3F_A2","0","3"
+mov %V_45, 0
+
+mov %V_46, 12
+
+unknown20 48
+delay 120
+unknown21 15
+overlayImage "00000000","MAP3F_A2",0,3
+removeBG
+bgload "BG22B2","0","2"
+showTextbox
+[NONE|1]我走进了电梯大厅。\
+[NONE|1]可是这里似乎没有任何可以提供躲藏的隐蔽处。\
+[NONE|1]我沿着墙壁慢慢确认，果然没有人躲在这里。\
+[NONE|1]电梯全数都呈现停止状态，看不出来到底有没有，或是
+[NONE|0]可不可以运转。\
+[NONE|1]（或许这里可以忽略掉……）\
+bgload "BG26B4L","0","2"
+if  %V_bb == 0     goto *Lt_2d_000008ac
+
+scriptLocationId 176
+showTextbox
+[NONE|1]接下来往哪里去好呢……\
+goto *Lt_2d_000008c0
+*Lt_2d_000008ac
+mov %V_bb, 1
+
+showTextbox
+[NONE|1]去中央控制室看看吧。\
+goto *Lt_2d_00000723
+*Lt_2d_000008c0
+
+hideTextbox
+playSFX "SE01_01",0,100
+showTextbox
+[NONE|1]【武】
+[NONE|0]“啊！”\
+[NONE|1]就在这个时候，我听到了声响。\
+[NONE|1]有人在走廊上移动的声音！\
+[NONE|1]那个脚步声从雷姆利亚遗迹往会议室的方向去。\
+[NONE|1]【武】
+[NONE|0]“不好了！”\
+[NONE|1]我紧急地回头跑去。\
+playSFX "SE01_02",0,100
+bgload "BG25B4","0","2"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“喂，是谁！！”\
+[t2c334|1]【少年】
+[NONE|0]“哇！”\
+[NONE|1]我吼出来之后，奔跑的人影畏缩了一下。\
+hideTextbox
+stopSFX
+fgload 1,"KA06ADS","320",3
+showTextbox
+[NONE|1]在转角的那个人影就是少年。\
+[NONE|1]不知道他是不是决定听天由命了，少年停在走道上，任
+[NONE|0]由我一步步靠近。\
+removeFG "1","3"
+fgload 1,"KA02ADM","320",3
+showTextbox
+[t2c335|1]【少年】
+[NONE|0]“真糟糕，被你发现了呢……我是第一个吗？”\
+[NONE|1]【武】
+[NONE|0]“是啊”\
+fgload 1,"KA01ADM","320",3
+showTextbox
+[t2c336|1]【少年】
+[NONE|0]“真是糟糕，那要是你抓到大家的话，下一个鬼不就是
+[NONE|0]我了？”\
+[NONE|1]【武】
+[NONE|0]“嗯……大概是吧。”\
+[t2c337|1]【少年】
+[NONE|0]“是吗？　谁赶快来救救我啊～”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[t2c338|1]【少年】
+[NONE|0]“武，你不去‘踩罐子’的话，我要去踢罐子啰？”\
+[NONE|1]【武】
+[NONE|0]“你对‘踢罐子’的规则，还知道得挺清楚嘛。”\
+hideTextbox
+playSFX "SE01_02",0,100
+showTextbox
+[t2c339|1]【优】
+[NONE|0]“冲啊－－－！！”\
+hideTextbox
+stopBGM
+fgload 1,"YU10ADL","320",3
+playSFX "SE05_05",0,100
+removeFG "1","3"
+unknown20 5
+showTextbox
+[NONE|1]砰咚！！\
+hideTextbox
+unknown21 15
+showTextbox
+[NONE|1]【武】
+[NONE|0]“呜哇！”\
+playSFX "SE02_02",0,100
+showTextbox
+[NONE|1]啪唰！！\
+hideTextbox
+playBGM "18","100"
+showTextbox
+[NONE|1]突然从走道两旁冲过来的优，毅然决然地给了我一记横
+[NONE|0]冲撞击。\
+playSFX "SE10_17",0,90
+showTextbox
+[NONE|1]【武】
+[NONE|0]“咳咳……”\
+[NONE|1]视线所及都是水。\
+[NONE|1]灌入我口中的海水，让我感觉到满口咸味。\
+fgload 1,"YU09ADM","320",3
+showTextbox
+[t2c340|1]【优】
+[NONE|0]“哇……哈……哈哈哈……”\
+[NONE|1]指着卧倒在水中的我，优哈哈大笑。\
+[NONE|1]【武】
+[NONE|0]“咳咳……咳咳……噗哈……！！”\
+hideTextbox
+stopSFX
+playSFX "SE02_04",0,100
+showTextbox
+[NONE|1]我拨了拨海水，迅速地站起来。\
+[NONE|1]【武】
+[NONE|0]“喂，你、你这家伙～～！！”\
+removeFG "1","3"
+fgload 1,"YU02ADS","320",3
+showTextbox
+[t2c341|1]【优】
+[NONE|0]“呵呵呵……这次的胜利我拿下了！”\
+hideTextbox
+removeFG "1","3"
+playSFX "SE01_01",0,100
+showTextbox
+[NONE|1]【武】
+[NONE|0]“开、开什么玩笑……你给我等等！”\
+playSFX "SE01_01",0,95
+showTextbox
+[t2c342|1]【优】
+[NONE|0]“我是那种你叫我等我就会乖乖等的人吗！”\
+[NONE|1]【武】
+[NONE|0]“这家伙！　被强大力量撞击的气愤，哪是那么容易可
+[NONE|0]以消除的！”\
+[NONE|1]我也猛然冲了出去，追在优后方。\
+[NONE|1]优的身影很快地消失在会议室中。\
+[NONE|1]她立刻打算把门给关起来，但我还是早了一步到房间里
+[NONE|0]。\
+bgload "BG17A2","0","2"
+stopSFX
+fgload 1,"YU13ADS","320",3
+showTextbox
+[NONE|1]结束了！！\
+[NONE|1]因为优不知道空罐子的地点，而迷惑了起来。\
+removeFG "1","3"
+showTextbox
+[NONE|1]我迅速地越过优跑了出去……\
+hideTextbox
+playSFX "SE10_12",0,100
+showTextbox
+[NONE|1]一眼就看到了我摆放的空罐子，滑垒达阵成功！\
+[NONE|1]于是我踩着空罐子，大声地宣判。\
+[NONE|1]【武】
+[NONE|0]“发现优！　我踩到罐子啰！！”\
+[NONE|1]随即……因为少年也进入了会议室。\
+[NONE|1]【武】
+[NONE|0]“发现少年！　我踩着罐子啰！”\
+[NONE|1]……情况继续下去。\
+[NONE|1]【武】
+[NONE|0]“嘿嘿嘿……太天真啰，优！你是不可能抢先一步的！
+[NONE|0]”\
+multifgload2 1,2,"00000000","YU04ADM","00000000","KA01ADM",128,512,3
+showTextbox
+[t2c343|1]【优】
+[NONE|0]“老奸！　仓成，你换了空罐子的摆设地点对不对！”\
+[NONE|1]【武】
+[NONE|0]“你又没规定罐子要放哪里不是吗，你还不是突然给我
+[NONE|0]一记冲撞，彼此彼此啦。”\
+[t2c344|1]【优】
+[NONE|0]“是是……那又怎样？　我是第一个被你喊‘踩着罐子
+[NONE|0]’的人吗？”\
+[NONE|1]【武】
+[NONE|0]“喔……是啊。”\
+fgload 1,"YU03ADM","128",3
+showTextbox
+[t2c345|1]【优】
+[NONE|0]“策略失败了……”\
+[NONE|1]【武】
+[NONE|0]“……咦？　什么策略？”\
+playSFX "SE01_02",0,90
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]紧接着，房间的反方向入口处传来了啪唰啪唰，一步步
+[NONE|0]接近的脚步声……\
+hideTextbox
+multifgload2 1,2,"00000000","SO01ADS","00000000","CO02ADS",176,464,3
+stopSFX
+showTextbox
+[t2c346|1]【可儿】
+[NONE|0]“呀─喝”\
+[NONE|1]【武】
+[NONE|0]“发现空、可儿以及ＰＩＰＩ。”\
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]我‘踩着罐子’。\
+multiremoveFG3 "1","2","0"
+multifgload3 "00000000","SO15ADS","00000000","CO15ADS","00000000","YU11ADS",128,320,512,3
+showTextbox
+[t2c347|1]【空】
+[NONE|0]“唉呀……田中，被抢先一步踩到罐子了是吗？”\
+[t2c348|1]【优】
+[NONE|0]“我预设的情形出了点状况嘛……”\
+[t2c349|1]【可儿】
+[NONE|0]“优秋是不是比我们约定的还要早跑出去呢？”\
+removeFG "1","3"
+multifgload2 1,2,"00000000","KA01ADS","00000000","CO11ADS",128,320,3
+showTextbox
+[t2c350|1]【少年】
+[NONE|0]“大家不是约好要同时跑回来的吗……”\
+[pipi_00|1]【ＰＩＰＩ】
+[NONE|0]“汪”\
+[NONE|1]【武】
+[NONE|0]“这就是你的策略啊……”\
+multifgload2 2,4,"00000000","CO01ADS","00000000","YU01ADS",320,512,3
+showTextbox
+[t2c351|1]【优】
+[NONE|0]“嗯……因为我想说……你没办法阻止我们大家踢罐子
+[NONE|0]。”\
+[NONE|1]【武】
+[NONE|0]“唉……什么啊……干嘛心机这么重啊。”\
+fgload 4,"YU08ADS","512",3
+showTextbox
+[t2c352|1]【优】
+[NONE|0]“嘿嘿嘿嘿……”\
+[NONE|1]优对着我摆出恶作剧般的害羞笑容。\
+multiremoveFG2 "87","04","00","3"
+multiremoveFG3 "0","1","2"
+showTextbox
+[NONE|1]我们再一度，在房间中央集合了起来。\
+[NONE|1]【武】
+[NONE|0]“那么，出乎我意料的，那么容易就找到大家了嘛……
+[NONE|0]”\
+[NONE|1]【武】
+[NONE|0]“首先，得禁止大家像现在这样串通好来踢罐子。”\
+fgload 1,"YU04ADM","320",3
+showTextbox
+[t2c353|1]【优】
+[NONE|0]“咦！　为什么不可以？”\
+[NONE|1]【武】
+[NONE|0]“我就是特别要制你的啦……下次还要使出同时攻击吗
+[NONE|0]？”\
+fgload 1,"YU08ADM","320",3
+showTextbox
+[t2c354|1]【优】
+[NONE|0]“怎么可能？”\
+[NONE|1]【武】
+[NONE|0]“所以啊……这根本就不好玩啦。”\
+[NONE|1]【武】
+[NONE|0]“鬼计算好时间去找人，其他的家伙再利用这个空档来
+[NONE|0]接近罐子……这一点意义也没有嘛。”\
+fgload 1,"YU17ADM","320",3
+showTextbox
+[t2c355|1]【优】
+[NONE|0]“嘿，了解……”\
+[NONE|1]这次换优当鬼了，优有点不甘愿地点头认同。\
+[NONE|1]或许这家伙，平常就是玩这种攻击战为主的踢罐子游戏
+[NONE|0]长大的吧。\
+removeFG "1","3"
+multiremoveFG3 "1","2","0"
+multifgload3 "00000000","SO01ADS","00000000","CO01ADS","00000000","KA01ADS",128,320,512,3
+showTextbox
+[NONE|1]【武】
+[NONE|0]“大家也觉得这样行得通吗？”\
+[NONE|1]空、可儿、少年、ＰＩＰＩ，大家都点点头表示赞同。\
+[NONE|1]【武】
+[NONE|0]“好，那么接下来就换优当鬼啰。”\
+[NONE|1]【武】
+[NONE|0]“空罐子就在那边，你自己捡吧，摆在你选定的地方，
+[NONE|0]好好地数完──”\
+hideTextbox
+stopBGM
+multiremoveFG2 "87","04","00","3"
+multiremoveFG3 "0","1","2"
+playSFX "SE08_04",0,100
+showTextbox
+[NONE|1]啪锵－－－－！！\
+playSFX "SE08_01",0,100
+showTextbox
+[NONE|1]匡啷匡啷匡啷匡啷……\
+[NONE|1]黑暗中，响起了罐子被踢飞的声响。\
+[NONE|1]罐子快速地旋转往走道滚了出去。\
+[NONE|1]【武】
+[NONE|0]“喂，是谁……把罐子踢出去的？”\
+fgload 1,"YU06ADM","320",3
+showTextbox
+[t2c356|1]【优】
+[NONE|0]“不、不是我喔！！”\
+hideTextbox
+fgload 1,"YU16ADM","320",3
+playSFX "SE01_04",0,100
+removeFG "1","3"
+showTextbox
+[NONE|1]一说完，优就是抢第一个逃跑的。\
+[NONE|1]【武】
+[NONE|0]“可恶的家伙……！”\
+hideTextbox
+playBGM "13","100"
+showTextbox
+[NONE|1]其他人，也跟着鸟兽散地逃了出去。\
+playSFX "SE01_01",0,90
+showTextbox
+[NONE|1]啪唰啪唰啪唰地，陆续传来多数往走道奔驰而去的脚步
+[NONE|0]声，看样子……都离这里越来越远。\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“这算什么嘛……又是我当鬼！”\
+[NONE|1]没有人回答我。\
+[NONE|1]我看了看四周。\
+[NONE|1]没有半个人留下来。\
+[NONE|1]（……咦？）\
+[NONE|1]（该不会刚刚踢罐子的是………月海？）\
+[NONE|1]虽然老是抱怨来抱怨去的，或许月海也参加了这个游戏
+[NONE|0]也说不定。\
+[NONE|1]（想玩就说一声嘛……可恶……）\
+[NONE|1]（真拿他们没办法……）\
+[NONE|1]【武】
+[NONE|0]“那么，我要数到１００啰，１……”\
+[NONE|1]【武】
+[NONE|0]“１０、１１……１００，好……”\
+[NONE|1]【武】
+[NONE|0]“我要出发啰。”\
+bgload "BG25B4","0","2"
+clock "22","28"
+showTextbox
+[NONE|1]你们逃不出我的手掌心的……\
+[NONE|1]那么……要从哪里找起呢？@
+mov %V_d0, 1
+
+mov %V_d1, 1
+
+mov %V_d2, 1
+
+mov %V_bb, 0
+
+*Lt_2d_00000d74
+if %V_d0+%V_d1+%V_d2<3 goto *Lt_2d_00000d75
+
+csel "雷姆利亚遗迹", *L_pre_t_2d_00000d9e,"休憩空间", *L_pre_t_2d_00000f0a,"塔滋塔三明治商店", *L_pre_t_2d_0000118e
+*Lt_2d_00000d75
+if %V_d0==0 goto *Lt_2d_00000d76
+if %V_d1==0 goto *Lt_2d_00000d77
+csel "雷姆利亚遗迹", *L_pre_t_2d_00000d9e,"休憩空间", *L_pre_t_2d_00000f0a
+*Lt_2d_00000d76
+csel "休憩空间", *L_pre_t_2d_00000f0a,"塔滋塔三明治商店", *L_pre_t_2d_0000118e
+*Lt_2d_00000d77
+csel "雷姆利亚遗迹", *L_pre_t_2d_00000d9e,"塔滋塔三明治商店", *L_pre_t_2d_0000118e
+
+*L_pre_t_2d_00000d9e
+ mov %V_b3, 0
+ goto *LchoiceId_1203_167
+
+*L_pre_t_2d_00000f0a
+ mov %V_b3, 1
+ goto *LchoiceId_1203_167
+
+*L_pre_t_2d_0000118e
+ mov %V_b3, 2
+ goto *LchoiceId_1203_167
+
+*LchoiceId_1203_167
+if %V_b3 == 0 goto *Lt_2d_00000d9e
+
+if %V_b3 == 1 goto *Lt_2d_00000f0a
+
+if %V_b3 == 2 goto *Lt_2d_0000118e
+
+*Lt_2d_00000d9e
+
+hideTextbox
+bgload "MAP3F_A2","0","3"
+mov %V_45, 0
+
+mov %V_46, 2
+
+unknown20 48
+delay 120
+unknown21 15
+overlayImage "00000000","MAP3F_A2",0,3
+removeBG
+bgload "BG04B2","0","2"
+mov %V_d0, 0
+
+showTextbox
+[NONE|1]雷姆利亚遗迹前。\
+[NONE|1]现在，游乐器材内部的灯光也被关掉了。\
+[NONE|1]里面看起来好像很容易迷路的样子。\
+[NONE|1]（该不会有人躲在迷宫中……？）\
+[NONE|1]我这么想着，但里面恐怕会更暗。\
+[NONE|1]而且潜入之后，要走到外面也是件麻烦事吧。\
+[NONE|1]一旦进去了，好像没那么容易走出来……\
+[NONE|1]我又何必冒着这个大风险，大费周章地跑到里面找人，
+[NONE|0]把自己当笨蛋呢。\
+[NONE|1]我快速地望了望四周，确定没有任何人影。\
+[NONE|1]我试着竖起耳朵静听。\
+[NONE|1]没有半点声音……\
+hideTextbox
+stopBGM
+playBGM "5","100"
+delay 30
+showTextbox
+[NONE|1]【武】
+[NONE|0]“呜喔！？”\
+[NONE|1]突然，遗迹中开始响起音乐。\
+[NONE|1]或许是这个游乐设施的主题曲也说不定。\
+[NONE|1]我听到混在这个声音里，有人奔驰而去的声音……\
+[NONE|1]【武】
+[NONE|0]“优，又是你吗！！”\
+[NONE|1]我一边跑一面快速绕到脚步声的前方，堵住出口。\
+fgload 1,"YU01ADS","320",3
+showTextbox
+[NONE|1]【武】
+[NONE|0]“果然没错……”\
+removeFG "1","3"
+fgload 1,"YU06ADM","320",3
+showTextbox
+[t2c357|1]【优】
+[NONE|0]“咦？　你怎么知道是我呢？”\
+[NONE|1]【武】
+[NONE|0]“跟旋转海豚那时候的手法一模一样，你想用这个来威
+[NONE|0]胁我，你觉得我还会再吃你这招吗？”\
+fgload 1,"YU02ADM","320",3
+showTextbox
+[t2c358|1]【优】
+[NONE|0]“啊，对喔！　这一招我已经用过了，糟糕……”\
+[NONE|1]【武】
+[NONE|0]“你打算这样蒙骗，再出乎意料地让我认栽吗？”\
+fgload 1,"YU08ADM","320",3
+showTextbox
+[t2c359|1]【优】
+[NONE|0]“哇……你都识破啦？　真是糟糕啊……啊哈哈……”\
+[NONE|1]【武】
+[NONE|0]“我说对了吧！！”\
+[NONE|1]一旦抓到窍门……这家伙还真容易理解……\
+fgload 1,"YU01ADM","320",3
+showTextbox
+[t2c360|1]【优】
+[NONE|0]“好吧，我认输，我乖乖听你的吧。”\
+[NONE|1]看来她明白这次我不会给她任何可趁之机，于是优举起
+[NONE|0]双手投降。\
+[NONE|1]似乎也毫无接近罐子的意图了。\
+removeFG "1","3"
+showTextbox
+[NONE|1]她装出战败者双手高举的模样，尾随着我慢慢走着。\
+showTextbox
+[NONE|1]
+[NONE|1]　　　　＜看到优　踩罐子＞\
+hideTextbox
+stopBGM
+playBGM "13","100"
+if  %V_bb == 0     goto *Lt_2d_00000ee8
+
+scriptLocationId 177
+goto *Lt_2d_000012d0
+*Lt_2d_00000ee8
+mov %V_bb, 1
+
+bgload "BG25B4","0","2"
+showTextbox
+[NONE|1]要不要找找其他房间？
+goto *Lt_2d_00000d74
+*Lt_2d_00000f0a
+
+hideTextbox
+bgload "MAP3F_A2","0","3"
+mov %V_45, 0
+
+mov %V_46, 13
+
+unknown20 48
+delay 120
+unknown21 15
+overlayImage "00000000","MAP3F_A2",0,3
+removeBG
+bgload "BG21B2","0","2"
+mov %V_d1, 0
+
+showTextbox
+[NONE|1]我率先造访了休憩房间。\
+[NONE|1]马上我就察觉到这里似乎有人在。\
+playSFX "SE01_01",0,95
+showTextbox
+[NONE|1]唰唰唰地，穿过水的脚步声。\
+[NONE|1]当我正逐步靠近他的时候，脚步声巧妙地转移了方向。\
+[NONE|1]树丛般的人影保持着低姿势，慢慢地移动着。\
+[NONE|1]让人焦急的僵持战持续着……\
+playSFX "SE01_02",0,90
+showTextbox
+[NONE|1]唰唰唰唰……\
+[NONE|1]对方的脚步声，试图突破往出口的方向。\
+[NONE|1]我为了要堵住通往走道的路线，不断往对手附近绕过去
+[NONE|0]。\
+playSFX "SE01_01",0,90
+showTextbox
+[NONE|1]脚步声渐渐地离出口越来越远，对方被我逼到了角落。\
+[NONE|1]我一步一步小心地接近。\
+[NONE|1]猜想对方会焦急地飞奔而来吧……\
+[NONE|1]我绕到前方，轻轻地勾了一下对方的脚！\
+playSFX "SE02_02",0,100
+showTextbox
+[NONE|1]啪～唰唰！！\
+[NONE|1]一阵响亮的跌倒声。\
+[NONE|1]【武】
+[NONE|0]“喂，虽然不知道你是谁，不过……还好吧？”\
+[NONE|1]【？？】
+[NONE|0]“…………”\
+[NONE|1]应该就倒在这附近才对……\
+[NONE|1]但脚底下实在太黑了，什么都看不见。\
+[NONE|1]【武】
+[NONE|0]“不知道这派不派得上用场？”\
+[NONE|1]我把ＰＤＡ从口袋拿了出来，试着把荧幕的反光开到最
+[NONE|0]强。\
+[NONE|1]可是这光线跟手电筒根本完全不能比，发电量很微弱。\
+[NONE|1]至少还是会比较亮吧，也只能这样安慰自己了。\
+hideTextbox
+mov %V_4f, 34
+
+mov %V_3b, 1
+
+mov %V_3c, %V_VAR_c3_0_6
+
+mov %V_3d, 2
+
+mov %V_3e, 2
+
+mov %V_3f, %V_VAR_c3_0_6
+
+mov %V_40, 2
+
+unknown20 12
+showTextbox
+[NONE|1]【武】
+[NONE|0]“呜哇！”\
+[NONE|1]手一滑，一不留神，ＰＤＡ差点掉了出去。\
+hideTextbox
+unknown21 11
+showTextbox
+[NONE|1]就差那么一点，还好我即时制止ＰＤＡ落水。\
+[NONE|1]【武】
+[NONE|0]“……咦？”\
+[NONE|1]我看到某个东西的影子往水里跳去……\
+[NONE|1]唰唰唰唰地游了过去，没见过这么大的一只鱼……\
+[NONE|1]【武】
+[NONE|0]“咦，这不是那小子吗！”\
+playSFX "SE01_03",0,95
+showTextbox
+[NONE|1]我随手捞起脚边的水，往少年头上泼去。\
+[t2c361|1]【少年】
+[NONE|0]“哇！　被抓到了！！”\
+hideTextbox
+playSFX "SE02_04",0,100
+fgload 1,"KA06AWL","320",3
+showTextbox
+[NONE|1]唰啪！！\
+[NONE|1]少年才一站起身子来，就马上想要逃走。\
+removeFG "1","3"
+fgload 1,"KA06AWM","320",3
+showTextbox
+[t2c362|1]【少年】
+[NONE|0]“哇哇哇……”\
+[NONE|1]结果，他头后方连着衣服的那个帽子。\
+removeFG "1","3"
+fgload 1,"KA06AWS","320",3
+showTextbox
+[NONE|1]因为积了太多的水……\
+hideTextbox
+removeFG "1","3"
+playSFX "SE02_02",0,100
+showTextbox
+[NONE|1]啪唰！！\
+[NONE|1]因为无法承受这重量，少年的身体向后画了一个漂亮的
+[NONE|0]圆弧，倒栽葱地再度跌入水中。\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[t2c363|1]【少年】
+[NONE|0]“没想到挺舒服的嘛……”\
+[NONE|1]少年当场在这个水深仅１５公分的泳池里游起蛙式来。\
+[NONE|1]【武】
+[NONE|0]“水不冷吗？”\
+[t2c364|1]【少年】
+[NONE|0]“有一点点……”\
+[NONE|1]唰─唰─地舒爽的泳姿。\
+[NONE|1]如鱼得水，指的大概就是这种情况吧。\
+[NONE|1]于是他就这样边游边混入黑暗中，打算往对面岸上游去
+[NONE|0]……\
+[NONE|1]【武】
+[NONE|0]“喂，好心告诉你一声，想从那个出口出去的话，你就
+[NONE|0]绕太远了。”\
+fgload 1,"KA07AWS","320",3
+showTextbox
+[t2c365|1]【少年】
+[NONE|0]“可恶，被你看穿了。”\
+[NONE|1]少年打消念头站了起来。\
+fgload 1,"KA02AWS","320",3
+showTextbox
+[t2c366|1]【少年】
+[NONE|0]“我还以为只要这样游走，你就不会发现了。”\
+[NONE|1]他这么说着，笑了起来。\
+[NONE|1]【武】
+[NONE|0]“你真是不能大意啊，简直跟忍者一样嘛……”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+fgload 1,"KA01AWS","320",3
+showTextbox
+[t2c367|1]【少年】
+[NONE|0]“忍法”\
+[NONE|1]少年结了个印。\
+[NONE|1]【武】
+[NONE|0]“…………”\
+hideTextbox
+removeFG "1","3"
+playSFX "SE02_04",0,100
+showTextbox
+[NONE|1]那家伙又再度投入水中，游了好一下子。\
+showTextbox
+[NONE|1]
+[NONE|1]　　　　　＜看到少年　踩罐子＞\
+if  %V_bb == 0     goto *Lt_2d_0000116c
+
+scriptLocationId 178
+goto *Lt_2d_000012d0
+*Lt_2d_0000116c
+mov %V_bb, 1
+
+bgload "BG25B4","0","2"
+showTextbox
+[NONE|1]要不要找找其他房间？
+goto *Lt_2d_00000d74
+*Lt_2d_0000118e
+
+hideTextbox
+bgload "MAP3F_A2","0","3"
+mov %V_45, 0
+
+mov %V_46, 9
+
+unknown20 48
+delay 120
+unknown21 15
+overlayImage "00000000","MAP3F_A2",0,3
+removeBG
+bgload "BG07B2","0","2"
+mov %V_d2, 0
+
+showTextbox
+[NONE|1]我来到塔滋塔三明治商店。\
+[NONE|1]四周一片昏暗，倒是美食的香味还是没变。\
+[NONE|1]（我肚子好饿……）\
+[NONE|1]（先吃点东西吧……）\
+[NONE|1]我朝着排在架上包装好的三明治伸出手。\
+[NONE|1]解开包装纸之后，我随口咬了下去。\
+[NONE|1]【武】
+[NONE|0]“好硬！！”\
+[NONE|1]【武】
+[NONE|0]“对喔，摆在这里的不都是模型吗……”\
+[NONE|1]我可没兴趣嚼着蜡所做的标本。\
+[NONE|1]这哪能吃啊。\
+[NONE|1]（伤脑筋……）\
+[NONE|1]我绕到商店内部，走了进去。\
+[NONE|1]我想做个塔滋塔三明治来吃好了。\
+[NONE|1]没有灯光的商店内，有点暗……\
+[NONE|1]不过，也多亏今天早上担任大家早餐的负责人，不论是
+[NONE|0]食材的摆放处，还是烹调器具的用法，我都很清楚。\
+[NONE|1]为了顺利打开脚边的冰箱，我向下弯曲了身子。\
+[NONE|1]【武】
+[NONE|0]“材料应该还剩很多才对……”\
+[NONE|1]【武】
+[NONE|0]“咦？”\
+[NONE|1]有个东西，从冰箱的旁边露了出来。\
+[NONE|1]是人的手。\
+[NONE|1]一双我认得的白晰手臂。\
+[NONE|1]这双手接着举到一个我认得的头顶上。\
+[NONE|1]而这个人的头，正战战兢兢地往四周望来望去。\
+hideTextbox
+stopBGM
+showTextbox
+[NONE|1]【武】
+[NONE|0]“你……你在干吗？”\
+hideTextbox
+playBGM "8","100"
+bgload "EV_SO08A","0","2"
+showTextbox
+[t2c368|1]【空】
+[NONE|0]“咦？　哇！！”\
+[NONE|1]她该不会完全没有察觉我进来了吧……？\
+[NONE|1]把头抬起来好好打量我一番之后，空整个人僵掉了。\
+[NONE|1]不知道是不是因为太不安，她嘴巴张得大大的，眼睛往
+[NONE|0]四周张望着。\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[NONE|1]【空】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“…………？”\
+[t2c369|1]【空】
+[NONE|0]“咦？　那个……”\
+bgload "EV_SO08B","0","2"
+showTextbox
+[t2c370|1]【空】
+[NONE|0]“欢……欢迎光临！”\
+[NONE|1]【武】
+[NONE|0]“咦？”\
+[NONE|1]空就这样蜷曲着，冲着我使出一连串微笑攻击。\
+[t2c371|1]【空】
+[NONE|0]“这、这位客人？　请问要点些什么？”\
+[t2c372|1]【空】
+[NONE|0]“请问要点些什么餐点呢？”\
+[NONE|1]【武】
+[NONE|0]“请给我一个塔滋塔三明治。”\
+[NONE|1]【武】
+[NONE|0]“对了，我记得这家商店的餐点，不是只有塔滋塔三明
+[NONE|0]治吗……？”\
+[t2c373|1]【空】
+[NONE|0]“咦？　啊，是这样吗……我明白了。”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[t2c374|1]【空】
+[NONE|0]“那么……要不要顺便点个饮料呢？”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[t2c375|1]【空】
+[NONE|0]“……那……”\
+[NONE|1]【武】
+[NONE|0]“空……你还真的老老实实地躲着啊？”\
+[NONE|1]【武】
+[NONE|0]“我以为你会消失在某处，或是躲在某些没办法找的地
+[NONE|0]方说。”\
+bgload "EV_SO08C","0","2"
+showTextbox
+[t2c376|1]【空】
+[NONE|0]“这样不就不能玩游戏了吗？　我会好好遵守游戏规则
+[NONE|0]的。”\
+[NONE|1]【武】
+[NONE|0]“你说的也没错啦……只是……”\
+[NONE|1]【武】
+[NONE|0]“既然要躲，找个更隐密的场所不是更好吗？”\
+[NONE|1]空只是蹲着并按着自己的头。\
+[t2c377|1]【空】
+[NONE|0]“是吗？　我以为不会那么容易被找到的……”\
+[t2c378|1]【空】
+[NONE|0]“算了，反正被找到了，也无可奈何。”\
+[NONE|1]我从冰箱里抓了一个三明治的面包。\
+[NONE|1]【武】
+[NONE|0]“嗯咕嗯咕……”\
+[t2c379|1]【空】
+[NONE|0]“仓成，在有人‘踩罐子’之前，输赢还没真正定论对
+[NONE|0]不对？”\
+[NONE|1]【武】
+[NONE|0]“是啊，我知道。”\
+bgload "EV_SO08B","0","2"
+showTextbox
+[t2c380|1]【空】
+[NONE|0]“我只是觉得现在不是大口吃面包的好时机……”\
+[NONE|1]【武】
+[NONE|0]“喔……没关系。”\
+[NONE|1]【武】
+[NONE|0]“空在这个地方，代表可儿也在这附近吧？”\
+[t2c381|1]【空】
+[NONE|0]“嗯……是的。”\
+[NONE|1]【武】
+[NONE|0]“等我吃完这个，再一个个追也还来得及啊。”\
+[NONE|1]【武】
+[NONE|0]“是吧……可儿？”\
+playSFX "SE10_00",0,100
+showTextbox
+[NONE|1]咚咚地，我敲了敲不锈钢的流理台。\
+[NONE|1]【可儿】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“你就躲在商店的里面对不对，我早就料到啰……”\
+[NONE|1]【可儿】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“反正，要是你真的在里面，就这样待着也无妨……”\
+[NONE|1]【武】
+[NONE|0]“如果你不在那里的话，回我一句话吧。”\
+[t2c382|1]【可儿】
+[NONE|0]“我不在喔。”\
+[t2c383|1]【空】
+[NONE|0]“可儿……你一回答就会被发现了啊。”\
+[t2c384|1]【可儿】
+[NONE|0]“咦？”\
+[NONE|1]【武】
+[NONE|0]“对付你啊……只要用这种老把戏就可以上钩了。”\
+[t2c385|1]【可儿】
+[NONE|0]“……咦咦？”\
+[NONE|1]可儿跟ＰＩＰＩ两个都从下方现身了。\
+showTextbox
+[NONE|1]
+[NONE|1]　　　　＜看到空　踩罐子＞\
+hideTextbox
+stopBGM
+playBGM "13","100"
+if  %V_bb == 0     goto *Lt_2d_000012ae
+
+scriptLocationId 179
+goto *Lt_2d_000012d0
+*Lt_2d_000012ae
+mov %V_bb, 1
+
+bgload "BG25B4","0","2"
+showTextbox
+[NONE|1]要不要找找其他房间？？
+goto *Lt_2d_00000d74
+*Lt_2d_000012d0
+mov %V_d0, 0
+
+mov %V_d1, 0
+
+mov %V_d2, 0
+
+removeBG
+showTextbox
+[NONE|1]一鼓作气把剩下的家伙都找出来吧，这样我就可以达成
+[NONE|0]‘踩罐子’的任务。\
+[NONE|1]接下来只剩下月海了………\
+bgload "BG17A2","0","2"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“呜哇哇！？”\
+[NONE|1]在外面绕了一圈回来之后，我吓了一大跳。\
+bgload "EV_TU06A","0","2"
+showTextbox
+[NONE|1]月海从容地坐在椅子上等着大家。\
+[NONE|1]【武】
+[NONE|0]“抓、抓到月海了！！”\
+bgload "EV_TU06B","0","2"
+showTextbox
+[t2c386|1]【月海】
+[NONE|0]“……咦？”\
+[NONE|1]【武】
+[NONE|0]“这个时候可不能装傻喔～”\
+[t2c387|1]【月海】
+[NONE|0]“我哪有跟你装什么傻啊。”\
+[NONE|1]【武】
+[NONE|0]“又来了，又说这种话，厚脸皮的家伙。”\
+[t2c388|1]【月海】
+[NONE|0]“厚脸皮？”\
+[NONE|1]【武】
+[NONE|0]“刚刚把罐子踢掉的不就是你吗？”\
+[t2c389|1]【月海】
+[NONE|0]“罐子？？”\
+[t2c390|1]【月海】
+[NONE|0]“你……胡说八道些什么啊？”\
+bgload "BG17A2","0","2"
+fgload 1,"TU01ADS","320",3
+showTextbox
+[NONE|1]站起身来的月海。\
+[NONE|1]不行！　要是让月海抢先一步踩到罐子的话，我就输定
+[NONE|0]了！\
+removeFG "1","3"
+showTextbox
+[NONE|1]我也慌张地回到摆罐子的地点。\
+[NONE|1]【武】
+[NONE|0]“发现月海了！”\
+[NONE|1]【武】
+[NONE|0]“踩到罐──”\
+[NONE|1]【武】
+[NONE|0]“子啰？　咦？”\
+fgload 1,"TU07ADM","320",3
+showTextbox
+[t2c391|1]【月海】
+[NONE|0]“真是的……”\
+[t2c392|1]【月海】
+[NONE|0]“你在做什么啦，武……”\
+removeFG "1","3"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“咦？？”\
+[NONE|1]我的脚尖往罐子的所在探了探，居然空无一物。\
+[NONE|1]【武】
+[NONE|0]“罐子不见了！”\
+[NONE|1]我专心地凝视着四周。\
+[NONE|1]紧急灯光正照着，倾倒在房间角落载浮载沉的罐子上。\
+[NONE|1]【武】
+[NONE|0]“喂！别忘了，被抓到的家伙要是踢了罐子就违反规则
+[NONE|0]喔！！”\
+[NONE|1]我对这黑鸦鸦的一片叫喊着，但是其他人早就已经逃走
+[NONE|0]了。\
+removeBG
+stopBGM
+playBGM "3","100"
+bgload "IMG01A","0","2"
+showTextbox
+[NONE|1]没办法，看来我得再当鬼重找一遍了。\
+[NONE|1]少年、优、可儿、ＰＩＰＩ、空……\
+[NONE|1]结果还是一样，因为他们都没有跑太远，我也马上就找
+[NONE|0]到他们了。\
+[NONE|1]月海还是待在会议室里，丝毫不打算逃跑。\
+[NONE|1]很谨慎地，我当着大家的面‘踩罐子’。\
+[NONE|1]这一次没人踢走罐子了……\
+bgload "BG17A2","0","2"
+clock "23","8"
+fgload 1,"KA01ADM","320",3
+showTextbox
+[NONE|1]【武】
+[NONE|0]“接下来换小子你当鬼啦。”\
+[t2c393|1]【少年】
+[NONE|0]“我知道……数到１００就好了吗？”\
+[NONE|1]少年接过了空罐子，坐在椅子上低下头。\
+removeFG "1","3"
+showTextbox
+[t2c394|1]【少年】
+[NONE|0]“那么，开始吧……”\
+[t2c395|1]【少年】
+[NONE|0]“１、２、３……”\
+[NONE|1]留下少年单独一人，大伙儿离开了会议室。\
+bgload "BG26B4R","0","2"
+playSFX "SE01_01",0,100
+showTextbox
+[NONE|1]可儿、ＰＩＰＩ、空踩着水，消失在走道前方。\
+hideTextbox
+stopSFX
+fgload 1,"YU01ADS","320",3
+showTextbox
+[NONE|1]优向我靠了过来。\
+removeFG "1","3"
+fgload 1,"YU01ADM","320",3
+showTextbox
+[t2c396|1]【优】
+[NONE|0]“仓成，要不要搭档？”\
+[NONE|1]【武】
+[NONE|0]“咦？　要是跟你串通的话，不就等于违反规定吗？　
+[NONE|0]我拒绝。”\
+fgload 1,"YU05ADM","320",3
+showTextbox
+[t2c397|1]【优】
+[NONE|0]“真坚决啊……”\
+removeFG "1","3"
+bgload "BG25B4","0","2"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“你干嘛跟着我来啊……”\
+[t2c398|1]【优】
+[NONE|0]“只是凑巧方向一样而已啦。”\
+[NONE|1]【武】
+[NONE|0]“啊，是……”\
+[t2c399|1]【优】
+[NONE|0]“啊，这里应该不会被发现吧？”\
+[NONE|1]【武】
+[NONE|0]“躲厕所很有可能违反规定，放弃吧……”\
+bgload "BG25B2","0","2"
+fgload 1,"YU13ADS","320",3
+showTextbox
+[t2c400|1]【优】
+[NONE|0]“……那……这里也没办法前进了……”\
+[NONE|1]【武】
+[NONE|0]“往回走吧。”\
+removeFG "1","3"
+showTextbox
+[NONE|1]【武】
+[NONE|0]“对了，还有时间吗……？”\
+[NONE|1]我倾耳静听。\
+[t2c401|1]【少年】
+[NONE|0]“……３４……３５……”\
+[NONE|1]还可以听见微弱的数数声。\
+[NONE|1]【武】
+[NONE|0]“好像还不要紧嘛……”\
+removeBG
+bgload "BG25B4","0","2"
+fgload 1,"YU01ADM","320",3
+showTextbox
+[t2c402|1]【优】
+[NONE|0]“我还是觉得包括紧急走廊会比较好玩吧？”\
+[NONE|1]【武】
+[NONE|0]“这样找起来会变得很麻烦耶。”\
+[t2c403|1]【优】
+[NONE|0]“不然，往会议室的通道都被限制住了，有点没意思。
+[NONE|0]”\
+[NONE|1]【武】
+[NONE|0]“不过优老是粗手粗脚大剌剌地来回走动，你打算从哪
+[NONE|0]里去踢罐子，很容易被看穿啦。”\
+fgload 1,"YU05ADM","320",3
+showTextbox
+[t2c404|1]【优】
+[NONE|0]“厚～你居然这样说我……”\
+fgload 1,"YU06ADM","320",3
+showTextbox
+[t2c405|1]【优】
+[NONE|0]“啊，等等！　静一下……”\
+[t2c406|1]【少年】
+[NONE|0]“……５１……５２……”\
+[NONE|1]又听到数数的声音了。\
+fgload 1,"YU01ADM","320",3
+showTextbox
+[NONE|1]【武】
+[NONE|0]“也该找个地方躲起来了。”\
+[t2c407|1]【优】
+[NONE|0]“也是……”\
+removeFG "1","3"
+bgload "BG04B2","0","2"
+showTextbox
+[NONE|1]我们抵达了雷姆利亚遗迹。\
+fgload 1,"YU02ADM","320",3
+showTextbox
+[t2c408|1]【优】
+[NONE|0]“要进去遗迹内吗？”\
+[NONE|1]【武】
+[NONE|0]“你要去迷宫啊？　要走出来好像很麻烦……”\
+[t2c409|1]【优】
+[NONE|0]“别这么说嘛……走吧。”\
+removeFG "1","3"
+showTextbox
+[NONE|1]优强行拉着我往遗迹的入口进去。\
+removeBG
+showTextbox
+[NONE|1]往遗迹内探了探头。\
+[NONE|1]可是里面就好像整个被漆黑给笼罩的世界，完全看不到
+[NONE|0]里面的构造。\
+[t2c410|1]【优】
+[NONE|0]“咦？　这会不会太暗……了。”\
+[t2c411|1]【优】
+[NONE|0]“灯光早就没了，就连紧急灯也是。”\
+[NONE|1]再次专注地看着黑暗。\
+[NONE|1]总觉得这黑暗好像永远不会消失似的。\
+[NONE|1]【武】
+[NONE|0]“在这种情况下，还敢进去的话也太没头没脑了吧……
+[NONE|0]咦？”\
+[NONE|1]黑暗中，有一部份在晃动。\
+bgload "BG04B2","0","2"
+showTextbox
+[NONE|1]遗迹中出现了人影。\
+fgload 1,"TU01ADS","320",3
+showTextbox
+[NONE|1]【武】
+[NONE|0]“月海，你在里面吗？”\
+removeFG "1","3"
+fgload 1,"TU01ADM","320",3
+showTextbox
+[t2c412|1]【月海】
+[NONE|0]“是啊，我绕到这里来了。”\
+[t2c413|1]【月海】
+[NONE|0]“我想说这里实在太暗了，应该不会有人进来。”\
+[NONE|1]【武】
+[NONE|0]“是啊，完全黑摸摸的……”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+removeFG "1","3"
+multifgload2 1,2,"00000000","YU07ADS","00000000","TU17ADS",176,464,3
+showTextbox
+[NONE|1]月海从我们身边走开了。\
+[NONE|1]月海好像很无聊似的拖着脚步绕来绕去，把脚边的水都
+[NONE|0]轻轻溅了起来。\
+playSFX "SE04_05",0,95
+showTextbox
+[NONE|1]不知她手上拿着什么发着喀恰喀恰声音的东西……\
+[NONE|1]好像在哪听过……\
+[NONE|1]【武】
+[NONE|0]“月海那家伙，身上带着手电筒吧？”\
+fgload 1,"YU17ADS","176",3
+showTextbox
+[t2c414|1]【优】
+[NONE|0]“不带怎么在里面走路啊。”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[t2c415|1]【可儿】
+[NONE|0]“哈啰，哈～啰！！”\
+hideTextbox
+multiremoveFG2 "83","04","00","3"
+playSFX "SE01_02",0,100
+showTextbox
+[NONE|1]一面踢着啪唰啪唰响的水声，可儿跟空一起跑着靠了过
+[NONE|0]来。\
+hideTextbox
+stopSFX
+multiremoveFG3 "1","2","0"
+multifgload3 "00000000","CO15ADS","00000000","YU11ADS","00000000","SO11ADS",128,320,512,3
+showTextbox
+[t2c416|1]【可儿】
+[NONE|0]“大家都在这里啊？”\
+[t2c417|1]【优】
+[NONE|0]“嘿呦”\
+[NONE|1]【武】
+[NONE|0]“喔，可儿跟空都来了啊……欢迎欢迎。”\
+[NONE|1]【武】
+[NONE|0]“……话说回来，大家应该不可以躲在一起吧？”\
+multifgload2 1,2,"00000000","CO05ADS","00000000","YU08ADS",128,320,3
+showTextbox
+[t2c418|1]【可儿】
+[NONE|0]“啊，好像真的不行耶……”\
+fgload 1,"CO01ADS","128",3
+showTextbox
+[t2c419|1]【可儿】
+[NONE|0]“可是……他就快要数完１００了。”\
+fgload 4,"SO01ADS","512",3
+showTextbox
+[t2c420|1]【空】
+[NONE|0]“是啊”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“对了，月海你打算参加摸黑捉迷藏是吧？”\
+multiremoveFG2 "87","04","00","3"
+fgload 1,"TU08ADS","320",3
+showTextbox
+[t2c421|1]【月海】
+[NONE|0]“我又没有要参加。”\
+fgload 1,"TU05ADS","320",3
+showTextbox
+[t2c422|1]【月海】
+[NONE|0]“我只是碰巧跑到这里而已。”\
+[t2c423|1]【月海】
+[NONE|0]“真不喜欢武讲一大堆怪话，又老是在怀疑我。”\
+[NONE|1]【武】
+[NONE|0]“嘿嘿……我有吗？”\
+removeFG "1","3"
+showTextbox
+[t2c424|1]【？？】
+[NONE|0]“……８７……８８……”\
+fgload 1,"KA01ADM","320",3
+showTextbox
+[t2c425|1]【少年】
+[NONE|0]“大家聚在这里做什么呢？　讨论策略吗？”\
+[NONE|1]【武】
+[NONE|0]“不，没这回事……”\
+[NONE|1]【武】
+[NONE|0]“那么，在被找到之前，我们就各自散开活动好吗？”\
+fgload 1,"KA02ADM","320",3
+showTextbox
+[t2c426|1]【少年】
+[NONE|0]“嗯嗯……好啊。”\
+[NONE|1]【优】
+[NONE|0]“…………”\
+[NONE|1]【空】
+[NONE|0]“…………”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]【可儿】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“喂，你这小子怎么会在这里？”\
+fgload 1,"KA06ADM","320",3
+showTextbox
+[t2c427|1]【少年】
+[NONE|0]“咦？　你说什么？”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“小子，你该不会……”\
+[NONE|1]【武】
+[NONE|0]“连你自己是鬼这件事都忘了吧？”\
+fgload 1,"KA07ADM","320",3
+showTextbox
+[t2c428|1]【少年】
+[NONE|0]“？？”\
+hideTextbox
+stopBGM
+showTextbox
+[t2c429|1]【？？】
+[NONE|0]“……９８……９９…”\
+[t2c430|1]【少年】
+[NONE|0]“咦……这是谁的声音？”\
+hideTextbox
+removeFG "1","3"
+playBGM "16","100"
+playSFX "SE03_11",0,100
+bgload "BG04B1","0","2"
+showTextbox
+[NONE|1]灯光打开了。\
+[NONE|1]【武】
+[NONE|0]“谁？　是谁把灯光打开的！？”\
+fgload 1,"SO03ADM","320",3
+showTextbox
+[t2c431|1]【空】
+[NONE|0]“是我……”\
+[NONE|1]终于可以看清周围了。\
+removeFG "1","3"
+multifgload3 "00000000","YU06ADS","00000000","CO06ADS","00000000","TU06ADS",128,320,512,3
+showTextbox
+[NONE|1]优、空、可儿、月海、少年、我……\
+[NONE|1]大家都在。\
+multiremoveFG2 "87","04","00","3"
+fgload 1,"SO10ADM","320",3
+showTextbox
+[t2c432|1]【空】
+[NONE|0]“大家都好好待在这里。”\
+[NONE|1]空把手举到头前来。\
+[t2c433|1]【空】
+[NONE|0]“全馆的生物反应正常，并未察觉任何异常现象。”\
+[t2c434|1]【空】
+[NONE|0]“会议室四周没有物体移动。”\
+removeFG "1","3"
+multifgload3 "00000000","YU03ADS","00000000","CO06ADS","00000000","TU03ADS",128,320,512,3
+showTextbox
+[NONE|1]【优】
+[NONE|0]“…………”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]【可儿】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“这怎么搞的？”\
+multiremoveFG2 "87","04","00","3"
+fgload 1,"KA08ADM","320",3
+showTextbox
+[t2c435|1]【少年】
+[NONE|0]“到底是谁在那里数数的？”\
+[NONE|1]【武】
+[NONE|0]“不是你吗？”\
+fgload 1,"KA06ADM","320",3
+showTextbox
+[t2c436|1]【少年】
+[NONE|0]“不、不是啊！！”\
+[NONE|1]【武】
+[NONE|0]“我以为是你的声音……那到底是谁？”\
+fgload 1,"KA03ADM","320",3
+showTextbox
+[t2c437|1]【少年】
+[NONE|0]“我、我不知道……”\
+removeFG "1","3"
+playSFX "SE08_04",0,95
+showTextbox
+[NONE|1]啪锵！！\
+if  %V_f1 == 0     goto *Lt_2d_000018e4
+
+scriptLocationId 180
+if  %V_ba != 5     goto *Lt_2d_000018e4
+
+scriptLocationId 181
+stopBGM
+mov %V_b3, 0
+
+goto *Lsc2e
+*Lt_2d_000018e4
+
+multifgload3 "00000000","YU03ADS","00000000","CO07ADS","00000000","TU06ADS",128,320,512,3
+showTextbox
+[t2c438|1]【优】
+[NONE|0]“那、那个……”\
+[t2c439|1]【可儿】
+[NONE|0]“刚刚……踢了罐子的……”\
+[t2c440|1]【月海】
+[NONE|0]“是谁？”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+removeFG "4","3"
+fgload 4,"SO11ADS","512",3
+showTextbox
+[t2c441|1]【空】
+[NONE|0]“是鬼吗？”\
+[NONE|1]空一脸认真地说道。\
+fgload 4,"SO02ADS","512",3
+showTextbox
+[t2c442|1]【空】
+[NONE|0]“如果是鬼的话，真想看看呢……”\
+multiremoveFG2 "87","04","00","3"
+playSFX "SE01_02",0,100
+showTextbox
+[NONE|1]啪唰啪唰啪唰……\
+[NONE|1]从房间外面传来了穿过水的脚步声……\
+[NONE|1]接着，空罐子一路转到我们面前来。\
+playSFX "SE08_01",0,100
+showTextbox
+[NONE|1]喀啷喀啷喀啷喀啷………\
+[NONE|1]空罐子滚上了浅滩，发出一声清脆的声响。\
+[pipi_04|1]【ＰＩＰＩ】
+[NONE|0]“汪汪！！”\
+fgload 1,"CO06ADM","320",3
+showTextbox
+[t2c443|1]【可儿】
+[NONE|0]“啊，ＰＩＰＩ你要去哪？”\
+[NONE|1]【优】
+[NONE|0]“…………”\
+[NONE|1]【空】
+[NONE|0]“…………”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]【可儿】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“…………？？”\
+removeFG "1","3"
+showTextbox
+[NONE|1]ＰＩＰＩ再度咬着空罐子，在我们四周来回绕着圈圈。\
+removeBG
+stopBGM
+showTextbox
+[NONE|1]摸黑捉迷藏就这样散会了。\
+[NONE|1]结果，我们还是不知道到底是谁在数数……\
+[NONE|1]夜晚就这样平安地、静静地加深了……\
+[NONE|1]我们也在这平稳的时间中……\
+[NONE|1]享受着安稳又充足的睡眠。\
+removeBG
+delay 150
+mov %V_b3, 0
+
+goto *Lt_3a
+

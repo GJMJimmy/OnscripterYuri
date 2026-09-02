@@ -1,0 +1,510 @@
+*Lsybd
+*Lsybd_00000016
+
+hideTextbox
+specialEffect 12,0
+stopBGM
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+unknown46 0
+mov %V_b0, 5
+
+mov %V_b1, 7
+
+mov %V_b2, 0
+
+mov %V_fa, 90
+
+clock "1","39"
+showTextbox
+[NONE|1]天未明──日期已经改变了，５月７日－星期日。\
+[NONE|1]在那之后，我们根本一夜没睡。\
+[NONE|1]我的身体再次起了异状。\
+[NONE|1]头痛、目眩、想吐……身体内像在孕育着恶寒。\
+[NONE|1]迟钝的疼痛与极度的倦怠感，一波一波袭来……意识朦
+[NONE|0]胧。\
+[NONE|1]疲劳困惫……我已经到达极限了。\
+[NONE|1]可是我还是努力忍耐着苦痛。\
+[NONE|1]连眼前一吋也看不到的暗闇……在这个无限恐怖中，我
+[NONE|0]们还是无力地抵抗着。\
+[NONE|1]周遭的状况好像没有好转的迹象。\
+[NONE|1]与外界的联络仍是断绝。\
+[NONE|1]而且……\
+[NONE|1]仍旧没有找到脱困的出口。\
+[NONE|1]现在就连优的身体……也开始出现异状。\
+[NONE|1]没有血色的脸。\
+[NONE|1]额头上冒着一颗颗汗珠，痛苦地呼吸着。\
+[NONE|1]似乎发着高烧。\
+[NONE|1]肉体上、精神上的压迫感，不只压抑我。\
+[NONE|1]这个预兆，从昨天就开始了。\
+[NONE|1]可是现在的我们……什么都没办法做，医疗室已经完全
+[NONE|0]浸水。\
+[NONE|1]只能静静等待时间的流逝。\
+[NONE|1]………………\
+[NONE|1]………………\
+[NONE|1]………………\
+hideTextbox
+playBGM "13","100"
+bgload "BG11A1","0","1"
+showTextbox
+[NONE|1]（不行了吗……）\
+[NONE|1]（已经不行了吗……）\
+[NONE|1]（只能放弃了吗……）\
+[NONE|1]无力地仰望空中。\
+[NONE|1]被香烟薰得污浊的天花板。\
+[NONE|1]只能看着那里了。\
+[NONE|1]（我要死了……）\
+[NONE|1]（只能在这里，什么都无法做的死去……）\
+[NONE|1]那就是我的下场。\
+[NONE|1]哈哈…………\
+[NONE|1]哈哈哈……\
+[NONE|1]啊哈哈……哈哈哈。\
+[NONE|1]是的，穷极我的力量之后，结局就是这样了。\
+[NONE|1]真是丢脸的家伙啊。\
+[NONE|1]没用。\
+[NONE|1]无能。\
+[NONE|1]是的，我会死了。\
+[NONE|1]这样最好。\
+[NONE|1]一点也不可惜。\
+[NONE|1]没有记忆的我，跟一开始就是死的没什么两样……\
+[NONE|1]没有任何改变，现在也没有任何损失。\
+[NONE|1]早就注定好了吗。\
+[NONE|1]嗯……月海不是说过了。\
+[NONE|1]‘我七天内会死’……\
+[NONE|1]那个预言成真了……\
+[NONE|1]（没关系了……就这样……）\
+[NONE|1]肩膀的力气消失，我落下视线。\
+[NONE|1]在那个前端……\
+[NONE|1]……是优。\
+[NONE|1]瘫软地靠在椅背上，痛苦地急促呼吸着的她。\
+unknown20 44
+removeBG
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]
+[y4a061|1]　　　　　　　　　　　约好了吧？\
+[NONE|1]　　　　　　　　　嗯……约好了。\
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+bgload "BG11A1","0","2"
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]忽然……在我的指尖上，那个小指的余温苏醒了。\
+[NONE|1]优……\
+[NONE|1]是的……这样下去，优会死的……\
+[NONE|1]不行……还是不行！\
+[NONE|1]我死了没关系，但是优…………优她……\
+[NONE|1]一定要帮她。\
+[NONE|1]因为我们约好了……\
+[NONE|1]约定……\
+[NONE|1]（该怎么办才好……怎么办……）\
+hideTextbox
+specialEffect 24,0
+showTextbox
+[NONE|1]………………\
+[NONE|1]………………\
+[NONE|1]………………\
+[NONE|1]终于…………\
+hideTextbox
+stopBGM
+mov %V_ab, %V_VAR_c0_31
+
+clock "4","17"
+showTextbox
+[NONE|1]预测完全崩溃的时刻，就快要到了。\
+hideTextbox
+playSFX "SE06_02",0,100
+delay 120
+showTextbox
+[NONE|1]警备室开始大幅晃动。\
+[NONE|1]馆内回响着尖锐的声音。\
+mov %V_41, 11
+
+mov %V_42, 8
+
+mov %V_50, 144
+
+unknown20 45
+playSFX "SE09_03L",0,100
+showTextbox
+[NONE|1]警报刺耳地响起。\
+fgload 1,"SO10ADS","320",3
+showTextbox
+[ybd000|1]【空】
+[NONE|0]“隔墙强度……超过了极限。”\
+[ybd001|1]【空】
+[NONE|0]“各楼层开始漏水、浸水。”\
+[ybd002|1]【空】
+[NONE|0]“索非亚休德克第４区块开始进水……同时，第５区块
+[NONE|0]开始崩溃……第６区块……”\
+[NONE|1]淡然地报告状况的空。\
+[NONE|1]【空】
+[NONE|0]“…………………………”\
+[NONE|1]【少年】
+[NONE|0]“……怎么了？　接下来呢？”\
+fgload 1,"SO03ADS","320",3
+showTextbox
+[ybd003|1]【空】
+[NONE|0]“不，我决定放弃……这样的报告并没有意义……”\
+[ybd004|1]【空】
+[NONE|0]“这个区块也开始进水……这里再过一会就会出现状况
+[NONE|0]了。”\
+[NONE|1]【少年】
+[NONE|0]“是吗……”\
+[NONE|1]【少年】
+[NONE|0]“还能撑多久？”\
+[ybd005|1]【空】
+[NONE|0]“２０分～２５分……”\
+[ybd006|1]【空】
+[NONE|0]“不过……现在可能随时会崩溃了。”\
+hideTextbox
+playSFX "SE06_04",0,100
+mov %V_4f, 120
+
+mov %V_3b, 1
+
+mov %V_3c, %V_VAR_cc_0_6
+
+mov %V_3d, 12
+
+mov %V_3e, 2
+
+mov %V_3f, %V_VAR_c8_0_6
+
+mov %V_40, 5
+
+unknown20 12
+delay 30
+mov %V_41, 4
+
+mov %V_42, 12
+
+mov %V_50, 0
+
+unknown20 45
+delay 10
+specialEffect 0,0
+unknown21 13
+mov %V_ab, %V_VAR_c0_21
+
+bgload "BG11A2","0","2"
+showTextbox
+[NONE|1]一般照明切断了，切换成紧急灯。\
+[NONE|1]恐怕是发电室已经被攻陷了。\
+fgload 1,"SO03ADS","320",3
+showTextbox
+[ybd007|1]【空】
+[NONE|0]“结果，还是无法救出你们两个……”\
+[ybd008|1]【空】
+[NONE|0]“真的……真的……很对不起……”\
+[ybd009|1]【空】
+[NONE|0]“……真的…………”\
+[NONE|1]【少年】
+[NONE|0]“算了……不是空的错。”\
+[NONE|1]【少年】
+[NONE|0]“我觉得空做得很好了”\
+[NONE|1]【空】
+[NONE|0]“……………………”\
+removeFG "1","3"
+showTextbox
+[NONE|1]我过去优那一侧。\
+fgload 1,"YU03ADM","320",3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“优，这里不能待了……走吧……”\
+playSFX "SE06_02",0,95
+showTextbox
+[NONE|1]优越来越衰弱。\
+[NONE|1]无力地抬头看我，轻轻点头。\
+[ybd010|1]【优】
+[NONE|0]“……嗯……”\
+removeFG "1","3"
+showTextbox
+[NONE|1]我背起优。\
+fgload 1,"SO03ADS","320",3
+showTextbox
+[ybd011|1]【空】
+[NONE|0]“要去哪里？”\
+[NONE|1]【少年】
+[NONE|0]“不知道……多少拖延一些剩余时间。”\
+[NONE|1]【少年】
+[NONE|0]“我打算下赌注，也许有救援的最后可能性。”\
+[NONE|1]【少年】
+[NONE|0]“只能想到这个方法了……”\
+playSFX "SE06_02",0,95
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“不过，我说好了……绝对要保护她。”\
+[NONE|1]【空】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“剩下的区域中，最坚固的地方是哪里？”\
+[ybd012|1]【空】
+[NONE|0]“德里克休德克的控制室了……”\
+[ybd013|1]【空】
+[NONE|0]“可是……那也只有几十分钟的差距。”\
+[NONE|1]【少年】
+[NONE|0]“那就足够了……”\
+[NONE|1]准备走出房间的时候……我忽地停下来。\
+[NONE|1]【少年】
+[NONE|0]“对了，空呢？”\
+[ybd014|1]【空】
+[NONE|0]“我已经无法跟你们两个人在一起了。”\
+[ybd015|1]【空】
+[NONE|0]“因为浸水的关系，馆内设置的影像设施已经出现毁损
+[NONE|0]。”\
+[ybd016|1]【空】
+[NONE|0]“我能够现形的场所已经很有限了。”\
+[ybd017|1]【空】
+[NONE|0]“可是我想……至少能藉由声音指示你们到达控制室。
+[NONE|0]”\
+[NONE|1]【少年】
+[NONE|0]“知道了，那就麻烦你了。”\
+[ybd018|1]【空】
+[NONE|0]“是的……”\
+hideTextbox
+specialEffect 18,0
+bgload "BG25B4","6","2"
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]一走到外头，可以发现墙壁的各处都在漏水了。\
+[NONE|1]隔墙叽叽地龟裂着。\
+[ybd019|1]【空】
+[NONE|0]“那么请听从我的指示……目前通往控制室的安全路径
+[NONE|0]为……”\
+removeBG
+delay 120
+bgload "BG26B4R","0","2"
+showTextbox
+[NONE|1]下降到了３楼。\
+[NONE|1]ＬｅＭＵ还支撑着。\
+[NONE|1]空所推测的预计完全崩溃时间点，应该早就过了吧……\
+[NONE|1]就像空拼命地保护我们两个人一样，ＬｅＭＵ也正在坚
+[NONE|0]持着最后的抵抗。\
+[ybd020|1]【优】
+[NONE|0]“喝喝喝喝…………”\
+[NONE|1]在我的背上，优正痛苦地喘息着。\
+[NONE|1]【少年】
+[NONE|0]“加油，再忍耐一下……”\
+[NONE|1]骗人。\
+[NONE|1]我在说谎。\
+[NONE|1]再忍耐一下……然后呢？\
+[NONE|1]根本什么都做不了。\
+[NONE|1]说谎……\
+[NONE|1]──我这个大骗子！\
+hideTextbox
+removeBG
+bgload "BG25B4","0","2"
+playBGM "24","100"
+showTextbox
+[NONE|1]只差一点就要到控制室了……\
+[NONE|1]我……又看到了。\
+[NONE|1]那个虚幻的少女……\
+[ybd021|1]【优】
+[NONE|0]“……怎，怎么了……？”\
+[NONE|1]通道的尽头……她就站在那里。\
+[NONE|1]与少女四目相交。\
+[NONE|1]忽然……我的脑中鲜明地浮出一个名字。\
+[NONE|1]【少年】
+[NONE|0]“──可儿！！！”\
+[ybd022|1]【空】
+[NONE|0]“少、少年……怎么了？”\
+[NONE|1]转身冲向另一头的可儿。\
+[NONE|1]我背着优追着那个少女。\
+[NONE|1]【少年】
+[NONE|0]“可儿！”\
+[ybd023|1]【空】
+[NONE|0]“少年！　快回头！　那里是……！”\
+removeBG
+showTextbox
+[NONE|1]全速追着的我。\
+[NONE|1]可是在浸水与持续摇晃的馆内……不稳定的场地阻止了
+[NONE|0]我。\
+[NONE|1]再加上背着人，已经到达了极限。\
+[NONE|1]……我跟丢了那个少女。\
+bgload "BG30B2","0","2"
+showTextbox
+[NONE|1]狭窄通道的尽头──一小扇门面前。\
+[NONE|1]这里是……？\
+[NONE|1]难道那个孩子在另一头？\
+hideTextbox
+specialEffect 1,1
+mov %V_ab, %V_VAR_c0_38
+
+showTextbox
+[NONE|1]在那一瞬间，我的脑中浮现一个景象。\
+[NONE|1]暧昧且抽象的印象。\
+[NONE|1]现在的……虽然不太知道……不过的确就是……\
+[NONE|1]我感觉到了──看到了。\
+[NONE|1]在那端……有着希望的光。\
+[NONE|1]我背着优，想要打开希梅尔（ＨＩＭＭＥＬ）的门。\
+[NONE|1]可是门无法开启。\
+[NONE|1]【少年】
+[NONE|0]“空！　打开这里！”\
+[y7a131|1]【空】
+[NONE|0]“不行，那扇门在我管辖之外。”\
+[NONE|1]咚咚地敲着门的我。\
+[NONE|1]【少年】
+[NONE|0]“我知道……在那一头……对面的那一头……！！”\
+[NONE|1]【少年】
+[NONE|0]“只要去那里，优就能得救了！拜托！打开啊！！！”\
+hideTextbox
+stopBGM
+playSFX "SE02_07",0,100
+showTextbox
+[NONE|1]噗咻－－－－！\
+[NONE|1]通道的壁面开始猛烈地喷出水。\
+mov %V_4f, 0
+
+mov %V_3b, 1
+
+mov %V_3c, %V_VAR_c2_0_6
+
+mov %V_3d, 1
+
+mov %V_3e, 2
+
+mov %V_3f, %V_VAR_c1_0_6
+
+mov %V_40, 1
+
+unknown20 12
+showTextbox
+[NONE|1]远处响起野兽般的咆哮轰声。\
+[NONE|1]激烈的上下摇晃。\
+[NONE|1]通道的那头……我看见滚滚泉涌而来的大量海水。\
+[NONE|1]张着大口，漆黑来袭的魔兽。\
+[NONE|1]慌张地冲回优身边。\
+[NONE|1]我知道自己的动作太慢了。\
+[NONE|1]──来不及了！\
+[NONE|1]一瞬间，时间停止……又启动。\
+[NONE|1]还没来得及呼吸，我们就已经被吞没。\
+removeBG
+unknown21 11
+showTextbox
+[NONE|1]水中，我与优四目相交。\
+[NONE|1]拼命伸出手的她。\
+[NONE|1]我握住手，优紧握着。\
+[NONE|1]优在说什么。\
+[NONE|1]那些字句却传不到我的耳朵。\
+[NONE|1]只是化为小小的气泡消失……在黑暗中。\
+[NONE|1]慢慢地，闭上眼睛的优。\
+[NONE|1]（……优？）\
+[NONE|1]（什么？　说了什么……？）\
+[NONE|1]（怎么能不在意她说的话……）\
+[NONE|1]摇摇手，没有反应。\
+[NONE|1]（太过分了……）\
+[NONE|1]（又在骗我了……）\
+[NONE|1]触碰优的脸颊。\
+[NONE|1]冰冷。\
+[NONE|1]（好冷……）\
+[NONE|1]（是吗……因为在水里吧……）\
+[NONE|1]（哈哈哈……冰冷也是应该的……）\
+[NONE|1]我用力握紧她的手。\
+[NONE|1]（嗯？）\
+[NONE|1]（嗯嗯……）\
+[NONE|1]（嗯……优，跟我说啊…………）\
+[NONE|1]她没有回握我。\
+[NONE|1]没有动。\
+[NONE|1]她已经什么都不能告诉我了。\
+[NONE|1]（…………………………………………）\
+[NONE|1]（…………………………………………）\
+[NONE|1]（…………………………………………）\
+[NONE|1]（…………………………………骗人的）\
+[NONE|1]（骗人、骗人、骗人……骗人…………）\
+[NONE|1]（这是骗人的……！）\
+[NONE|1]（骗人－－－－－－－！！！）\
+[NONE|1]从我的肺里，吐出了最后的气息。\
+[NONE|1]我从现实别开了视线，闭上了眼睛。\
+hideTextbox
+specialEffect 0,0
+playBGM "21","100"
+bgload "EV_YU03A","0","2"
+mov %V_ab, %V_VAR_c0_46
+
+showTextbox
+[y4a061|1]【优】
+[NONE|0]“约好了？”\
+[NONE|1]【少年】
+[NONE|0]“嗯……约好了。”\
+[y4a062|1]【优】
+[NONE|0]“如果……没有遵守呢？”\
+[NONE|1]【少年】
+[NONE|0]“不会的，我绝对会保护你。”\
+[y4a063|1]【优】
+[NONE|0]“绝对？　不会有１％的失败？”\
+[NONE|1]【少年】
+[NONE|0]“连０．００００００００００００００００１％的失
+[NONE|0]败都不会有。”\
+[NONE|1]【优】
+[NONE|0]“…………”\
+bgload "EV_YU03C","0","2"
+showTextbox
+[y4a064|1]【优】
+[NONE|0]“从来没听过这么自信的约定……”\
+[y4a065|1]【优】
+[NONE|0]“不过……没办法啦，就答应你吧。”\
+hideTextbox
+specialEffect 24,0
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]（来不及……）\
+[NONE|1]（没有遵守承诺……）\
+[NONE|1]（我不能保护她……）\
+[NONE|1]（说谎…………）\
+[NONE|1]（──这个大骗子混蛋！！！）\
+hideTextbox
+delay 120
+specialEffect 36,1
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]此时，感觉到些许光的温暖。\
+[NONE|1]光……？\
+[NONE|1]一条光刃划破平坦的黑闇世界。\
+[NONE|1]被开启的希梅尔………天国（ＨＩＭＭＥＬ）之门──\
+[NONE|1]那一端是充满光芒的白色世界。\
+[NONE|1]天国……\
+[NONE|1]幻觉？　我又看到幻觉了……？\
+[NONE|1]──不，不对。\
+[NONE|1]这才是真正的现实。\
+[NONE|1]这绝对是我的真实世界。\
+[NONE|1]是的……\
+[NONE|1]那一头……\
+[NONE|1]只要去那里……\
+[NONE|1]也许就能再一次相逢。\
+[NONE|1]也许这次真的能守护她。\
+[NONE|1]…………优。\
+hideTextbox
+stopBGM
+delay 60
+showTextbox
+[NONE|1]我──\
+[NONE|1]静静地……\
+[NONE|1]睁开了眼睛。\
+hideTextbox
+removeBG
+delay 180
+mov %V_15, 1
+
+mov %V_1b, 1
+
+mov %V_c7, 5
+
+mov %V_b3, 0
+
+mov %V_yuBE,1
+
+goto *Ly_ed
+

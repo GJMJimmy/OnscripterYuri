@@ -1,0 +1,2443 @@
+*Ls_1b
+*Ls_1b_00000072
+
+if  %V_b3 == 1     goto *Ls_1b_00002436
+
+scriptLocationId 57
+unknown46 0
+mov %V_b0, 5
+
+mov %V_b1, 1
+
+mov %V_b2, 1
+
+mov %V_fa, 51
+
+bgload "BG26B3R","6","2"
+playBGM "4","100"
+mov %V_ab, %V_VAR_c0_31
+
+clock "18","30"
+showTextbox
+[NONE|1]我试着往德里克休德克中的一个方向闯闯看。\
+[NONE|1]优与沙罗现在应该正在调查上面的区域。\
+bgload "BG21B1","0","2"
+showTextbox
+[NONE|1]──休息片刻。\
+[NONE|1]忽然发现眼前的景象跟早上有些不同。\
+[NONE|1]中央的池子里，应该有个盖子。\
+[NONE|1]该说是盖子……还是墙壁呢……\
+[NONE|1]不管是哪一个，总之这个池子已经不再连接大海了。\
+[NONE|1]优说的那个‘雷米’电脑，也许已经自动封锁这里。\
+bgload "BG07B1","0","2"
+showTextbox
+[NONE|1]──塔滋塔三明治的商店。\
+[NONE|1]令人垂涎三尺的浓郁香味，还未散去。\
+[NONE|1]一闻到这个香味，我的肚子咕噜咕噜地叫了。\
+[NONE|1]小心翼翼地环顾四周。\
+[NONE|1]没有人……\
+[NONE|1]吃吗……\
+[NONE|1]虽然真的想这么做，却又不想做出犯罪行为。\
+[NONE|1]我咽了咽口水，离开了那里。\
+bgload "BG17A1","0","2"
+showTextbox
+[NONE|1]──会议室。\
+[NONE|1]没有什么特别的异状，只有一件事令我比较在意。\
+[NONE|1]这个房间里，并没有海水流过的痕迹。\
+[NONE|1]虽然入口处有比较高的阶梯，但是一看也知道那不可能
+[NONE|0]阻止海水的浸入。\
+specialEffectImage "00000000","BG07B1",0,2,61,22,632,475
+showTextbox
+[NONE|1]──塔滋塔三明治的商店。\
+[NONE|1]闻到了令人垂涎三尺的浓郁香味。\
+bgload "BG16A1","0","2"
+showTextbox
+[NONE|1]──控制室。\
+[NONE|1]这里好像也因为有高低阶差的关系，所以才没有浸到海
+[NONE|0]水。\
+[NONE|1]优弄倒在地板上的椅子，还静静地躺在原地。\
+[NONE|1]我将椅子抬正，环顾室内一周，然后离开这里。\
+specialEffectImage "00000000","BG07B1",0,2,150,37,550,412
+showTextbox
+[NONE|1]──塔滋塔的商店。\
+[NONE|1]浓郁的香味一阵一阵地飘散着。\
+bgload "BG04B1","0","2"
+showTextbox
+[NONE|1]──雷姆利亚遗迹。\
+[NONE|1]刚刚跟优一起来过这里。\
+[NONE|1]为了小心起见，检查了石柱后的阴影处，还绕进了建筑
+[NONE|0]物里头，可是并没有发现类似通道的东西。\
+specialEffectImage "00000000","BG07B1",0,2,281,85,382,287
+showTextbox
+[NONE|1]──塔滋塔三明治的商店。\
+[NONE|1]浓郁的香味……已经弥漫得到处都是了。\
+[NONE|1]偷偷伸手去拿放在架上的塔滋塔三明治。\
+[NONE|1]已经饿得前胸贴后背了！\
+[NONE|1]一边强力说服自己，我喀滋喀滋地大口咬着三明治。\
+hideTextbox
+specialEffect 6,0
+bgload "BG25B3","6","2"
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]就这样，三楼的德里克休德克算是调查完毕。\
+[NONE|1]既没有找到任何隐藏出路，也没发现除了我们三人以外
+[NONE|0]受困的人。\
+[NONE|1]上面的情况如何？\
+[NONE|1]难道就像优说的那样，再怎么找也没有用了吗……\
+[NONE|1]虽然距离约定的时间还早，我还是决定先回到控制室。\
+hideTextbox
+specialEffect 12,0
+stopBGM
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]结果……\
+[NONE|1]──那里竟然出现了令人惊讶的场景！\
+hideTextbox
+specialEffect 0,0
+bgload "BG15B1","6","2"
+multifgload2 2,1,"00000000","SO02ADS","00000000","KB02ADS",128,320,0
+playBGM "3","100"
+mov %V_ab, %V_VAR_c0_31
+
+clock "19","6"
+showTextbox
+[s1b000|1]【男人】
+[NONE|0]“哟！”\
+[s1b001|1]【女人】
+[NONE|0]“午安”\
+[NONE|1]【少年】
+[NONE|0]“哇！？！？！？”\
+[NONE|1]【少年】
+[NONE|0]“啊，啊，啊……你们！”\
+[NONE|1]【少年】
+[NONE|0]“……是谁？”\
+multifgload2 2,1,"00000000","SO07ADS","00000000","KB07ADS",128,320,3
+showTextbox
+[s1b002|1]【男人】
+[NONE|0]“喔咿喔咿，你忘记啦？”\
+[NONE|1]什么意思。\
+[NONE|1]总觉得见过他们。\
+[NONE|1]的确有这个印象……\
+[NONE|1]【少年】
+[NONE|0]“嗯，这个，你们叫做……？”\
+[NONE|1]想不出来。\
+fgload 1,"KB01ADS","320",3
+showTextbox
+[s1b003|1]【男人】
+[NONE|0]“啊，还没自我介绍。”\
+[s1b004|1]【武】
+[NONE|0]“我是仓成武，然后这位是──”\
+[NONE|1]自称武的他，指着那个女人。\
+fgload 2,"SO01ADS","128",3
+showTextbox
+[s1b005|1]【空】
+[NONE|0]“我是茜崎空。”\
+[NONE|1]她对我行个礼。\
+[NONE|1]【少年】
+[NONE|0]“武跟空……”\
+[NONE|1]我在嘴里振振有词的念着。\
+[NONE|1]点着头的两个人。\
+[NONE|1]【少年】
+[NONE|0]“不过，你们为什么会在这里！？”\
+fgload 4,"YU02BDS","512",3
+showTextbox
+[s1b006|1]【优】
+[NONE|0]“呀喔～”\
+[NONE|1]【少年】
+[NONE|0]“咦咦！？　这，这是怎么一回事？？？”\
+fgload 4,"YU05BDS","512",3
+showTextbox
+[s1b007|1]【优】
+[NONE|0]“别这么惊讶行不行？”\
+fgload 4,"YU01BDS","512",3
+showTextbox
+[s1b008|1]【优】
+[NONE|0]“刚刚跟玛由一起在二楼的索非亚休德克……遇到了这
+[NONE|0]三个人……”\
+[NONE|1]【少年】
+[NONE|0]“那么，除了武跟空之外，还有一个人？”\
+fgload 2,"SO03ADS","128",3
+showTextbox
+[s1b009|1]【空】
+[NONE|0]“嗯，嗯嗯……”\
+[s1b010|1]【武】
+[NONE|0]“没错”\
+[NONE|1]【少年】
+[NONE|0]“咦？　等等……刚刚你是说‘三个人’吧？”\
+[s1b011|1]【优】
+[NONE|0]“是啊”\
+[s1b012|1]【优】
+[NONE|0]“你看，就在那里呀。”\
+multiremoveFG2 "87","04","00","3"
+showTextbox
+[NONE|1]往优所指的方向看过去。\
+fgload 1,"TU17ADS","320",3
+showTextbox
+[NONE|1]通道旁的墙壁旁有人站在那里。\
+[NONE|1]虽然只看到半边背影，不过那长长的头发与全黑衣服，
+[NONE|0]却令人印象深刻。\
+removeFG "1","3"
+multifgload2 1,2,"00000000","SO01ADM","00000000","KB01ADM",128,512,3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“那个人……？”\
+[s1b013|1]【空】
+[NONE|0]“叫做小町吧？”\
+[s1b014|1]【武】
+[NONE|0]“啊啊，小町月海的样子吧……”\
+[NONE|1]月海……那是穿着黑衣的她的名字。\
+[NONE|1]这个名字虽然陌生，不过……\
+[NONE|1]【少年】
+[NONE|0]“总觉得我好像看过她的样子。”\
+[s1b015|1]【空】
+[NONE|0]“你认识她？”\
+[NONE|1]【少年】
+[NONE|0]“呜嗯……我想不是的，也许是我的错觉……”\
+[NONE|1]【少年】
+[NONE|0]“只是……总有一种……”\
+fgload 2,"KB03ADM","512",3
+showTextbox
+[s1b016|1]【武】
+[NONE|0]“是吗？　总之，她是个复杂的女孩子。”\
+[s1b017|1]【武】
+[NONE|0]“虽然不知道为什么，不过她好像很讨厌我。”\
+[NONE|1]【少年】
+[NONE|0]“讨厌你？”\
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]不知为何，月海的背影竟然流露一种憎恶的感情。\
+[NONE|1]无言地诉说着一种难以靠近的气氛。\
+[NONE|1]（想跟她说话……）\
+fgload 1,"TU08ADS","320",3
+showTextbox
+[NONE|1]正当这么想的时候，月海悄悄地转头过来。\
+[NONE|1]犀利的眼光……充满威严的眼神……\
+[NONE|1]被瞪着的我一步也无法跨出。\
+[NONE|1]这状况实在不适合打招呼。\
+[NONE|1]（什、什么事……？）\
+[NONE|1]（到底为了什么事这么生气……？）\
+[NONE|1]（我又没有做什么让她讨厌的事情……）\
+removeFG "1","3"
+showTextbox
+[NONE|1]月海的视线回到原点。\
+[NONE|1]我的额头已经冒出了冷汗。\
+[NONE|1]【少年】
+[NONE|0]“啊，对了，沙罗呢？”\
+[NONE|1]忽然想起了她，我环顾着四周。\
+fgload 1,"SA03ADM","320",3
+showTextbox
+[NONE|1]忽然之间，沙罗就站在我的背后。\
+[NONE|1]【沙罗】
+[NONE|0]“…………”@
+
+csel "担心", *L_pre_s_1b_000003fa,"不担心", *L_pre_s_1b_0000048e
+*L_pre_s_1b_000003fa
+ mov %V_b3, 0
+ goto *LchoiceId_1203_52
+
+*L_pre_s_1b_0000048e
+ mov %V_b3, 1
+ goto *LchoiceId_1203_52
+
+*LchoiceId_1203_52
+if %V_b3 == 0 goto *Ls_1b_000003fa
+
+if %V_b3 == 1 goto *Ls_1b_0000048e
+
+*Ls_1b_000003fa
+add %V_b9, 1
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“嗯？　怎么了？”\
+[NONE|1]沙罗眼中反射出的阴郁，我还是看见了。\
+[NONE|1]之前跟我道别时的轻松表情已经完全消失无踪。\
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“发生了什么事情？”\
+[NONE|1]【沙罗】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“沙罗？”\
+[NONE|1]【沙罗】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“沙罗？？？”\
+[NONE|1]【沙罗】
+[NONE|0]“…………”\
+[NONE|1]【少年】
+[NONE|0]“喔咿！”\
+fgload 1,"SA06ADM","320",3
+showTextbox
+[s1b018|1]【沙罗】
+[NONE|0]“咦？　什、什么？”\
+[NONE|1]【少年】
+[NONE|0]“没事了？”\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[s1b019|1]【沙罗】
+[NONE|0]“没事啊，当然……”\
+fgload 1,"SA08ADM","320",3
+showTextbox
+[s1b020|1]【沙罗】
+[NONE|0]“为什么要这样问？”\
+[NONE|1]【少年】
+[NONE|0]“因为……你好像没什么精神……”\
+[s1b021|1]【沙罗】
+[NONE|0]“才没有……”\
+fgload 1,"SA03ADM","320",3
+showTextbox
+[s1b022|1]【沙罗】
+[NONE|0]“只是……”\
+[NONE|1]【少年】
+[NONE|0]“只是？”\
+[s1b023|1]【沙罗】
+[NONE|0]“找不到出口……有点沮丧而已……”\
+[NONE|1]【少年】
+[NONE|0]“真的只是这样？”\
+fgload 1,"SA01ADM","320",3
+showTextbox
+[s1b024|1]【沙罗】
+[NONE|0]“嗯，只是这样。”\
+[NONE|1]沙罗的表情忽然明亮起来。\
+[NONE|1]看着这个笑容，我也稍微放心了。\
+removeFG "1","3"
+goto *Ls_1b_000004a4
+*Ls_1b_0000048e
+
+showTextbox
+[NONE|1]表情似乎没什么精神……\
+[NONE|1]可是，也许那是正常的吧。\
+[NONE|1]毕竟接连发生了这么多事情，又找不到出口。\
+[NONE|1]在精神上，我们都是受到一样的折磨。\
+removeFG "1","3"
+showTextbox
+[NONE|1]现在还是让她静一静吧……我想。\
+goto *Ls_1b_000004a4
+*Ls_1b_000004a4
+
+fgload 1,"SO01ADM","320",3
+showTextbox
+[s1b025|1]【空】
+[NONE|0]“总之，站在这里说话实在没有什么帮助……”\
+[s1b026|1]【空】
+[NONE|0]“还是在控制室调查一下现在ＬｅＭＵ的状况吧。”\
+[NONE|1]空说着，指着控制室的大门。\
+removeFG "1","3"
+showTextbox
+[NONE|1]我们在空的催促下，一个个进入了控制室。\
+hideTextbox
+specialEffect 6,0
+stopBGM
+bgload "BG16A1","6","2"
+mov %V_ab, %V_VAR_c0_31
+
+clock "19","13"
+showTextbox
+[s1b027|1]【优】
+[NONE|0]“空，怎么样？　有头绪了吗？”\
+[s1b028|1]【空】
+[NONE|0]“嗯嗯，这个嘛……”\
+[NONE|1]空面对控制台上的仪表版，两手撑着下颚。\
+[NONE|1]就在这一瞬间，画面忽然开始快速跳动，许多的视窗开
+[NONE|0]开关关……资料正被检查建档中。\
+[NONE|1]她那流利的操纵手法，我不经意地看出神。\
+[NONE|1]空似乎相当熟悉这里的电脑操作。\
+[NONE|1]摇晃着椅子，一副静不下来的样子。\
+[NONE|1]跟刚刚的优完全不一样……\
+hideTextbox
+playBGM "14","100"
+fgload 1,"SO01ADM","320",3
+showTextbox
+[s1b029|1]【空】
+[NONE|0]“……我知道了”\
+[NONE|1]终于，空公式化地说出了这句话。看来已经调查完毕。\
+[NONE|1]全部的人都看着她。\
+fgload 1,"SO10ADM","320",3
+showTextbox
+[s1b030|1]【空】
+[NONE|0]“大家请冷静听我说……”\
+[s1b031|1]【空】
+[NONE|0]“请不要慌张，也别丧气……”\
+[NONE|1]这么说着的她表情有些发青。\
+[NONE|1]大家一同安静地注视着。\
+fgload 1,"SO05ADM","320",3
+showTextbox
+[s1b032|1]【空】
+[NONE|0]“等会，就会显示目前ＬｅＭＵ的状况。”\
+hideTextbox
+specialEffect 6,1
+removeFG "1","0"
+bgload "IMG03A","6","2"
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[s1b033|1]【空】
+[NONE|0]“首先，一楼艾鲁斯德里克……”\
+[s1b034|1]【空】
+[NONE|0]“完全进水”\
+[s1b035|1]【优】
+[NONE|0]“啊，完全！？”\
+[s1b036|1]【空】
+[NONE|0]“是的，阻闭的隔墙已经放下，通道也无法通行了。”\
+[s1b037|1]【沙罗】
+[NONE|0]“也就是说……往上的通道已经完全…被封闭了？”\
+[s1b038|1]【空】
+[NONE|0]“是的”\
+[s1b039|1]【空】
+[NONE|0]“然后……”\
+bgload "MAP2F_A1","0","3"
+showTextbox
+[s1b040|1]【空】
+[NONE|0]“这是二楼索非亚休德克的状况。”\
+[s1b041|1]【空】
+[NONE|0]“显示上面的阶梯，在医疗室那一层。”\
+bgload "MAP3F_A1","0","3"
+showTextbox
+[s1b042|1]【空】
+[NONE|0]“这里是三楼德里克休德克……”\
+[s1b043|1]【空】
+[NONE|0]“现在正在闪的就是我们的所在地。”\
+hideTextbox
+mov %V_45, 0
+
+mov %V_46, 6
+
+unknown20 48
+delay VAR_c1_-31072_0
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[s1b044|1]【武】
+[NONE|0]“不会吧……”\
+[s1b045|1]【沙罗】
+[NONE|0]“怎、怎么会……”\
+[s1b046|1]【优】
+[NONE|0]“ＬｅＭＵ将近有一半的部分都已经泡在水里了，是吗
+[NONE|0]？！”\
+[NONE|1]空带着沉痛的表情，静静地点着头。\
+unknown21 15
+overlayImage "00000000","MAP3F_A1",0,3
+showTextbox
+[s1b047|1]【空】
+[NONE|0]“这层的地下室分成三个部分。”\
+[NONE|1]【少年】
+[NONE|0]“地下室……？”\
+[s1b048|1]【空】
+[NONE|0]“就是没有被浸水的区域，人还有可能通行的部分。”\
+[s1b049|1]【空】
+[NONE|0]“显示在地图中心位置的是我们现在所在的第八区块。
+[NONE|0]”\
+[NONE|1]【少年】
+[NONE|0]“咦？地图好像被分成两个地方……另一个区块呢？”\
+[s1b050|1]【空】
+[NONE|0]“老实说，因为系统不完备，无法显示详细的地图……
+[NONE|0]”\
+[s1b051|1]【空】
+[NONE|0]“这个第八区块对角线上的第４区块还是完好的。”\
+[s1b052|1]【空】
+[NONE|0]“可是……”\
+[s1b053|1]【沙罗】
+[NONE|0]“不能去那里？”\
+[s1b054|1]【空】
+[NONE|0]“是的，不可能。”\
+[NONE|1]【少年】
+[NONE|0]“为什么？”\
+[s1b055|1]【空】
+[NONE|0]“因为连结两个区块的通路全都被水淹没了。”\
+[s1b056|1]【空】
+[NONE|0]“相隔距离大约是１００公尺。”\
+[s1b057|1]【空】
+[NONE|0]“我们之中，应该没有人能在闭气状态下，持续游一百
+[NONE|0]公尺吧？”\
+[s1b058|1]【空】
+[NONE|0]“所以说，这是不可能的。”\
+[s1b059|1]【空】
+[NONE|0]“而且……就算能够到达第四区，眼前的状况也不见得
+[NONE|0]会好转。”\
+[NONE|1]【少年】
+[NONE|0]“？”\
+[s1b060|1]【空】
+[NONE|0]“第四区跟这里一样。”\
+[s1b061|1]【空】
+[NONE|0]“通往浮岛的紧急阶梯全都完全浸水了。”\
+[s1b062|1]【武】
+[NONE|0]“也就是说，去了也没用？”\
+[s1b063|1]【空】
+[NONE|0]“没错”\
+hideTextbox
+specialEffect 12,0
+removeBG
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]沉默的大家……\
+[NONE|1]片刻之间，只是呆望着在黑暗中发光的ＬｅＭＵ地图。\
+[NONE|1]然后……\
+hideTextbox
+specialEffect 0,0
+bgload "BG16A1","6","2"
+multifgload3 "00000000","SA15ADS","00000000","YU11BDS","00000000","SO05ADS",128,512,320,3
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[s1b064|1]【优】
+[NONE|0]“嗯？　我忽然想到……”\
+[NONE|1]优静静地开口。\
+[s1b065|1]【优】
+[NONE|0]“ＬｅＭＵ里头，应该有装类似排水帮浦的东西吧？”\
+fgload 4,"SO10ADS","320",3
+showTextbox
+[s1b066|1]【空】
+[NONE|0]“当然有”\
+showTextbox
+[s1b067|1]【沙罗】
+[NONE|0]“那么就用那个东西，把淹水区域的水抽干的话……”\
+fgload 4,"SO03ADS","320",3
+showTextbox
+[s1b068|1]【空】
+[NONE|0]“那个……已经不能动的样子。”\
+multifgload2 1,2,"00000000","SA06ADS","00000000","YU06BDS",128,512,3
+showTextbox
+[s1b069|1]【优】
+[NONE|0]“为什么？　电力还存在啊……”\
+[s1b070|1]【空】
+[NONE|0]“我……不知道原因。”\
+[s1b071|1]【空】
+[NONE|0]“包括电梯，有一部分的电子系统已经无法控制了。”\
+[s1b072|1]【空】
+[NONE|0]“也许是受到各区块配线被断线的影响……”\
+multifgload2 2,1,"00000000","YU03BDS","00000000","SA03ADS",512,128,3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[NONE|1]【优】
+[NONE|0]“…………”\
+[NONE|1]【沙罗】
+[NONE|0]“…………”\
+[NONE|1]【武】
+[NONE|0]“…………”\
+fgload 4,"SO10ADS","320",3
+showTextbox
+[s1b073|1]【空】
+[NONE|0]“另外，刚刚确认了ＬｅＭＵ里的生物反应，除了留在
+[NONE|0]这里的人之外，已经没有其他的人了。”\
+multifgload2 2,1,"00000000","YU06BDS","00000000","SA06ADS",512,128,3
+showTextbox
+[NONE|1]留在这里的人──\
+[NONE|1]优，沙罗，空，月海，武以及我……一共六个人……\
+fgload 4,"SO01ADS","320",3
+showTextbox
+[s1b074|1]【空】
+[NONE|0]“此外，现在外部压力为６大气压。”\
+[s1b075|1]【空】
+[NONE|0]“氧气浓度：２２％、碳气浓度：７５％、氦浓度：３
+[NONE|0]％、气温：２４度……”\
+fgload 1,"SA01ADS","128",3
+showTextbox
+[s1b076|1]【沙罗】
+[NONE|0]“也就是说，我们暂时留在这里应该是没问题的。”\
+fgload 4,"SO03ADS","320",3
+showTextbox
+[s1b077|1]【空】
+[NONE|0]“是的，没错……”\
+fgload 2,"YU07BDS","512",3
+showTextbox
+[s1b078|1]【空】
+[NONE|0]“所以大家现在只能先暂时留在馆内。”\
+removeFG "2","3"
+fgload 2,"KB08ADS","512",3
+showTextbox
+[s1b079|1]【武】
+[NONE|0]“暂时？　要等到什么时候？”\
+fgload 4,"SO05ADS","320",3
+showTextbox
+[s1b080|1]【空】
+[NONE|0]“等到救援来之前。”\
+[s1b081|1]【空】
+[NONE|0]“一直都在持续发送救援的请求，可是……”\
+fgload 4,"SO10ADS","320",3
+showTextbox
+[s1b082|1]【空】
+[NONE|0]“可是这种状况下，不能保证能传送得到。”\
+fgload 1,"SA05ADS","128",3
+showTextbox
+[s1b083|1]【空】
+[NONE|0]“连到因塞尔．奴尔岛的通讯线路，包括紧急回线在内
+[NONE|0]，会因为物理性的阻断而无法使用。”\
+[s1b084|1]【空】
+[NONE|0]“而且利用海底电缆的网路接驳，以及音波式水中通话
+[NONE|0]，全都已经试过了……”\
+[s1b085|1]【空】
+[NONE|0]“通讯系统的恢复，还不见一点头绪。”\
+multifgload2 1,2,"00000000","SA03ADS","00000000","KB05ADS",128,512,3
+showTextbox
+[s1b086|1]【武】
+[NONE|0]“也就是说，我们是在水中迷路的小孩，ＳＯＳ讯号谁
+[NONE|0]也听不到……”\
+fgload 4,"SO05ADS","320",3
+showTextbox
+[s1b087|1]【空】
+[NONE|0]“是的”\
+fgload 2,"KB03ADS","512",3
+showTextbox
+[NONE|1]这个事实，简单淡然地冲击而来。\
+[NONE|1]所有的人，不可能不绝望。\
+[NONE|1]武与优，几乎同时叹气。\
+[NONE|1]我与沙罗也沮丧地垂下肩膀。\
+multiremoveFG2 "87","04","00","3"
+showTextbox
+[NONE|1]（对了，月海怎么样呢？）\
+[NONE|1]（从刚刚就一句话也没说……）\
+[NONE|1]我转过头去。\
+fgload 1,"TU08ADS","320",3
+showTextbox
+[NONE|1]月海站在房间的一个角落，冷眼地看着我们。\
+[NONE|1]依旧是一种无法亲近的气氛。\
+[NONE|1]（到底为什么这么愤怒的样子……？）\
+hideTextbox
+specialEffect 12,0
+removeFG "1","0"
+stopBGM
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]在那之后，过了不久……\
+hideTextbox
+specialEffect 0,0
+bgload "BG16A1","6","2"
+fgload 4,"YU02BDS","320",0
+playBGM "1","100"
+mov %V_ab, %V_VAR_c0_38
+
+showTextbox
+[s1b088|1]【优】
+[NONE|0]“不过，呜嗯……会失望也是正常的。”\
+[s1b089|1]【优】
+[NONE|0]“积极一点，要向前看啊！　嗯？各位！”\
+[NONE|1]打破沉默，优很有架势地说着。\
+[NONE|1]可是，没有人回应这句话。\
+fgload 4,"YU05BDS","320",3
+showTextbox
+[s1b090|1]【优】
+[NONE|0]“真是的，不要一副沉重的表情啊～”\
+[s1b091|1]【优】
+[NONE|0]“我们啊，又不是漂流在太平洋的中央，也不是在冬天
+[NONE|0]的雪山遇难啊！”\
+[NONE|1]【少年】
+[NONE|0]“所以呢？”\
+fgload 4,"YU01BDS","320",3
+showTextbox
+[s1b092|1]【优】
+[NONE|0]“重要的是，我们一定会在几小时之内获救的。”\
+fgload 1,"SA15ADS","128",3
+showTextbox
+[s1b093|1]【沙罗】
+[NONE|0]“你为什么会知道？”\
+fgload 4,"YU11BDS","320",3
+showTextbox
+[s1b094|1]【优】
+[NONE|0]“因为……仔细想一想。”\
+[s1b095|1]【优】
+[NONE|0]“我们被不知名的原因，困在这个封闭的建筑物之中。
+[NONE|0]”\
+[s1b096|1]【优】
+[NONE|0]“而且也没有办法跟外界连络。”\
+fgload 4,"YU14BDS","320",3
+showTextbox
+[s1b097|1]【优】
+[NONE|0]“不过，不过呢？”\
+[s1b098|1]【优】
+[NONE|0]“就算我们做不到联络这件事，也一定会有其他人帮我
+[NONE|0]们啊。”\
+[NONE|1]【少年】
+[NONE|0]“其他人，谁？”\
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“──啊，对了。”\
+[NONE|1]【少年】
+[NONE|0]“优的同事……还有沙罗学校的朋友、老师……”\
+fgload 4,"YU02BDS","320",3
+showTextbox
+[NONE|1]听到这句话的优，‘就是这个意思’地大力点着头。\
+multifgload2 1,4,"00000000","SA16ADS","00000000","YU16BDS",128,320,3
+showTextbox
+[s1b100|1]【优】
+[NONE|0]“仓成，你不是自己一个人来的吧？”\
+fgload 2,"KB11ADS","512",3
+showTextbox
+[s1b101|1]【武】
+[NONE|0]“对喔，这么说的确也有道理。”\
+[s1b102|1]【武】
+[NONE|0]“浮岛上的朋友一定会发现我们还留在这里。”\
+fgload 4,"YU01BDS","320",3
+showTextbox
+[s1b103|1]【优】
+[NONE|0]“没错”\
+[s1b104|1]【优】
+[NONE|0]“所以，不管是救援队还是搜索队，总之一定会有人马
+[NONE|0]上来救我们了。”\
+fgload 4,"YU02BDS","320",3
+showTextbox
+[s1b105|1]【优】
+[NONE|0]“怎么样？　明白了吗？”\
+fgload 2,"KB12ADS","512",3
+showTextbox
+[NONE|1]我、沙罗、空、武这四个人，频频点着头。\
+[NONE|1]大家的表情都恢复了光彩。\
+[NONE|1]可是，只有月海……还是一样冷眼旁观地看着我们……\
+hideTextbox
+specialEffect 12,0
+stopBGM
+delay 30
+multiremoveFG2 "87","04","00","3"
+bgload "BG17A1","6","2"
+playBGM "2","100"
+mov %V_ab, %V_VAR_c0_31
+
+clock "19","25"
+showTextbox
+[NONE|1]我们全体移动到会议室。\
+[NONE|1]在那个幽暗的控制室里等待救援，总觉得无法冷静下来
+[NONE|0]的样子，而且椅子的张数也不够坐。\
+[NONE|1]仅剩的干燥空间中，哪里能让大家稍微安心静下来呢？\
+[NONE|1]最近的地方就是这个会议室了。\
+[NONE|1]【少年】
+[NONE|0]“对了……为什么空这么了解ＬｅＭＵ的事情？”\
+[NONE|1]我对坐在旁边的空，开口问了。\
+fgload 4,"SO01ADS","320",3
+showTextbox
+[s1b106|1]【空】
+[NONE|0]“我是ＬｅＭＵ开发部的系统工程师。”\
+[s1b107|1]【空】
+[NONE|0]“而且，现在算是……代理主任的职务。”\
+fgload 2,"KB12ADS","512",3
+showTextbox
+[s1b108|1]【武】
+[NONE|0]“代理主任……很了不起吧？”\
+fgload 4,"SO15ADS","320",3
+showTextbox
+[s1b109|1]【空】
+[NONE|0]“代理，只是名称上而已……没什么了不起的。”\
+fgload 2,"KB11ADS","512",3
+showTextbox
+[s1b110|1]【武】
+[NONE|0]“不过，空怎么不是在地上的闸门？”\
+[s1b111|1]【武】
+[NONE|0]“入场的时候好像有说明吧？　我大概只听了一半而已
+[NONE|0]。”\
+[s1b112|1]【空】
+[NONE|0]“是的，没错，你发现了啊……”\
+fgload 4,"SO16ADS","320",3
+showTextbox
+[s1b113|1]【空】
+[NONE|0]“因为这里有时候会人手不足，偶尔我也会那样做。”\
+[NONE|1]空微笑着。\
+[NONE|1]‘地上的闸门’是什么？\
+[NONE|1]虽然不懂武与空之间的对话内容，不过，起码我知道空
+[NONE|0]为什么熟知ＬｅＭＵ的理由了。\
+fgload 2,"KB01ADS","512",3
+showTextbox
+[s1b114|1]【武】
+[NONE|0]“这么一来，这里就有二位ＬｅＭＵ的职员了。”\
+multifgload2 4,1,"00000000","SO07ADS","00000000","YU05BDS",320,128,3
+showTextbox
+[s1b115|1]【优】
+[NONE|0]“二个？”\
+[s1b116|1]【武】
+[NONE|0]“优你啊。”\
+fgload 1,"YU07BDS","128",3
+showTextbox
+[s1b117|1]【优】
+[NONE|0]“我，不算职员啊，只是工读而已啦……”\
+fgload 1,"YU02BDS","128",3
+showTextbox
+[s1b118|1]【优】
+[NONE|0]“仓成呢？　来玩的吗？”\
+fgload 2,"KB07ADS","512",3
+showTextbox
+[s1b119|1]【武】
+[NONE|0]“应该没有人是非要游玩才来主题游乐区的吧？”\
+[s1b120|1]【武】
+[NONE|0]“是吧，沙罗？”\
+removeFG "4","3"
+fgload 4,"SA01ADS","320",3
+showTextbox
+[s1b121|1]【沙罗】
+[NONE|0]“我……是因为笃志（笃志贡献服务派遣的义工活动）
+[NONE|0]”\
+fgload 2,"KB06ADS","512",3
+showTextbox
+[s1b122|1]【武】
+[NONE|0]“啊？　ㄉㄨˇ　ㄓˋ？”\
+fgload 1,"YU01BDS","128",3
+showTextbox
+[s1b123|1]【优】
+[NONE|0]“就是鸠鸣馆的二年级学生都要参加的活动。”\
+fgload 4,"SA02ADS","320",3
+showTextbox
+[s1b124|1]【沙罗】
+[NONE|0]“嗯，不过感觉都像是在玩呢。”\
+fgload 2,"KB01ADS","512",3
+showTextbox
+[s1b125|1]【武】
+[NONE|0]“呼嗯……”\
+[NONE|1]【少年】
+[NONE|0]“那个！？”\
+[NONE|1]我不经意地大叫了一声。\
+[NONE|1]忽然发现了一件事情。\
+[NONE|1]【少年】
+[NONE|0]“留在这里的人……应该彼此都不认识吧！？”\
+multifgload3 "00000000","YU05BDS","00000000","KB07ADS","00000000","SA08ADS",128,512,320,3
+showTextbox
+[s1b126|1]【优】
+[NONE|0]“当然，刚刚才遇到的啊。”\
+[NONE|1]【少年】
+[NONE|0]“那为什么优会称呼武为‘仓成’？”\
+[NONE|1]【少年】
+[NONE|0]“而且武也是……叫着‘优’、‘沙罗’的……”\
+multifgload2 4,2,"00000000","SA02ADS","00000000","KB02ADS",320,512,3
+showTextbox
+[s1b127|1]【武】
+[NONE|0]“啊啊，是喔，因为你不知道吧……”\
+[NONE|1]【少年】
+[NONE|0]“咦？”\
+removeFG "4","3"
+fgload 4,"SO01ADS","320",3
+showTextbox
+[s1b128|1]【空】
+[NONE|0]“刚刚在索非亚休德克遇到的时候，我们就简单自我介
+[NONE|0]绍过了。”\
+[NONE|1]【少年】
+[NONE|0]“啊，是喔……”\
+fgload 2,"KB01ADS","512",3
+showTextbox
+[s1b129|1]【武】
+[NONE|0]“是呀……”\
+[NONE|1]（嗯？　不过就算是这样，一下子就直接叫名字，未免
+[NONE|0]也太熟了吧……）\
+[NONE|1]正当我这么想的时后……\
+[s1b130|1]【武】
+[NONE|0]“对了，你的名字是？”\
+fgload 1,"YU06BDS","128",3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“……咦？”\
+[s1b131|1]【武】
+[NONE|0]“我还没问过你吧，没错吧？”\
+[NONE|1]【少年】
+[NONE|0]“我……”\
+[NONE|1]【少年】
+[NONE|0]“我…………”\
+fgload 1,"YU03BDS","128",3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“我………………”\
+removeFG "1","3"
+fgload 1,"SA02ADS","128",3
+showTextbox
+[s1b132|1]【沙罗】
+[NONE|0]“杀手喔，他……”\
+multifgload2 4,2,"00000000","SO06ADS","00000000","KB06ADS",320,512,3
+showTextbox
+[s1b133|1]【武】
+[NONE|0]“啊……”\
+[s1b134|1]【空】
+[NONE|0]“杀手……！？”\
+[s1b135|1]【沙罗】
+[NONE|0]“嗯，正被黑暗组织追杀中。”\
+[NONE|1]【少年】
+[NONE|0]“喔咿，才没有被追杀啊！”\
+removeFG "1","3"
+fgload 1,"YU04BDS","128",3
+showTextbox
+[s1b136|1]【优】
+[NONE|0]“即使是真的，也不会知道了。”\
+multifgload2 4,2,"00000000","SO07ADS","00000000","KB07ADS",320,512,3
+showTextbox
+[s1b137|1]【武】
+[NONE|0]“？？？”\
+[s1b138|1]【空】
+[NONE|0]“？？？”\
+fgload 1,"YU01BDS","128",3
+showTextbox
+[s1b139|1]【优】
+[NONE|0]“我知道了，我替你跟大家说明吧。”\
+[s1b140|1]【优】
+[NONE|0]“其实他是──”\
+[s1b141|1]【优】
+[NONE|0]“丧失记忆了”\
+fgload 4,"SO06ADS","320",3
+showTextbox
+[s1b142|1]【空】
+[NONE|0]“丧失……”\
+fgload 2,"KB06ADS","512",3
+showTextbox
+[s1b143|1]【武】
+[NONE|0]“丧失记忆！？”\
+hideTextbox
+specialEffect 6,1
+stopBGM
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]针对我记忆丧失的状态，优简单扼要地说明。\
+[NONE|1]‘名字跟地址、家人跟朋友的事情全忘了’。\
+[NONE|1]回应着那句话‘不过日期，还有遇到优之后的事情是记
+[NONE|0]得的’。\
+[NONE|1]听完了说明之后，空说了。\
+hideTextbox
+specialEffect 0,1
+bgload "BG17A1","6","2"
+multifgload3 "00000000","YU01BDS","00000000","KB07ADS","00000000","SO01ADS",128,512,320,3
+playBGM "14","100"
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[s1b144|1]【空】
+[NONE|0]“这个恐怕是记忆障碍之一的完全健忘症吧。”\
+fgload 1,"YU05BDS","128",3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“？？？”\
+[s1b145|1]【空】
+[NONE|0]“完全健忘症，也可以说是全生活史健忘症……”\
+[s1b146|1]【空】
+[NONE|0]“这个症状的发生，却能同样保有与社会层面有关的知
+[NONE|0]识……”\
+[s1b147|1]【空】
+[NONE|0]“也就是指完全想不出自己的名字、背景、家人或朋友
+[NONE|0]、以及所有相关生活过程的状态。”\
+[s1b148|1]【空】
+[NONE|0]“通常经过几天到一、二个月之后，应该就能自然恢复
+[NONE|0]记忆。”\
+fgload 4,"SO05ADS","320",3
+showTextbox
+[s1b149|1]【空】
+[NONE|0]“或者，也可以尝试使用催眠疗法或电击疗法……”\
+fgload 1,"YU06BDS","128",3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“电、电击……”\
+fgload 4,"SO02ADS","320",3
+showTextbox
+[s1b150|1]【空】
+[NONE|0]“呵呵，安心吧。”\
+fgload 4,"SO01ADS","320",3
+showTextbox
+[s1b151|1]【空】
+[NONE|0]“再重复说明一次……记忆丧失的症状，通常都是自然
+[NONE|0]痊愈的。”\
+fgload 1,"YU01BDS","128",3
+showTextbox
+[s1b152|1]【空】
+[NONE|0]“所以，现在首要的……”\
+[s1b153|1]【空】
+[NONE|0]“别太在意，别思考太多事情，这就是最好的治疗方法
+[NONE|0]了。”\
+fgload 1,"YU02BDS","128",3
+showTextbox
+[s1b154|1]【优】
+[NONE|0]“你看吧？　跟我说的一样吧？”\
+[s1b155|1]【优】
+[NONE|0]“别担心，一定没问题的。”\
+[NONE|1]【少年】
+[NONE|0]“………………………………”\
+fgload 2,"KB02ADS","512",3
+showTextbox
+[s1b156|1]【武】
+[NONE|0]“也只能这样了。”\
+[NONE|1]【少年】
+[NONE|0]“你对那种说法好像很不以为然的样子。”\
+fgload 2,"KB03ADS","512",3
+showTextbox
+[s1b157|1]【武】
+[NONE|0]“不，我不是这个意思……”\
+fgload 2,"KB01ADS","512",3
+showTextbox
+[s1b158|1]【武】
+[NONE|0]“记忆这种东西实在很不可思议，正当在想别的事情的
+[NONE|0]时后，却忽然唤醒了某些记忆。”\
+[s1b159|1]【武】
+[NONE|0]“例如……明明就是记得一些艺人的长相，却怎么也想
+[NONE|0]不出他们名字的时候。”\
+[NONE|1]【少年】
+[NONE|0]“呜～嗯……好像是这样……”\
+removeFG "1","3"
+fgload 1,"SA05ADS","128",3
+showTextbox
+[s1b160|1]【沙罗】
+[NONE|0]“可是，你是从什么时候开始丧失记忆的呢？”\
+[NONE|1]【少年】
+[NONE|0]“什么时候？”\
+[s1b161|1]【武】
+[NONE|0]“对啊，你知道我跟空的长相吧？”\
+removeFG "1","3"
+fgload 1,"YU01BDS","128",3
+showTextbox
+[s1b162|1]【优】
+[NONE|0]“而且，也记得我的名字……”\
+[NONE|1]【少年】
+[NONE|0]“什么时候……是什么时候呢……？”\
+hideTextbox
+specialEffect 6,1
+bgload "EV_SO11D","6","2"
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]我随时间的河流回溯着，开始寻找记忆的开端。@
+[NONE|1]究竟是从什么时候开始，我只记得往后的东西，却忘了
+[NONE|0]之前的事情呢？\
+[NONE|1]可以当做回答的映像，隐隐约约地在脑中浮现。\
+[NONE|1]
+[NONE|1]──是的，我丧失记忆的时候，就在掉进那个池子的当
+[NONE|0]中！@
+[NONE|1]一定就是那个时候！\
+hideTextbox
+showTextbox
+[NONE|1]在那之前的事情，我几乎无法想起来了。@
+[NONE|1]相反地，在那之后的事情却全部记得。\
+[NONE|1]掉落在池子的一瞬间，就是记忆的开端，也是过去回忆
+[NONE|0]的末端。\
+[NONE|1]
+hideTextbox
+hideTextbox
+specialEffect 6,1
+mov %V_ac, 0
+
+unknown21 16
+bgload "BG17A1","6","2"
+hideTextbox
+mov %V_13, 0
+
+multifgload3 "00000000","YU01BDS","00000000","KB01ADS","00000000","SO01ADS",128,512,320,3
+mov %V_ab, %V_VAR_c0_31
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“大概是掉到池子的时候吧，我想……”\
+[NONE|1]我对大家说明着。\
+fgload 4,"SO03ADS","320",3
+showTextbox
+[s1b163|1]【空】
+[NONE|0]“‘池子’的话……就是那个在休憩空间的‘池子’？
+[NONE|0]”\
+[NONE|1]【少年】
+[NONE|0]“应该是……”\
+removeFG "1","3"
+fgload 1,"SA05ADS","128",3
+showTextbox
+[s1b164|1]【沙罗】
+[NONE|0]“之前的事情，都完全想不起来了？”\
+fgload 2,"KB07ADS","512",3
+showTextbox
+[s1b165|1]【武】
+[NONE|0]“有没有浮现了一些片段的印象？”\
+fgload 1,"SA03ADS","128",3
+showTextbox
+[s1b166|1]【沙罗】
+[NONE|0]“居住地方的景色……”\
+fgload 2,"KB02ADS","512",3
+showTextbox
+[s1b167|1]【武】
+[NONE|0]“喜欢的女孩的事情……”\
+fgload 1,"SA01ADS","128",3
+showTextbox
+[s1b168|1]【沙罗】
+[NONE|0]“像日剧也有演过喔，虽然没有记忆，指尖的触觉却藏
+[NONE|0]着自然而然的印象？”\
+fgload 2,"KB01ADS","512",3
+showTextbox
+[s1b169|1]【武】
+[NONE|0]“原来如此……‘一拿到笔，就忽然开始画出一些专业
+[NONE|0]的艺术画’是吧？”\
+fgload 1,"SA02ADS","128",3
+showTextbox
+[s1b170|1]【沙罗】
+[NONE|0]“对对对……”\
+[s1b171|1]【沙罗】
+[NONE|0]“所以，多看多接触各种东西，也许会得到线索呢？”\
+fgload 2,"KB02ADS","512",3
+showTextbox
+[s1b172|1]【武】
+[NONE|0]“是啊……那一开始该怎么做比较好呢？”\
+hideTextbox
+stopBGM
+showTextbox
+[NONE|1]在我面前一来一往的谈话……\
+[NONE|1]太阳穴隐约开始抽痛。\
+[NONE|1]痛苦地扭曲了脸。\
+removeFG "4","3"
+fgload 4,"YU06BDS","320",3
+showTextbox
+[s1b173|1]【优】
+[NONE|0]“等，等一下！”\
+fgload 1,"SA08ADS","128",3
+showTextbox
+[s1b174|1]【沙罗】
+[NONE|0]“？”\
+fgload 2,"KB07ADS","512",3
+showTextbox
+[s1b175|1]【武】
+[NONE|0]“？”\
+fgload 4,"YU05BDS","320",3
+showTextbox
+[s1b176|1]【优】
+[NONE|0]“刚刚空不是才说过吗？”\
+[s1b177|1]【优】
+[NONE|0]“‘别太在意，别思考太多事情’”\
+[s1b178|1]【优】
+[NONE|0]“只要他一深入思考，就会陷入崩溃的精神状态。”\
+[s1b179|1]【沙罗】
+[NONE|0]“崩溃？”\
+[s1b180|1]【优】
+[NONE|0]“或者……应该说是错乱？”\
+[s1b181|1]【优】
+[NONE|0]“呻吟了一声‘呜’或‘啊’之后……就突然昏倒。”\
+fgload 2,"KB03ADS","512",3
+showTextbox
+[s1b182|1]【武】
+[NONE|0]“是这样啊……”\
+fgload 4,"YU01BDS","320",3
+showTextbox
+[s1b183|1]【优】
+[NONE|0]“所以……有关记忆的事情，大家还是小心翼翼处理才
+[NONE|0]好……”\
+fgload 4,"YU02BDS","320",3
+showTextbox
+[NONE|1]优轻轻地把手放在我的头上。\
+playBGM "2","100"
+showTextbox
+[NONE|1]然后，不可思议地……疼痛像是被吸走一样地消失了。\
+multifgload2 1,2,"00000000","SA02ADS","00000000","KB02ADS",128,512,3
+showTextbox
+[s1b184|1]【武】
+[NONE|0]“ＯＫ，我知道了。”\
+[s1b185|1]【武】
+[NONE|0]“那就换个话题吧。”\
+multiremoveFG3 "2","0","1"
+removeFG "1","3"
+fgload 1,"SO03ADS","128",3
+showTextbox
+[s1b186|1]【空】
+[NONE|0]“那个……”\
+[s1b187|1]【空】
+[NONE|0]“从刚刚我就在想一件事情……”\
+[s1b188|1]【沙罗】
+[NONE|0]“？”\
+fgload 2,"KB07ADS","512",3
+showTextbox
+[s1b189|1]【武】
+[NONE|0]“？”\
+fgload 4,"YU07BDS","320",3
+showTextbox
+[s1b190|1]【优】
+[NONE|0]“？”\
+[s1b191|1]【空】
+[NONE|0]“那就是，我们应该要怎么称呼他比较好呢？”\
+[s1b192|1]【优】
+[NONE|0]“是啊，不决定一个称呼的话，还是有点不方便。”\
+fgload 2,"KB11ADS","512",3
+showTextbox
+[s1b193|1]【武】
+[NONE|0]“权兵卫（意指无名小卒）如何？”\
+[s1b194|1]【武】
+[NONE|0]“方便的名字就好了，没有名字的权兵卫不错啊。”\
+fgload 1,"SO17ADS","128",3
+showTextbox
+[s1b195|1]【空】
+[NONE|0]“‘因为方便称呼所以叫权兵卫’这句话，不会对不起
+[NONE|0]全国上下叫权兵卫的人吗？”\
+[s1b196|1]【武】
+[NONE|0]“只是假名，方便就好了啊。”\
+removeFG "1","3"
+fgload 1,"SA16ADS","128",3
+showTextbox
+[s1b197|1]【沙罗】
+[NONE|0]“叫他狙击手。”\
+fgload 4,"YU05BDS","320",3
+showTextbox
+[s1b198|1]【优】
+[NONE|0]“为什么你一直拘泥在这件事情上啊。”\
+[s1b199|1]【优】
+[NONE|0]“他才不是那种型的男生呢。”\
+fgload 1,"SA15ADS","128",3
+showTextbox
+[s1b200|1]【沙罗】
+[NONE|0]“那……多氛三郎怎么样？”\
+fgload 4,"YU07BDS","320",3
+showTextbox
+[s1b201|1]【优】
+[NONE|0]“不懂你的意思。”\
+removeFG "1","3"
+fgload 1,"SO15ADS","128",3
+showTextbox
+[s1b202|1]【空】
+[NONE|0]“说得也是，那我还想到一个。”\
+[s1b203|1]【空】
+[NONE|0]“忘忆人怎么样？”\
+fgload 2,"KB13ADS","512",3
+showTextbox
+[s1b204|1]【武】
+[NONE|0]“为什么叫忘忆人？”\
+fgload 4,"YU11BDS","320",3
+showTextbox
+[s1b205|1]【优】
+[NONE|0]“‘忘记记忆的人’的省略吧？”\
+[s1b206|1]【武】
+[NONE|0]“不太吉利的感觉。”\
+fgload 1,"SO17ADS","128",3
+showTextbox
+[s1b207|1]【空】
+[NONE|0]“不好意思，太直接了……”\
+removeFG "1","3"
+fgload 1,"SA15ADS","128",3
+showTextbox
+[s1b208|1]【沙罗】
+[NONE|0]“纳秋学姐呢？　有什么想法？”\
+fgload 4,"YU07BDS","320",3
+showTextbox
+[s1b209|1]【优】
+[NONE|0]“这个吗……”\
+fgload 4,"YU05BDS","320",3
+showTextbox
+[s1b210|1]【优】
+[NONE|0]“Ａ少年怎么样？”\
+fgload 2,"KB11ADS","512",3
+showTextbox
+[s1b211|1]【武】
+[NONE|0]“好像罪犯的简称……”\
+fgload 4,"YU01BDS","320",3
+showTextbox
+[s1b212|1]【优】
+[NONE|0]“那就Ｂ少年……”\
+fgload 2,"KB14ADS","512",3
+showTextbox
+[s1b213|1]【武】
+[NONE|0]“还不是一样！”\
+fgload 1,"SA16ADS","128",3
+showTextbox
+[s1b214|1]【沙罗】
+[NONE|0]“阿斯塔基？　久米川？”\
+[s1b215|1]【空】
+[NONE|0]“Ｍｅｍｏｒｉｅｓ　Ｏｎ如何？”\
+fgload 2,"KB11ADS","512",3
+showTextbox
+[s1b216|1]【武】
+[NONE|0]“那是个昵称好吗，真是的……”\
+fgload 4,"YU02BDS","320",3
+showTextbox
+[s1b217|1]【优】
+[NONE|0]“Ｑ少年也不错。”\
+[NONE|1]【少年】
+[NONE|0]“……………………………………………………”\
+fgload 2,"KB01ADS","512",3
+showTextbox
+[s1b218|1]【武】
+[NONE|0]“好吧，你自己觉得哪个比较好？”\
+fgload 1,"SA02ADS","128",3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“都……”\
+[NONE|1]【少年】
+[NONE|0]“……不喜欢。”\
+multifgload2 1,4,"00000000","SA04ADS","00000000","YU07BDS",128,320,3
+showTextbox
+[s1b219|1]【沙罗】
+[NONE|0]“别要求太多了！　都这个时候了还啰唆！”\
+[NONE|1]【少年】
+[NONE|0]“那……”@
+
+csel "三上智也", *L_pre_s_1b_0000142c,"石原诚", *L_pre_s_1b_0000145d,"深山直人", *L_pre_s_1b_0000148e,"早濑川椎名", *L_pre_s_1b_000014bf,"橞村元树", *L_pre_s_1b_000014f0,"伊波健", *L_pre_s_1b_00001521,"渡良濑恭介", *L_pre_s_1b_00001552,"王子殿下", *L_pre_s_1b_00001583
+*L_pre_s_1b_0000142c
+ mov %V_b3, 0
+ goto *LchoiceId_1203_54
+
+*L_pre_s_1b_0000145d
+ mov %V_b3, 1
+ goto *LchoiceId_1203_54
+
+*L_pre_s_1b_0000148e
+ mov %V_b3, 2
+ goto *LchoiceId_1203_54
+
+*L_pre_s_1b_000014bf
+ mov %V_b3, 3
+ goto *LchoiceId_1203_54
+
+*L_pre_s_1b_000014f0
+ mov %V_b3, 4
+ goto *LchoiceId_1203_54
+
+*L_pre_s_1b_00001521
+ mov %V_b3, 5
+ goto *LchoiceId_1203_54
+
+*L_pre_s_1b_00001552
+ mov %V_b3, 6
+ goto *LchoiceId_1203_54
+
+*L_pre_s_1b_00001583
+ mov %V_b3, 7
+ goto *LchoiceId_1203_54
+
+*LchoiceId_1203_54
+if %V_b3 == 0 goto *Ls_1b_0000142c
+
+if %V_b3 == 1 goto *Ls_1b_0000145d
+
+if %V_b3 == 2 goto *Ls_1b_0000148e
+
+if %V_b3 == 3 goto *Ls_1b_000014bf
+
+if %V_b3 == 4 goto *Ls_1b_000014f0
+
+if %V_b3 == 5 goto *Ls_1b_00001521
+
+if %V_b3 == 6 goto *Ls_1b_00001552
+
+if %V_b3 == 7 goto *Ls_1b_00001583
+
+*Ls_1b_0000142c
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“‘智也’好了。”\
+multifgload3 "00000000","SA06ADS","00000000","KB06ADS","00000000","YU06BDS",128,512,320,3
+showTextbox
+[s1b220|1]【全体】
+[NONE|0]“智也～！？”\
+goto *Ls_1b_000015bf
+*Ls_1b_0000145d
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“‘诚’好了。”\
+multifgload3 "00000000","SA06ADS","00000000","KB06ADS","00000000","YU06BDS",128,512,320,3
+showTextbox
+[s1b221|1]【全体】
+[NONE|0]“诚～！？”\
+goto *Ls_1b_000015bf
+*Ls_1b_0000148e
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“‘直人’好了。”\
+multifgload3 "00000000","SA06ADS","00000000","KB06ADS","00000000","YU06BDS",128,512,320,3
+showTextbox
+[s1b222|1]【全体】
+[NONE|0]“直人～！？”\
+goto *Ls_1b_000015bf
+*Ls_1b_000014bf
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“‘椎名’好了。”\
+multifgload3 "00000000","SA06ADS","00000000","KB06ADS","00000000","YU06BDS",128,512,320,3
+showTextbox
+[s1b223|1]【全体】
+[NONE|0]“椎名～！？”\
+goto *Ls_1b_000015bf
+*Ls_1b_000014f0
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“‘元树’好了。”\
+multifgload3 "00000000","SA06ADS","00000000","KB06ADS","00000000","YU06BDS",128,512,320,3
+showTextbox
+[s1b224|1]【全体】
+[NONE|0]“元树～！？”\
+goto *Ls_1b_000015bf
+*Ls_1b_00001521
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“‘伊波健’好了。”\
+multifgload3 "00000000","SA06ADS","00000000","KB06ADS","00000000","YU06BDS",128,512,320,3
+showTextbox
+[s1b225|1]【全体】
+[NONE|0]“伊波健～！？”\
+goto *Ls_1b_000015bf
+*Ls_1b_00001552
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“‘恭介’好了。”\
+multifgload3 "00000000","SA06ADS","00000000","KB06ADS","00000000","YU06BDS",128,512,320,3
+showTextbox
+[s1b226|1]【全体】
+[NONE|0]“恭介～！？”\
+goto *Ls_1b_000015bf
+*Ls_1b_00001583
+mov %V_df, 1
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“‘王子殿下’好了。”\
+multifgload3 "00000000","SA06ADS","00000000","KB06ADS","00000000","YU06BDS",128,512,320,3
+showTextbox
+[s1b227|1]【全体】
+[NONE|0]“王子殿下～！？”\
+goto *Ls_1b_000015bf
+*Ls_1b_000015bf
+
+fgload 4,"YU05BDS","320",3
+showTextbox
+[s1b228|1]【优】
+[NONE|0]“放弃吧。”\
+fgload 1,"SA05ADS","128",3
+showTextbox
+[s1b229|1]【沙罗】
+[NONE|0]“绝对不行。”\
+fgload 2,"KB05ADS","512",3
+showTextbox
+[s1b230|1]【武】
+[NONE|0]“不可能。”\
+removeFG "2","3"
+fgload 2,"SO04ADS","512",3
+showTextbox
+[s1b231|1]【空】
+[NONE|0]“很难赞成。”\
+multifgload3 "00000000","SA02ADS","00000000","SO02ADS","00000000","YU02BDS",128,512,320,3
+showTextbox
+[s1b232|1]【全体】
+[NONE|0]“因为，一点都不像啊！”\
+[NONE|1]【少年】
+[NONE|0]“……………………………………………………”\
+removeFG "2","3"
+fgload 2,"KB04ADS","512",3
+showTextbox
+[s1b233|1]【武】
+[NONE|0]“啊……烦死了，‘少年’好了，就叫‘少年’吧～”\
+stopBGM
+showTextbox
+[NONE|1]──就在这个时候！\
+playSFX "SE05_08",0,100
+showTextbox
+[NONE|1]──啪当！\
+multifgload3 "00000000","SA06ADS","00000000","KB06ADS","00000000","YU06BDS",128,512,320,3
+showTextbox
+[s1b234|1]【月海】
+[NONE|0]“够了吧！”\
+multiremoveFG2 "87","04","00","3"
+multiremoveFG3 "0","1","2"
+showTextbox
+[NONE|1]月海拍着桌子站了起来。\
+fgload 1,"TU04ADM","320",3
+showTextbox
+[s1b235|1]【月海】
+[NONE|0]“到底想怎么样！？”\
+[s1b236|1]【月海】
+[NONE|0]“你们到底在想什么啊……”\
+showTextbox
+[s1b237|1]【武】
+[NONE|0]“什么……正在想名字啊……”\
+[s1b238|1]【月海】
+[NONE|0]“别开玩笑了！”\
+showTextbox
+[NONE|1]一片沉默的室内……\
+fgload 1,"TU05ADM","320",3
+showTextbox
+[NONE|1]我们互相看着对方。\
+hideTextbox
+playBGM "19","97"
+showTextbox
+[s1b239|1]【优】
+[NONE|0]“呜，呜嗯……是啊……”\
+[NONE|1]开口的是优。\
+[s1b240|1]【优】
+[NONE|0]“我们根本没考虑他的感受……也许有点太过分了。”\
+fgload 1,"TU04ADM","320",3
+showTextbox
+[s1b241|1]【月海】
+[NONE|0]“我才不是这个意思！”\
+fgload 1,"TU08ADM","320",3
+showTextbox
+[s1b242|1]【空】
+[NONE|0]“那小町你觉得该怎么称呼他比较好？”\
+[NONE|1]【月海】
+[NONE|0]“…………”\
+[NONE|1]【全体】
+[NONE|0]“…………”\
+showTextbox
+[s1b243|1]【沙罗】
+[NONE|0]“看吧？　要想出一个名字，很难吧？”\
+fgload 1,"TU05ADM","320",3
+showTextbox
+[s1b244|1]【月海】
+[NONE|0]“算了……随便你们吧……”\
+hideTextbox
+removeFG "1","3"
+playSFX "SE00_01",1,100
+waitForSFX
+showTextbox
+[NONE|1]丢下这句话，月海走出了房间。\
+multifgload2 1,2,"00000000","KB07ADM","00000000","SA05ADM",128,512,3
+showTextbox
+[s1b245|1]【武】
+[NONE|0]“她怎么了？”\
+removeFG "2","3"
+fgload 2,"YU07BDM","512",3
+showTextbox
+[s1b246|1]【优】
+[NONE|0]“为什么生气？”\
+removeFG "2","3"
+fgload 2,"SA07ADM","512",3
+showTextbox
+[s1b247|1]【沙罗】
+[NONE|0]“武……你是不是做了让她讨厌的事情？”\
+fgload 1,"KB04ADM","128",3
+showTextbox
+[s1b248|1]【武】
+[NONE|0]“我才没有！”\
+fgload 1,"KB05ADM","128",3
+showTextbox
+[s1b249|1]【武】
+[NONE|0]“虽然我也不太了解，不过……从刚刚碰面开始就有这
+[NONE|0]种感觉了……”\
+removeFG "2","3"
+fgload 2,"SO03ADM","512",3
+showTextbox
+[s1b250|1]【空】
+[NONE|0]“跟小町相处还是要慎重一点才好。”\
+[s1b251|1]【空】
+[NONE|0]“大家要观察情况，然后一边让她知道我们没有恶意或
+[NONE|0]敌意，一边慢慢地……慢慢地同化她……”\
+[NONE|1]我忽然被什么东西驱使一样……\
+hideTextbox
+specialEffect 6,0
+stopBGM
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]一回神，已经冲出了房间。\
+hideTextbox
+specialEffect 0,0
+bgload "BG25B3","6","2"
+mov %V_ab, %V_VAR_c0_31
+
+showTextbox
+[NONE|1]通道的前方──月海踢着水花走着。\
+[NONE|1]我不知道她要走去哪里。\
+[NONE|1]我对着她的背影叫着。\
+[NONE|1]【少年】
+[NONE|0]“喂！　等一等！”\
+[NONE|1]月海没有停下来。也没有回头。\
+[NONE|1]【少年】
+[NONE|0]“月海！　月海！”\
+[NONE|1]终于追上她的我，举手拍了拍她的肩膀。\
+hideTextbox
+playBGM "7","100"
+fgload 1,"TU04ADM","320",3
+showTextbox
+[s1b252|1]【月海】
+[NONE|0]“别碰我……”\
+fgload 1,"TU05ADM","320",3
+showTextbox
+[s1b253|1]【月海】
+[NONE|0]“别碰我……”\
+[NONE|1]月海停下脚步，小声地呢喃着。\
+[NONE|1]【少年】
+[NONE|0]“对，对不起……”\
+[NONE|1]我道歉着，将手拿开她的肩膀。\
+fgload 1,"TU08ADM","320",3
+showTextbox
+[s1b254|1]【月海】
+[NONE|0]“什么事？　你找我做什么？”@
+
+csel "为什么生气？", *L_pre_s_1b_000018fc,"我还没正式跟你打过招呼", *L_pre_s_1b_0000191c
+*L_pre_s_1b_000018fc
+ mov %V_b3, 0
+ goto *LchoiceId_1203_62
+
+*L_pre_s_1b_0000191c
+ mov %V_b3, 1
+ goto *LchoiceId_1203_62
+
+*LchoiceId_1203_62
+if %V_b3 == 0 goto *Ls_1b_000018fc
+
+if %V_b3 == 1 goto *Ls_1b_0000191c
+
+*Ls_1b_000018fc
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“为什么……你要这么生气呢……”\
+[NONE|1]我单刀直入地切入话题。\
+fgload 1,"TU10ADM","320",3
+showTextbox
+[s1b255|1]【月海】
+[NONE|0]“为什么？　呵呵，真是有趣的问话……”\
+[s1b256|1]【月海】
+[NONE|0]“不知道我生气的原因吗？”\
+[NONE|1]【少年】
+[NONE|0]“不知道。”\
+goto *Ls_1b_0000193c
+*Ls_1b_0000191c
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“因为我还没正式跟你打过招呼……”\
+[NONE|1]为什么我无法直视月海的眼睛。\
+[NONE|1]只要一对上视线，心脏就砰砰地跳……\
+fgload 1,"TU05ADM","320",3
+showTextbox
+[s1b257|1]【月海】
+[NONE|0]“什么打招呼，没那个必要。”\
+[s1b258|1]【月海】
+[NONE|0]“我一点都不想跟你说话。”\
+[NONE|1]【少年】
+[NONE|0]“为什么……？”\
+[NONE|1]【少年】
+[NONE|0]“我做了什么让你生气的事情吗？”\
+goto *Ls_1b_0000193c
+*Ls_1b_0000193c
+
+fgload 1,"TU07ADM","320",3
+showTextbox
+[s1b259|1]【月海】
+[NONE|0]“唉……”\
+fgload 1,"TU01ADM","320",3
+showTextbox
+[s1b260|1]【月海】
+[NONE|0]“喂？　别再闹了，我不希望你问我那个……”\
+[NONE|1]【少年】
+[NONE|0]“那个，到底是什么？”\
+[s1b261|1]【月海】
+[NONE|0]“别再装傻了，拜托你……”\
+[NONE|1]【少年】
+[NONE|0]“我没有装傻……”\
+fgload 1,"TU07ADM","320",3
+showTextbox
+[s1b262|1]【月海】
+[NONE|0]“骗人……”\
+fgload 1,"TU01ADM","320",3
+showTextbox
+[s1b263|1]【月海】
+[NONE|0]“我什么都知道了。”\
+[s1b264|1]【月海】
+[NONE|0]“难道，连你也是那些家伙的同伙……？”\
+[NONE|1]【少年】
+[NONE|0]“那些家伙？？？　同伙？？？”\
+[s1b265|1]【月海】
+[NONE|0]“你刚刚不是说‘丧失记忆’吗？”\
+[NONE|1]【少年】
+[NONE|0]“呜，呜嗯……”\
+fgload 1,"TU08ADM","320",3
+showTextbox
+[s1b266|1]【月海】
+[NONE|0]“那么，你为什么知道那些家伙的名字？”\
+[NONE|1]【少年】
+[NONE|0]“那个……刚刚不是说明过了……”\
+[NONE|1]【少年】
+[NONE|0]“我只记得遇见优她们的事情。”\
+[NONE|1]【少年】
+[NONE|0]“你没听到吗？”\
+fgload 1,"TU04ADM","320",3
+showTextbox
+[s1b267|1]【月海】
+[NONE|0]“──说谎！”\
+[NONE|1]突然，月海大喊了出来。\
+fgload 1,"TU05ADM","320",3
+showTextbox
+[s1b268|1]【月海】
+[NONE|0]“真是愚蠢……”\
+[s1b269|1]【月海】
+[NONE|0]“总之，我不会被骗的……”\
+[s1b270|1]【月海】
+[NONE|0]“不要再跟我说话了……好吗？”\
+removeFG "1","3"
+showTextbox
+[NONE|1]说完之后，月海头也不回地离开了。\
+[NONE|1]想不出任何可以唤住她的话，我只是一直看着她渐行渐
+[NONE|0]远的背影。\
+hideTextbox
+specialEffect 12,0
+stopBGM
+bgload "BG17A1","6","2"
+playSFX "SE00_01",0,100
+mov %V_ab, %V_VAR_c0_38
+
+clock "19","48"
+showTextbox
+[NONE|1]回到会议室，桌子中央浮着ＬｅＭＵ的立体图像。\
+[NONE|1]优、沙罗、空、武四个人，一边看着图像，一边‘不是
+[NONE|0]那样，不是这样’地议论着。\
+[NONE|1]【少年】
+[NONE|0]“嗯？　你们在聊什么？”\
+multifgload3 "00000000","YU02BDS","00000000","KB01ADS","00000000","SA01ADS",128,512,320,3
+showTextbox
+[s1b271|1]【优】
+[NONE|0]“啊，你回来啦，少年……”\
+[s1b272|1]【沙罗】
+[NONE|0]“月海呢？”\
+[NONE|1]我摇摇头。\
+multifgload2 1,4,"00000000","YU07BDS","00000000","SA08ADS",128,320,3
+showTextbox
+[s1b273|1]【武】
+[NONE|0]“对吧？　很难懂的女孩子吧？”\
+[NONE|1]这次我点点头。\
+[NONE|1]的确，月海很难懂，根本不明白她到底在想什么。\
+[NONE|1]月海的事情，再怎么多想也没用了。\
+[NONE|1]我回到原本的话题。\
+[NONE|1]【少年】
+[NONE|0]“嗯？　你们现在在聊什么呢？”\
+removeFG "2","3"
+fgload 2,"SO01ADS","512",3
+showTextbox
+[s1b274|1]【空】
+[NONE|0]“在讨论为什么会发生现在这个意外……”\
+fgload 1,"YU05BDS","128",3
+showTextbox
+[s1b275|1]【优】
+[NONE|0]“还有接下来的对策……大家应该要怎么办？”\
+fgload 4,"SA05ADS","320",3
+showTextbox
+[s1b276|1]【沙罗】
+[NONE|0]“我们正在归纳共识。”\
+[NONE|1]【少年】
+[NONE|0]“呼嗯，意外的原因跟对策啊……”\
+[NONE|1]【少年】
+[NONE|0]“嗯？　不好意思，可以说给我听听看吗？　简单说明
+[NONE|0]就好了。”\
+multiremoveFG2 "87","04","00","3"
+fgload 1,"SO01ADM","320",3
+showTextbox
+[s1b277|1]【空】
+[NONE|0]“我知道了。”\
+[s1b278|1]【空】
+[NONE|0]“那么，我就把意外发生的经过再说明一次。”\
+[NONE|1]空说着，用手碰触着桌上的投影图像。\
+bgload "IMG03A","0","2"
+playBGM "14","100"
+showTextbox
+[NONE|1]她接着说明下面的事情。\
+[NONE|1]‘１２点４５分，ＬｅＭＵ内部突然停电，原因不明。
+[NONE|0]’\
+[NONE|1]‘随即紧急避难警报发布……这也是原因不明。’\
+[NONE|1]‘因为这两件事情，ＬｅＭＵ里的所有游客及职员开始
+[NONE|0]进行避难。’\
+[NONE|1]‘１２点５４分──紧急气密闸开放。’\
+bgload "BG17A1","0","2"
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“紧急气密闸是什么？”\
+fgload 1,"SO01ADM","320",3
+showTextbox
+[s1b279|1]【空】
+[NONE|0]“与浮岛直接连结，用来逃离的紧急出口。”\
+[s1b280|1]【空】
+[NONE|0]“装设在紧急阶梯的最顶端。”\
+[s1b281|1]【空】
+[NONE|0]“如果没有重大意外的话，这个门是不会轻易开启的…
+[NONE|0]………”\
+[NONE|1]【少年】
+[NONE|0]“不过……还是开了啊？”\
+fgload 1,"SO05ADM","320",3
+showTextbox
+[s1b282|1]【空】
+[NONE|0]“是的……”\
+[NONE|1]【少年】
+[NONE|0]“‘重大意外发生了’是吗？”\
+fgload 1,"SO03ADM","320",3
+showTextbox
+[s1b283|1]【空】
+[NONE|0]“不知道这样的说法算不算正确……”\
+[NONE|1]【少年】
+[NONE|0]“？？？”\
+fgload 1,"SO01ADM","320",3
+showTextbox
+[s1b284|1]【空】
+[NONE|0]“指导手册上是这么写的。”\
+[s1b285|1]【空】
+[NONE|0]“‘即使发生了紧急状况，游客仍然必须暂时停留在因
+[NONE|0]塞尔．奴尔岛（零之岛）上的增减压室’。”\
+[NONE|1]【少年】
+[NONE|0]“为什么？　不能马上逃走吗？　为什么还要停在增减
+[NONE|0]压室……”\
+showTextbox
+[s1b286|1]【空】
+[NONE|0]“这是为了防止减压症（潜水夫病）。”\
+[NONE|1]【少年】
+[NONE|0]“减压症？”\
+[s1b287|1]【空】
+[NONE|0]“因为剧烈的减压，会导致血液中的氮气溶解成气泡、
+[NONE|0]血栓等的症状。”\
+[NONE|1]【少年】
+[NONE|0]“？？？”\
+fgload 1,"SO07ADM","320",3
+showTextbox
+[s1b288|1]【空】
+[NONE|0]“嗯呃……这件事以后再说明……先继续说下去吧。”\
+[NONE|1]【少年】
+[NONE|0]“呜，呜嗯……”\
+[NONE|1]【少年】
+[NONE|0]“总之，原本不应该开启的闸门，却在那个时候开启了
+[NONE|0]，是吗？”\
+fgload 1,"SO01ADM","320",3
+showTextbox
+[s1b289|1]【空】
+[NONE|0]“没错。”\
+fgload 1,"SO05ADM","320",3
+showTextbox
+[s1b290|1]【空】
+[NONE|0]“虽然这只是我的推测……”\
+fgload 1,"SO10ADM","320",3
+showTextbox
+[s1b291|1]【空】
+[NONE|0]“但这恐怕是因为某个恐慌的游客，躲避在混乱的增减
+[NONE|0]压室内，结果不小心开启了紧急气密闸门。”\
+[s1b292|1]【空】
+[NONE|0]“然后，这扇门在开启之后并没有关闭，而是呈现一直
+[NONE|0]开放着的状态。”\
+[s1b293|1]【空】
+[NONE|0]“因此承受约６气压的内部混合气体，开始急速地向外
+[NONE|0]部释放。”\
+[NONE|1]继续说明的空。\
+hideTextbox
+unknown20 44
+showTextbox
+[NONE|1]‘１４点３９分──由于氦气比氧气、氮气还轻，所以
+[NONE|0]会更早释放出来……由于内部压力比外部气压要低’\
+[NONE|1]‘１５点５５分──进水意外发生’\
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+fgload 1,"SO01ADM","320",3
+showTextbox
+[s1b294|1]【空】
+[NONE|0]“原本ＬｅＭＵ是以饱和潜水装置的设计为基础，而建
+[NONE|0]造完成的建筑物……”\
+[NONE|1]【少年】
+[NONE|0]“饱和潜水装置？”\
+[s1b295|1]【空】
+[NONE|0]“调整内部气压跟外部的水压相等，或提高内部压力比
+[NONE|0]外面的高，让建筑物本身不被海水压挤崩坏……”\
+[s1b296|1]【空】
+[NONE|0]“……就是这么一回事，懂了吗？”@
+
+csel "我懂了", *L_pre_s_1b_00001c35,"有点不太………", *L_pre_s_1b_00001c9a
+*L_pre_s_1b_00001c35
+ mov %V_b3, 0
+ goto *LchoiceId_1203_64
+
+*L_pre_s_1b_00001c9a
+ mov %V_b3, 1
+ goto *LchoiceId_1203_64
+
+*LchoiceId_1203_64
+if %V_b3 == 0 goto *Ls_1b_00001c35
+
+if %V_b3 == 1 goto *Ls_1b_00001c9a
+
+*Ls_1b_00001c35
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“呜嗯，大概……”\
+fgload 1,"SO07ADM","320",3
+showTextbox
+[s1b297|1]【空】
+[NONE|0]“那么你也明白进水意外发生的原因了……？”\
+[NONE|1]【少年】
+[NONE|0]“呜嗯……这个吗……”\
+[NONE|1]【少年】
+[NONE|0]“我想应该是这样吧？”\
+[NONE|1]【少年】
+[NONE|0]“ＬｅＭＵ原本是藉由内部气压与水压相等，才不至于
+[NONE|0]被压挤崩坏。”\
+[NONE|1]【少年】
+[NONE|0]“不过，因为内部气压几乎流失了，只剩下现在的１气
+[NONE|0]压以下……”\
+[NONE|1]【少年】
+[NONE|0]“因此，海水的压力就使劲压挤……”\
+[NONE|1]【少年】
+[NONE|0]“最后一定会在某处产生龟裂，接着海水就会大量涌入
+[NONE|0]了……”\
+fgload 1,"SO01ADM","320",3
+showTextbox
+[s1b298|1]【空】
+[NONE|0]“几乎是正确解答。”\
+fgload 1,"SO02ADM","320",3
+showTextbox
+[s1b299|1]【空】
+[NONE|0]“真是厉害啊，少年，你真的丧失记忆了吗？”\
+[NONE|1]【少年】
+[NONE|0]“咦？　呜，呜嗯……应该吧……”\
+fgload 1,"SO10ADM","320",3
+showTextbox
+[s1b300|1]【空】
+[NONE|0]“没有其他要补充的地方了。”\
+[s1b301|1]【空】
+[NONE|0]“剧烈的气压骤减，就是这次进水意外的主要原因。”\
+goto *Ls_1b_00001cd8
+*Ls_1b_00001c9a
+
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“呜～嗯……”\
+[NONE|1]我微歪着头。\
+showTextbox
+[s1b302|1]【空】
+[NONE|0]“把装满空气的宝特瓶盖上盖子，为什么会在水中慢慢
+[NONE|0]下沉呢？”\
+[NONE|1]【少年】
+[NONE|0]“为什么呢……因为瓶子的侧面可能在某个地方有了破
+[NONE|0]洞吧？”\
+showTextbox
+[s1b303|1]【空】
+[NONE|0]“就是这个道理。”\
+[s1b304|1]【空】
+[NONE|0]“这是因为宝特瓶中的空气已经被水挤压出去。”\
+showTextbox
+[s1b305|1]【空】
+[NONE|0]“为了不要让宝特瓶下沉，该怎么办才好呢？”\
+[NONE|1]【少年】
+[NONE|0]“呜～嗯，这个嘛……”\
+showTextbox
+[s1b306|1]【空】
+[NONE|0]“答案很简单。”\
+[s1b307|1]【空】
+[NONE|0]“在宝特瓶里面装入更多的空气就好了。”\
+[s1b308|1]【空】
+[NONE|0]“从外侧施压的力量，跟从内侧反压的力量达到平衡的
+[NONE|0]话，宝特瓶就不会变形了吧？”\
+[s1b309|1]【空】
+[NONE|0]“这就是‘饱和潜水装置状态’，虽然解说得有些不伦
+[NONE|0]不类……”\
+[NONE|1]【少年】
+[NONE|0]“原来如此，终于有一点懂了……”\
+showTextbox
+[s1b310|1]【空】
+[NONE|0]“不过，如果装满空气的宝特瓶……”\
+[s1b311|1]【空】
+[NONE|0]“原本就沉在水中的话，在它上方钻一个洞会怎么样？
+[NONE|0]”\
+[NONE|1]【少年】
+[NONE|0]“空气会外漏。”\
+[s1b312|1]【空】
+[NONE|0]“然后呢？”\
+[NONE|1]【少年】
+[NONE|0]“空气会咕噜咕噜的外泄……”\
+[NONE|1]【少年】
+[NONE|0]“然后呢，当压力平衡被破坏之后，宝特瓶就会被压扁
+[NONE|0]。”\
+showTextbox
+[s1b313|1]【空】
+[NONE|0]“正确答案。”\
+fgload 1,"SO10ADM","320",3
+showTextbox
+[s1b314|1]【空】
+[NONE|0]“所以这就是ＬｅＭＵ发生进水意外的主要原因。”\
+[s1b315|1]【空】
+[NONE|0]“由于内部压力降至１气压以下，让原本就脆弱的玻璃
+[NONE|0]面板开始产生了龟裂，因而更造成大量海水涌入的情况
+[NONE|0]……”\
+goto *Ls_1b_00001cd8
+*Ls_1b_00001cd8
+
+showTextbox
+[s1b316|1]【空】
+[NONE|0]“然后……为了将伤害减到最小，雷米将进水部位的闭
+[NONE|0]水闸门自动关闭。”\
+[NONE|1]【少年】
+[NONE|0]“所以我们就被锁在这里了……”\
+fgload 1,"SO01ADM","320",3
+showTextbox
+[s1b317|1]【空】
+[NONE|0]“是的……”\
+hideTextbox
+specialEffect 6,0
+bgload "EV_SA13D","6","2"
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]一口气听了这些有点复杂的事情，脑袋里似乎有些地方
+[NONE|0]要产生龟裂了。\
+[NONE|1]可是，整理一下空的说明之后，我明白了二个要点。\
+[NONE|1]
+[NONE|1]１：馆内突然停电后，虽然发布了警报，但原因不明。\
+[NONE|1]２：由于气压减少，才发生了进水意外。\
+hideTextbox
+specialEffect 6,0
+mov %V_ac, 0
+
+unknown21 16
+bgload "BG17A1","6","2"
+hideTextbox
+mov %V_13, 0
+
+multifgload2 2,1,"00000000","SO01ADM","00000000","KB11ADM",128,512,0
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[s1b318|1]【武】
+[NONE|0]“咦？　等等？”\
+fgload 2,"SO15ADM","128",3
+showTextbox
+[NONE|1]一直沉默地听着的武忽然开口了。\
+showTextbox
+[s1b319|1]【武】
+[NONE|0]“现在这里的气压是１气压吗？”\
+showTextbox
+[s1b320|1]【空】
+[NONE|0]“嗯嗯，是的，怎么了吗……？”\
+[s1b321|1]【武】
+[NONE|0]“那样的话，现在我们耳朵上装的耳机……声音变换机
+[NONE|0]是吧？　不就不必戴了？”\
+fgload 2,"SO17ADM","128",3
+showTextbox
+[s1b322|1]【空】
+[NONE|0]“不，不是……那个……”\
+[s1b323|1]【空】
+[NONE|0]“那个……还是……请你戴着吧……”\
+removeFG "1","3"
+fgload 1,"SA11ADM","512",3
+showTextbox
+[s1b324|1]【沙罗】
+[NONE|0]“为什么？　氦气不是几乎都被排光了吗？”\
+[NONE|1]【优】
+[NONE|0]“…………”\
+[NONE|1]只有优沉默着。\
+[NONE|1]看得出她的眼神不自然地别开了视线。\
+fgload 2,"SO09ADM","128",3
+showTextbox
+[s1b325|1]【空】
+[NONE|0]“总，总之……请不要把它拿下来。”\
+[NONE|1]【少年】
+[NONE|0]“理由呢？”\
+fgload 2,"SO03ADM","128",3
+showTextbox
+[s1b326|1]【空】
+[NONE|0]“理由……理由……”\
+removeFG "1","3"
+fgload 1,"YU01BDM","512",3
+showTextbox
+[s1b327|1]【优】
+[NONE|0]“嗯，既然空这样说，就这样做好了。”\
+[s1b328|1]【优】
+[NONE|0]“反正就算带着它，也没有什么不舒服的感觉啊，这个
+[NONE|0]……就是这个声音变换耳机。”\
+removeFG "2","3"
+fgload 2,"SA07ADM","128",3
+showTextbox
+[s1b329|1]【沙罗】
+[NONE|0]“呜～嗯，的确，我都忘了正带着这个东西呢……”\
+fgload 1,"YU02BDM","512",3
+showTextbox
+[s1b330|1]【优】
+[NONE|0]“就是说吧？”\
+fgload 1,"YU01BDM","512",3
+showTextbox
+[s1b331|1]【优】
+[NONE|0]“与其研究这个……我觉得……应该先讨论‘接下来该
+[NONE|0]怎么办？’的对策吧。”\
+removeFG "2","3"
+fgload 2,"KB01ADM","128",3
+showTextbox
+[s1b332|1]【武】
+[NONE|0]“对策呀……”\
+hideTextbox
+specialEffect 12,0
+stopBGM
+multiremoveFG2 "83","04","00","3"
+delay 30
+mov %V_ab, %V_VAR_c0_31
+
+showTextbox
+[NONE|1]然后……\
+[NONE|1]虽然我们抱着胸、左思右想、绞尽脑汁……就是想不出
+[NONE|0]一个称得上提议的东西。\
+[NONE|1]结果……\
+multifgload2 1,2,"00000000","SA03ADM","00000000","YU03BDM",128,512,3
+showTextbox
+[s1b333|1]【优】
+[NONE|0]“只能等待救援了……”\
+[NONE|1]当然，没有人会提出异议或反对。\
+hideTextbox
+specialEffect 12,0
+mov %V_fa, 52
+
+bgload "BG17A1","6","2"
+multifgload3 "00000000","SA03ADS","00000000","KB07ADS","00000000","YU03BDS",128,512,320,3
+playBGM "2","100"
+mov %V_ab, %V_VAR_c0_38
+
+clock "20","36"
+showTextbox
+[NONE|1]月海离开这个房间，不知不觉已经过了一个小时。\
+[NONE|1]空说‘要去尝试找出突破目前现状的对策’而回到了控
+[NONE|0]制室。\
+[NONE|1]剩下的我们四人，没事可做，也无话可说，只是静静等
+[NONE|0]待外界的连络或救援。\
+[s1b334|1]【沙罗】
+[NONE|0]“月海，还没回来耶……”\
+[NONE|1]沙罗孤零零地自言自语着。\
+[s1b335|1]【沙罗】
+[NONE|0]“让她一个人这样下去，好吗……”\
+fgload 2,"KB08ADS","512",3
+showTextbox
+[s1b336|1]【武】
+[NONE|0]“应该不好吧……”\
+fgload 1,"SA05ADS","128",3
+showTextbox
+[s1b337|1]【沙罗】
+[NONE|0]“喂，少年？　刚刚你不是去追月海吗？”\
+[NONE|1]【少年】
+[NONE|0]“嗯……”\
+[s1b338|1]【沙罗】
+[NONE|0]“当时，她有没有说要去哪里啊？”\
+[NONE|1]【少年】
+[NONE|0]“呜嗯，没有。”\
+fgload 4,"YU05BDS","320",3
+showTextbox
+[s1b339|1]【优】
+[NONE|0]“那就没办法了……”\
+[s1b340|1]【优】
+[NONE|0]“要去找她吗？”\
+[NONE|1]呼应优的这句话，我们站了起来。\
+bgload "BG15B1","0","2"
+showTextbox
+[NONE|1]优首先去的地方竟然是控制室。\
+[NONE|1]【少年】
+[NONE|0]“咦？　为什么去控制室？”\
+fgload 1,"YU01BDM","320",3
+showTextbox
+[s1b341|1]【优】
+[NONE|0]“少年，你不记得了？”\
+fgload 1,"YU05BDM","320",3
+showTextbox
+[s1b342|1]【优】
+[NONE|0]“刚刚集合在控制室的时候，空不是说了？”\
+[s1b343|1]【优】
+[NONE|0]“‘只要确认生物反应的话，就可以什么什么’的啊。
+[NONE|0]”\
+[NONE|1]【少年】
+[NONE|0]“说过吗？”\
+showTextbox
+[s1b344|1]【武】
+[NONE|0]“啊啊，的确说过这件事。”\
+[s1b345|1]【武】
+[NONE|0]“你有注意在听吗？　少年……”\
+[NONE|1]【少年】
+[NONE|0]“是打算要听啊……”\
+showTextbox
+[s1b346|1]【优】
+[NONE|0]“所以只要用那个‘生物反应检查装置’之类的东西。
+[NONE|0]”\
+fgload 1,"YU01BDM","320",3
+showTextbox
+[s1b347|1]【优】
+[NONE|0]“应该就可以知道月海的位置了～”\
+[NONE|1]【少年】
+[NONE|0]“呼～嗯……”\
+[NONE|1]生物反应检查装置──。\
+[NONE|1]不过，一次又一次难懂的名词，又窜进了我的脑袋。\
+[NONE|1]这也是记忆丧失的关系吗？　我所不知道的名词、现象
+[NONE|0]及系统，在这里竟然有这么多。\
+[NONE|1]【少年】
+[NONE|0]“唉……”\
+[NONE|1]不自觉地叹气。\
+removeFG "1","3"
+showTextbox
+[NONE|1]而且，我所无法理解的事情还有一件。\
+[NONE|1]从什么时候开始，大家就叫我‘少年’了。\
+[NONE|1]就这样自然而然地决定好称呼──‘少年’──这就是
+[NONE|0]我现在的名字。\
+[NONE|1]唉，比起‘多酚三郎’算是比较好的了……\
+[NONE|1]不过，还是有点难以理解。\
+[NONE|1]【少年】
+[NONE|0]“唉……”\
+[NONE|1]再一次叹息，边摇着头，我随着大家一起进入了控制室
+[NONE|0]。\
+playSFX "SE00_00",0,100
+bgload "BG16A1","0","2"
+fgload 4,"SO07ADS","320",3
+showTextbox
+[s1b348|1]【空】
+[NONE|0]“哎呀？　怎么了？”\
+[NONE|1]看着我们一个跟着一个进来，空疑惑地歪着头。\
+multifgload2 1,2,"00000000","SA15ADS","00000000","YU11BDS",128,512,3
+showTextbox
+[s1b349|1]【沙罗】
+[NONE|0]“那个？　因为不能把月海就这样丢下……”\
+fgload 2,"YU12BDS","512",3
+showTextbox
+[s1b350|1]【优】
+[NONE|0]“嗯，所以……想要请你帮忙确认生物反应……”\
+fgload 4,"SO02ADS","320",3
+showTextbox
+[s1b351|1]【空】
+[NONE|0]“啊啊，是这样的啊，我知道了。”\
+fgload 4,"SO01ADS","320",3
+showTextbox
+[s1b352|1]【空】
+[NONE|0]“就是要调查小町的位置是吧？”\
+[s1b353|1]【空】
+[NONE|0]“等一下喔……”\
+multiremoveFG2 "87","04","00","3"
+showTextbox
+[NONE|1]荧幕上显示了ＬｅＭＵ的地图。\
+[NONE|1]扩大、缩小、移动、反转……画面眼花撩乱地切换着。\
+[NONE|1]【少年】
+[NONE|0]“嗯，空？”\
+[NONE|1]【少年】
+[NONE|0]“这叫做‘生物反应检查装置’是吧？　用这个真的就
+[NONE|0]能找出月海的位置？”\
+fgload 4,"SO01ADS","320",3
+showTextbox
+[s1b354|1]【空】
+[NONE|0]“嗯嗯……”\
+[s1b355|1]【空】
+[NONE|0]“因为人类是恒温动物，经常保持在３６度左右的温度
+[NONE|0]呀。”\
+[s1b356|1]【空】
+[NONE|0]“用红外线检查这个体温。”\
+[s1b357|1]【空】
+[NONE|0]“所有ＬｅＭＵ内的人数，还有所在位置，都能马上确
+[NONE|0]认……”\
+fgload 4,"SO02ADS","320",3
+showTextbox
+[s1b358|1]【空】
+[NONE|0]“你看，已经知道了。”\
+[NONE|1]索非亚休德克的那一层有一个模糊光点。\
+[s1b359|1]【空】
+[NONE|0]“没错，就是小町了。”\
+[NONE|1]在那下方，德里克休德克的一个房间中，也有好几个光
+[NONE|0]点重叠着。\
+[NONE|1]这里，应该就是指这个控制室。\
+stopBGM
+showTextbox
+[NONE|1]（……啊，咦？？？）\
+[NONE|1]就在这一刻，我发现了某个奇怪现象。\
+[NONE|1]荧幕的一角，浮现着‘生物反应：７’的小小显示。\
+[NONE|1]【少年】
+[NONE|0]“喂，喂喂……？”\
+fgload 2,"YU05BDS","512",3
+showTextbox
+[s1b360|1]【优】
+[NONE|0]“怎么了？”\
+[NONE|1]【少年】
+[NONE|0]“这个数字不是很奇怪吗？”\
+[NONE|1]【少年】
+[NONE|0]“你们看……”\
+[NONE|1]我指着荧幕的一个角落。\
+bgload "IT04E","0","2"
+playBGM "16","100"
+showTextbox
+[NONE|1]‘生物反应：７’\
+[s1b361|1]【优】
+[NONE|0]“七！？”\
+[s1b362|1]【沙罗】
+[NONE|0]“七！？”\
+[s1b363|1]【武】
+[NONE|0]“七！？”\
+[s1b364|1]【空】
+[NONE|0]“怎，怎么会……”\
+[NONE|1]被关在ＬｅＭＵ里的优、沙罗、空、月海、武……还有
+[NONE|0]我应该是‘一共六人’才对。\
+[NONE|1]可是，这个主控电脑‘雷米’却显示生物反应数字是
+[NONE|0]‘７’。\
+[s1b365|1]【空】
+[NONE|0]“这，这个，到底是……”\
+[NONE|1]可是，随后……\
+bgload "IT04C","0","2"
+showTextbox
+[NONE|1]‘生物反应：５’
+overlayImage "00000000","IT04E",0,3
+showTextbox
+[NONE|1]‘生物反应：７’
+overlayImage "00000000","IT04D",0,3
+showTextbox
+[NONE|1]‘生物反应：６’\
+bgload "IT04C","0","2"
+showTextbox
+[NONE|1]５？
+overlayImage "00000000","IT04E",0,3
+showTextbox
+[NONE|1]７？
+overlayImage "00000000","IT04D",0,3
+showTextbox
+[NONE|1]６？
+overlayImage "00000000","IT04C",0,3
+showTextbox
+[NONE|1]５？
+overlayImage "00000000","IT04E",0,3
+showTextbox
+[NONE|1]７？
+overlayImage "00000000","IT04D",0,3
+showTextbox
+[NONE|1]６……\
+showTextbox
+[NONE|1]数值在数秒之后就会变动一次。\
+bgload "IT04E","0","3"
+showTextbox
+[NONE|1]以‘６’为基准，上下增减‘１’……\
+[s1b366|1]【空】
+[NONE|0]“为什么，为什么会这样……”\
+[NONE|1]空露出少有的慌乱模样，急忙开始操作着控制仪。\
+bgload "IT04D","0","3"
+showTextbox
+[NONE|1]可是……这个数值变动却一点也没有停止的迹象。\
+[NONE|1]我看着地图上的光点。\
+bgload "IT04C","0","3"
+showTextbox
+[NONE|1]生物反应的数值即使改变，光点却没有重新出现或消失
+[NONE|0]。\
+bgload "BG16A1","0","2"
+multifgload2 1,2,"00000000","SA05ADM","00000000","YU05BDM",128,512,3
+showTextbox
+[s1b367|1]【沙罗】
+[NONE|0]“如果这个显示真的是‘７’的话……”\
+[NONE|1]【少年】
+[NONE|0]“除了我们，就表示还有其他来不及逃出去的人！”\
+[s1b368|1]【优】
+[NONE|0]“嗯，如果７是正确数值的话……”\
+removeFG "1","3"
+fgload 1,"KB08ADM","128",3
+showTextbox
+[s1b369|1]【武】
+[NONE|0]“嗯，等一下吧，大家……”\
+[s1b370|1]【武】
+[NONE|0]“冷静点……”\
+bgload "IT04E","0","2"
+showTextbox
+[NONE|1]一段时间，我们都专注在变动的数字上。\
+[NONE|1]终于……\
+bgload "IT04E","0","3"
+bgload "IT04C","0","3"
+delay 10
+bgload "IT04D","0","3"
+bgload "IT04C","0","3"
+delay 30
+bgload "IT04D","0","2"
+showTextbox
+[NONE|1]数字显示着‘６’，然后就完全停了下来。\
+[NONE|1]‘生物反应：６’\
+bgload "BG16A1","0","2"
+multifgload2 1,2,"00000000","SA05ADM","00000000","YU05BDM",128,512,3
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“啊，咦？　……停在‘６’了。”\
+[s1b371|1]【优】
+[NONE|0]“坏掉了吗？　常会有错误的侦测动作吗？”\
+removeFG "1","3"
+fgload 1,"SO03ADM","128",3
+showTextbox
+[s1b372|1]【空】
+[NONE|0]“不，没有……应该不可能的……”\
+removeFG "2","3"
+fgload 2,"KB01ADM","512",3
+showTextbox
+[s1b373|1]【武】
+[NONE|0]“不过，结果是停在‘６’……这是正确答案吧？　
+[NONE|0]应该没错。”\
+removeFG "1","3"
+fgload 1,"SA08ADM","128",3
+showTextbox
+[s1b374|1]【沙罗】
+[NONE|0]“说的也是……”\
+fgload 1,"SA01ADM","128",3
+showTextbox
+[s1b375|1]【沙罗】
+[NONE|0]“仔细想想，应该不可能会有其他的人了……”\
+[NONE|1]【少年】
+[NONE|0]“不过……”\
+fgload 1,"SA05ADM","128",3
+showTextbox
+[s1b376|1]【沙罗】
+[NONE|0]“不过什么，少年？　我们不是在ＬｅＭＵ里面搜查过
+[NONE|0]了吗？”\
+[s1b377|1]【沙罗】
+[NONE|0]“根本没遇到任何人。”\
+[NONE|1]【少年】
+[NONE|0]“是没错……”\
+*Ls_1b_000023ab
+
+if  %V_ba != 1     goto *Ls_1b_000023d2
+
+scriptLocationId 58
+*Ls_1b_000023c0
+mov %V_b3, 0
+
+goto *Lsc1b
+*Ls_1b_000023d2
+
+fgload 2,"KB08ADM","512",3
+showTextbox
+[s1b378|1]【武】
+[NONE|0]“嗯，不管是哪一个，只要在馆内走一遍就知道了吧？
+[NONE|0]”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+fgload 2,"KB05ADM","512",3
+showTextbox
+[s1b379|1]【武】
+[NONE|0]“现在重要的是先猎捕月海啊！”\
+removeFG "1","3"
+fgload 1,"YU05BDM","128",3
+showTextbox
+[s1b380|1]【优】
+[NONE|0]“猎捕？　是保护吧？”\
+fgload 2,"KB08ADM","512",3
+showTextbox
+[s1b381|1]【武】
+[NONE|0]“因为很危险所以隔离其他对象，才叫做保护。”\
+[s1b382|1]【武】
+[NONE|0]“因为很危险所以隔离事物本身，就叫做猎捕。”\
+*Ls_1b_00002436
+
+removeFG "1","3"
+fgload 1,"SA08ADM","128",3
+showTextbox
+[s1b383|1]【沙罗】
+[NONE|0]“月海……有这么危险吗？”\
+fgload 2,"KB01ADM","512",3
+showTextbox
+[s1b384|1]【武】
+[NONE|0]“啊，那是因为沙罗跟优还没有跟那个猛兽说过话吧？
+[NONE|0]”\
+fgload 1,"SA03ADM","128",3
+showTextbox
+[s1b385|1]【沙罗】
+[NONE|0]“呜，嗯……”\
+[s1b386|1]【优】
+[NONE|0]“嗯……”\
+fgload 2,"KB02ADM","512",3
+showTextbox
+[s1b387|1]【武】
+[NONE|0]“好，那么，猎捕月海作战开始了。”\
+[s1b388|1]【武】
+[NONE|0]“准备好了吗？”\
+hideTextbox
+specialEffect 12,0
+stopBGM
+bgload "BG29A1","6","2"
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]我们爬上紧急阶梯，朝着月海所在的区域前进。\
+[NONE|1]只有空留在控制室，努力寻找逃出的方法、确认通讯方
+[NONE|0]式、重新检查馆内、以及修复其他功能不全的系统。\
+hideTextbox
+mov %V_b3, 0
+
+goto *Ls_1c
+

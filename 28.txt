@@ -1,0 +1,1190 @@
+*Lss6a
+*Lss6a_0000001e
+
+unknown46 0
+mov %V_fa, 98
+
+mov %V_b0, 0
+
+mov %V_b1, 0
+
+mov %V_b2, 0
+
+removeBG
+showTextbox
+[NONE|1]不知从何处传来歌声……\
+[NONE|1]温柔，却带着寂寞的歌声。\
+hideTextbox
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]
+[s6a000|1]　　　　　长弓背中扛……明月之妖精……@
+[s6a001|1]　　　　　　梦中徙步来……长夜无可待……\
+[s6a002|1]　　　　　　今宵伴君行……月夜观囃子……@
+[s6a009|1]　　　　　　待君早日还……长夜无可待……\
+[s6a004|1]　　　　　　我欲长睡之……为我阖上眼……@
+[s6a005|1]　　　　　　我欲长睡之……母亲怀抱中……\
+hideTextbox
+showTextbox
+[NONE|1]
+[s6a006|1]　　　　　　手将真棹揭……彻水之妖精……@
+[s6a007|1]　　　　　　梦中徙步来……长夜无可待……\
+[s6a008|1]　　　　　　今宵伴君行……子夜戏迷藏……@
+[s6a009|1]　　　　　待君早日还……长夜无可待……\
+[s6a010|1]　　　　　我欲长睡之……涟漪轻摇曳……@
+[s6a011|1]　　　　　　我欲长睡之……海之怀抱中……\
+hideTextbox
+mov %V_b0, 5
+
+mov %V_b1, 6
+
+mov %V_b2, 6
+
+chapterCutin "00000000","cal_506"
+hideTextbox
+specialEffect 6,0
+bgload "BG09A1","6","2"
+hideTextbox
+mov %V_13, 0
+
+unknown20 44
+mov %V_ab, %V_VAR_c0_38
+
+clock "10","26"
+showTextbox
+[NONE|1]莫名的熟悉感涌上，我醒了过来。\
+[NONE|1]医疗室的狭小病床。\
+[NONE|1]看着白色天花板，出神地呆望着。\
+[NONE|1]记忆慢慢复原。\
+[NONE|1]宇宙鲸鱼的浸水、沙罗的拯救。\
+[NONE|1]以及沙罗的苏醒……\
+[NONE|1]之后，原本就在发烧的我……随即不支倒地。\
+[NONE|1]我看着隔壁的病床。\
+[NONE|1]【少年】
+[NONE|0]“沙罗……”\
+[NONE|1]隔壁的床上躺着沙罗。\
+[NONE|1]呼吸规律，脸颊也恢复了血气。\
+[NONE|1]些许安心，感到内心一股平静。\
+[NONE|1]我听到远方一个细微的声音。\
+[NONE|1]实在太远，几乎只能听到吱喳的声音，不过……应该是
+[NONE|0]月海与武。\
+[NONE|1]两人的声音细细的。\
+[NONE|1]实在太细了，几乎听不到内容。\
+[NONE|1]只听到什么ＨＩＭＭＥＬ，还是ＨＡＭＥＬＮ的陌生单
+[NONE|0]字，随后……又传来一些声响。\
+[NONE|1]不久之后，连那个声音都听不到了。\
+[NONE|1]习惯动作地，我的左手小指触碰着大拇指。\
+[NONE|1]奇妙的异我感。\
+[NONE|1]我举起左手，看着大拇指。\
+[NONE|1]哪里有些奇怪，哪里有些不同。\
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+playBGM "16","100"
+showTextbox
+[NONE|1]出神呆滞的视界，一下子变得鲜明。\
+[NONE|1]伤痕不见了！\
+[NONE|1]为什么？　怎么了？\
+[NONE|1]我急忙起身。\
+[NONE|1]再看一次左手。\
+[NONE|1]伤痕还是不见了。\
+[NONE|1]原本这里的确有伤痕。\
+[NONE|1]在打开困住沙罗的密闭电梯时，我就发现这个伤痕的存
+[NONE|0]在。\
+[NONE|1]还是，那其实是幻想？\
+[NONE|1]不……不可能，这里的确有伤痕。\
+[NONE|1]可是为什么……为什么伤痕会消失？\
+[NONE|1]我的心里，有种被挖了一个大洞的失落感。\
+[NONE|1]好像失去了非常重要的东西，可是……却不知道那是什
+[NONE|0]么。\
+[NONE|1]就是这种感觉。\
+[NONE|1]【少年】
+[NONE|0]“空！　空！”\
+[NONE|1]我忘了沙罗还在睡，大声呼叫着空。\
+[s6a012|1]【空】
+[NONE|0]“是的，少年……什么事？”\
+[NONE|1]只有空的声音回响着。\
+[NONE|1]【少年】
+[NONE|0]“空，你……对我做了什么？”\
+[s6a013|1]【空】
+[NONE|0]“什么……你指什么？”\
+[NONE|1]【少年】
+[NONE|0]“别装蒜！　我的左手……这里原本有伤痕的！”\
+[NONE|1]【少年】
+[NONE|0]“但是现在，伤痕……却不见了！”\
+fgload 1,"SO01ADM","320",3
+showTextbox
+[s6a014|1]【空】
+[NONE|0]“啊啊，这件事啊……”\
+[NONE|1]空，在房间入口处现身。\
+[NONE|1]【少年】
+[NONE|0]“就是这件事！”\
+showTextbox
+[s6a015|1]【空】
+[NONE|0]“在你睡着的时候摘除了”\
+[NONE|1]【少年】
+[NONE|0]“摘除？　什么东西？”\
+[s6a016|1]【空】
+[NONE|0]“请来这里”\
+removeFG "1","3"
+showTextbox
+[NONE|1]随着空的说法，我接近诊察台。\
+fgload 1,"SO01ADL","320",3
+showTextbox
+[s6a017|1]【空】
+[NONE|0]“就是这个”\
+[NONE|1]空指着诊察台的机械臂所夹取的某个碎片。\
+[s6a018|1]【空】
+[NONE|0]“因为埋着这个，所以将它摘除了。”\
+[NONE|1]【少年】
+[NONE|0]“为什么……为什么这么擅自主张！”\
+[NONE|1]【少年】
+[NONE|0]“也许那是解开我过去的一个重要线索！”\
+[NONE|1]我不经意对空愤怒着。\
+showTextbox
+[s6a019|1]【空】
+[NONE|0]“是的，你说的对……”\
+fgload 1,"SO03ADL","320",3
+showTextbox
+[s6a020|1]【空】
+[NONE|0]“可是身体中存着异物，并不是一件好事。”\
+fgload 1,"SO10ADL","320",3
+showTextbox
+[s6a021|1]【空】
+[NONE|0]“而且少年……”\
+[s6a022|1]【空】
+[NONE|0]“你记得这个碎片吗？”\
+[NONE|1]【少年】
+[NONE|0]“不记得！　怎么可能记得！”\
+[NONE|1]可是，空为什么这样问？\
+[s6a023|1]【空】
+[NONE|0]“这个碎片里纪录了某个影像。”\
+[NONE|1]空冷静地说着。\
+[NONE|1]【少年】
+[NONE|0]“影像？”\
+[s6a024|1]【空】
+[NONE|0]“要看吗？”\
+[NONE|1]我用指尖捏着原本埋在指头中的碎片。\
+[NONE|1]【少年】
+[NONE|0]“这、这个是……！？”\
+bgload "EV_ET02C","0","2"
+showTextbox
+[NONE|1]那是和沙罗的３Ｄ影像坠子里一模一样的影像。\
+[NONE|1]也就是……某个男人的影像。\
+[s6a025|1]【空】
+[NONE|0]“看得到吗？”\
+[NONE|1]【少年】
+[NONE|0]“看得到……”\
+[s6a026|1]【空】
+[NONE|0]“其实这个３Ｄ影像，必须在特定波长的光线照射下才
+[NONE|0]能够看见。”\
+[s6a027|1]【空】
+[NONE|0]“现在我使用雷米的系统在这个碎片上照射光线。”\
+[s6a028|1]【空】
+[NONE|0]“这个３Ｄ影像，虽然不能得知其制造年代，不过……
+[NONE|0]可以确定是一个旧型的设计。”\
+[s6a029|1]【空】
+[NONE|0]“跟目前在ＬｅＭＵ商店中贩卖的商品，基本原理并不
+[NONE|0]同。”\
+[s6a030|1]【空】
+[NONE|0]“以往的３Ｄ影像，是用物体光与参照光……也就是利
+[NONE|0]用这两种光源纪录影像。”\
+[s6a031|1]【空】
+[NONE|0]“简单来说，物体光－就是照射物品的反射光线。”\
+[s6a032|1]【空】
+[NONE|0]“参照光－就是干涉物体光的光线，你明白吗？”\
+[NONE|1]连我思考的余地都没有，空继续说着。\
+[s6a033|1]【空】
+[NONE|0]“所以，这里有一件重要的事……”\
+[s6a034|1]【空】
+[NONE|0]“为了重现这种设计的３Ｄ影像……”\
+[s6a035|1]【空】
+[NONE|0]“必须让记录当时的参照光，用相同波长的光线来照射
+[NONE|0]在上面。”\
+[s6a036|1]【空】
+[NONE|0]“也就是说……归纳出一个结论。”\
+[s6a037|1]【空】
+[NONE|0]“这个３Ｄ影像碎片中的影像，是使用某种特定波长的
+[NONE|0]光源所拍摄下来的。”\
+[s6a038|1]【空】
+[NONE|0]“为了看这个影像，就必须用相同波长的光源照射。”\
+[s6a039|1]【空】
+[NONE|0]“在一般萤光灯的光线下，是无法看见的。”\
+[s6a040|1]【空】
+[NONE|0]“它所需要的光源，是类似日光或打火机的火焰之类…
+[NONE|0]………高温发热的光源。”\
+[s6a041|1]【空】
+[NONE|0]“而且……”\
+bgload "BG09A1","0","2"
+showTextbox
+[NONE|1]空继续说明。\
+[NONE|1]此一特定波长为８５０ｍｍ左右的红外线。\
+[NONE|1]红外线，普通人是看不见的。\
+[NONE|1]可以看到红外线，就可以在几乎没有光源的黑暗中看到
+[NONE|0]东西。\
+[NONE|1]只是……有个条件，也就是物体必须散发出某种程度的
+[NONE|0]热源。\
+[NONE|1]相反的说，发热的东西就会释放红外线。\
+[NONE|1]而且……只要看到红外线，就能根据其颜色的浓淡，不
+[NONE|0]必接触物体也能知道温度……\
+fgload 1,"SO10ADL","320",3
+showTextbox
+[s6a042|1]【空】
+[NONE|0]“如果看不见红外线，就无法看到这个映像。”\
+[s6a043|1]【空】
+[NONE|0]“看得见这个映像，也就表示少年看得见红外线……就
+[NONE|0]是这个道理。”\
+[NONE|1]【少年】
+[NONE|0]“可是……沙罗她？　这就表示沙罗也是？”\
+fgload 1,"SO01ADL","320",3
+showTextbox
+[s6a044|1]【空】
+[NONE|0]“是的，也就是说……你们两个都是能看见红外线的特
+[NONE|0]殊视力者。”\
+[NONE|1]这么说来，原来……武跟优看不到坠子的影像。\
+[NONE|1]【少年】
+[NONE|0]“可是……为什么这个碎片会在我的指头里……？”\
+[NONE|1]我颤抖地说着。\
+[NONE|1]【少年】
+[NONE|0]“跟沙罗坠子相同的影像……”\
+[NONE|1]【少年】
+[NONE|0]“所以那个坠子的缺角部份，就是在我的大拇指里？”\
+fgload 1,"SO05ADL","320",3
+showTextbox
+[s6a045|1]【空】
+[NONE|0]“推论出来的确是这样”\
+[s6a046|1]【空】
+[NONE|0]“镜面的断面，跟这个碎片的形状的确一致。”\
+[NONE|1]【少年】
+[NONE|0]“可是……为什么……”\
+fgload 1,"SO01ADL","320",3
+showTextbox
+[s6a047|1]【空】
+[NONE|0]“那是因为……少年……”\
+showTextbox
+[s6a048|1]【空】
+[NONE|0]“你跟松永是兄妹”\
+[NONE|1]【少年】
+[NONE|0]“这怎么可能……”\
+showTextbox
+[s6a049|1]【空】
+[NONE|0]“你们两个人都拥有红外线视力，这也是原因。”\
+[s6a050|1]【空】
+[NONE|0]“恐怕是因为遗传吧……”\
+[NONE|1]【少年】
+[NONE|0]“不对”\
+[NONE|1]【少年】
+[NONE|0]“不对……不对……不对……”\
+fgload 1,"SO07ADL","320",3
+showTextbox
+[s6a051|1]【空】
+[NONE|0]“少年，为什么你不觉得高兴呢？”\
+fgload 1,"SO09ADL","320",3
+showTextbox
+[s6a052|1]【空】
+[NONE|0]“你找到了你的至亲啊？”\
+[s6a053|1]【空】
+[NONE|0]“为了找回记忆，这是一个宝贵的线索。”\
+[NONE|1]【少年】
+[NONE|0]“不对……不对……”\
+[NONE|1]我抱着头，呢喃着。\
+fgload 1,"SO10ADL","320",3
+showTextbox
+[s6a054|1]【空】
+[NONE|0]“不管怎么样，这是事实……请接受吧。”\
+[s6a055|1]【空】
+[NONE|0]“在你们熟睡时，我做了ＤＮＡ鉴定。”\
+[s6a056|1]【空】
+[NONE|0]“资料显示……”\
+[s6a057|1]【空】
+[NONE|0]“你们两人是兄妹的机率……几乎是１００％。”\
+[NONE|1]【少年】
+[NONE|0]“不对不对不对不对不对不对不对不对不对不对！”\
+mov %V_41, 7
+
+mov %V_42, 8
+
+mov %V_50, 0
+
+unknown20 45
+showTextbox
+[NONE|1]突然之间，一直想知道却无法得知的记忆被揭开了。\
+[NONE|1]一直被某个东西压抑，无法解开的回忆，奔流般地在脑
+[NONE|0]中流窜。\
+[NONE|1]【少年】
+[NONE|0]“呜哇～～～～～”\
+[NONE|1]我一直以来的记忆，无关时间的排序，切割的画面一幕
+[NONE|0]幕重现。\
+[NONE|1]接连不断、毫无顺序地浮现又消失。\
+[NONE|1]我的脑袋，耐不住这记忆的奔驰。\
+hideTextbox
+specialEffect 24,0
+stopBGM
+unknown21 13
+removeBG
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]然后黑暗中……\
+[NONE|1]不知从哪里，又听到了子守歌……\
+hideTextbox
+delay 25
+delay 68
+delay 65
+delay 56
+delay 12
+hideTextbox
+specialEffect 18,1
+mov %V_fa, 99
+
+removeBG
+mov %V_ab, %V_VAR_c0_46
+
+showTextbox
+[NONE|1]我忽然清醒。\
+[NONE|1]机构里硬梆梆的床铺。\
+hideTextbox
+showTextbox
+[NONE|1]听到了哭泣声。\
+bgload "EV_SA14A","0","2"
+playBGM "22","97"
+showTextbox
+[NONE|1]广场的正中央，一个哭泣少女被欺负她的孩子们围绕着
+[NONE|0]。\
+[NONE|1]是沙罗。\
+[NONE|1]撒野的孩子们，用小孩特有的残酷方式欺负、嘲笑着沙
+[NONE|0]罗。\
+[NONE|1]我走向沙罗。\
+hideTextbox
+showTextbox
+[NONE|1]孩子们像一群小蜘蛛一样，一哄而散逃开。\
+[NONE|1]宝贝的坠子破裂了，沙罗说着。\
+[NONE|1]沙罗的手中紧握着坠子。\
+[NONE|1]我蹲着想要寻找镜子的碎片。\
+hideTextbox
+unknown20 5
+showTextbox
+[NONE|1]突然的撞击。\
+[NONE|1]我往前扑倒。\
+[NONE|1]碎片随着一股刺痛，刺入了指头里。\
+bgload "EV_SA14B","0","1"
+showTextbox
+[NONE|1]那些总是欺负沙罗的孩子们，围绕着我跟沙罗。\
+[NONE|1]孩子们的嘲笑声响彻天边。\
+[NONE|1]【少年】
+[NONE|0]“你们！　还敢欺负沙罗！”\
+[NONE|1]忘我地，我冲进那些孩子里。\
+hideTextbox
+specialEffect 18,0
+delay 30
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]我凄惨无比地仰躺在广场上。\
+[NONE|1]那些撒野的孩子们，也许是欺负我欺负的够了吧，所以
+[NONE|0]都走掉了。\
+[NONE|1]沙罗走近我，伸出了手。\
+[s6a062|1]【沙罗】
+[NONE|0]“哥哥好强喔”\
+[NONE|1]说着微笑了。\
+hideTextbox
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]
+[NONE|1]　　　　　　即使我输了。\
+hideTextbox
+hideTextbox
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]指头不断流出血来。\
+[NONE|1]我也不想让沙罗担心，我逞强地说着‘这没什么大不了
+[NONE|0]’。\
+[NONE|1]我什么都没跟老师说。\
+[NONE|1]也没去医院，我只是沉默地忍耐着伤口的痛楚。\
+[NONE|1]跟谁说了，就代表输了，我是这么认为……\
+[NONE|1]就这样，那个伤口自行愈合了……\
+[NONE|1]有一天，一个穿着套装，看似温柔的女人来了。\
+[NONE|1]‘只要来这里，就再也不必觉得丢脸，再也不会被人欺
+[NONE|0]负了。’\
+[NONE|1]这么说着，女人伸出手来。\
+[NONE|1]她发现到我们不为人知的特质。\
+[NONE|1]一开始，我们并不觉得这是异常，却被大家觉得恶心。\
+[NONE|1]那个女的说想要研究这个不可思议的力量。\
+[NONE|1]我接受了这个建议。\
+[NONE|1]老师们沉默地送走在机构里不受欢迎的我们。\
+[NONE|1]我彻底被欺骗了。\
+hideTextbox
+specialEffect 0,0
+bgload "BG37A1","6","2"
+mov %V_ab, %V_VAR_c0_31
+
+showTextbox
+[NONE|1]我们根本就是被关在病房里。\
+[NONE|1]每天每天，往返于那个房间跟研究所。\
+[NONE|1]唯一的窗子只有月光射进。\
+[NONE|1]我记得的，只有每天来往的通道上，门口印着的拉比利
+[NONE|0]标志。\
+[NONE|1]研究所职员的白衣。\
+[NONE|1]还有隔壁房间传来的沙罗哭声……\
+hideTextbox
+specialEffect 12,0
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]那一天，某些气氛跟以往不同。\
+[NONE|1]我们走出了病房，被带往不同于平常的研究室场所。\
+[NONE|1]陌生的人们，拉着我的手向外走。\
+hideTextbox
+specialEffect 0,0
+specialEffectImage "00000000","EV_SA14C",6,2,90,67,620,472
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]只有沙罗被留在原地。\
+[s6a063|1]【沙罗】
+[NONE|0]“哥哥！”\
+[NONE|1]沙罗的叫唤声。\
+[NONE|1]我挥开大人们的手，想要跑回沙罗身边。\
+[NONE|1]研究员阻挡着我的去路。\
+[NONE|1]【少年】
+[NONE|0]“沙罗！”\
+[s6a064|1]【沙罗】
+[NONE|0]“哥哥～”\
+specialEffectImage "00000000","EV_SA14C",0,2,72,58,680,510
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“沙罗等着！”\
+[NONE|1]【少年】
+[NONE|0]“我一定，一定会来接你！”\
+[NONE|1]【少年】
+[NONE|0]“乖乖等着！”\
+specialEffectImage "00000000","EV_SA14C",0,2,17,16,740,555
+showTextbox
+[s6a065|1]【沙罗】
+[NONE|0]“嗯……我会乖乖等的……”\
+[s6a066|1]【沙罗】
+[NONE|0]“一定、一定会来吧？　会来接我吗？”\
+[s6a067|1]【沙罗】
+[NONE|0]“我会一直……一直等着！”\
+hideTextbox
+bgload "EV_SA14C","0","2"
+specialEffect 18,0
+removeBG
+hideTextbox
+mov %V_13, 1
+
+mov %V_ab, %V_VAR_c0_18
+
+showTextbox
+[NONE|1]
+[NONE|1]　　　　　　　　　　　约好了。\
+hideTextbox
+hideTextbox
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]一开始，我被收容在另一个机构中，不久后被一个家庭
+[NONE|0]收养了。\
+[NONE|1]叔叔和阿姨都是很好的人。\
+[NONE|1]只要我不捣蛋的话，就会对我好。\
+[NONE|1]只是……那两个人也是拉比利的人。\
+[NONE|1]我在软禁般的监视下，过着根本无法探视沙罗的生活。\
+[NONE|1]虽然总是好几次想要知道一些线索。\
+[NONE|1]可是连研究所在哪里都不知道的我，被某些刻意的介入
+[NONE|0]阻挡着，根本无法得知更多事情。\
+[NONE|1]单凭我的力量，根本救不出沙罗。\
+[NONE|1]可是……不管怎么说……结果都是一样。\
+[NONE|1]我丢下了沙罗。\
+[NONE|1]在那个只有冰冷月光的病房里。\
+hideTextbox
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]
+[NONE|1]　　我没办法……遵守那个承诺……\
+hideTextbox
+hideTextbox
+specialEffect 0,0
+bgload "EV_SA14C","6","2"
+hideTextbox
+mov %V_13, 0
+
+unknown20 44
+mov %V_ab, %V_VAR_c0_38
+
+showTextbox
+[NONE|1]现在，沙罗就在门的那一头……\
+[NONE|1]一定在那个令人窒息的病房里等着我。\
+[NONE|1]一直相信着我。\
+[NONE|1]就像当时约好的那样。\
+[NONE|1]压倒性的罪恶感。\
+[NONE|1]彻底的绝望。\
+[NONE|1]还有失落。\
+hideTextbox
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]
+[NONE|1]　　　　　　　什么都做不到！\
+[NONE|1]　　　　　　我什么都做不到！\
+[NONE|1]　　　　　　我到底做了什么！\
+hideTextbox
+hideTextbox
+specialEffect 24,1
+mov %V_ac, 0
+
+unknown21 16
+stopBGM
+delay 60
+bgload "BG09A1","6","2"
+hideTextbox
+mov %V_13, 0
+
+playBGM "13","100"
+mov %V_ab, %V_VAR_c0_38
+
+clock "12","4"
+showTextbox
+[NONE|1]我在医疗室的床铺上醒过来。\
+[NONE|1]我不知道是谁送我过来的，还是我无意识地睡着了。\
+[NONE|1]下意识地，看了看时间。\
+[NONE|1]其实……并没有经过多久的时间。\
+[NONE|1]我睡在这个床上，直盯着天花板，思考着之前的事情。\
+[NONE|1]之前，我会在发电室前发现里面的高温，也是因为红外
+[NONE|0]线视力的关系。\
+[NONE|1]将小暗房里的发电设备看成是月光，也是因为这个关系
+[NONE|0]。\
+[NONE|1]发电设备的热，在那样的黑暗中被误认为是光源了。\
+[NONE|1]跟沙罗相逢的时候，像是自家人的熟悉感，现在想来…
+[NONE|0]………也是理所当然。\
+[NONE|1]因为我们是兄妹啊。\
+[NONE|1]在那失去记忆的心灵深处，一定是发现了。\
+[NONE|1]所以……我看到沙罗的时候才会那样……\
+[NONE|1]沙罗在黑暗中握紧我的拇指，又是为了什么？\
+[NONE|1]那个时候……呢喃着子守歌歌词又是为了什么？\
+hideTextbox
+specialEffect 12,1
+bgload "BG10A1","6","2"
+fgload 1,"SA05ADL","320",0
+unknown20 32
+mov %V_ab, %V_VAR_c0_19
+
+mov %V_ac, 0
+
+unknown21 13
+showTextbox
+[s4a079|1]【沙罗】
+[NONE|0]“真的？　不知道吗？”\
+fgload 1,"SA03ADL","320",3
+showTextbox
+[s4a080|1]【沙罗】
+[NONE|0]“是喔……是吗……”\
+hideTextbox
+unknown20 32
+specialEffect 12,1
+mov %V_ac, 0
+
+unknown21 13
+bgload "BG09A1","6","2"
+mov %V_ab, %V_VAR_c0_31
+
+showTextbox
+[NONE|1]沙罗发现了吗？\
+[NONE|1]我们其实是兄妹的事情……\
+[NONE|1]所以……\
+[NONE|1]我起身。\
+[NONE|1]隔壁病床上，沙罗还在睡。\
+[NONE|1]站在沙罗的枕边，看着她的脸。\
+[NONE|1]虽然记忆多少还是混乱的，但是却不会看错那张脸。\
+[NONE|1]是沙罗。\
+[NONE|1]小小的沙罗，成长到１６岁的模样。\
+[NONE|1]不会认错的。\
+[NONE|1]她是沙罗。\
+[NONE|1]当时说要去接她，却没有履行那个承诺，我的妹妹……\
+[NONE|1]罪恶感涌上，我再也看不下去沙罗的脸。\
+[NONE|1]站在那里的感觉很痛苦。\
+[NONE|1]该对沙罗说些什么才好。\
+[NONE|1]对沙罗能说些什么藉口？\
+[NONE|1]不管说什么……都只是虚无。\
+[NONE|1]在沙罗恢复意识前出去吧。\
+[NONE|1]我走向出口。\
+stopBGM
+showTextbox
+[s6a068|1]【沙罗】
+[NONE|0]“哥……哥？”\
+[NONE|1]这个声音让我霎时停下脚步。\
+[NONE|1]没有回头的勇气。\
+[s6a069|1]【沙罗】
+[NONE|0]“哥……哥哥，怎么了？”\
+[NONE|1]沙罗重复这句话。\
+[NONE|1]这一字一句，像是刺进我的心脏。\
+[s6a070|1]【沙罗】
+[NONE|0]“哥哥？”\
+playBGM "15","97"
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“不是！”\
+[NONE|1]我不经思考地说出口。\
+[s6a071|1]【沙罗】
+[NONE|0]“咦……？”\
+[NONE|1]【少年】
+[NONE|0]“我……不是。”\
+[s6a072|1]【沙罗】
+[NONE|0]“不、不会的……”\
+[s6a073|1]【沙罗】
+[NONE|0]“是哥哥吧？”\
+[NONE|1]【少年】
+[NONE|0]“不是！”\
+[NONE|1]感觉到背后的沙罗正从床上起来，我准备离开。\
+[s6a074|1]【沙罗】
+[NONE|0]“等等！”\
+[s6a075|1]【沙罗】
+[NONE|0]“等等……哥哥！”\
+[NONE|1]那个声音，就像是小时候的沙罗，我根本无法移动。\
+[s6a076|1]【沙罗】
+[NONE|0]“哥哥……是吧……嗯……是吧？”\
+[NONE|1]【少年】
+[NONE|0]“…………”\
+[NONE|1]沙罗抓着我的肩膀。\
+[s6a077|1]【沙罗】
+[NONE|0]“嗯……为什么沉默？　看着我！”\
+fgload 1,"SA03ADL","320",3
+showTextbox
+[NONE|1]沙罗抓着我的肩膀，走到我面前。\
+[NONE|1]可是我无法直视沙罗的脸，所以别过了眼神。\
+[s6a078|1]【沙罗】
+[NONE|0]“嗯……哥哥，为什么不看着我？”\
+[s6a079|1]【沙罗】
+[NONE|0]“嗯……看着我啊。”\
+[s6a080|1]【沙罗】
+[NONE|0]“是我啊！”\
+[NONE|1]【少年】
+[NONE|0]“不是不是不是！”\
+[NONE|1]挥开沙罗的手。\
+removeFG "1","3"
+showTextbox
+[s6a081|1]【沙罗】
+[NONE|0]“呀！”\
+[NONE|1]【少年】
+[NONE|0]“沙罗！”\
+fgload 1,"SA03ADL","320",3
+showTextbox
+[NONE|1]我下意识地抱住摔倒的沙罗。\
+[NONE|1]直视了沙罗的眼睛。\
+fgload 1,"SA10ADL","320",3
+showTextbox
+[s6a082|1]【沙罗】
+[NONE|0]“为什么？　为什么否认？”\
+[s6a083|1]【沙罗】
+[NONE|0]“是哥哥吧？　哥哥吧？”\
+[NONE|1]【少年】
+[NONE|0]“不是、不是，我……”\
+[s6a084|1]【沙罗】
+[NONE|0]“为什么？　没有错！”\
+[s6a085|1]【沙罗】
+[NONE|0]“哥哥……就是哥哥！”\
+[s6a086|1]【沙罗】
+[NONE|0]“我在等？　一直、一直都在等。”\
+[s6a087|1]【沙罗】
+[NONE|0]“沙罗……一直都在等哥哥！”\
+[s6a088|1]【沙罗】
+[NONE|0]“哥哥……”\
+removeFG "1","3"
+showTextbox
+[NONE|1]哭出来的沙罗，我没有话能对她说。\
+[NONE|1]我离开那里。\
+[NONE|1]是的，我逃了。\
+[NONE|1]逃离沙罗，逃离过去，逃走了……\
+hideTextbox
+specialEffect 12,0
+stopBGM
+delay 90
+bgload "BG14A1","6","2"
+playBGM "16","100"
+mov %V_ab, %V_VAR_c0_38
+
+showTextbox
+[NONE|1]我瑟缩在仓库尽头的房间。\
+[NONE|1]逃离沙罗，逃离过去，除了逃……我什么都不能做。\
+[NONE|1]我是胆小鬼。\
+[NONE|1]苏醒的记忆打击着我，却从好不容易再见的妹妹身边逃
+[NONE|0]开……\
+[NONE|1]无法接受自己的软弱。\
+[NONE|1]承认自己做不到的事情是如此可怕，我否定了我自己。\
+[NONE|1]我……我是一个无药可救的胆小鬼……\
+[NONE|1]早知结果是这样，要是没有恢复记忆，那就好了……\
+[NONE|1]什么都不记得比较好……\
+[NONE|1]我就瑟缩在那里，什么都不能做，不知道过了多久。\
+[NONE|1]沙罗……无法面对她，只能什么都不做，任凭时间流逝
+[NONE|0]。\
+[NONE|1]…………………\
+hideTextbox
+unknown20 44
+hideTextbox
+mov %V_13, 1
+
+showTextbox
+[NONE|1]记忆，除了最近的事情……几乎都恢复了。@
+[NONE|1]我的年纪、住所、还有电话号码……\
+[NONE|1]也想起了养父养母。@
+[NONE|1]只是……就只有一个，只有一个重大的事情，我想不起
+[NONE|0]来。\
+hideTextbox
+showTextbox
+[NONE|1]
+[NONE|1]　　　　　　　　　那就是……\
+[NONE|1]　　　　　　　　我的名字……\
+[NONE|1]　　　　　　　我叫做什么？\
+[NONE|1]　　　　　　　　被叫做什么？\
+[NONE|1]　　　　　　　　　我不知道。\
+hideTextbox
+hideTextbox
+mov %V_ac, 0
+
+unknown21 16
+hideTextbox
+mov %V_13, 0
+
+showTextbox
+[NONE|1]为什么只有这个想不起来。\
+[NONE|1]如果想不起来，我就是不完全的存在。\
+[NONE|1]我的存在……全部都在名字上。\
+[NONE|1]只要想不出名字，我就不能变成完全的我。\
+[NONE|1]总觉得…………\
+[NONE|1]不管怎么回想，就是这一点怎么想也想不出来。\
+[NONE|1]而且，我失去记忆的原因……是为什么。\
+[NONE|1]对沙罗的罪恶感……\
+[NONE|1]是因为这样，才决定了隐蔽自己的记忆吗？\
+[NONE|1]不过，这样一来……前后不符的事情就太多了。\
+[NONE|1]照理说，我失去记忆是在遇到沙罗之前……也就是Ｌ－
+[NONE|0]ｅＭＵ发生事故以前。\
+[NONE|1]而且，我根本想不起来，在那之前我正在做什么，为什
+[NONE|0]么会来ＬｅＭＵ。\
+[NONE|1]或者说……发生事故前曾在ＬｅＭＵ的某处见到了沙罗
+[NONE|0]……所以才失忆的……\
+[NONE|1]可是……还是觉得很奇怪。\
+[NONE|1]为什么我不记得的，只有最近的事情，还有名字？\
+[NONE|1]沙罗的事情已经想起来了……\
+[NONE|1]全部都想起来，应该很正常才对。\
+[NONE|1]到底这个记忆丧失……是为什么……\
+hideTextbox
+specialEffect 24,0
+stopBGM
+delay 180
+mov %V_fa, 100
+
+playSFX "SE06_02",0,100
+bgload "BG14A1","6","2"
+mov %V_4f, 0
+
+mov %V_3b, 1
+
+mov %V_3c, %V_VAR_c1_0_6
+
+mov %V_3d, 1
+
+mov %V_3e, 2
+
+mov %V_3f, %V_VAR_c2_0_6
+
+mov %V_40, 2
+
+unknown20 12
+mov %V_ab, %V_VAR_c0_31
+
+clock "21","31"
+showTextbox
+[NONE|1]被这个声音与晃动惊扰，我抬起头来。\
+playSFX "SE09_03L",0,100
+showTextbox
+[NONE|1]下一瞬间，警报响起。\
+[NONE|1]像是铁被割裂的声响。\
+[NONE|1]断断续续的持续摇晃。\
+[NONE|1]怎、怎么了……\
+[NONE|1]我冲出房间。\
+bgload "BG26B3L","0","2"
+showTextbox
+[NONE|1]水？\
+[NONE|1]一走到通道的时候，我发现了异常。\
+[NONE|1]水竟然已经浸到这里。\
+[NONE|1]难道已经开始进水了？\
+fgload 1,"YU04ADM","320",3
+showTextbox
+[s6a089|1]【优】
+[NONE|0]“少年！”\
+[NONE|1]【少年】
+[NONE|0]“优，到底怎么了？　发生什么事了！”\
+[s6a090|1]【优】
+[NONE|0]“等一下再跟你说明，快点往这里。”\
+[NONE|1]【少年】
+[NONE|0]“什、什么事？”\
+[s6a091|1]【优】
+[NONE|0]“发现出口了！”\
+[NONE|1]【少年】
+[NONE|0]“在哪里？”\
+[s6a092|1]【优】
+[NONE|0]“等一下再跟你说，总之……快逃吧！”\
+removeFG "1","3"
+showTextbox
+[NONE|1]优说着，催促我开始奔跑。\
+hideTextbox
+specialEffect 6,0
+stopSFX
+unknown21 11
+bgload "BG25B3","6","2"
+playBGM "10","100"
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]转弯朝向避难通道的阶梯。\
+[NONE|1]【少年】
+[NONE|0]“其他人呢？”\
+[s6a093|1]【优】
+[NONE|0]“玛由去接仓成，月海已经在紧急通道了。”\
+[NONE|1]我们一口气冲出通往紧急通道的楼梯。\
+bgload "BG27A3","0","2"
+showTextbox
+[NONE|1]爬上避难用通道。\
+[NONE|1]武跟月海，还有沙罗已经在那里集合了。\
+multifgload2 1,2,"00000000","TU08ADS","00000000","KB05ADS",176,464,3
+showTextbox
+[s6a094|1]【武】
+[NONE|0]“快点，没时间了。”\
+[NONE|1]【少年】
+[NONE|0]“到底怎么了？”\
+fgload 2,"KB04ADS","464",3
+showTextbox
+[s6a095|1]【武】
+[NONE|0]“好啦，快点啊。”\
+multiremoveFG2 "83","04","00","3"
+showTextbox
+[NONE|1]说着，一马当先开始跑了。\
+[NONE|1]月海也跟在后头。\
+fgload 1,"YU05ADM","320",3
+showTextbox
+[s6a096|1]【优】
+[NONE|0]“听清楚了，ＬｅＭＵ已经开始崩溃了。”\
+removeFG "1","3"
+showTextbox
+[NONE|1]优施压我的背。\
+[NONE|1]我也开始跟着跑。\
+[s6a097|1]【优】
+[NONE|0]“刚刚终于跟地面连络上了，所以才能使用紧急阶梯。
+[NONE|0]”\
+[s6a098|1]【优】
+[NONE|0]“不过……如果不赶快的话，恐怕那里也会开始进水。
+[NONE|0]”\
+[s6a099|1]【优】
+[NONE|0]“所以，一定要赶快。”\
+[NONE|1]优从后方告诉我目前的状况。\
+[NONE|1]我跟着武与月海，总之……穿过了通往紧急阶梯的一大
+[NONE|0]段距离。\
+bgload "BG29A1","0","2"
+playSFX "SE01_07",0,100
+showTextbox
+[NONE|1]马上就要抵达紧急阶梯。\
+[NONE|1]武跟月海已经开始向上爬。\
+[s6a100|1]【武】
+[NONE|0]“快点！　这里……”\
+[NONE|1]武的声音从上面传来。\
+[NONE|1]追着两人的脚步，我也开始跑了。\
+[NONE|1]这段期间里，ＬｅＭＵ不断发出如金属般割裂的声响，
+[NONE|0]激烈晃动着。\
+[NONE|1]我们不断向上爬着楼梯。\
+[NONE|1]大家的喘息声、踏在铁制楼梯的脚步声，响遍紧急阶梯
+[NONE|0]内。\
+[NONE|1]……………………\
+[s6a101|1]【武】
+[NONE|0]“只差一点，差一点了！”\
+[NONE|1]在前头的武叫着。\
+[NONE|1]武的声音充满了希望。\
+[NONE|1]就在这个时候。\
+[s6a102|1]【优】
+[NONE|0]“玛由……玛由……玛由不见了！”\
+[NONE|1]优叫着。\
+stopSFX
+showTextbox
+[NONE|1]【少年】
+[NONE|0]“咦？”\
+[s6a103|1]【武】
+[NONE|0]“什么？”\
+showTextbox
+[NONE|1]我们停了下来，回头看。\
+[NONE|1]那里只有呆然地向下望着阶梯的优。\
+[s6a104|1]【优】
+[NONE|0]“怎么会！　应该在我后面的啊，我的后面！”\
+multifgload2 1,2,"00000000","YU03ADM","00000000","KB05ADM",128,512,3
+showTextbox
+[s6a105|1]【武】
+[NONE|0]“什么？　到底怎么了？”\
+[NONE|1]武他们也停下来了。\
+fgload 1,"YU18ADM","128",3
+showTextbox
+[s6a106|1]【优】
+[NONE|0]“仓成……玛由……玛由不见了！”\
+fgload 2,"KB04ADM","512",3
+showTextbox
+[s6a107|1]【武】
+[NONE|0]“怎么会这样……你没有确认她是不是跟上了吗？”\
+showTextbox
+[s6a108|1]【优】
+[NONE|0]“一开始都在后头啊！”\
+[s6a109|1]【优】
+[NONE|0]“中途之后，我只想到要拼命往上爬……”\
+hideTextbox
+specialEffect 0,0
+stopBGM
+playSFX "SE06_02",0,100
+bgload "BG29A2","6","2"
+multifgload2 1,2,"00000000","YU06ADM","00000000","KB06ADM",128,512,0
+mov %V_ab, %V_VAR_c0_16
+
+mov %V_44, 2
+
+mov %V_43, 0
+
+unknown20 46
+showTextbox
+[NONE|1]随着声音，紧急阶梯开始大幅晃动。\
+[NONE|1]同时，照亮楼梯间的昏暗照明切断了。\
+fgload 2,"KB04ADM","512",3
+showTextbox
+[s6a110|1]【武】
+[NONE|0]“糟了！　停电啊……现在根本没办法回头了。”\
+[s6a111|1]【武】
+[NONE|0]“现在回头的话，大家就有危险了！”\
+fgload 1,"YU18ADM","128",3
+showTextbox
+[s6a112|1]【优】
+[NONE|0]“可是！”\
+[NONE|1]【少年】
+[NONE|0]“我去……”\
+multifgload2 1,2,"00000000","YU06ADM","00000000","KB06ADM",128,512,3
+showTextbox
+[s6a113|1]【优】
+[NONE|0]“咦？”\
+[NONE|1]【少年】
+[NONE|0]“我回去，大家还是继续往上。”\
+multiremoveFG2 "83","04","00","3"
+playSFX "SE01_06",0,100
+showTextbox
+[NONE|1]不等大家的反应，我已经冲下刚刚我爬上来的楼梯。\
+[s6a114|1]【武】
+[NONE|0]“喔咿……少年！”\
+[s6a115|1]【优】
+[NONE|0]“不可以！　开始浸水了吧？　你要怎么去！？”\
+[NONE|1]两人的声音逼着我。\
+[NONE|1]【少年】
+[NONE|0]“游泳！”\
+[s6a116|1]【优】
+[NONE|0]“下面很黑啊！”\
+[NONE|1]【少年】
+[NONE|0]“没关系！”\
+[NONE|1]【少年】
+[NONE|0]“我看得到的！”\
+[NONE|1]事实上，在这个楼梯间里，我能看出每个物体的温度差
+[NONE|0]。\
+[NONE|1]长这么大以来，这是我第一次感谢自己的特殊视力。\
+hideTextbox
+specialEffect 12,0
+stopSFX
+bgload "BG28A4L","6","2"
+playBGM "12","97"
+mov %V_ab, %V_VAR_c0_38
+
+showTextbox
+[NONE|1]下了楼梯，走到索非亚休德克的避难用通道。\
+[NONE|1]紧急用电源也全都关闭了。\
+[NONE|1]沙罗会在哪里呢。\
+[NONE|1]我拼命想着。\
+[NONE|1]若是中途回来的话，应该不会到德里克休德克吧。\
+[NONE|1]可是……万一是这样呢？\
+[NONE|1]万一她真的下去德里克休德克……\
+[NONE|1]再加上要勘查索非亚休德克的话，不知道来不来得及。\
+[NONE|1]该怎么办呢……\
+[NONE|1]该从索非亚休德克开始搜寻，还是从德里克休德克开始
+[NONE|0]呢……@
+
+csel "搜寻德里克休德克", *L_pre_ss6a_00000b9c,"搜寻索非亚休德克", *L_pre_ss6a_00000d2c
+*L_pre_ss6a_00000b9c
+ mov %V_b3, 0
+ goto *LchoiceId_1203_28
+
+*L_pre_ss6a_00000d2c
+ mov %V_b3, 1
+ goto *LchoiceId_1203_28
+
+*LchoiceId_1203_28
+if %V_b3 == 0 goto *Lss6a_00000b9c
+
+if %V_b3 == 1 goto *Lss6a_00000d2c
+
+*Lss6a_00000b9c
+
+showTextbox
+[NONE|1]从德里克休德克开始搜寻吧。\
+[NONE|1]那里的水压变高，也许已经进水了。\
+[NONE|1]万一她在德里克休德克的话，现在不赶紧开始搜寻，或
+[NONE|0]许会来不及。\
+[NONE|1]我朝着德里克休德克冲下楼梯。\
+hideTextbox
+specialEffect 12,0
+playSFX "SE06_02",0,100
+bgload "BG27A4","6","2"
+mov %V_4f, 0
+
+mov %V_3b, 1
+
+mov %V_3c, %V_VAR_c3_0_6
+
+mov %V_3d, 2
+
+mov %V_3e, 2
+
+mov %V_3f, %V_VAR_c6_0_6
+
+mov %V_40, 6
+
+unknown20 12
+mov %V_ab, %V_VAR_c0_23
+
+showTextbox
+[NONE|1]我下楼到了德里克休德克的紧急通道。\
+[NONE|1]如果沙罗在这里的话，会在……\
+[NONE|1]会议室还是控制室呢？\
+[NONE|1]还是在游乐设施？\
+[NONE|1]已经没时间了。\
+[NONE|1]从紧急舱口向下看，发现已经浸水了。\
+[NONE|1]无法再向下的话，从紧急通道确认各个房间好了。\
+[NONE|1]可是，沙罗真的在这一层吗……？\
+[NONE|1]既然已经来这里，就不能回去了。\
+[NONE|1]我奔向紧急通道。\
+hideTextbox
+playSFX "SE01_06",0,100
+bgload "BG28A4R","0","2"
+showTextbox
+[NONE|1]我走到最外侧的紧急通道。\
+[NONE|1]打开通往各房间的紧急舱口，向里面探头。\
+[NONE|1]沙罗在的话，就能马上根据人体温度知道位置了。\
+[NONE|1]会议室、控制室，一个一个的看，没有沙罗的身影，却
+[NONE|0]发现水越涨越高。\
+bgload "BG28A2R","0","2"
+showTextbox
+[NONE|1]电梯间的那一端并没有门。\
+[NONE|1]我绕着游乐设施的方向，跑在紧急通道上。\
+bgload "BG28A4L","0","2"
+playSFX "SE06_02",0,100
+showTextbox
+[NONE|1]确认休憩空间，也看了雷姆利亚遗迹，还是没有看到沙
+[NONE|0]罗。\
+[NONE|1]难道真的不在这个楼层……？\
+[NONE|1]水声越来越剧烈，振动也越来越强烈。\
+[NONE|1]不快一点的话，就会回不去索非亚休德克了。\
+[NONE|1]得赶快回紧急阶梯！\
+bgload "BG29A2","0","2"
+stopSFX
+playSFX "SE01_06",0,100
+showTextbox
+[NONE|1]冲过紧急阶梯，准备回到索非亚休德克。\
+[NONE|1]浪费大半时间了。\
+[NONE|1]得赶快。\
+bgload "BG27A4","0","2"
+showTextbox
+[NONE|1]好不容易才回到索非亚休德克。\
+[NONE|1]ＬｅＭＵ晃动渐渐剧烈，紧急用舱口下几乎积满了水。\
+[NONE|1]避难通道上已经有水流过来了。\
+[NONE|1]我直接奔进水中。\
+hideTextbox
+specialEffect 2,0
+stopSFX
+playSFX "SE02_05",0,100
+unknown21 11
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+showTextbox
+[NONE|1]几乎忘了手腕的疼痛，拼命游向警备室，探头进去。\
+[NONE|1]没有沙罗的踪影。\
+[NONE|1]呼吸着房间顶部剩余的空气，以确保可以活下去。\
+[NONE|1]沙罗……在哪里……\
+[NONE|1]我再次潜入水中，游进医疗室。\
+[NONE|1]医疗室的门开着。\
+[NONE|1]从那里探进去。\
+stopBGM
+showTextbox
+[NONE|1]……沙罗！\
+[NONE|1]沙罗的身体，白白地漂浮在黑暗的水中。\
+[NONE|1]这里也是在房间的顶部积满了空气。\
+[NONE|1]沙罗勉勉强强浮在那里。\
+[NONE|1]我浮出了水面。\
+hideTextbox
+mov %V_b3, 0
+
+goto *Lssbd
+*Lss6a_00000d2c
+
+showTextbox
+[NONE|1]不，沙罗应该是在索非亚休德克的某处。\
+[NONE|1]不知为何，我确信着。\
+[NONE|1]一定是在索非亚休德克的哪里……\
+[NONE|1]也许那是毫无意义的自信。\
+[NONE|1]不过，这是我与沙罗兄妹间的牵绊。\
+[NONE|1]留着相同血液的我和沙罗。\
+[NONE|1]我是这么想的。\
+[NONE|1]也许……是愚蠢的幻想，可是现在只能赌这个直觉了。\
+removeBG
+playSFX "SE02_05",0,100
+showTextbox
+[NONE|1]打开紧急舱口，水已经淹没到通道的７、８成高度了。\
+[NONE|1]我毫不犹豫地纵身跳入水中。\
+[NONE|1]水在好几个地方转成漩涡，不规则地变换流向。\
+[NONE|1]忍着右腕的疼痛，我拼命游着。\
+[NONE|1]我首先去看看警备室。\
+[NONE|1]没有沙罗所散发的热源。\
+[NONE|1]直接进入仓库，沙罗并不在那里。\
+[NONE|1]看了看旋转海豚那里，似乎也没有。\
+[NONE|1]前面是电梯间，应该也不在这里。\
+[NONE|1]我游回通道。\
+[NONE|1]医疗室的入口已经完全淹水。\
+[NONE|1]我立即深吸一口气潜入水里。\
+[NONE|1]打开门，探入里头。\
+[NONE|1]──就在那里……\
+removeBG
+stopBGM
+showTextbox
+[NONE|1]沙罗。\
+[NONE|1]因为体温，沙罗的身体在四周的黑暗中格外发着光芒。\
+[NONE|1]我直接潜进医疗室里，再浮出水面。\
+[NONE|1]我从水中一跃而出时，沙罗那惊讶的表情。\
+[s6a117|1]【沙罗】
+[NONE|0]“少年……呜呜……哥哥……”\
+[NONE|1]【少年】
+[NONE|0]“沙罗……没事吗？”\
+[s6a118|1]【沙罗】
+[NONE|0]“哥哥，为什么……”\
+[NONE|1]【少年】
+[NONE|0]“约好的”\
+[NONE|1]【少年】
+[NONE|0]“一定会来接你的”\
+hideTextbox
+specialEffect 0,1
+removeBG
+mov %V_ab, %V_VAR_c0_16
+
+delay 90
+mov %V_b3, 0
+
+goto *Lss7a
+
