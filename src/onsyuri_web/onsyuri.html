@@ -347,23 +347,24 @@
             }
 
             function toggle_onsmenu(){
-                var canvas = document.getElementById('canvas');    
-                var event = new KeyboardEvent("keydown", 
-                    {bubbles: true, cancelable: true, keyCode: 0x1B}); // ESC key
-                canvas.dispatchEvent(event);
+                var canvas = document.getElementById('canvas');
+                // SDL in wasm derives the scancode from event.code; a keyCode-only
+                // synthetic event has an unknown scancode and is dropped by SDL
+                var init = {bubbles: true, cancelable: true, key: "Escape", code: "Escape",
+                    keyCode: 0x1B}; // ESC key
+                canvas.dispatchEvent(new KeyboardEvent("keydown", init));
                 setTimeout(() => {
-                    var event = new KeyboardEvent("keyup", 
-                    {bubbles: true, cancelable: true, keyCode: 0x1B}); // ESC key
-                    canvas.dispatchEvent(event);
+                    canvas.dispatchEvent(new KeyboardEvent("keyup", init));
                 }, 50);
             }
 
             var g_skip = false;
             function toggle_skip() {
                 g_skip = !g_skip;
-                var canvas = document.getElementById('canvas');    
-                var event = new KeyboardEvent(g_skip ? "keydown": "keyup", 
-                    {bubbles: true, cancelable: true, keyCode: 0x11}); // ctrl key
+                var canvas = document.getElementById('canvas');
+                var event = new KeyboardEvent(g_skip ? "keydown": "keyup",
+                    {bubbles: true, cancelable: true, key: "Control", code: "ControlLeft",
+                    keyCode: 0x11}); // ctrl key
                 canvas.dispatchEvent(event);
             }
 
