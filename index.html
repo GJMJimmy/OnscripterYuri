@@ -489,6 +489,7 @@
                     drag.moved = true;
                     g_fab_pos = fab_clamp_pos({left: drag.left + dx, top: drag.top + dy});
                     fab_apply_pos();
+                    if(menu_is_shown()) menu_place_panel(); // panel follows the fab while dragging
                 });
                 fab.addEventListener("pointerup", (event)=>{
                     var drag = g_fab_drag;
