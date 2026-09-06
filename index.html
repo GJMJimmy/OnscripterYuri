@@ -383,14 +383,125 @@
             function toggle_webmenu() {
                 var onsyuri_webrmenu = document.getElementById("onsyuri_webrmenu");
                 if(onsyuri_webrmenu.style.display=="none") {
-                    onsyuri_webrmenu.style.display = "block";
+                    onsyuri_webrmenu.style.display = "flex";
+                    menu_place_panel(); // measure after shown, position before paint
+                    var fab = get_fab();
+                    if(fab) fab.textContent = "✕";
                 }
                 else {
                     var onsyuri_webinfo = document.getElementById("onsyuri_webinfo");
                     onsyuri_webinfo.style.display = "none";
                     onsyuri_webrmenu.style.display = "none";
+                    var fab = get_fab();
+                    if(fab) fab.textContent = "☰";
                 }
             }
+
+            // ---- floating action button: click to toggle menu, drag to move ----
+            const FAB_DRAG_THRESHOLD = 6;
+            var g_fab_pos = null; // {left, top} in css pixels
+            var g_fab_drag = {active: false, moved: false, id: -1, x: 0, y: 0, left: 0, top: 0};
+
+            function get_fab() {
+                return document.getElementById("onsyuri_fab");
+            }
+
+            function menu_is_shown() {
+                var panel = document.getElementById("onsyuri_webrmenu");
+                return !!panel && panel.style.display != "none";
+            }
+
+            // presses on the fab or the popup panel should not count as canvas longpress
+            function in_onsmenu_ui(target) {
+                return !!(target && target.closest &&
+                    target.closest("#onsyuri_fab, #onsyuri_webrmenu"));
+            }
+
+            function fab_default_pos(fab) {
+                return {left: window.innerWidth - fab.offsetWidth - 16, top: 16};
+            }
+
+            function fab_clamp_pos(pos) {
+                var fab = get_fab();
+                pos.left = Math.max(0, Math.min(pos.left, window.innerWidth - fab.offsetWidth));
+                pos.top  = Math.max(0, Math.min(pos.top,  window.innerHeight - fab.offsetHeight));
+                return pos;
+            }
+
+            function fab_apply_pos() {
+                var fab = get_fab();
+                fab.style.left = g_fab_pos.left + "px";
+                fab.style.top  = g_fab_pos.top + "px";
+                fab.style.right = "auto"; // left takes over once js positions the fab
+            }
+
+            function fab_load_pos() {
+                var fab = get_fab();
+                g_fab_pos = fab_default_pos(fab);
+                try {
+                    var pos = JSON.parse(localStorage.getItem("onsyuri_fab_pos"));
+                    if(pos && typeof pos.left=="number" && typeof pos.top=="number")
+                        g_fab_pos = pos;
+                }
+                catch(e) {} // localStorage unavailable, keep the default position
+                fab_clamp_pos(g_fab_pos);
+                fab_apply_pos();
+            }
+
+            function fab_save_pos() {
+                try { localStorage.setItem("onsyuri_fab_pos", JSON.stringify(g_fab_pos)); }
+                catch(e) {}
+            }
+
+            // popup the panel beside the fab, flipping at the screen edges
+            function menu_place_panel() {
+                var panel = document.getElementById("onsyuri_webrmenu");
+                var fab = get_fab();
+                if(!g_fab_pos) fab_load_pos();
+                var margin = 8;
+                var pw = panel.offsetWidth, ph = panel.offsetHeight;
+                var left = (g_fab_pos.left + fab.offsetWidth / 2 > window.innerWidth / 2) ?
+                    g_fab_pos.left - pw - margin : g_fab_pos.left + fab.offsetWidth + margin;
+                var top = (g_fab_pos.top + fab.offsetHeight + ph + margin < window.innerHeight) ?
+                    g_fab_pos.top : g_fab_pos.top + fab.offsetHeight - ph;
+                left = Math.max(margin, Math.min(left, window.innerWidth - pw - margin));
+                top  = Math.max(margin, Math.min(top,  window.innerHeight - ph - margin));
+                panel.style.left = left + "px";
+                panel.style.top  = top + "px";
+            }
+
+            function fab_init() {
+                var fab = get_fab();
+                if(!fab) return;
+                fab_load_pos();
+                fab.addEventListener("pointerdown", (event)=>{
+                    if(!event.isPrimary) return;
+                    g_fab_drag = {active: true, moved: false, id: event.pointerId,
+                        x: event.clientX, y: event.clientY,
+                        left: g_fab_pos.left, top: g_fab_pos.top};
+                    get_fab().setPointerCapture(event.pointerId);
+                });
+                fab.addEventListener("pointermove", (event)=>{
+                    var drag = g_fab_drag;
+                    if(!drag.active || event.pointerId != drag.id) return;
+                    var dx = event.clientX - drag.x, dy = event.clientY - drag.y;
+                    if(!drag.moved && Math.hypot(dx, dy) < FAB_DRAG_THRESHOLD) return;
+                    drag.moved = true;
+                    g_fab_pos = fab_clamp_pos({left: drag.left + dx, top: drag.top + dy});
+                    fab_apply_pos();
+                });
+                fab.addEventListener("pointerup", (event)=>{
+                    var drag = g_fab_drag;
+                    if(!drag.active || event.pointerId != drag.id) return;
+                    g_fab_drag = {active: false, moved: false, id: -1, x: 0, y: 0, left: 0, top: 0};
+                    if(drag.moved) fab_save_pos();
+                    else toggle_webmenu();
+                });
+                fab.addEventListener("pointercancel", ()=>{
+                    g_fab_drag = {active: false, moved: false, id: -1, x: 0, y: 0, left: 0, top: 0};
+                });
+            }
+            document.addEventListener("DOMContentLoaded", fab_init);
 
             function click_export() {
                 var files = em_lsfiles(g_onsyuri_module.FS, g_onsyuri_index.savedir);
@@ -406,6 +517,11 @@
                 var canvas = document.getElementById('canvas');
                 var ratio = g_fullstrech ? window.innerWidth/window.innerHeight: g_screen_width/g_screen_height;
                 scale_full(canvas, ratio);
+                if(g_fab_pos) { // keep the fab inside the window
+                    fab_clamp_pos(g_fab_pos);
+                    fab_apply_pos();
+                }
+                if(menu_is_shown()) menu_place_panel();
             };
 
             window.onkeydown = (event) => {
@@ -432,29 +548,37 @@
             }
 
             window.onmousedown = (event) => {
+                if(in_onsmenu_ui(event.target)) return;
                 if(event.button==0){
                     g_lastpressdown = event.timeStamp;
                 }
             }
 
             window.onmouseup = (event) => {
+                if(in_onsmenu_ui(event.target)) return;
                 if(event.button==0){
-                    if(event.timeStamp - g_lastpressdown > LONG_CLICK_TIME) {
-                        var onsyuri_webrmenu = document.getElementById("onsyuri_webrmenu");
-                        if(onsyuri_webrmenu.style.display=="none") toggle_webmenu();
+                    if(menu_is_shown()) { // click outside closes the popup menu
+                        toggle_webmenu();
+                    }
+                    else if(event.timeStamp - g_lastpressdown > LONG_CLICK_TIME) {
+                        toggle_webmenu();
                         g_lastpressdown = event.timeStamp;
                     }
                 }
             }
 
             window.ontouchstart = (event) => {
+                if(in_onsmenu_ui(event.target)) return;
                 g_lastpressdown = event.timeStamp;
             }
 
             window.ontouchend = (event) => {
-                if(event.timeStamp - g_lastpressdown > LONG_CLICK_TIME) {
-                    var onsyuri_webrmenu = document.getElementById("onsyuri_webrmenu");
-                    if(onsyuri_webrmenu.style.display=="none") toggle_webmenu();
+                if(in_onsmenu_ui(event.target)) return;
+                if(menu_is_shown()) { // tap outside closes the popup menu
+                    toggle_webmenu();
+                }
+                else if(event.timeStamp - g_lastpressdown > LONG_CLICK_TIME) {
+                    toggle_webmenu();
                     g_lastpressdown = event.timeStamp;
                 }
             }
@@ -531,18 +655,37 @@
                 margin-right: 10%;
             }
 
-            #onsyuri_webrmenu {
-                position: fixed; 
-                display: block;
-                border-radius: 10px;
-                top: 10%;
-                left: 0;
-                right: 0; 
-                margin-left:auto;
-                margin-right: auto; 
-                min-width: 400px;
-                max-width: 800px;
+            #onsyuri_fab {
+                position: fixed;
+                top: 16px;
+                right: 16px;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                background: rgba(0, 188, 212, 0.65);
+                color: white;
+                font-size: 24px;
+                line-height: 46px;
                 text-align: center;
+                cursor: pointer;
+                user-select: none;
+                touch-action: none; /* let pointer events drag the fab on touch too */
+                z-index: 1001;
+            }
+
+            #onsyuri_fab:hover {
+                background: rgba(22, 229, 255, 0.85);
+            }
+
+            #onsyuri_webrmenu {
+                position: fixed;
+                border-radius: 10px;
+                padding: 8px;
+                flex-direction: column;
+                gap: 8px;
+                width: max-content;
+                z-index: 1000;
                 color: snow;
             }
 
@@ -566,9 +709,11 @@
             <p> Loading game resources ... </p>
             <p> Powered by <a href="https://github.com/YuriSizuku/OnscripterYuri" target="_blank"> Onscripter Yuri</a> v0.7.7</p>
             <hr>
-            <p> [Right|Long Click|F9]: show menu </p>
+            <p> [Float Button|Long Click|F9]: show menu </p>
             <p> [F10]: stretch full; [F11]: screen full</p>
         </div>
+
+        <div id="onsyuri_fab" title="menu">☰</div>
 
         <div id="onsyuri_webrmenu" style="display: none;">
             <button onclick="toggle_stretchfull()">sfull[F10]</button>
