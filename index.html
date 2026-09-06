@@ -347,14 +347,17 @@
             }
 
             function toggle_onsmenu(){
+                // simulate a real right click: some games swap the ESC semantics
+                // with useescspc, but a right click always opens the game menu
                 var canvas = document.getElementById('canvas');
-                // SDL in wasm derives the scancode from event.code; a keyCode-only
-                // synthetic event has an unknown scancode and is dropped by SDL
-                var init = {bubbles: true, cancelable: true, key: "Escape", code: "Escape",
-                    keyCode: 0x1B}; // ESC key
-                canvas.dispatchEvent(new KeyboardEvent("keydown", init));
+                var rect = canvas.getBoundingClientRect();
+                var init = {bubbles: true, cancelable: true, button: 2, buttons: 2,
+                    clientX: rect.left + rect.width / 2,
+                    clientY: rect.top + rect.height / 2};
+                canvas.dispatchEvent(new MouseEvent("mousedown", init));
                 setTimeout(() => {
-                    canvas.dispatchEvent(new KeyboardEvent("keyup", init));
+                    init.buttons = 0; // no button held on release
+                    canvas.dispatchEvent(new MouseEvent("mouseup", init));
                 }, 50);
             }
 
@@ -719,7 +722,7 @@
         <div id="onsyuri_webrmenu" style="display: none;">
             <button onclick="toggle_stretchfull()">sfull[F10]</button>
             <button onclick="toggle_screenfull()">full[F11]</button>
-            <button onclick="toggle_onsmenu()">menu[Esc]</button>
+            <button onclick="toggle_onsmenu()">menu[R-Click]</button>
             <button onclick="toggle_skip()">skip[Ctrl]</button>
             <button onclick="click_export()">export[F3]</button>
             <button onclick="click_import()">import[F4]</button>
