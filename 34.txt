@@ -1,0 +1,68 @@
+
+*b_f_3d0
+	getparam %1001, %1002, %1003
+	;开启关闭下雨
+	return
+
+*b_f_3d0_1
+	getparam %1001, $1002, %1003
+	return
+
+*b_f_3d2
+	getparam %1001, %1002, %1003, %1004
+	;雨点颜色？
+	return
+
+*b_f_3d4
+	getparam %1001
+	;雨有关……
+	return
+
+*b_f_3d5
+	getparam %1001, %1002, %1003
+	return
+
+*b_f_3d6
+	getparam %1001
+	;设置雨的大小
+	return
+
+*b_f_3d8
+	getparam %1001
+	return
+
+*b_Quake
+	getparam %1001
+	mov %1002, 2
+	skip 4
+*b_f_3f1
+	getparam %1001, %1002
+	;
+	;1,1 1,3, 0,1
+	et
+	quake %1001+%1002, 1000
+	return
+
+*b_f_230
+	getparam %1001, %1002, %1003, %1004, %1005, %1006
+	;震动开始
+	;b_f_230 240, 1, 0, 2, 0, 0
+	b_Quake 1
+	return
+
+*b_f_231
+	getparam %1001, %1002
+	;震动结束
+	;b_f_231 500, 0
+	return
+
+*b_Jishin
+	getparam %1001
+	if %1001 = 0 quake 1, 50:return
+	if %1001 = 1 quake 2, 230:return
+	if %1001 = 2 quake 5, 230:return
+	if %1001 = 3 quake 8, 240:return
+	if %1001 = 4 quake 10, 240:return
+	if %1001 = 5 quake 20, 250:return
+	if %1001 = 6 quake 1, 230:return
+	return

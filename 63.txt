@@ -1,0 +1,27 @@
+
+; 转场
+; k_trans $method, %time, $rule
+; 可以在*kc_pretrans和*kc_posttrans中分别定制转场前后做的准备和收尾工作
+; 目前backlay和wt没有任何作用
+
+*k_backlay
+*k_wt
+	return
+
+*kc_pretrans
+	if %sysv_nobtndefclear = 0 et
+	if %is_queue_on = 0 return
+	if %602 = 0 mov $601, "pass":return
+	push2 601, 603
+	movequeue_start_ex %602, -1, 1
+	if %4000 <= 0 pop2:mov $601, "pass":return
+	gosub *queue_vsp308_clear
+	mov %is_queue_on, 0:pop2:mov %602, %4000
+	return
+
+*kc_prefreeimage
+*kc_postfreeimage
+*kc_preimage
+*kc_postimage
+*kc_posttrans
+	return

@@ -1,0 +1,196 @@
+; 基础图像函数
+; 转换图片文件名，简单的加文件头
+; ex版本检查文件是否存在，并自动添加后缀
+;; <REJECT REFERENCE>: $601
+; imageconv/imageconv_ex <$0>
+
+*imageconv
+	;push 601, 601
+	getparam s%601
+	mid $601, $%601, 0, 1
+	if $601 != ":" mov $%601, DEFAULT_IMAGE_HEAD+$%601
+	;pop 601, 601
+	return
+
+*imageconv_ex
+	;push2 601, 604
+	getparam s%601
+	mid $601, $%601, 0, 1
+	if $601 = ":" splits $%601, ";", $602, $603:add $602, ";":skip 2
+	mov $602, DEFAULT_IMAGE_HEAD: mov $603, $%601
+	rsplits $603, ".", $603, $604:if $604 != "" mov $604, "."+$604
+	mov $601, $603+$604:fileexist %602, $601
+	if %602 > 0 mov $%601, $602+$601:goto *end_of_imageconv_ex
+	mov $601, $603+".png":fileexist %602, $601
+	if %602 > 0 mov $%601, $602+$601:goto *end_of_imageconv_ex
+	mov $601, $603+".jpg":fileexist %602, $601
+	if %602 > 0 mov $%601, $602+$601:goto *end_of_imageconv_ex
+	mov $601, $603+".bmp":fileexist %602, $601
+	if %602 > 0 mov $%601, $602+$601:goto *end_of_imageconv_ex
+	; <TODO> how to warn user?
+*end_of_imageconv_ex
+	;pop2
+	return
+
+; 转换图层
+; ex版本从文字转换，普通版本从数字转换
+; <REJECT REFERENCE>: %601, %602
+; get_layer <%spnum>, %layer
+; get_layer_ex <%spnum>, $layer
+
+*get_layer_ex
+	;push 601, 602
+	getparam i%601, $602
+	if $602 = "base" mov %602, -1:skip 2
+	atoi %602, $602
+	skip 4
+*get_layer
+	;push 601, 602
+	getparam i%601, %602
+	; FIXME: test ver.
+	mov %%601, LAYER_BASELINE-%602
+	;pop 601, 602
+	return
+
+*k_trans
+	;push2 601, 603
+	getparam $601, %602, $603
+	gosub *kc_pretrans
+	if $601 = "pass" goto *end_of_trans
+	if %602 = 0 print 1:goto *end_of_trans
+	if $601 = "mosaic" print 17, %602:goto *end_of_trans
+	if $601 = "mosaicout" print 16, %602:goto *end_of_trans
+	if $601 != "universal" skip 10
+		startswith %603, $603, ":"
+		if %603 > 0 split $603, ";", $603, $603:print 18, %602, $603:goto *end_of_trans
+		mov $603, "rule\"+$603
+		mov $602, $603+".png":fileexist %603, $602
+		if %603 > 0 print 18, %602, $602:goto *end_of_trans
+		mov $602, $603+".jpg":fileexist %603, $602
+		if %603 > 0 print 18, %602, $602:goto *end_of_trans
+		mov $602, $603+".bmp":fileexist %603, $602
+		if %603 > 0 print 18, %602, $602:goto *end_of_trans
+	;
+	print 10, %602
+*end_of_trans
+	; something for cleaning...
+	gosub *kc_posttrans
+	;pop2
+	return
+
+; 载入/释放图片
+; image $storage,$layer,$page,%visible,%left,%top,%opacity
+; freeimage $layer, $page
+; 同样可以在对应的pre和post做准备和收尾工作
+
+*k_image
+	push2 701, 707
+	;getparam $storage,$layer,$page,%visible,%left,%top,%opacity
+	getparam $701, $702, $703, %704, %705, %706, %707
+	gosub *kc_preimage
+	get_layer_ex %702, $702
+	imageconv $701
+	lsp %702, $701, %705, %706, %707
+	gosub *kc_postimage
+	pop2
+	return
+
+*k_freeimage
+	push2 701, 702
+	getparam $701, $702
+	gosub *kc_prefreeimage
+	get_layer_ex %701, $701
+	csp %701
+	gosub *kc_postfreeimage
+	pop2
+	return
+
+; 移动图层
+; k_moves %spnum, x, y, opacity, time
+
+*k_moves
+	pushi2 701, 712
+	;getparam %realspnum, x, y, opacity, time
+	getparam %701, %702, %703, %704, %705
+	mov %707, 0:mov %708, 0:mov %709, 0
+	; 706: current time
+	; 707~709: moved distance	710~712: need to move
+	resettimer
+*k_moves_loop
+	gettimer %706
+	if %706 >= %705 msp %701, %702-%707, %703-%708, %704-%709:popi2:return	; time out
+	mov %710, %706*%702/%705-%707
+	mov %711, %706*%703/%705-%708
+	mov %712, %706*%704/%705-%709
+	msp %701, %710, %711, %712
+	print 1
+	add %707, %710:add %708, %711:add %709, %712
+	waittimer 10
+	goto *k_moves_loop
+
+; 多图层移动
+; add的参数和k_moves一样，在start执行后一起移动
+
+*movequeue_add_ex
+	pushi2 701, 706
+	getparam %701, %702, %703, %704, %705, %706
+	skip 6
+*movequeue_add
+	;getparam %spnum, x, y, opacity, time
+	pushi2 701, 706
+	getparam %701, %702, %703, %704, %705
+	mov %706, 0
+	;
+	if %701 = 0 popi2:return
+	pl_add_ex MQ_ID, 701, 6
+	popi2
+	return
+
+*movequeue_start_ex
+	pushi2 701, 720
+	getparam %716, %717, %718	;timelimit, keep end scene, keep movequeue status
+	skip 4
+*movequeue_start
+	pushi2 701, 720
+	mov %716, 0:mov %717, 0:mov %718, 1
+	;
+	resettimer
+	mov %711, 0:mov %719, 0
+	pl_getcount %720, MQ_ID
+	;
+	if %720 <= %719 skip 6
+		mov %719, 0:gettimer %711
+		if %716 > 0 & %711 > %716 mov %711, %716
+		pl_foreach_ex MQ_ID, "*movequeue_loop", 701, 1, 10
+		print 1:waittimer 10:if %716 > 0 & %711 >= %716 skip 2
+	skip -6
+	;
+	if %717 > 0 mov %711, 400000:pl_foreach_ex MQ_ID, "*movequeue_loop", 701, 1, 10:print 1:mov %718, 1
+	if %719 >= %720 sub %716, %711:mov %718, 1:skip 2
+	mov %716, 0
+	if %717 = 0 & %716 > 0 delay %716-%711
+	if %717 = -1 mov %4000, %716
+	pl_foreach_ex MQ_ID, "*movequeue_loop_time_set", 701, 1, 10
+	if %720 <= %719 pl_clear MQ_ID:skip 2
+	if %718 > 0 pl_clear MQ_ID
+	popi2:return
+*movequeue_loop
+	;%701-%710: layer, x, y, o, t, msp2, curx, cury, curo,last_time
+	if %701 = 0 inc %719:return
+	mov %712, %711+%710:if %712 > %705 mov %712, %705
+	if %705 = 0 mov %713, %702:mov %714, %703:mov %715, %704:skip 4
+	mov %713, %702*%712/%705-%707
+	mov %714, %703*%712/%705-%708
+	mov %715, %704*%712/%705-%709
+	;
+	if %706 > 0 msp2 %701, %713, %714, 0, 0, 0, %715:skip 2
+	msp %701, %713, %714, %715
+	if %712 >= %705 mov %701, 0:mov %710, %705:inc %719:return
+	add %707, %713
+	add %708, %714
+	add %709, %715
+	return
+
+*movequeue_loop_time_set
+	add %710, %711
+	return

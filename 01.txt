@@ -1,0 +1,252 @@
+*main
+
+b_f_122 1
+b_f_123 1
+b_f_0e0 1, 0
+b_f_0e0 2, 0
+b_f_0e0 4, 0
+b_f_0f0 "aiy00010"
+b_f_0f0 "aiy00020"
+b_f_0f0 "aiy00030"
+b_f_0f0 "aiy00040"
+b_f_0f0 "aiy00050"
+b_f_0f0 "aiy00060"
+b_f_0f0 "aiy00070"
+b_f_0f0 "aiy00080"
+b_f_0f0 "aiy00090"
+b_f_0f0 "aiy00100"
+b_f_0f0 "aiy00110"
+b_f_0f0 "aiy00120"
+b_f_0f0 "aiy00130"
+b_f_0f0 "aiy00140"
+b_f_0f0 "aiy00150"
+b_f_0f0 "aiy00160"
+b_f_0f0 "aiy10010"
+b_f_0f0 "aiy10020"
+b_f_0f0 "aiy10030"
+b_f_0f0 "aiy10040"
+b_f_0f0 "aiy10050"
+b_f_0f0 "aiy10060"
+b_f_0f0 "aiy10070"
+b_f_0f0 "aiy10080"
+b_f_0f0 "aiy10090"
+b_f_0f0 "aiy10100"
+b_f_0f0 "aiy10110"
+b_f_0f0 "aiy10120"
+b_f_0f0 "aiy10130"
+b_f_0f0 "aiy10140"
+b_f_0f0 "aiy10150"
+b_f_0f0 "aiy10160"
+b_f_0f0 "aiy10170"
+b_f_0f0 "aiy10180"
+b_f_0f0 "aiy10190"
+b_f_0e0 9, 1
+b_f_0e1 1
+mov %branch_flag, 1:if %3004 >= 2 mov %branch_flag, 0
+if %branch_flag != 0 goto *main_L00550
+b__say "必须要做出决断。", 0, 0, 0, 0
+b_f_164 "不能让菲奥奈的双手染上亲人的鲜血", "应该让菲奥奈来做决定"
+b_f_160 
+b_f_0e0 9, %3004
+*main_L00550
+	b_f_0e1 9
+	mov %2988, %3004
+	mov %branch_flag, 1:if %2988 = 0 mov %branch_flag, 0
+	if %branch_flag != 0 goto *main_L00698
+	b_f_0f0 "aiy10230"
+	b_f_0f0 "aiy10240"
+	b_f_0f0 "aiy10250"
+	b_f_0f0 "aiy10260"
+	b_f_0f0 "aiy10270"
+	b_f_0f0 "aiy10280"
+	b_f_0f0 "aiy10290"
+	return 
+	goto *main_L00750
+*main_L00698
+	mov %branch_flag, 1:if %2988 = 1 mov %branch_flag, 0
+	if %branch_flag != 0 goto *main_L00750
+*main_L006c4
+	b_f_0f0 "aiy10200"
+	b_f_0f0 "aiy10210"
+	b_f_0f0 "aiy10220"
+	b_f_0e0 1, 0
+*main_L00750
+	b_f_0f0 "aiy20010"
+	b_f_0f0 "aiy20020"
+	b_f_0f0 "aiy20030"
+	b_f_0f0 "aiy20040"
+	b_f_0f0 "aiy20050"
+	b_f_0f0 "aiy20060"
+	b_f_0f0 "aiy20070"
+	b_f_0f0 "aiy20080"
+	b_f_0f0 "aiy20090"
+	b_f_0f0 "aiy20100"
+	b_f_0f0 "aiy20110"
+	b_f_0f0 "aiy20120"
+	b_f_0f0 "aiy20130"
+	b_f_0f0 "aiy20140"
+	b_f_0f0 "aiy20150"
+	b_f_0f0 "aiy20160"
+	b_f_0f0 "aiy20170"
+	b_f_0f0 "aiy20180"
+	b_f_0f0 "aiy20190"
+	b_f_0f0 "aiy20200"
+	b_f_0f0 "aiy20210"
+	b_f_0e5 202
+	if %branch_flag != 0 goto *main_L009a0
+	b_f_0f0 "aiy20220"
+*main_L009a0
+	b_f_0f0 "aiy20230"
+	b_f_0e5 202
+	if %branch_flag != 0 goto *main_L00a38
+	b_f_0f0 "aiy20240"
+	b_f_0f0 "aiy20250"
+	return 
+*main_L00a38
+	b_f_0f0 "aiy30010"
+	b_f_0f0 "aiy30020"
+	b_f_0f0 "aiy30030"
+	b_f_0f0 "aiy30040"
+	b_f_0f0 "aiy30050"
+	b_f_0f0 "aiy30060"
+	b_f_0f0 "aiy30070"
+	b_f_0f0 "aiy30080"
+	b_f_0f0 "aiy30090"
+	b_f_0f0 "aiy30100"
+	b_f_0f0 "aiy30110"
+	b_f_0f0 "aiy30120"
+	b_f_0f0 "aiy30130"
+	b_f_0f0 "aiy30140"
+	b_f_0f0 "aiy30150"
+	b_f_0f0 "aiy30160"
+	b_f_0f0 "aiy30170"
+	b_f_0f0 "aiy30180"
+	b_f_0f0 "aiy30190"
+	b_f_0f0 "aiy30200"
+	b_f_0f0 "aiy30210"
+	b_f_0f0 "aiy30220"
+	b_f_0e5 203
+	if %branch_flag != 0 goto *main_L00ca0
+	b_f_0f0 "aiy30230"
+*main_L00ca0
+	b_f_0f0 "aiy30240"
+	b_f_0f0 "aiy30250"
+	b_f_0f0 "aiy30260"
+	b_f_0e5 203
+	if %branch_flag != 0 goto *main_L00d80
+	b_f_0f0 "aiy30280"
+	b_f_0f0 "aiy30290"
+	b_f_0f0 "aiy30310"
+	return 
+	goto *main_L00e48
+*main_L00d80
+	b_f_0e5 206
+	if %branch_flag != 0 goto *main_L00e18
+	b_f_0f0 "aiy30280"
+	b_f_0f0 "aiy30300"
+	b_f_0f0 "aiy30310"
+	return 
+	goto *main_L00e3c
+*main_L00e18
+	b_f_0f0 "aiy30270"
+*main_L00e3c
+*main_L00e48
+	b_f_0f0 "aiy40010"
+	b_f_0f0 "aiy40020"
+	b_f_0f0 "aiy40030"
+	b_f_0f0 "aiy40040"
+	b_f_0f0 "aiy40050"
+	b_f_0f0 "aiy40060"
+	b_f_0f0 "aiy40070"
+	b_f_0f0 "aiy40080"
+	b_f_0f0 "aiy40090"
+	b_f_0f0 "aiy40100"
+	b_f_0f0 "aiy40110"
+	b_f_0f0 "aiy40120"
+	b_f_0f0 "aiy40130"
+	b_f_0f0 "aiy40140"
+	b_f_0f0 "aiy40150"
+	b_f_0f0 "aiy40160"
+	b_f_0f0 "aiy40170"
+	b_f_0f0 "aiy40180"
+	b_f_0f0 "aiy40190"
+	b_f_0f0 "aiy40200"
+	b_f_0f0 "aiy40210"
+	b_f_0f0 "aiy40220"
+	b_f_0f0 "aiy40230"
+	b_f_0f0 "aiy40240"
+	b_f_0f0 "aiy40250"
+	b_f_0f0 "aiy40260"
+	b_f_0f0 "aiy40270"
+	b_f_0f0 "aiy40280"
+	b_f_0f0 "aiy40290"
+	b_f_0f0 "aiy40300"
+	b_f_0f0 "aiy40310"
+	b_f_0f0 "aiy40320"
+	b_f_0f0 "aiy40330"
+	b_f_0f0 "aiy40340"
+	b_f_0f0 "aiy40350"
+	b_f_0e1 4
+	mov %branch_flag, 1:if %3004 >= 3 mov %branch_flag, 0
+	if %branch_flag != 0 goto *main_L01294
+	b_f_0f0 "aiy40410"
+	b_f_0f0 "aiy40420"
+	b_f_0f0 "aiy40430"
+	*test_1
+	b_f_0f0 "aiy40440"
+	b_f_0f0 "aiy40450"
+	b_f_0f0 "aiy40460"
+	b_f_0f0 "aiy40470"
+	return 
+	goto *main_L01318
+*main_L01294
+	b_f_0f0 "aiy40360"
+	b_f_0f0 "aiy40370"
+	b_f_0f0 "aiy40380"
+	b_f_0f0 "aiy40390"
+	b_f_0f0 "aiy40400"
+*main_L01318
+	b_f_0f0 "aiy50010"
+	b_f_0f0 "aiy50020"
+	b_f_0f0 "aiy50030"
+	b_f_0f0 "aiy50040"
+	b_f_0f0 "aiy50050"
+	b_f_0f0 "aiy50060"
+	b_f_0f0 "aiy50070"
+	b_f_0f0 "aiy50080"
+	b_f_0f0 "aiy50090"
+	b_f_0f0 "aiy50100"
+	b_f_0f0 "aiy50110"
+	b_f_0f0 "aiy50120"
+	b_f_0f0 "aiy50130"
+	b_f_0f0 "aiy50140"
+	b_f_0f0 "aiy50150"
+	b_f_0f0 "aiy50160"
+	b_f_0f0 "aiy50170"
+	b_f_0f0 "aiy50180"
+	b_f_0f0 "aiy50190"
+	b_f_0f0 "aiy50200"
+	b_f_0f0 "aiy50210"
+	b_f_0f0 "aiy50220"
+	b_f_0f0 "aiy50230"
+	b_f_0f0 "aiy50240"
+	b_f_0f0 "aiy50250"
+	b_f_0f0 "aiy50260"
+	b_f_0f0 "aiy50270"
+	b_f_0f0 "aiy50280"
+	b_f_0f0 "aiy50290"
+	b_f_0f0 "aiy50300"
+	b_f_0f0 "aiy50310"
+	b_f_0f0 "aiy50320"
+	return 
+*main_L01634
+	return
+
+*b_f_0f0
+	getparam $1001
+	if DEBUG_MODE_EX=1 lsp 0, ":s#FFFFFF剧本"+$1001, 0, 0, 255:print 1:br
+	mov $1001, "*"+$1001
+	if DEBUG_MODE_EX=1 selnum %0, "跳过", "继续":csp 0
+	if DEBUG_MODE_EX=1 & %0=0 return
+	gosub $1001
+	return

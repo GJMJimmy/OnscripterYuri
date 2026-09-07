@@ -1,0 +1,53 @@
+*custom_selbtn
+	atoi %0, $sysv_param:add %0, 21
+	if %0=21 gosub *custom_system:goto *sys_draw
+	if %0=22 gosub *custom_save:goto *sys_draw
+	if %0=23 gosub *custom_load:goto *sys_draw
+	if %0=24 gosub *custom_q_load:goto *sys_draw
+	if %0=25 gosub *custom_q_save:goto *sys_draw
+	if %0=26 gosub *custom_gesture:goto *sys_draw
+	if %0=27 gosub *custom_back:goto *sys_draw
+	goto *sys_draw
+
+*b_f_160
+	;selnum %2988, $1901, $1902
+	saveoff
+	mov %1101, 215:mov %1102, 295
+	mov %1103, 345:mov %1104, 65:mov %1106, 268
+	geoconv %1101:geoconv %1102
+	geoconv %1103:geoconv %1104:geoconv %1106
+	itoa $FONT_SIZE, %FONT_SIZE
+	mov $1903, ":s/"+$FONT_SIZE+","+$FONT_SIZE+",1;#FFFFFF"
+	lsph 10, ":a;sysgrp\SGSlctWnd900000.grp.png", %1106, %1103, 255
+	lsph 11, ":a;sysgrp\SGSlctWnd900000.grp.png", %1106, %1103+%1104, 255
+	
+	sys_new
+	mov %sysv_nobtndefclear, 1
+	sys_sp_add ":a;sysgrp\SGSlctWnd990000.grp.png", %1101, %1102, 255
+	sys_btn_add_ex ":a;sysgrp\SGSlctWnd900000.grp.png", %1106, %1103, 0, "*b_f_160_select;0", "P10C11"
+	sys_btn_add_ex ":a;sysgrp\SGSlctWnd900000.grp.png", %1106, %1103+%1104, 0, "*b_f_160_select;1", "P11C10"
+	lsph 1, $1903+$1901, 0, 0, 255
+	getspsize 1, %1107, %1108
+	mov %1105, (SCREEN_WIDTH-%1107)/2
+	sys_btn_add_ex $1903+$1901, %1105, %1103+LINE_SPACE, 255, "*b_f_160_select;0", "P10C11"
+	lsph 1, $1903+$1902, 0, 0, 255
+	getspsize 1, %1107, %1108
+	mov %1105, (SCREEN_WIDTH-%1107)/2
+	sys_btn_add_ex $1903+$1902, %1105, %1103+%1104+LINE_SPACE, 255, "*b_f_160_select;1", "P11C10"
+	csp 1
+	sys_right_set "rmenu"
+	sys_trans_set "custom", 500, ""
+	gosub *hide_frame_btn
+	gosub *show_frame_btn
+	goto *sys_draw
+*b_f_160_select
+	atoi %3004, $sysv_param
+	csp 10:csp 11
+	mov %sysv_nobtndefclear, 0
+	gosub *syscall_back
+	repaint
+	return
+
+*b_f_164
+	getparam $1901, $1902
+	return

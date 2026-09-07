@@ -1,0 +1,1050 @@
+;施工现场
+
+*f_13a
+	getparam $21
+	if %9 != %10 return
+	if %8 < %11 return
+	mov %12, %8-%11
+	if %12 >= 16 return
+	mov %21, 0
+	mov $23, $9
+	if %9 = 6 split $23, ";", $23
+	;
+		splits $23, ";", $22, $23
+		get_image $22:split $22, ";", $24, $22
+		if fchk $22 mov %21, 1:goto *fill_cg
+		if $23 = "" goto *fill_cg
+		skip -5
+*fill_cg
+	if %21=0 mov $21, "tum00-00_off"
+	mov $21, ":a;image\tum\"+$21+IMAGE_EXT
+	mov %23, %12/4
+	mov %22, %12-%23*4
+	mov %22, 337+%22*224
+	mov %23, 100+%23*133
+	geoconv %22:geoconv %23
+	sys_btn_add $21, %22, %23, 255, "*custom_cg_click;"+$9
+	return
+
+*custom_cg_fill
+	if %12 >= 15 return
+	mov $9, ""
+	for %12 = %12+1 to 15
+		mov %21, 0
+		gosub *fill_cg
+	next
+	return
+	
+*b_f_138
+	getparam %21, %22
+	return
+
+*custom_cg
+	b_f_0e7 3
+	if %branch_flag = 0 mov %1, 1:skip 2
+	mov %1, 0
+
+	b_f_138 0, 20
+	b_f_138 1, 16
+	b_f_138 2, 20
+	b_f_138 3, 16
+	b_f_138 4, 16
+	b_f_138 5, 21
+	b_f_138 6, 48
+	b_f_138 7, 60
+
+	mov %10, 0:mov %11, 0
+*custom_cg_set
+	;di2 sysv_id_bottom, "SYSV_ID"
+	sys_new
+	mov %sysv_nobtndefclear, 1
+	sys_sp_add ":c;sysgrp\SGGallery990000"+FIX_SYSGRP, 0, 0, 255
+	
+	mov %12, 0
+	gosub *prepare_cg
+	gosub *custom_cg_fill
+	sys_right_set "clear"
+	sys_trans_set "crossfade", 0, ""
+	btndef ":a;sysgrp\SGGallery990100"+FIX_SYSGRP
+	sys_btn_add_ex2 1218, 100, 35, 35, "*custom_cg_prev"
+	sys_btn_add_ex2 1218, 563, 35, 35, "*custom_cg_next"
+	gosub *custom_common_button
+	; x, y, y_add
+	mov %4, 30:mov %5, 100:mov %6, 70:geoconv %4
+	for %2 = 0 to 7
+		itoa $3, %2:mov %7, %5+%6*%2
+		if %2=2 & %1=1 geoconv %7:sys_btn_add ":a/2,0,3;sysgrp2\SGGalleryS9901021.png", %4, %7, 255, "*custom_cg_role;"+$3:skip 2
+		sys_btn_add_ex2 30, %7, 234, 54, "*custom_cg_role;"+$3
+		;
+	next
+	goto *sys_draw
+
+*custom_cg_prev
+	gosub *syscall_back
+	if %11 >= 4 sub %11, 4
+	goto *custom_cg_set
+	
+*custom_cg_next
+	gosub *syscall_back
+	add %11, 4
+	if %10 = 0 & %11 >= 20 mov %11, 16
+	if %10 = 1 & %11 >= 16 mov %11, 12
+	if %10 = 2 & %11 >= 20 mov %11, 16
+	if %10 = 3 & %11 >= 16 mov %11, 12
+	if %10 = 4 & %11 >= 16 mov %11, 12
+	if %10 = 5 & %11 >= 21 mov %11, 20
+	if %10 = 6 & %11 >= 48 mov %11, 44
+	if %10 = 7 & %11 >= 60 mov %11, 56
+	goto *custom_cg_set
+
+
+*custom_cg_role
+	gosub *syscall_back
+	atoi %10, $sysv_param:mov %11, 0
+	goto *custom_cg_set
+	
+*custom_cg_click
+	gosub *syscall_back
+	mov $9, $sysv_param
+	;ds2 9, "CG"
+	if %10 = 6 goto *custom_cg_click_ex
+	;
+		splits $9, ";", $22, $9
+		get_image $22:split $22, ";", $23, $22
+		if fchk $22 gosub *custom_cg_show:if %9 = -1 skip 3
+		if $9 = "" skip 2
+		skip -5
+	;
+	goto *custom_cg_set
+
+*custom_cg_click_ex
+	splits $9, ";", $22, $9
+	get_image $22
+	blsp_face 1, $22, 0, 0, 255
+	;
+		splits $9, ";", $22, $9
+		get_image $22:split $22, ";", $23, $22
+		notif fchk $22 skip 2
+		gosub *custom_cg_show_ex:if %9 = -1 skip 3
+		if $9 = "" skip 2
+		skip -6
+	;
+	csp 1
+	goto *custom_cg_set
+	
+*custom_cg_show_ex
+	mov $22, ":a;"+$22
+	blsp2 L_TOP_0, $22, 0, 0, 255, 2
+	skip 4
+*custom_cg_show
+	mov $22, ":a;"+$22
+	blsp_face 0, $22, 0, 0, 255
+	;
+	;ds2 22, "CGS"
+	mov %9, 0
+	btnwait2 %9
+	csp 0
+	if %9 = -10 mov %9, -1
+	return
+
+*prepare_cg
+	;%7-图像个数 %8-图像编号 %9-人物
+	mov %9, 0
+	mov %8, 0
+	mov %7, 2
+	mov $9, "eve_010101;eve_010102;"
+	f_13a "tum01-01_on"
+	inc %8
+	mov %7, 4
+	mov $9, "eve_010201;eve_010202;eve_010203;eve_010204;"
+	f_13a "tum01-02_on"
+	inc %8
+	mov %7, 5
+	mov $9, "eve_010301;eve_010302;eve_010303;eve_010304;eve_010305;"
+	f_13a "tum01-03_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_010401;"
+	f_13a "tum01-04_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_010501;"
+	f_13a "tum01-05_on"
+	inc %8
+	mov %7, 2
+	mov $9, "eve_010601;eve_010602;"
+	f_13a "tum01-06_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_010701;"
+	f_13a "tum01-07_on"
+	inc %8
+	mov %7, 4
+	mov $9, "eve_010901;eve_010902;eve_010903;eve_010904;"
+	f_13a "tum01-09_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_011101;"
+	f_13a "tum01-11_on"
+	inc %8
+	mov %7, 6
+	mov $9, "eve_011201;eve_011202;eve_011203;eve_011204;eve_011205;eve_011206;"
+	f_13a "tum01-12_on"
+	inc %8
+	mov %7, 2
+	mov $9, "eve_011301;eve_011302;"
+	f_13a "tum01-13_on"
+	inc %8
+	mov %7, 2
+	mov $9, "eve_011401;eve_011402;"
+	f_13a "tum01-14_on"
+	inc %8
+	mov %7, 6
+	mov $9, "hcg_010101;hcg_010102;hcg_010103;hcg_010104;hcg_010105;hcg_010106;"
+	f_13a "tum01-15_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_010201;hcg_010202;hcg_010203;hcg_010204;hcg_010205;"
+	f_13a "tum01-16_on"
+	inc %8
+	mov %7, 4
+	mov $9, "hcg_010301;hcg_010302;hcg_010303;hcg_010304;"
+	f_13a "tum01-17_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_010401;hcg_010402;hcg_010403;hcg_010404;hcg_010405;"
+	f_13a "tum01-18_on"
+	inc %8
+	mov %7, 4
+	mov $9, "hcg_010501;hcg_010502;hcg_010503;hcg_010504;"
+	f_13a "tum01-19_on"
+	inc %8
+	mov %7, 6
+	mov $9, "hcg_010601;hcg_010602;hcg_010603;hcg_010604;hcg_010605;hcg_010606;"
+	f_13a "tum01-20_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_010701;hcg_010702;hcg_010703;hcg_010704;hcg_010705;"
+	f_13a "tum01-21_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_010801;hcg_010802;hcg_010803;hcg_010804;hcg_010805;"
+	f_13a "tum01-22_on"
+	inc %8
+	mov %9, 1
+	mov %8, 0
+	mov %7, 1
+	mov $9, "eve_020102;"
+	f_13a "tum02-01_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_020201;"
+	f_13a "tum02-02_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_020301;"
+	f_13a "tum02-03_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_020401;"
+	f_13a "tum02-04_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_020501;"
+	f_13a "tum02-05_on"
+	inc %8
+	mov %7, 5
+	mov $9, "eve_020601;eve_020602;eve_020603;eve_020604;eve_020605;"
+	f_13a "tum02-06_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_020701;"
+	f_13a "tum02-07_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_020801;"
+	f_13a "tum02-08_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_020101;hcg_020102;hcg_020103;hcg_020104;hcg_020105;"
+	f_13a "tum02-09_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_020201;hcg_020202;hcg_020203;hcg_020204;hcg_020205;"
+	f_13a "tum02-10_on"
+	inc %8
+	mov %7, 8
+	mov $9, "hcg_020701;hcg_020702;hcg_020703;hcg_020704;hcg_020711;hcg_020712;hcg_020713;"
+	add $9, "hcg_020714;"
+	f_13a "tum02-11_on"
+	inc %8
+	mov %7, 10
+	mov $9, "hcg_020801;hcg_020802;hcg_020803;hcg_020804;hcg_020805;hcg_020811;hcg_020812;"
+	add $9, "hcg_020813;hcg_020814;hcg_020815;"
+	f_13a "tum02-12_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_020501;hcg_020502;hcg_020503;hcg_020504;hcg_020505;"
+	f_13a "tum02-13_on"
+	inc %8
+	mov %7, 4
+	mov $9, "hcg_020601;hcg_020602;hcg_020603;hcg_020604;"
+	f_13a "tum02-14_on"
+	inc %8
+	mov %7, 4
+	mov $9, "hcg_020301;hcg_020302;hcg_020303;hcg_020304;"
+	f_13a "tum02-15_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_020401;hcg_020402;hcg_020403;hcg_020404;hcg_020405;"
+	f_13a "tum02-16_on"
+	inc %8
+	mov %9, 2
+	mov %8, 0
+	mov %7, 1
+	mov $9, "eve_030101;"
+	f_13a "tum03-01_on"
+	inc %8
+	mov %7, 5
+	mov $9, "eve_030201;eve_030203;eve_030204;eve_030205;eve_030206;"
+	f_13a "tum03-02_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_030302;"
+	f_13a "tum03-03_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_030401;"
+	f_13a "tum03-04_on"
+	inc %8
+	mov %7, 9
+	mov $9, "eve_030501;eve_030502;eve_030503;eve_030504;eve_030505;eve_030506;eve_030507;"
+	add $9, "eve_030508;eve_030509;"
+	f_13a "tum03-05_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_030601;"
+	f_13a "tum03-06_on"
+	inc %8
+	mov %7, 2
+	mov $9, "eve_030701;eve_030702;"
+	f_13a "tum03-07_on"
+	inc %8
+	mov %7, 3
+	mov $9, "eve_030802;eve_030801;eve_030803;"
+	f_13a "tum03-08_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_030901;"
+	f_13a "tum03-09_on"
+	inc %8
+	mov %7, 2
+	mov $9, "eve_031001;eve_031002;"
+	f_13a "tum03-10_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_031101;"
+	f_13a "tum03-11_on"
+	inc %8
+	mov %7, 6
+	mov $9, "hcg_030101;hcg_030102;hcg_030103;hcg_030104;hcg_030105;hcg_030106;"
+	f_13a "tum03-12_on"
+	inc %8
+	mov %7, 12
+	mov $9, "hcg_030201;hcg_030202;hcg_030203;hcg_030204;hcg_030205;hcg_030206;hcg_030207;"
+	add $9, "hcg_030208;hcg_030209;hcg_0302010;hcg_030211;hcg_030212;"
+	f_13a "tum03-13_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_030301;hcg_030302;hcg_030303;hcg_030304;hcg_030305;"
+	f_13a "tum03-14_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_030401;hcg_030402;hcg_030403;hcg_030404;hcg_030405;"
+	f_13a "tum03-15_on"
+	inc %8
+	mov %7, 7
+	mov $9, "hcg_030501;hcg_030502;hcg_030503;hcg_030504;hcg_030505;hcg_030506;hcg_030507;"
+	f_13a "tum03-16_on"
+	inc %8
+	mov %7, 10
+	mov $9, "hcg_030601;hcg_030602;hcg_030603;hcg_030604;hcg_030605;hcg_030606;hcg_030607;"
+	add $9, "hcg_030608;hcg_030610;hcg_030609;"
+	f_13a "tum03-17_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_030701;hcg_030702;hcg_030703;hcg_030704;hcg_030705;"
+	f_13a "tum03-18_on"
+	inc %8
+	mov %7, 13
+	mov $9, "hcg_030801;hcg_030802;hcg_030803;hcg_030804;hcg_030805;hcg_030806;hcg_030807;"
+	add $9, "hcg_030808;hcg_030809;hcg_030810;hcg_030811;hcg_030812;hcg_030813;"
+	f_13a "tum03-19_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_010801;"
+	f_13a "tum01-08_on"
+	inc %8
+	mov %9, 3
+	mov %8, 0
+	mov %7, 1
+	mov $9, "eve_040101;"
+	f_13a "tum04-01_on"
+	inc %8
+	mov %7, 2
+	mov $9, "eve_040201;eve_040202;"
+	f_13a "tum04-02_on"
+	inc %8
+	mov %7, 2
+	mov $9, "eve_040301;eve_040302;"
+	f_13a "tum04-03_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_040401;"
+	f_13a "tum04-04_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_040501;"
+	f_13a "tum04-05_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_040601;"
+	f_13a "tum04-06_on"
+	inc %8
+	mov %7, 2
+	mov $9, "eve_040701;eve_040702;"
+	f_13a "tum04-07_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_040801;"
+	f_13a "tum04-08_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_040101;hcg_040102;hcg_040103;hcg_040104;hcg_040105;"
+	f_13a "tum04-09_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_040201;hcg_040202;hcg_040203;hcg_040204;hcg_040205;"
+	f_13a "tum04-10_on"
+	inc %8
+	mov %7, 7
+	mov $9, "hcg_040301;hcg_040302;hcg_040303;hcg_040304;hcg_040305;hcg_040306;hcg_040307;"
+	f_13a "tum04-11_on"
+	inc %8
+	mov %7, 8
+	mov $9, "hcg_040401;hcg_040402;hcg_040403;hcg_040404;hcg_040405;hcg_040406;hcg_040407;"
+	add $9, "hcg_040408;"
+	f_13a "tum04-12_on"
+	inc %8
+	mov %7, 6
+	mov $9, "hcg_040501;hcg_040502;hcg_040503;hcg_040504;hcg_040505;hcg_040506;"
+	f_13a "tum04-13_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_040601;hcg_040602;hcg_040603;hcg_040604;hcg_040605;"
+	f_13a "tum04-14_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_040701;hcg_040702;hcg_040703;hcg_040704;hcg_040705;"
+	f_13a "tum04-15_on"
+	inc %8
+	mov %7, 6
+	mov $9, "hcg_040801;hcg_040802;hcg_040803;hcg_040804;hcg_040805;hcg_040806;"
+	f_13a "tum04-16_on"
+	inc %8
+	mov %9, 4
+	mov %8, 0
+	mov %7, 1
+	mov $9, "eve_050101;"
+	f_13a "tum05-01_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_050201;"
+	f_13a "tum05-02_on"
+	inc %8
+	mov %7, 3
+	mov $9, "eve_050301;eve_050302;eve_050303;"
+	f_13a "tum05-03_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_050401;"
+	f_13a "tum05-04_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_050501;"
+	f_13a "tum05-05_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_050601;"
+	f_13a "tum05-06_on"
+	inc %8
+	mov %7, 4
+	mov $9, "eve_050701;eve_050702;eve_050703;eve_050704;"
+	f_13a "tum05-07_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_050801;"
+	f_13a "tum05-08_on"
+	inc %8
+	mov %7, 6
+	mov $9, "hcg_050101;hcg_050102;hcg_050103;hcg_050104;hcg_050105;hcg_050106;"
+	f_13a "tum05-09_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_050201;hcg_050202;hcg_050203;hcg_050204;hcg_050205;"
+	f_13a "tum05-10_on"
+	inc %8
+	mov %7, 8
+	mov $9, "hcg_050301;hcg_050302;hcg_050303;hcg_050304;hcg_050305;hcg_050306;hcg_050307;"
+	add $9, "hcg_050308;"
+	f_13a "tum05-11_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_050401;hcg_050402;hcg_050403;hcg_050404;hcg_050405;"
+	f_13a "tum05-12_on"
+	inc %8
+	mov %7, 6
+	mov $9, "hcg_050501;hcg_050502;hcg_050503;hcg_050504;hcg_050505;hcg_050506;"
+	f_13a "tum05-13_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_050601;hcg_050602;hcg_050603;hcg_050604;hcg_050605;"
+	f_13a "tum05-14_on"
+	inc %8
+	mov %7, 4
+	mov $9, "hcg_050701;hcg_050702;hcg_050703;hcg_050704;"
+	f_13a "tum05-15_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_050801;hcg_050802;hcg_050803;hcg_050804;hcg_050805;"
+	f_13a "tum05-16_on"
+	inc %8
+	mov %9, 5
+	mov %8, 0
+	mov %7, 2
+	mov $9, "eve_070101;eve_070102;"
+	f_13a "tum06-01_on"
+	inc %8
+	mov %7, 1
+	mov $9, "eve_011001;"
+	f_13a "tum01-10_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_060101;hcg_060102;hcg_060103;hcg_060104;hcg_060105;"
+	f_13a "tum06-02_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_060201;hcg_060202;hcg_060203;hcg_060204;hcg_060205;"
+	f_13a "tum06-03_on"
+	inc %8
+	mov %7, 4
+	mov $9, "hcg_060301;hcg_060302;hcg_060303;hcg_060304;"
+	f_13a "tum06-04_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_060401;hcg_060402;hcg_060403;hcg_060404;hcg_060405;"
+	f_13a "tum06-05_on"
+	inc %8
+	mov %7, 4
+	mov $9, "hcg_060501;hcg_060502;hcg_060503;hcg_060504;"
+	f_13a "tum06-06_on"
+	inc %8
+	mov %7, 5
+	mov $9, "hcg_060601;hcg_060602;hcg_060603;hcg_060604;hcg_060605;"
+	f_13a "tum06-07_on"
+	inc %8
+	mov %7, 1
+	mov $9, "mon_010101;"
+	f_13a "tum06-08_on"
+	inc %8
+	mov %7, 1
+	mov $9, "mon_020101;"
+	f_13a "tum06-09_on"
+	inc %8
+	mov %7, 1
+	mov $9, "mon_030101;"
+	f_13a "tum06-10_on"
+	inc %8
+	mov %7, 2
+	mov $9, "mon_030201;mon_030202;"
+	f_13a "tum06-11_on"
+	inc %8
+	mov %7, 1
+	mov $9, "mon_030301;"
+	f_13a "tum06-12_on"
+	inc %8
+	mov %7, 1
+	mov $9, "mon_040101;"
+	f_13a "tum06-13_on"
+	inc %8
+	mov %7, 1
+	mov $9, "mon_040201;"
+	f_13a "tum06-14_on"
+	inc %8
+	mov %7, 1
+	mov $9, "mon_040301;"
+	f_13a "tum06-15_on"
+	inc %8
+	mov %7, 1
+	mov $9, "mon_050101;"
+	f_13a "tum06-16_on"
+	inc %8
+	mov %7, 1
+	mov $9, "mon_050201;"
+	f_13a "tum06-17_on"
+	inc %8
+	mov %7, 1
+	mov $9, "mon_050301;"
+	f_13a "tum06-18_on"
+	inc %8
+	mov %7, 1
+	mov $9, "mon_070101;"
+	f_13a "tum06-19_on"
+	inc %8
+	mov %7, 1
+	mov $9, "mon_070102;"
+	f_13a "tum06-20_on"
+	inc %8
+	mov %9, 6
+	mov %8, 0
+	mov %7, 4
+	
+	notif fchk "image\aiy81010_07.png" return
+	
+	mov $9, "bg_3011;tati_010102;tati_010133;tati_010155;"
+	f_13a "tum07-01_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_3801;tati_010604;tati_010634;tati_010647;"
+	f_13a "tum07-02_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_1011;tati_010707;tati_010728;tati_010743;"
+	f_13a "tum07-03_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_3571;tati_010213;tati_010229;tati_010253;"
+	f_13a "tum07-04_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_3561;tati_010310;tati_010331;tati_010342;"
+	f_13a "tum07-05_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_1021;tati_010412;tati_010432;tati_010450;"
+	f_13a "tum07-06_on"
+	inc %8
+	mov %7, 6
+	mov $9, "bg_3573;tati_010014;tati_010037;tati_010048;tati_010803;tati_010827;"
+	f_13a "tum07-07_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_3601;tati_020101;tati_020125;tati_020146;"
+	f_13a "tum07-08_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_3521;tati_020213;tati_020222;tati_020243;"
+	f_13a "tum07-09_on"
+	inc %8
+	mov %7, 6
+	mov $9, "bg_3581;tati_020008;tati_020029;tati_020056;tati_020317;tati_020342;"
+	f_13a "tum07-10_on"
+	inc %8
+	mov %7, 7
+	mov $9, "bg_1561;tati_030101;tati_031101;tati_030132;tati_031132;tati_030152;tati_031152;"
+	f_13a "tum07-11_on"
+	inc %8
+	mov %7, 7
+	mov $9, "bg_2511;tati_030212;tati_031212;tati_030224;tati_031224;tati_030248;tati_031248;"
+	f_13a "tum07-12_on"
+	inc %8
+	mov %7, 7
+	mov $9, "bg_1543;tati_030008;tati_031008;tati_030029;tati_031029;tati_030048;tati_031056;"
+	f_13a "tum07-13_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_1131;tati_040101;tati_040121;tati_040141;"
+	f_13a "tum07-14_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_1151;tati_040202;tati_040222;tati_040254;"
+	f_13a "tum07-15_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_1161;tati_040304;tati_040328;tati_040348;"
+	f_13a "tum07-16_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_1171;tati_040413;tati_040431;tati_040450;"
+	f_13a "tum07-17_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_1153;tati_040008;tati_040035;tati_040049;"
+	f_13a "tum07-18_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_3031;tati_050101;tati_050123;tati_050141;"
+	f_13a "tum07-19_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_3721;tati_050443;tati_050452;"
+	f_13a "tum07-20_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_3021;tati_050206;tati_050226;tati_050243;"
+	f_13a "tum07-21_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_2541;tati_050302;tati_050333;tati_050346;"
+	f_13a "tum07-22_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_3573;tati_050014;tati_050031;tati_050049;"
+	f_13a "tum07-23_on"
+	inc %8
+	mov %7, 5
+	mov $9, "bg_2041;tati_110101;tati_110113;tati_110121;tati_110122;"
+	f_13a "tum07-24_on"
+	inc %8
+	mov %7, 5
+	mov $9, "bg_2061;tati_110210;tati_110212;tati_110227;tati_110226;"
+	f_13a "tum07-25_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_2031;tati_111121;tati_111232;"
+	f_13a "tum07-26_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_1111;tati_110423;tati_110430;"
+	f_13a "tum07-27_on"
+	inc %8
+	mov %7, 5
+	mov $9, "bg_3551;tati_120101;tati_120112;tati_120123;tati_120128;"
+	f_13a "tum07-28_on"
+	inc %8
+	mov %7, 5
+	mov $9, "bg_1531;tati_130101;tati_130106;tati_130121;tati_130122;"
+	f_13a "tum07-29_on"
+	inc %8
+	mov %7, 5
+	mov $9, "bg_2551;tati_130202;tati_130212;tati_130224;tati_130228;"
+	f_13a "tum07-30_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_3541;tati_140201;tati_140212;"
+	f_13a "tum07-31_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_3543;tati_140104;tati_140111;"
+	f_13a "tum07-32_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_3544;tati_140009;tati_140008;"
+	f_13a "tum07-33_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_3611;tati_150101;tati_150112;"
+	f_13a "tum07-34_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_3613;tati_150014;tati_150002;"
+	f_13a "tum07-35_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_3531;tati_160101;tati_160110;"
+	f_13a "tum07-36_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_3534;tati_160011;tati_160008;"
+	f_13a "tum07-37_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_3801;tati_170104;tati_170122;"
+	f_13a "tum07-38_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_1196;tati_170202;tati_170229;"
+	f_13a "tum07-39_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_3561;tati_310101;"
+	f_13a "tum07-40_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_2051;tati_320101;tati_320123;"
+	f_13a "tum07-41_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_3821;tati_330101;"
+	f_13a "tum07-42_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_3591;tati_340101;"
+	f_13a "tum07-43_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_1141;tati_360101;"
+	f_13a "tum07-44_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_3511;tati_400101;"
+	f_13a "tum07-45_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_1121;tati_410101;tati_410201;"
+	f_13a "tum07-46_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_3021;tati_430101;"
+	f_13a "tum07-47_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_1521;tati_440101;"
+	f_13a "tum07-48_on"
+	inc %8
+	mov %9, 7
+	mov %8, 0
+	mov %7, 3
+	mov $9, "bg_1010;bg_1011;bg_1013;"
+	f_13a "tum08-01_on"
+	inc %8
+	mov %7, 6
+	mov $9, "bg_1021;bg_1024;bg_1025;bg_1027;bg_1028;bg_1029;"
+	f_13a "tum08-02_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_1111;bg_1114;bg_1116;"
+	f_13a "tum08-03_on"
+	inc %8
+	mov %7, 5
+	mov $9, "bg_1121;bg_1122;bg_1123;bg_1125;bg_1126;"
+	f_13a "tum08-04_on"
+	inc %8
+	mov %7, 1
+	mov $9, "bg_1131;"
+	f_13a "tum08-05_on"
+	inc %8
+	mov %7, 1
+	mov $9, "bg_1141;"
+	f_13a "tum08-06_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_1151;bg_1152;bg_1153;bg_1154;"
+	f_13a "tum08-07_on"
+	inc %8
+	mov %7, 5
+	mov $9, "bg_1161;bg_1162;bg_1163;bg_1165;bg_1167;"
+	f_13a "tum08-08_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_1171;bg_1172;bg_1173;"
+	f_13a "tum08-09_on"
+	inc %8
+	mov %7, 1
+	mov $9, "bg_1181;"
+	f_13a "tum08-10_on"
+	inc %8
+	mov %7, 5
+	mov $9, "bg_1191;bg_1192;bg_1193;bg_1196;bg_1197;"
+	f_13a "tum08-11_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_1202;bg_1203;"
+	f_13a "tum08-12_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_1211;bg_1213;bg_1215;bg_1216;"
+	f_13a "tum08-13_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_1510;bg_1511;bg_1512;bg_1513;"
+	f_13a "tum08-14_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_1520;bg_1521;bg_1522;bg_1524;"
+	f_13a "tum08-15_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_1531;bg_1532;bg_1533;"
+	f_13a "tum08-16_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_1541;bg_1542;bg_1543;"
+	f_13a "tum08-17_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_1551;bg_1552;bg_1553;bg_1554;"
+	f_13a "tum08-18_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_1561;bg_1563;"
+	f_13a "tum08-19_on"
+	inc %8
+	mov %7, 7
+	mov $9, "bg_2010;bg_2011;bg_2012;bg_2013;bg_2014;bg_2015;bg_2016;"
+	f_13a "tum08-20_on"
+	inc %8
+	mov %7, 1
+	mov $9, "bg_2021;"
+	f_13a "tum08-21_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_2031;bg_2032;bg_2033;bg_2034;"
+	f_13a "tum08-22_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_2041;bg_2042;bg_2043;"
+	f_13a "tum08-23_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_2051;bg_2052;bg_2053;bg_2055;"
+	f_13a "tum08-24_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_2061;bg_2063;bg_2065;"
+	f_13a "tum08-25_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_2071;bg_2074;"
+	f_13a "tum08-26_on"
+	inc %8
+	mov %7, 1
+	mov $9, "bg_2081;"
+	f_13a "tum08-27_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_2511;bg_2512;bg_2513;bg_2515;"
+	f_13a "tum08-28_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_2521;bg_2522;bg_2523;"
+	f_13a "tum08-29_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_2531;bg_2535;bg_2537;bg_2538;"
+	f_13a "tum08-30_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_2541;bg_2542;bg_2543;bg_2544;"
+	f_13a "tum08-31_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_2551;bg_2552;bg_2553;bg_2554;"
+	f_13a "tum08-32_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_2561;bg_2563;"
+	f_13a "tum08-33_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_3016;bg_3011;bg_3012;bg_3015;"
+	f_13a "tum08-34_on"
+	inc %8
+	mov %7, 6
+	mov $9, "bg_3027;bg_3021;bg_3022;bg_3025;bg_3026;bg_3028;"
+	f_13a "tum08-35_on"
+	inc %8
+	mov %7, 1
+	mov $9, "bg_3031;"
+	f_13a "tum08-36_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_3042;bg_3043;"
+	f_13a "tum08-37_on"
+	inc %8
+	mov %7, 8
+	mov $9, "bg_3511;bg_3512;bg_3513;bg_3514;bg_3515;bg_3516;bg_3517;"
+	add $9, "bg_3518;"
+	f_13a "tum08-38_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_3521;bg_3522;bg_3523;bg_3524;"
+	f_13a "tum08-39_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_3531;bg_3534;"
+	f_13a "tum08-40_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_3541;bg_3543;bg_3544;"
+	f_13a "tum08-41_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_3551;bg_3553;"
+	f_13a "tum08-42_on"
+	inc %8
+	mov %7, 6
+	mov $9, "bg_3561;bg_3562;bg_3563;bg_3564;bg_3565;bg_3566;"
+	f_13a "tum08-43_on"
+	inc %8
+	mov %7, 7
+	mov $9, "bg_3571;bg_3572;bg_3573;bg_3574;bg_3575;bg_3576;bg_3577;"
+	f_13a "tum08-44_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_3581;bg_3583;bg_3584;"
+	f_13a "tum08-45_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_3591;bg_3592;bg_3593;"
+	f_13a "tum08-46_on"
+	inc %8
+	mov %7, 8
+	mov $9, "bg_3601;bg_3602;bg_3603;bg_3604;bg_3605;bg_3606;bg_3607;"
+	add $9, "bg_3608;"
+	f_13a "tum08-47_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_3611;bg_3613;"
+	f_13a "tum08-48_on"
+	inc %8
+	mov %7, 1
+	mov $9, "bg_3701;"
+	f_13a "tum08-49_on"
+	inc %8
+	mov %7, 2
+	mov $9, "bg_3721;bg_3722;"
+	f_13a "tum08-50_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_3731;bg_3732;bg_3733;bg_3734;"
+	f_13a "tum08-51_on"
+	inc %8
+	mov %7, 5
+	mov $9, "bg_3801;bg_3802;bg_3803;bg_3804;bg_3805;"
+	f_13a "tum08-52_on"
+	inc %8
+	mov %7, 3
+	mov $9, "bg_3811;bg_3812;bg_3813;"
+	f_13a "tum08-53_on"
+	inc %8
+	mov %7, 5
+	mov $9, "bg_3821;bg_3822;bg_3823;bg_3824;bg_3826;"
+	f_13a "tum08-54_on"
+	inc %8
+	mov %7, 10
+	mov $9, "bg_4101;bg_4102;bg_4103;bg_4104;bg_4105;bg_4106;bg_4107;"
+	add $9, "bg_4108;bg_4110;bg_4111;"
+	f_13a "tum08-55_on"
+	inc %8
+	mov %7, 1
+	mov $9, "bg_5012;"
+	f_13a "tum08-56_on"
+	inc %8
+	mov %7, 1
+	mov $9, "bg_5021;"
+	f_13a "tum08-57_on"
+	inc %8
+	mov %7, 6
+	mov $9, "bg_5031;bg_5032;bg_5033;bg_5035;bg_5036;bg_5037;"
+	f_13a "tum08-58_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_5041;bg_5042;bg_5043;bg_5044;"
+	f_13a "tum08-59_on"
+	inc %8
+	mov %7, 4
+	mov $9, "bg_5051;bg_5052;bg_5053;bg_5054;"
+	f_13a "tum08-60_on"
+	inc %8
+	return

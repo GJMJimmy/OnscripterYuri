@@ -1,0 +1,51 @@
+; 基础分支选项
+; 使用临时变量: protected
+
+*k_seladd
+	push2 1001, 1002
+	getparam $1001, $1002
+	mov %1001, KSEL_POOL+KSEL_SIZE*%KSEL_COUNT
+	mov $%1001, $1001
+	inc %1001:mov $%1001, $1002
+	inc %KSEL_COUNT
+	pop2
+	return
+
+*k_select
+	pushi2 1001, 1004
+	savegame 999
+	btndef ""
+	mov %1002, KSEL_POOL
+	mov %1003, 0:mov %1004, 100
+	if %KSEL_COUNT > 3 mov %1003, 20:mov %1004, 80
+	for %1001=1 to %KSEL_COUNT
+		lsp L_KSEL-%1001, FMT_KSEL+$%1002, 200, %1001 * %1004 + %1003
+		spbtn L_KSEL-%1001, %1001
+		add %1002, KSEL_SIZE
+	next
+*k_select_lp
+	btnwait2 %1002
+	if %1002 = -10 mov %1002, -1
+	if %right_enabled = 0 & %1002 = -1 goto *k_select_lp
+	if %1002 < 1 & %1002 != -1 goto *k_select_lp
+	gosub *k_select_clear
+	if %1002 = -1 popi2:systemcall rmenu:goto *k_select
+	mov %1002, KSEL_POOL+KSEL_SIZE*(%1002-1)+1
+	mov $kflow_label, $%1002
+	mov %KSEL_COUNT, 0
+	popi2
+	return
+
+*k_select_clear
+	pushint 1001
+	btndef clear
+	for %1001=1 to %KSEL_COUNT
+		csp L_KSEL-%1001
+	next
+	popint 1001
+	return
+
+*k_selclear
+	gosub *k_select_clear
+	repaint
+	return

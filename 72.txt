@@ -1,0 +1,156 @@
+; 基础变量函数2
+; 使用临时变量: 501~505
+
+; 全是一些为了取变量方便的工具
+
+
+*gvs
+	; gvs <$result>, %base, %offset
+	getparam s%501,%502,%503
+	add %502,%503
+	mov $%501,$%502
+	return
+
+*gvn
+	; gvn <%result>, %base, %offset
+	getparam i%501,%502,%503
+	add %502,%503
+	mov %%501,%%502
+	return
+
+*gvnfs
+	; gvnfs <%result>, %base, %offset
+	getparam i%501,%502,%503
+	add %502,%503
+	atoi %%501,$%502
+	return
+
+*gvsfn
+	; gvsfn <$result>, %base, %offset
+	getparam s%501,%502,%503
+	add %502,%503
+	itoa $%501,%%502
+	return
+
+*pvs
+	; pvs $0, %base, %offset
+	getparam $501,%502,%503
+	add %502,%503
+	mov $%502,$501
+	return
+
+*pvn
+	; pvn %0, %base, %offset
+	getparam %501,%502,%503
+	add %502,%503
+	mov %%502,%501
+	return
+
+*pvnfs
+	; pvnfs $0, %base, %offset
+	getparam $501,%502,%503
+	add %502,%503
+	atoi %%502,$501
+	return
+
+*pvsfn
+	; pvsfn %0, %base, %offset
+	getparam %501,%502,%503
+	add %502,%503
+	itoa $%502,%501
+	return
+
+*cvs
+	; 从起始地址开始连续多个字符串复制到另一个地址开始的一串字符串变量中
+	; cvs %save_addr, %load_addr,%count
+	getparam %501,%502,%503
+	for %503=%503 to 1 step -1
+		mov $%501,$%502
+		inc %501:inc %502
+	next
+	return
+
+*cvn
+	; 从起始地址开始连续多个数字复制到另一个地址开始的一串数字变量中
+	; cvn %save_addr, %load_addr,%count
+	getparam %501,%502,%503
+	for %503=%503 to 1 step -1
+		mov %%501,%%502
+		inc %501:inc %502
+	next
+	return
+
+*cvsn
+	; 从起始地址开始连续多个字符串/数字复制到另一个地址开始的一串字符串/数字变量中
+	; cvsn %save_addr, %load_addr,%count
+	getparam %501,%502,%503
+	for %503=%503 to 1 step -1
+		mov %%501,%%502
+		mov $%501,$%502
+		inc %501:inc %502
+	next
+	return
+
+*mvsfn
+	;==============================================
+	;从起始地址起连续多个数字合并并转换为单个字符串
+	;mvsfn <$save>, $delimiter, %load_addr, %count
+	;==============================================
+	;例：
+	;mov %1,0:mov %2,1:mov %3,2
+	;cvsfn 0,",",1,3
+	;此时$0="0,1,2"
+	;==============================================
+	getparam %501,$503,%502,%503
+	mov $%501,""
+		itoa $502,%%502
+		add $%501,$502
+	if %503=1 return
+		add $%501,$503
+		inc %502:dec %503
+	skip -5
+
+*svstn
+	;==============================================
+	;mvsfn的反函数
+	;svstn $0, $delimiter, %load_addr, %count
+	;==============================================
+	;例：svstn "0,1,2",",",2,3
+	;此时%2=0,%3=1,%4=2
+	;相比而言更多的时候直接用split效率更高，
+	;所以基本上仅在不确定读取数量或数量为变量时有用
+	;==============================================
+	getparam $501,$503,%502,%503
+	for %503=%503 to 1 step -1
+		splits $501,$503,$502,$501
+		;if $502="" mov $502,$501:mov $501,""
+		atoi %%502,$502
+		inc %502
+	next
+	return
+
+*avs
+	; 对偏移后字符串变量追加值
+	; avs $0, %base, %offset
+	getparam $501,%502,%503
+	add %502,%503
+	add $%502,$501
+	return
+
+*avn
+	; 对偏移后数字变量追加值
+	; avs %0, %base, %offset
+	getparam %501,%502,%503
+	add %502,%503
+	add %%502,%501
+	return
+
+*swapn
+	; 交换数字变量
+	; swapn %addr1,%addr2
+	getparam %501,%502
+	add %%501,%%502
+	mov %%502,%%501-%%502
+	sub %%501,%%502
+	return
+

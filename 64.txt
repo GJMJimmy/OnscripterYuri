@@ -1,0 +1,93 @@
+
+*custom_replay_or
+	getparam i%500, %501, %502, %503, %504
+	b_f_0e7 %501:if %branch_flag = 0 mov %%500, 1:return
+	b_f_0e7 %502:if %branch_flag = 0 mov %%500, 1:return
+	b_f_0e7 %503:if %branch_flag = 0 mov %%500, 1:return
+	if %504 = 0 skip 2
+	b_f_0e7 %504:if %branch_flag = 0 mov %%500, 1:return
+	mov %%500, 0
+	return
+
+*f_13b
+	getparam %801, %802, $803, $804, $805, %806
+	if %10 != %801 return
+	mov %807, 320+240*%802:mov %808, 100
+	geoconv %807:geoconv %808
+	b_f_0e7 %806
+	if %branch_flag != 0 itoa $802, %802:sys_sp_add ":a;sysgrp\SGReplay10990"+$802+".grp.png", %807, %808, 255:return
+	sys_btn_add ":a/2,0,3;sysgrp2\rply\"+$803+".png", %807, %808, 255, "*custom_replay_ready;"+$805
+	return
+
+*custom_replay
+	b_f_0e7 3
+	if %branch_flag != 0 mov %1, 0:skip 4
+	b_f_0e7 211
+	if %branch_flag != 0 mov %1, 1:skip 2
+	mov %1, 2
+
+	mov %10, 0
+*custom_replay_set
+	;di2 sysv_id_bottom, "SYSV_ID"
+	sys_new
+	mov %sysv_nobtndefclear, 1
+	sys_sp_add ":c;sysgrp\SGReplay990000"+FIX_SYSGRP, 0, 0, 255
+	mov $1, ":a/2,0,3;sysgrp2\SGReplayS99010"
+	
+	; x, y, y_add
+	mov %4, 30:mov %5, 100:mov %6, 90:geoconv %4
+	mov %2, 0:mov %8, 201
+	for %2 = 0 to 5
+		if %2 = 5 custom_replay_or %3, %8, %8+1, %8+2, 0:skip 2
+		custom_replay_or %3, %8, %8+1, %8+2, %8+3
+		add %8, 4
+		if %3 = 0 skip 5
+		itoa $3, %2:mov %7, %5+%6*%2:geoconv %7:mov $4, $3
+		if %2 = 2 itoa $2, %1:add $4, $2
+		if %2 != %10 sys_btn_add $1+$4+IMAGE_EXT, %4, %7, 255, "*custom_replay_role;"+$3:skip 2
+		sys_sp_add ":a/2,<1,0>,1;sysgrp2\SGReplayS99010"+$4+IMAGE_EXT, %4, %7, 255
+		;
+	next
+	
+	f_13b 0, 0, "RplyTum_0101", "Rplyoff_0101", "aiy50220", 201
+	f_13b 0, 1, "RplyTum_0102", "Rplyoff_0102", "aiy70110", 202
+	f_13b 0, 2, "RplyTum_0103", "Rplyoff_0103", "aiy70120", 203
+	f_13b 0, 3, "RplyTum_0104", "Rplyoff_0104", "aiy70130", 204
+	f_13b 1, 0, "RplyTum_0201", "Rplyoff_0201", "aiy20220", 205
+	f_13b 1, 1, "RplyTum_0202", "Rplyoff_0202", "aiy20240", 206
+	f_13b 1, 2, "RplyTum_0203", "Rplyoff_0203", "aiy70210", 207
+	f_13b 1, 3, "RplyTum_0204", "Rplyoff_0204", "aiy70220", 208
+	f_13b 2, 0, "RplyTum_0301", "Rplyoff_0301", "aiy30230", 209
+	f_13b 2, 1, "RplyTum_0302", "Rplyoff_0302", "aiy30290", 210
+	f_13b 2, 2, "RplyTum_0303", "Rplyoff_0303", "aiy30300", 211
+	f_13b 2, 3, "RplyTum_0304", "Rplyoff_0304", "aiy70320", 212
+	f_13b 3, 0, "RplyTum_0401", "Rplyoff_0401", "aiy40440", 213
+	f_13b 3, 1, "RplyTum_0402", "Rplyoff_0402", "aiy40470", 214
+	f_13b 3, 2, "RplyTum_0403", "Rplyoff_0403", "aiy70410", 215
+	f_13b 3, 3, "RplyTum_0404", "Rplyoff_0404", "aiy70420", 216
+	f_13b 4, 0, "RplyTum_0501", "Rplyoff_0501", "aiy10250", 217
+	f_13b 4, 1, "RplyTum_0502", "Rplyoff_0502", "aiy10280", 218
+	f_13b 4, 2, "RplyTum_0503", "Rplyoff_0503", "aiy70510", 219
+	f_13b 4, 3, "RplyTum_0504", "Rplyoff_0504", "aiy70520", 220
+	f_13b 5, 0, "RplyTum_0601", "Rplyoff_0601", "aiy71410", 221
+	f_13b 5, 1, "RplyTum_0602", "Rplyoff_0602", "aiy71510", 222
+	f_13b 5, 2, "RplyTum_0603", "Rplyoff_0603", "aiy71610", 223
+	sys_right_set "clear"
+	sys_trans_set "crossfade", 500, ""
+	btndef ":a;sysgrp\SGReplay990200"++FIX_SYSGRP
+	gosub *custom_common_button
+	goto *sys_draw
+	
+*custom_replay_role
+	gosub *syscall_back
+	atoi %10, $sysv_param
+	goto *custom_replay_set
+
+*custom_replay_ready
+	mov $sysv_param, "*"+$sysv_param
+	gosub *title_reset
+	mov %is_in_scene, 1:mov %sysv_nobtndefclear, 0
+	gosub $sysv_param
+	mov %is_in_scene, 0:mov %sysv_nobtndefclear, 1
+	goto *sys_draw
+	

@@ -1,0 +1,267 @@
+
+*geoconv
+	getparam i%500
+	mov %%500, %%500*5/8
+	return
+
+*qw_limit
+	mov %701, 3500:mov %702, 1
+*qw_ex
+	skip 4
+*qw
+*queue_cb
+	mov %701, 0:mov %702, 1
+	;
+	if %is_queue_on = 0 return
+	et
+	movequeue_start_ex %701, 0, %702
+	gosub *queue_vsp308_clear
+	mov %is_queue_on, 0
+	print 1
+	return
+*queue_vsp308_clear
+	pl_foreach_ex VSP308_ID, "*queue_cb_vsp308", 701, 0, 5
+	pl_clear VSP308_ID
+	return
+*queue_cb_vsp308
+	mov %706, VSP300_BASE+%701*VSP300_SIZE
+	mov %707, %%706
+	inc %706:mov %%706, %702
+	inc %706:add %%706, %703
+	inc %706:add %%706, %704
+	inc %706:add %%706, %705
+	get_layer2 %701, %701
+	if %707 = 2 vsp2 %701, %702:skip 2
+	vsp %701, %702
+	return
+
+
+*waits
+	getparam %701
+	if %is_queue_on = 0 delay %701:return
+	mov %702, 0
+	gosub *qw_ex
+	return
+	
+*b_filename
+	getparam $current_filename
+	return
+
+*get_image_with_mask
+	getparam s%601, $602
+	mov $601, ":a;image2\"+$%601+"_"+$602+IMAGE_EXT
+	fileexist %602, $601
+	if %602 > 0 mov $%601, $601:return
+	get_image $%601
+	return
+
+*get_image_a
+	mov $602, "imagechs\"+$%601+IMAGE_EXT
+	fileexist %602, $602
+	if %602 > 0 mov $%601, ":a;"+$602:return
+	mov $%601, ":a;image\"+$%601+IMAGE_EXT
+	return
+*get_image_c
+	mov $%601, ":c;image\"+$%601+IMAGE_EXT
+	return
+*get_image_try
+	mov $601, "image\"+$%601+IMAGE_EXT
+	fileexist %602, $601:if %602 > 0 mov $%601, DEFAULT_IMAGE_HEAD+$601:return
+	mov $601, "bg\"+$%601+IMAGE_EXT
+	fileexist %602, $601:if %602 > 0 mov $%601, DEFAULT_IMAGE_HEAD+$601:return
+	mov $601, "eve\"+$%601+IMAGE_EXT
+	fileexist %602, $601:if %602 > 0 mov $%601, DEFAULT_IMAGE_HEAD+$601:return
+	mov $601, "hcg\"+$%601+IMAGE_EXT
+	fileexist %602, $601:if %602 > 0 mov $%601, DEFAULT_IMAGE_HEAD+$601:return
+	mov $601, "mon\"+$%601+IMAGE_EXT
+	fileexist %602, $601:if %602 > 0 mov $%601, DEFAULT_IMAGE_HEAD+$601:return
+	mov $601, "tati\"+$%601+IMAGE_EXT
+	fileexist %602, $601:if %602 > 0 mov $%601, ":a;"+$601:return
+	return
+*get_image
+	getparam s%601
+	startswith %602, $%601, ":"
+	if %602 > 0 return
+	if $%601 = "sword_01" goto *get_image_a
+	if $%601 = "re_cloud" goto *get_image_a
+	if $%601 = "particle" goto *get_image_a
+	startswith %602, $%601, "aiy"
+	startswith %603, $%601, "chs"
+	add %602, %603
+	if %602 <= 0 goto *get_image_try
+	right $601, $%601, -3
+	if $601 = "10070_01" goto *get_image_c
+	if $601 = "10090_01" goto *get_image_c
+	if $601 = "10160_01" goto *get_image_c
+	if $601 = "10190_10" goto *get_image_c
+	if $601 = "10190_27" goto *get_image_c
+	if $601 = "20200_13" goto *get_image_c
+	if $601 = "20200_anm01" goto *get_image_a
+	if $601 = "30100_01" goto *get_image_c
+	if $601 = "30180_06" goto *get_image_c
+	if $601 = "40360_01" goto *get_image_c
+	if $601 = "50300_01" goto *get_image_c
+	if $601 = "50310_01" goto *get_image_c
+	if $601 = "50310_02" goto *get_image_c
+	split $601, "_", $603, $602
+	if $603 = "10000" goto *get_image_c
+	if $602 = "sprite" goto *get_image_a
+	if $602 = "roll" goto *get_image_a
+	mid $602, $602, 0, 1
+	atoi %602, $602
+	if $602 != "0" & %602 = 0 & $602 != "t" goto *get_image_try
+	goto *get_image_a
+
+*get_layer2
+	getparam i%501, %502
+	if %502 >= L_308 && %502 < L_TATI mov %502, L_308+L_TATI-%502-1
+	if %502 >= L_TATI mov %502, L_MAX+L_TATI-%502
+	if %502 > 0 get_layer %%501, L_MAX-%502:return
+	if %502 = L_TOP_0 mov %%501, 0:return
+	get_layer %%501, %502
+	return
+
+*blsp_face
+	getparam %802, $801, %805, %806, %807
+	mov %808, 1:mov %809, 0
+	skip 4
+*blsp2
+	getparam %802, $801, %805, %806, %807, %808
+	get_layer2 %802, %802:mov %809, 1
+	;%808: 0-normal 1-face 2-tati 3-leftbot-with-screen-center 4-center-with-screen-center 5-rightbot-with-screen-center 6-center-with-screen-center-normal 7-lefttop-with-screen-center
+	skip 4
+*blsp
+	getparam %802, $801, %805, %806, %807
+	mov %808, 0:mov %809, 1
+	;
+	;gosub *queue_cb
+	if %809 = 1 gosub *hide_frame_btn
+	if $801 = "" csp %802:return
+	if %809 = 1 geoconv %805:geoconv %806
+	lsp %802, $801, %805, %806, %807
+	if %808 = 0 return
+	getspsize %802, %803, %804
+	if %808 = 1 mov %806, SCREEN_BOTTOM-%804-%806
+	if %808 = 2 add %805, SCREEN_WIDTH/2-%803/2:mov %806, SCREEN_BOTTOM-%804-%806
+	if %808 = 3 add %805, SCREEN_WIDTH/2:mov %806, SCREEN_BOTTOM/2-%806-%804
+	if %808 = 4 add %805, SCREEN_WIDTH/2-%803/2:mov %806, SCREEN_BOTTOM/2-%806-%804/2
+	if %808 = 5 mov %805, SCREEN_WIDTH-%803-%805:mov %806, SCREEN_BOTTOM-%806-%804
+	if %808 = 6 add %805, SCREEN_WIDTH/2-%803/2:add %806, SCREEN_BOTTOM/2-%804/2
+	if %808 = 7 add %805, SCREEN_WIDTH/2:add %806, SCREEN_BOTTOM/2
+	amsp %802, %805, %806, %807
+	return
+
+*bcsp2
+	getparam %802
+	get_layer2 %802, %802
+	skip 3
+*bcsp
+	getparam %802
+	;
+	;gosub *queue_cb
+	csp %802
+	return
+
+*bvsp2
+	getparam %802, %803
+	get_layer2 %802, %802
+	skip 3
+*bvsp
+	getparam %802, %803
+	;
+	;gosub *queue_cb
+	vsp %802, %803
+	return
+
+*getspsize2
+	getparam $601, i%601, i%602
+	lsph 1, $601, 0, 0, 255
+	getspsize 1, %%601, %%602
+	csp 1
+	return
+
+*fileconv_ex
+	getparam s%701, $701, %702, %703, $705
+	skip 4
+*fileconv
+	getparam s%701, $701, %702, %703
+	mov $705, IMAGE_EXT
+	;
+	split $701, ";", $703, $701
+	if $701 = "" mov $701, $703:mov $703, "":skip 2
+	mov $703, ":"+$703+";"
+	itoaex $702, %702, %703
+	split $701, "_", $704
+	mov $%701, $703+$704+"\"+$701+$702+$705
+	return
+
+*b_DrawScreen
+	et
+	getparam %1101, $1101, %1102, %1103
+	if %1101 = 1 mov %1104, 4
+	if %1101 = 2 mov %1104, 6
+	if %1101 = 3 mov %1104, 6
+	fileconv $1103, "c;"+$1101, %1103, %1104
+	if %1102 = 4 mov %1105, 0:jumpf
+	if %1102 = 2 mov %1105, 3000:jumpf
+	if %1102 = 3 mov %1105, 900:jumpf
+	if %1101 = 2 mov %1105, 900:jumpf
+	if %1101 = 3 mov %1105, 900:jumpf
+	
+	if %1102 = 5 rnd %1102, 15:inc %1102
+	itoaex $1102, %1102, 2
+	mov $1102, ":c;mask\mask0"+$1102+IMAGE_EXT
+	b__showbg_mask $1103, 900, $1102
+	return
+	~
+	b__showbg $1103, %1105
+	return
+
+*b__showbg_mask
+	getparam $1111, %1111, $1112
+	et
+	get_image $1111
+	gosub *b_ClrAllLayers
+	blsp2 -1, $1111, 0, 0, 255, 0
+	k_trans "universal", %1111, $1112
+	return
+
+*b__showbg
+	getparam $1111, %1111
+	et
+	get_image $1111
+	gosub *b_ClrAllLayers
+	blsp2 -1, $1111, 0, 0, 255, 0
+	k_trans "crossfade", %1111, ""
+	return
+
+*b_ClrAllLayers
+	qw_limit
+	for %1121 = 0 to L_MAX
+		if %1121 != %TEMP_TATI get_layer2 %1122, %1121:bcsp %1122:csp2 %1122
+	next
+	mov %TEMP_TATI, 0
+	return
+
+*f308_pick_300_data
+	getparam %802, %801
+	; base, layer
+	; layer, visible, x, y, o
+	mov %801, VSP300_BASE+VSP300_SIZE*%801
+	cvn %802, %801, VSP300_SIZE
+	return
+
+*vsp300_update2
+	getparam %801, %802, %803, %804, %805
+	mov %806, 2
+	skip 4
+*vsp300_update
+	getparam %801, %802, %803, %804, %805
+	mov %806, 1
+	;
+	mov %801, VSP300_BASE+VSP300_SIZE*%801:mov %%801, %806
+	inc %801:mov %%801, %802
+	inc %801:mov %%801, %803
+	inc %801:mov %%801, %804
+	inc %801:mov %%801, %805
+	return

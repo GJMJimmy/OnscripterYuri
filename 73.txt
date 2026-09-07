@@ -1,0 +1,155 @@
+; 基础字符串函数
+; 使用临时变量: 501~509
+
+; 裁剪左边/右边空格
+; stripl/stripr <$0>
+
+*stripl
+	getparam s%501
+	len %502, $%501
+	mov %503, 0
+	mid $502, $%501, %503, 1
+	if $502 = " " inc %503:skip -1
+	mid $%501, $%501, %503, %502
+	return
+	
+*stripr
+	getparam s%501
+	len %502, $%501
+	dec %502
+	mid $502, $%501, %502, 1
+	if $502 = " " dec %502:skip -1
+	inc %502
+	mid $%501, $%501, 0, %502
+	return
+
+; 分割字符串
+; - splits与原版split函数不同的是，分割后的有半边是完整的;
+; - 而rsplits则是从右到左的;
+; - splits2在splits上增加了一个标志位，提示是否没有找到分隔符，没有找到则该位为1;
+; - splits_ex类似splits，但若分隔符不在字符串中出现，将first-half置为空，second-half置为原字符串。
+; - eg:
+; - split "a,b,c", ",", $1, $2
+; --- $1 = "a", $2 = "b"
+; - splits "a,b,c", ",", $1, $2
+; --- $1 = "a", $2 = "b,c"
+; - rsplits "a,b,c", ",", $1, $2
+; --- $1 = "a,b", $2 = "c"
+; splits/rsplits/splits_ex $source, $delimiter, <$first-half>, <$second-half>
+; splits2 $source, $delimiter, <%flag>, <$first-half>, <$second-half>
+	
+*splits
+	getparam $501,$502,s%501,s%502
+	split $501,$502,$%501
+	len %503,$%501:inc %503
+	len %501,$501:sub %501,%503
+	if %501<=0 mov $%502,"":return
+	mid $%502,$501,%503,%501
+	return
+
+*rsplits
+	getparam $501, $502, s%501, s%502
+	split $501,$502,$%501
+	if $501 = $%501 mov $%502, "":return
+	len %503, $%501
+	mov %504, %503+1
+	;
+	mid $503, $501, %504, 1
+	if $503 = $502 mov %503, %504
+	if $503 != "" inc %504:skip -3
+	mid $%501, $501, 0, %503
+	sub %504, %503+1
+	mid $%502, $501, %503+1, %504
+	return
+
+*splits_ex
+	getparam $501,$502,s%501,s%502
+	split $501,$502,$%501
+	if $501 = $%501 mov $%501, "":mov $%502, $501:return
+	len %503,$%501:inc %503
+	len %501,$501:sub %501,%503
+	if %501<=0 mov $%502,"":return
+	mid $%502,$501,%503,%501
+	return
+
+*splits2
+	getparam $501,$502,i%504,s%501,s%502
+	mov %%504, 0
+	split $501,$502,$%501
+	if $%501 = $501 mov %%504, 1
+	len %503,$%501:inc %503
+	len %501,$501:sub %501,%503
+	if %501<=0 mov $%502,"":return
+	mid $%502,$501,%503,%501
+	return
+
+; 取字符串左边
+; - 当参数为负数时，表示取左边直至右边还剩%count个字符
+; left $dest, $source, %count
+
+*left
+	getparam s%501,$501,%502
+	if %502<0 len %503,$501:add %502,%503
+	mid $%501,$501,0,%502
+	return
+
+; 取字符串右边
+; - 当参数为负数时，表示取右边直至左边还剩%count个字符
+; right $dest, $source, %count
+
+*right
+	getparam s%501,$501,%502
+	if %502=0 mov $%501,"":return
+	len %503,$501
+	if %502<0 add %502,%503
+	sub %503,%502
+	if %503<=0 mov $%501,$501:return
+	mid $%501,$501,%503,%502
+	return
+
+*startswith
+	getparam i%501, $501, $502
+	len %502, $502
+	mid $503,$501,0,%502
+	if $503 = $502 mov %%501, 1:return
+	mov %%501, 0
+	return
+
+*str_find
+	getparam i%501, $501, $502
+	len %502, $502
+	len %504, $501
+	mov %503, 0
+	;
+		mid $503, $501, %503, %502
+		if $503 = $502 mov %%501, %503:return
+		inc %503:if %503+%502 > %504 mov %%501, -1:return
+	skip -4
+	
+*itoaex
+	getparam s%501, %502, %503
+	itoa $%501, %502
+	len %504, $%501
+	if %504 >= %503 return
+	sub %503, %504
+	;
+		if %503 = 1 mov $%501, "0"+$%501:return
+		if %503 = 2 mov $%501, "00"+$%501:return
+		if %503 = 3 mov $%501, "000"+$%501:return
+		mov $%501, "0000"+$%501:sub %503, 4
+		if %503 = 0 return
+	skip -6
+
+*atoaex
+	getparam s%501, $502, %503
+	mov $%501, $502
+	len %504, $%501
+	if %504 >= %503 return
+	sub %503, %504
+	;
+		if %503 = 1 mov $%501, "0"+$%501:return
+		if %503 = 2 mov $%501, "00"+$%501:return
+		if %503 = 3 mov $%501, "000"+$%501:return
+		mov $%501, "0000"+$%501:sub %503, 4
+		if %503 = 0 return
+	skip -6

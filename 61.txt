@@ -1,0 +1,31 @@
+
+*global_init
+	;全局第一次初始化
+	return
+
+*first_init
+	mov %VARS_SP, 500
+	mov %VARI_SP, 500
+	pl_init MQ_ID, MQ_BASE, MQ_SIZE
+	pl_init VSP308_ID, VSP308_BASE, VSP308_SIZE
+	pl_init KSEL_ID, KSEL_BASE, KSEL_SIZE
+	mov %sysv_curID, 0
+	mov %sysv_layer, SYS_LAYER_BASE
+	mov %sysv_pool, SYS_POOL_BASE
+	mov %sysv_id_bottom, SYS_ID_BOTTOM
+	;开始游戏第一次初始化
+	mov %TEMP_TATI, -1
+	mov $textwin_transparent, "0"
+	mov $textwin_style, "0"
+	mov %is_frame_btn_enable, 0
+	mov %is_frame_btn_show, 0
+	mov %FONT_SIZE, 19
+	mov $textwin_head, ""
+	mov %h_textmode, 0
+	mov %is_in_scene, 0
+	erasetextwindow 0
+	return
+
+*title_init
+	;每次返回标题初始化
+	return

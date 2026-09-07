@@ -1,0 +1,159 @@
+; 基础分支选项
+
+*pl_convID
+	mov %600, POOL_BASE+POOL_HEAD+%600*POOL_SIZE
+	return
+*pl_convID_ex
+	; %600:编号->地址 %601:Size %602:count %609:head
+	; %602: >0-正常 -1:最后一项之后 -2:最后一项 -3:头
+	mov %600, POOL_BASE+POOL_HEAD+%600*POOL_SIZE
+	gvn %601, %600, 1
+	if %602 = -1 gvn %602, %600, 2
+	if %602 = -2 gvn %602, %600, 2:dec %602
+	gvn %609, %600, 3
+	if %602 = -3 mov %603, %%600:return
+	mov %603, %%600+%609+%601*%602
+	return
+
+; 初始化一个pool
+; pl_init ID, BASE, SIZE
+; pl_init_ex ID, BASE, SIZE, HEAD
+
+*pl_init
+	getparam %600, %601, %602
+	mov %603, 0
+	skip 3
+*pl_init_ex
+	getparam %600, %601, %602, %603
+	;
+	gosub *pl_convID
+	mov %%600, %601:inc %600	;Base
+	mov %%600, %602:inc %600	;Size
+	mov %%600, 0:inc %600	;Count
+	mov %%600, %603	;Head
+	return
+
+; 在pool中增加一个项，增加的内容从%start_addr开始SIZE个，ex版只增加%count个，剩下的补0和""
+; pl_add ID, %start_addr
+; pl_add_ex ID, %start_addr, %count
+
+*pl_add_head
+	getparam %600, %605
+	mov %602, -3:mov %604, -1
+	skip 4
+*pl_add
+	getparam %600, %605
+	mov %602, -1:mov %604, -1
+	skip 4
+*pl_add_head_ex
+	getparam %600, %605, %604
+	mov %602, -3
+	skip 4
+*pl_add_ex
+	getparam %600, %605, %604
+	mov %602, -1
+	;
+	gosub *pl_convID_ex
+	if %602=-3 mov %606, %609:skip 2
+	mov %606, %601
+	if %604=-1 mov %604, %606
+	cvsn %603, %605, %604
+	if %602 != -3 add %600, 2:inc %%600
+	if %604 >= %606 return
+	for %604=%604 to %606
+		pvn 0, %603, %604
+		pvs "", %603, %604
+	next
+	return
+
+; 直接将pool中第%count项的内容读入到%addr开始SIZE个变元中
+; pl_get %addr, ID, %count
+
+*pl_get
+	getparam %605, %600, %602
+	gosub *pl_convID_ex
+	cvsn %605, %603, %601
+	return
+
+*pl_gethead_data
+	getparam %605, %600
+	mov %602, -3
+	gosub *pl_convID_ex
+	cvsn %605, %603, %609
+	return
+
+; 取pool第%count项的实际地址
+; pl_getaddr <%addr>, ID, %count
+
+*pl_getaddr
+	getparam i%604, %600, %602
+	gosub *pl_convID_ex
+	mov %%604, %603
+	return
+
+*pl_gethead
+	getparam i%604, %600
+	mov %602, -3
+	gosub *pl_convID_ex
+	mov %%604, %603
+	return
+
+; 对每个项做操作，ex版限定count的意义类似pl_add_ex, write_back表示调用完后写回
+; pl_foreach ID, $gosub, %addr, %write_back
+; pl_foreach_ex ID, $gosub, %addr, %write_back, %count
+; %plv_total是总项数,%plv_cur是当前项，%plv_addr是当前项起始地址
+
+*pl_foreach
+	getparam %600, $600, %605, %607
+	mov %604, -1
+	skip 3
+*pl_foreach_ex
+	getparam %600, $600, %605, %607, %604
+	;
+	mov %602, -1
+	gosub *pl_convID_ex
+	if %604 = -1 mov %604, %601
+	mov %606, %%600+%609
+	mov %plv_break, 0
+	;di2 602, "POOLSIZE "+$600
+	for %603=1 to %602
+		cvsn %605, %606, %604
+		pushi2 600, 607:pushstr $600
+		mov %plv_total, %602:mov %plv_cur, %603:mov %plv_addr, %606
+		gosub $600
+		if %607 > 0 cvsn %606, %605, %604
+		popstr $600:popi2
+		if %plv_break > 0 break
+		add %606, %601
+	next
+	return
+
+; pool大小加1,手动添加项时使用
+; pl_inc ID
+
+*pl_inc
+	getparam %600
+	gosub *pl_convID
+	add %600, 2
+	inc %%600
+	return
+
+; 取当前项数
+; pl_getcount <%ret>, ID
+
+*pl_getcount
+	getparam i%601, %600
+	gosub *pl_convID
+	add %600, 2
+	mov %%601, %%600
+	return
+
+; 清空pool
+; pl_clear ID
+
+*pl_clear
+	getparam %600
+	gosub *pl_convID
+	add %600, 2
+	mov %%600, 0
+	return

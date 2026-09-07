@@ -1,0 +1,116 @@
+
+*b_f_0f4
+	reset
+	return
+
+*b_f_12f
+	;b_f_12f 
+	;mov %branch_flag, 1:if %3012 != 0 mov %branch_flag, 0
+	mov %3012, %is_in_scene
+	return
+
+*b_Ending_Base
+	mov $1001, "*"+$current_filename+"_Ending_Base"
+	goto $1001
+
+*b_f_03a
+	if %branch_flag != 0 mov %branch_flag, 0:return
+	mov %branch_flag, 1
+	return
+
+*b_f_0e0
+*b_f_0e0_1
+*b_f_0e0_2
+	getparam %1001, %1002
+	add %1001, f0e0
+	mov %%1001, %1002
+	return
+
+*b_f_0e1
+	getparam %1001
+	add %1001, f0e0
+	mov %3004, %%1001
+	return
+
+*get_f0e4
+	if %1001 >= 100 sub %1001, 50
+	add %1001, f0e4
+	return
+	
+*b_f_0e4
+	getparam %1001, %1002
+	gosub *get_f0e4
+	mov %%1001, %1002
+	return
+
+*b_f_0e5
+	getparam %1001
+	mov %branch_flag, 1
+	gosub *get_f0e4
+	if %%1001 > 0 mov %branch_flag, 0
+	return
+
+*b_f_0e6
+	getparam %1001, %1002
+	add %1001, f0e6
+	mov %%1001, %1002
+	savegame 999
+	return
+
+*b_f_0e7
+	;111, 112
+	getparam %1001
+	mov %branch_flag, 1
+	add %1001, f0e6
+	if %%1001 > 0 mov %branch_flag, 0
+	return
+
+*b_RouteFlag
+	b_f_0e7 103:if %branch_flag != 0 jumpf
+	b_f_0e7 105:if %branch_flag != 0 jumpf
+	b_f_0e7 107:if %branch_flag != 0 jumpf
+	b_f_0e7 108:if %branch_flag != 0 jumpf
+	b_f_0e7 110:if %branch_flag != 0 jumpf
+	b_f_0e7 111:if %branch_flag != 0 jumpf
+	b_f_0e6 113, 1
+	~
+	b_f_0e7 113:if %branch_flag != 0 jumpf
+	b_f_0e7 151:if %branch_flag != 0 jumpf
+	b_f_0e7 152:if %branch_flag != 0 jumpf
+	b_f_0e7 153:if %branch_flag != 0 jumpf
+	b_f_0e7 154:if %branch_flag != 0 jumpf
+	b_f_0e7 155:if %branch_flag != 0 jumpf
+	b_f_0e7 156:if %branch_flag != 0 jumpf
+	b_f_0e7 157:if %branch_flag != 0 jumpf
+	b_f_0e7 158:if %branch_flag != 0 jumpf
+	b_f_0e7 159:if %branch_flag != 0 jumpf
+	b_f_0e7 160:if %branch_flag != 0 jumpf
+	b_f_0e7 161:if %branch_flag != 0 jumpf
+	b_f_0e7 162:if %branch_flag != 0 jumpf
+	b_f_0e7 163:if %branch_flag != 0 jumpf
+	b_f_0e7 164:if %branch_flag != 0 jumpf
+	b_f_0e7 165:if %branch_flag != 0 jumpf
+	b_f_0e7 166:if %branch_flag != 0 jumpf
+	b_f_0e7 167:if %branch_flag != 0 jumpf
+	b_f_0e6 114, 1
+	~
+	return
+
+*b_f_111
+	;只在aiy50320末尾和aiy81010末尾出现，click？
+	click
+	return
+
+*b_f_112
+	;b_f_112 0	settimer
+	getparam %last_timer
+	return
+
+*b_f_113
+	;b_f_113 260500 waittimer
+	getparam %1001
+	pushint %1001
+	waits %1001-%last_timer
+	popint %1001
+	mov %last_timer, %1001
+	return

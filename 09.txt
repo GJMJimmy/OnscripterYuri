@@ -1,0 +1,12 @@
+*start
+	if %SF_EXEC < 1 gosub *global_init:mov %SF_EXEC, 0
+	inc %SF_EXEC
+	;另一种做法是if not lchk *title gosub *global_init
+	;当然需要打开labellog
+	gosub *first_init
+	gosub *logo
+	goto *title
+
+*title
+	gosub *title_init
+	goto *title_ex

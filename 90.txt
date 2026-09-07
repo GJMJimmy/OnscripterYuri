@@ -1,0 +1,402 @@
+*define
+
+caption "秽翼的尤斯蒂娅 test ver. 0.04f by skydark"
+;spi "nscrpng.spi|png"
+nsa
+globalon
+filelog
+labellog
+
+numalias WIDESCREEN_MODE, 1
+
+numalias SCREEN_WIDTH, 800
+numalias SCREEN_BOTTOM, SCREEN_WIDTH*9/16
+if WIDESCREEN_MODE = 1 numalias SCREEN_HEIGHT, SCREEN_BOTTOM:numalias BTNHEIGHT_FIX, 0:skip 2
+numalias SCREEN_HEIGHT, 600:numalias BTNHEIGHT_FIX, 240
+
+numalias DEBUG_MODE, 1
+numalias DEBUG_MODE_EX, 0
+stralias FIX_SYSGRP, ".png"	;".grp.png"
+numalias LOCAL_F, 0
+mov %LOCAL_F, 999
+numalias GLOBAL_F, 1
+mov %GLOBAL_F, 2001
+
+numalias LINE_SPACE, 7
+numalias L_TEXT, 90
+numalias L_DIALOG, L_TEXT+2
+numalias L_FACE, L_TEXT+1
+numalias L_BTN, L_TEXT-1
+numalias L_CURSOR, L_TEXT-2
+numalias L_SEL, 80
+numalias L_SELTEXT, L_SEL-5
+numalias L_308, 16
+numalias LAYER_BASELINE, 150
+numalias L_MAX, 40
+numalias L_TATI, 32
+numalias L_TOP_0, -100
+
+
+usewheel
+useescspc
+humanz L_TEXT
+windowback
+textgosub *text_lb
+pretextgosub *pre_text
+loadgosub *pre_load
+rubyon
+
+deletemenu
+menusetwindow 24,24,2,11,1,1,#cccccc
+
+menuselectcolor #ffffff,#cfcfef,#aaaaaa
+
+;rmenu "显示图象", windowerase, "自动阅读", automode, "回想", lookback,"到下一个选择肢", skip, "返回标题画面", reset, "结束游戏", end
+
+;注意：(仅针对NS而非ONS)
+; 1 - NS不支持systemcall automode;
+; 2 - NS对超过数量的save支持有问题
+rmenu "回想", lookback,"跳到下一个选择肢", skip, "返回标题画面", reset, "结束游戏", end, "存档", save, "读档", load
+savenumber 10
+
+;セーブの名称
+savename "----存档----","----读档----","存档"
+
+;createdebugwindow
+
+;============================================
+stralias DEFAULT_IMAGE_HEAD, ":c;"
+stralias IMAGE_EXT, ".png"
+stralias msg_pagebreak, ":a/16,50,2;system\pagebreak_a.png"
+;============================================
+numalias VARS_SP, %LOCAL_F:dec %LOCAL_F
+mov %VARS_SP, 500
+numalias VARI_SP, %LOCAL_F:dec %LOCAL_F
+mov %VARI_SP, 500
+numalias POOL_BASE, 1200
+numalias POOL_HEAD, 0
+numalias POOL_SIZE, 4
+numalias plv_total, %LOCAL_F:dec %LOCAL_F
+numalias plv_cur, %LOCAL_F:dec %LOCAL_F
+numalias plv_addr, %LOCAL_F:dec %LOCAL_F
+numalias plv_break, %LOCAL_F:dec %LOCAL_F
+numalias sysv_pool, %LOCAL_F:dec %LOCAL_F
+numalias sysv_id_bottom, %LOCAL_F:dec %LOCAL_F
+numalias sysv_layer, %LOCAL_F:dec %LOCAL_F
+numalias sysv_curID, %LOCAL_F:dec %LOCAL_F
+numalias sysv_target, %LOCAL_F:dec %LOCAL_F
+numalias sysv_param, %LOCAL_F:dec %LOCAL_F
+numalias msg_face, %LOCAL_F:dec %LOCAL_F
+numalias branch_flag, %LOCAL_F:dec %LOCAL_F
+numalias is_frame_btn_enable, %LOCAL_F:dec %LOCAL_F
+numalias is_frame_btn_show, %LOCAL_F:dec %LOCAL_F
+numalias frame_x, %LOCAL_F:dec %LOCAL_F
+numalias frame_y, %LOCAL_F:dec %LOCAL_F
+numalias frame_w, %LOCAL_F:dec %LOCAL_F
+numalias frame_h, %LOCAL_F:dec %LOCAL_F
+numalias FONT_SIZE, %LOCAL_F:dec %LOCAL_F
+numalias textwin_transparent, %LOCAL_F:dec %LOCAL_F
+numalias textwin_style, %LOCAL_F:dec %LOCAL_F
+numalias textwin_head, %LOCAL_F:dec %LOCAL_F
+numalias f248image_x, %LOCAL_F:dec %LOCAL_F
+numalias f248image_y, %LOCAL_F:dec %LOCAL_F
+numalias is_queue_on, %LOCAL_F:dec %LOCAL_F
+numalias f0e4_1, %LOCAL_F:dec %LOCAL_F
+numalias cur_bgm_channel, %LOCAL_F:dec %LOCAL_F
+numalias TEMP_TATI, %LOCAL_F:dec %LOCAL_F
+numalias current_filename, %LOCAL_F:dec %LOCAL_F
+numalias is_in_scene, %LOCAL_F:dec %LOCAL_F
+numalias last_timer, %LOCAL_F:dec %LOCAL_F
+numalias h_textmode, %LOCAL_F:dec %LOCAL_F
+numalias sysv_nobtndefclear, %LOCAL_F:dec %LOCAL_F	; WORKAROUND
+
+numalias MQ_ID, 0
+numalias MQ_BASE, 1300
+numalias MQ_SIZE, 10
+
+numalias f0e0, 1800
+numalias f0e4, 1810
+numalias f0e6, 2500
+
+numalias VSP300_BASE, 1600
+numalias VSP300_SIZE, 5
+
+numalias VSP308_ID, 3
+numalias VSP308_BASE, 1400
+numalias VSP308_SIZE, 5
+
+numalias SYS_LAYER_BASE, 100
+numalias SYS_POOL_BASE, 1400
+numalias SYS_ID_BOTTOM, 5
+numalias SYSV_SIZE, 4
+numalias SYSV_HEAD, 7
+
+numalias KSEL_ID, 1
+numalias KSEL_BASE, 1400
+numalias KSEL_SIZE, 5
+
+numalias KSEL_POOL, 1400
+numalias KSEL_COUNT, %LOCAL_F:dec %LOCAL_F
+numalias kflow_label, %LOCAL_F:dec %LOCAL_F
+numalias L_KSEL, 20
+stralias FMT_KSEL, ":s/32,32,0;#FFFFFF"
+
+;============================================
+numalias SF_EXEC, %GLOBAL_F:inc %GLOBAL_F
+numalias game_started, %GLOBAL_F:inc %GLOBAL_F
+;============================================
+
+defsub di
+defsub ds
+defsub di2
+defsub ds2
+defsub push
+defsub pop
+defsub pushstr
+defsub popstr
+defsub pushint
+defsub popint
+defsub pushs
+defsub pops
+defsub pushi
+defsub popi
+defsub push2
+defsub pop2
+defsub pushs2
+defsub pops2
+defsub pushi2
+defsub popi2
+
+defsub p_start
+
+defsub gvs
+defsub gvn
+defsub gvnfs
+defsub gvsfn
+defsub pvs
+defsub pvn
+defsub pvnfs
+defsub pvsfn
+defsub cvs
+defsub cvn
+defsub cvsn
+defsub mvsfn
+defsub svstn
+defsub avs
+defsub avn
+defsub swapn
+
+defsub stripl
+defsub stripr
+defsub splits
+defsub rsplits
+defsub splits_ex
+defsub splits2
+defsub left
+defsub right
+defsub startswith
+defsub str_find
+defsub itoaex
+defsub atoaex
+
+defsub pl_init
+defsub pl_init_ex
+defsub pl_add_head
+defsub pl_add_head_ex
+defsub pl_add
+defsub pl_add_ex
+defsub pl_get
+defsub pl_gethead_data
+defsub pl_getaddr
+defsub pl_gethead
+defsub pl_foreach
+defsub pl_foreach_ex
+defsub pl_clear
+defsub pl_inc
+defsub pl_getcount
+
+defsub get_layer
+defsub get_layer_ex
+defsub imageconv
+defsub imageconv_ex
+
+defsub k_backlay
+defsub k_trans
+defsub k_wt
+defsub k_image
+defsub k_freeimage
+defsub k_moves
+
+defsub movequeue_add
+defsub movequeue_add_ex
+defsub movequeue_start
+defsub movequeue_start_ex
+
+defsub sys_new
+defsub sys_sp_add
+defsub sys_sp_add_ex
+defsub sys_btn_add
+defsub sys_btn_add_ex
+defsub sys_btn_add_ex2
+defsub sys_get_layer_by_id
+defsub sys_right_set
+defsub sys_trans_set
+defsub sys_se_onover
+defsub sys_se_onclick
+defsub sys_clear
+;============================================
+defsub geoconv
+defsub get_layer2
+defsub b_filename
+defsub get_image
+defsub get_image_with_mask
+defsub fileconv
+defsub fileconv_ex
+defsub getspsize2
+defsub bcsp
+defsub bcsp2
+defsub bvsp
+defsub bvsp2
+defsub blsp
+defsub blsp2
+defsub blsp_face
+defsub waits
+defsub et
+defsub qw
+defsub qw_limit
+defsub btns
+defsub custom_replay_or
+defsub f308_pick_300_data
+defsub vsp300_update
+defsub vsp300_update2
+defsub b_DrawScreen
+defsub b__hidetextwin
+
+defsub b_Back
+defsub b_BgmNo
+defsub b_BgmPlay
+defsub b_BgmShow
+defsub b_BgmStop
+defsub b_BgmVol
+defsub b_BgmX
+defsub b_ClrFace
+defsub b_ClrTati
+defsub b_Event
+defsub b_Face
+defsub b_Fadeout
+defsub b_Hcg
+defsub b_LoopSE
+defsub b_Quake
+defsub b_Refresh
+defsub b_SEPlay
+defsub b_SEStop
+defsub b_Size
+defsub b_Tati
+defsub b_TatiFa
+defsub b_View
+defsub b_ViewEnd
+defsub b_Voice
+defsub b_Window
+defsub b__say
+defsub b__say_1
+defsub b__screenmsg
+defsub b__showbg
+defsub b__showbg_mask
+defsub b__soundstop
+defsub b_f_0e4
+defsub b_f_0e5
+defsub b_f_110
+defsub b_f_120
+defsub b_f_121
+defsub b_f_15c
+defsub b_f_160
+defsub b_f_164
+defsub b_f_1bf
+defsub b_f_230
+defsub b_f_231
+defsub b_f_236
+defsub b_f_237
+defsub b_f_23c
+defsub b_f_240
+defsub b_f_248
+defsub b_f_248_1
+defsub b_f_300
+defsub b_f_302
+defsub b_f_304
+defsub b_f_306
+defsub b_f_307
+defsub b_f_308
+defsub b_f_340
+defsub b_f_348
+defsub b_f_388
+defsub b_f_390
+defsub b_f_392
+defsub b_f_3d0
+defsub b_f_3d2
+defsub b_f_3d4
+defsub b_f_3d5
+defsub b_f_3d6
+defsub b_f_3d8
+defsub b_f_3f1
+
+defsub b_f_309
+defsub b_f_30e
+defsub b_f_0e1
+defsub b_f_12f
+
+defsub b_Ending_Base
+defsub b_EventMN
+defsub b_Flash
+defsub b_Jishin
+defsub b_NextDay
+defsub b_ResetSc
+defsub b_RouteFlag
+defsub b__screenmsg_1
+defsub b_f_03a
+defsub b_f_0e0
+defsub b_f_0e0_1
+defsub b_f_0e0_2
+defsub b_f_0e6
+defsub b_f_0e7
+defsub b_f_0f0
+defsub b_f_0f4
+defsub b_f_0f5
+defsub b_f_108
+defsub b_f_111
+defsub b_f_119
+defsub b_f_122
+defsub b_f_123
+defsub b_f_13f
+defsub b_f_14e
+defsub b_f_153
+defsub b_f_15d
+defsub b_f_185
+defsub b_f_186
+defsub b_f_195
+defsub b_f_196
+defsub b_f_1a4
+defsub b_f_1ac
+defsub b_f_238
+defsub b_f_288
+defsub b_f_2c0
+defsub b_f_2c2
+defsub b_f_2c2_1
+defsub b_f_2c6
+defsub b_f_2c8
+defsub b_f_2ce
+defsub b_f_2df
+defsub b_f_300_1
+defsub b_f_301
+defsub b_f_31f
+defsub b_f_33f
+defsub b_f_3d0_1
+
+defsub b_f_112
+defsub b_f_113
+defsub b_f_181
+
+defsub f_13a
+defsub f_13b
+defsub f_13c
+defsub b_f_138
+game

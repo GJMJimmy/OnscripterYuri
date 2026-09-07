@@ -1,0 +1,139 @@
+;施工现场
+
+*custom_music
+	; 11-current top 13-current playing
+	mov %11, 0:mov %13, -1
+*custom_music_set
+	;di2 sysv_id_bottom, "SYSV_ID"
+	sys_new
+	mov %sysv_nobtndefclear, 1
+	sys_sp_add ":c;sysgrp\SGMusic990000"+FIX_SYSGRP, 0, 0, 255
+	
+	mov %12, 0
+	gosub *prepare_music
+	sys_right_set "clear"
+	sys_trans_set "crossfade", 0, ""
+	btndef ":a;sysgrp\SGMusic990100"+FIX_SYSGRP
+	sys_btn_add_ex2 1218, 100, 35, 35, "*custom_music_prev"
+	sys_btn_add_ex2 1218, 563, 35, 35, "*custom_music_next"
+	gosub *custom_common_button
+	goto *sys_draw
+
+*custom_music_prev
+	gosub *syscall_back
+	if %11 > 0 dec %11
+	goto *custom_music_set
+	
+*custom_music_next
+	gosub *syscall_back
+	if %12-%11 >= 14 inc %11
+	goto *custom_music_set
+
+*custom_music_click
+	gosub *syscall_back
+	split $sysv_param, ";", %9, $10
+	mov $10, "bgm\"+$10+".ogg"
+	bgm $10
+	mov %13, %9
+	goto *custom_music_set
+
+
+*f_13c
+	getparam %5, $6, $7
+	inc %12
+	if %12 <= %11 return
+	mov %8, %12-%11
+	if %8 > 13 return
+	mov %6, 430
+	mov %7, %8*40+60
+	geoconv %6:geoconv %7
+	split $7, "_", $8, $8
+	itoa $6, %5
+	if %5 = %13 mov $8, ":a;sysgrp\SGMusic51"+$8+".grp.png":skip 2
+	mov $8, ":a;sysgrp\SGMusic50"+$8+".grp.png"
+	sys_btn_add $8, %6, %7, 255, "*custom_music_click;"+$6+";"+$7
+	return
+
+*prepare_music
+	f_13c 1, "bgm_0102_head", "bgm_0102_loop"
+	b_f_0e7 111
+	if %branch_flag = 0 f_13c 2, "bgm_0103_head", "bgm_0103_loop"
+	b_f_0e7 103
+	if %branch_flag != 0 b_f_0e7 105
+	if %branch_flag != 0 b_f_0e7 107
+	if %branch_flag != 0 b_f_0e7 108
+	if %branch_flag != 0 b_f_0e7 110
+	if %branch_flag = 0 f_13c 3, "bgm_0104_head", "bgm_0104_loop"
+	b_f_0e7 111
+	if %branch_flag = 0 f_13c 4, "bgm_0105_head", "bgm_0105_loop"
+	f_13c 5, "bgm_0201_head", "bgm_0201_loop"
+	f_13c 6, "bgm_0202_head", "bgm_0202_loop"
+	f_13c 7, "bgm_0203_head", "bgm_0203_loop"
+	f_13c 8, "bgm_0204_head", "bgm_0204_loop"
+	f_13c 9, "bgm_0205_head", "bgm_0205_loop"
+	f_13c 10, "bgm_0206_head", "bgm_0206_loop"
+	f_13c 11, "bgm_0208_head", "bgm_0208_loop"
+	f_13c 12, "bgm_0301_head", "bgm_0301_loop"
+	f_13c 13, "bgm_0302_head", "bgm_0302_loop"
+	f_13c 14, "bgm_0303_head", "bgm_0303_loop"
+	f_13c 15, "bgm_0304_head", "bgm_0304_loop"
+	f_13c 16, "bgm_0305_head", "bgm_0305_loop"
+	b_f_0e7 102
+	if %branch_flag != 0 b_f_0e7 103
+	if %branch_flag = 0 f_13c 17, "bgm_0306_head", "bgm_0306_loop"
+	f_13c 18, "bgm_0307_head", "bgm_0307_loop"
+	b_f_0e7 106
+	if %branch_flag != 0 b_f_0e7 107
+	if %branch_flag != 0 b_f_0e7 108
+	if %branch_flag = 0 f_13c 19, "bgm_0308_head", "bgm_0308_loop"
+	if %branch_flag = 0 f_13c 20, "bgm_0309_head", "bgm_0309_loop"
+	b_f_0e7 109
+	if %branch_flag != 0 b_f_0e7 110
+	if %branch_flag = 0 f_13c 21, "bgm_0310_head", "bgm_0310_loop"
+	b_f_0e7 111
+	if %branch_flag = 0 f_13c 22, "bgm_0311_head", "bgm_0311_loop"
+	f_13c 23, "bgm_0401_head", "bgm_0401_loop"
+	f_13c 24, "bgm_0402_head", "bgm_0402_loop"
+	f_13c 25, "bgm_0403_head", "bgm_0403_loop"
+	f_13c 26, "bgm_0404_head", "bgm_0404_loop"
+	f_13c 27, "bgm_0405_head", "bgm_0405_loop"
+	f_13c 29, "bgm_0407_head", "bgm_0407_loop"
+	f_13c 30, "bgm_0408_head", "bgm_0408_loop"
+	f_13c 31, "bgm_0409_head", "bgm_0409_loop"
+	f_13c 32, "bgm_0410_head", "bgm_0410_loop"
+	b_f_0e7 104
+	if %branch_flag != 0 b_f_0e7 105
+	if %branch_flag = 0 f_13c 33, "bgm_0411_head", "bgm_0411_loop"
+	f_13c 34, "bgm_0412_head", "bgm_0412_loop"
+	b_f_0e7 106
+	if %branch_flag != 0 b_f_0e7 107
+	if %branch_flag != 0 b_f_0e7 108
+	if %branch_flag = 0 f_13c 35, "bgm_0413_head", "bgm_0413_loop"
+	b_f_0e7 109
+	if %branch_flag != 0 b_f_0e7 110
+	if %branch_flag = 0 f_13c 36, "bgm_0414_head", "bgm_0414_loop"
+	b_f_0e7 111
+	if %branch_flag = 0 f_13c 37, "bgm_0415_head", "bgm_0415_loop"
+	b_f_0e7 112
+	if %branch_flag = 0 f_13c 38, "bgm_0416_head", "bgm_0416_loop"
+	if %branch_flag = 0 f_13c 39, "bgm_0417_head", "bgm_0417_loop"
+	f_13c 40, "bgm_0418_head", "bgm_0418_loop"
+	b_f_0e7 111
+	if %branch_flag = 0 f_13c 42, "bgm_0420_head", "bgm_0420_loop"
+	if %branch_flag = 0 f_13c 43, "bgm_0421_head", "bgm_0421_loop"
+	b_f_0e7 109
+	if %branch_flag != 0 b_f_0e7 110
+	if %branch_flag = 0 f_13c 44, "bgm_0501_head", "bgm_0501_loop"
+	b_f_0e7 106
+	if %branch_flag != 0 b_f_0e7 107
+	if %branch_flag != 0 b_f_0e7 108
+	if %branch_flag = 0 f_13c 45, "bgm_0502_head", "bgm_0502_loop"
+	b_f_0e7 109
+	if %branch_flag != 0 b_f_0e7 110
+	if %branch_flag = 0 f_13c 46, "bgm_0503_head", "bgm_0503_loop"
+	if %branch_flag = 0 f_13c 47, "bgm_0504_head", "bgm_0504_loop"
+	b_f_0e7 111
+	if %branch_flag = 0 f_13c 48, "bgm_0505_head", "bgm_0505_loop"
+	if %branch_flag = 0 f_13c 49, "bgm_0506_head", "bgm_0506_loop"
+	if %branch_flag = 0 f_13c 50, "bgm_0507_head", "bgm_0507_loop"
+	return

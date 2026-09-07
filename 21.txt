@@ -1,0 +1,117 @@
+*show_frame_btn
+	if %is_frame_btn_enable = 0 return
+	if %is_frame_btn_show = 1 return
+	if $textwin_head = "" return
+*force_show_frame_btn
+	erasetextwindow 0
+	mov %is_frame_btn_show, 1
+	mov %709, -100
+	geoconv %709
+	blsp_face L_FACE, $msg_face, %709, SCREEN_BOTTOM-SCREEN_HEIGHT, 255
+	blsp_face L_DIALOG, $textwin_head+"000.grp.png", 0, SCREEN_BOTTOM-SCREEN_HEIGHT, 255
+	vsp L_FACE, 1:vsp L_DIALOG, 1
+	blsp L_BTN, $textwin_head+"100.grp.png", %frame_x, %frame_y, 255
+	btndef $textwin_head+"101.grp.png"
+	;system save load q-load q-save gesture back auto skip
+	mov %21, %frame_x:mov %22, 0:mov %23, %frame_w
+	for %20 = 0 to 8
+		if %20 = 5 mov %23, %23*3/2
+		if %20 > 5 mov %23, %23*5/6
+		if %sysv_nobtndefclear = 0 btns 21+%20,%21,%frame_y,%23,%frame_h,%22,0:skip 2
+		itoa $20, %20:btns %sysv_layer,%21,%frame_y,%23,%frame_h,%22,0:sys_btn_add_ex "", %21, %frame_y, 255, "*custom_selbtn;"+$20, "*"
+		add %21, %23:add %22, %23
+		mov %23, %frame_w
+	next
+	print 1
+	;erasetextwindow 1
+	return
+
+*btns
+	getparam %601, %602, %603, %604, %605, %606, %607
+	geoconv %602:geoconv %603:geoconv %604
+	geoconv %605:geoconv %606:geoconv %607
+	btn %601, %602, %603, %604, %605, %606, %607
+	return
+
+*hide_frame_btn
+	if %is_frame_btn_enable = 0 return
+	if %is_frame_btn_show = 0 return
+	if $textwin_head = "" return
+*force_hide_frame_btn
+	erasetextwindow 0
+	btndef clear
+	mov %is_frame_btn_show, 0
+	;vsp L_BTN, 0
+	;vsp L_FACE, 0
+	;vsp L_DIALOG, 0
+	print 1
+	;erasetextwindow 1
+	return
+
+*pre_load
+	gosub *hide_frame_btn
+*pre_text
+	gosub *queue_cb
+	mov %is_frame_btn_enable, 1
+	erasetextwindow 0
+	gosub *show_frame_btn
+	return
+
+*reload_text_lb
+	gosub *pre_load
+*text_lb
+	erasetextwindow 0
+	getcursorpos %1,%2
+	ispage %0
+	
+	;Click等待Icon表示
+	lsp L_CURSOR, msg_pagebreak, %1, %2:print 1
+	;print 1
+
+*textbtnloop
+	textbtnwait %0
+	vsp L_CURSOR, 0
+	;repaint
+	if %0=-2 goto *end_textbtn ;自动前进
+	if %0=-1 systemcall rmenu:goto *text_lb
+
+	if %0=0 goto *end_textbtn ;继续前进
+	
+	;system save load q-load q-save gesture back auto skip
+	if %0=21 gosub *custom_system:goto *reload_text_lb
+	if %0=22 gosub *custom_save:goto *reload_text_lb
+	if %0=23 gosub *custom_load:goto *reload_text_lb
+	if %0=24 gosub *custom_q_load:goto *reload_text_lb
+	if %0=25 gosub *custom_q_save:goto *reload_text_lb
+	if %0=26 gosub *custom_gesture:goto *reload_text_lb
+	if %0=27 gosub *custom_back:goto *reload_text_lb
+	if %0=28 systemcall automode:goto *end_textbtn
+	if %0=29 systemcall skip:goto *end_textbtn
+
+	goto *textbtnloop
+
+*end_textbtn
+	vsp L_CURSOR, 0
+	print 1
+	texec
+	gosub *hide_frame_btn
+	saveoff
+	saveon
+	;erasetextwindow 1
+	return
+
+
+*r
+mov $k_nl, ""
+;
+$k_nl
+;
+return
+
+*k_er
+	textclear
+	return
+
+*k_resetfont
+	#FFFFFF/
+	return

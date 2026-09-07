@@ -1,0 +1,213 @@
+; 基础界面系统
+; 使用临时变量: protected
+
+; eg:
+;*startlabel
+	sys_new
+	sys_sp_add "filename", x, y, opacity
+	sys_btn_add "filename", x, y, opacity, "target/action;param"
+	sys_right_set "clear"
+	sys_trans_set "crossfade", 500, ""
+	sys_se_onover ""	;default
+	sys_se_onclick ""	;default
+	goto *sys_draw
+	;添加按钮
+	;显示按钮
+	;注册按钮
+	;循环事件
+	;清理
+*sys_new
+	mov %sysv_nobtndefclear, 0
+	mov %1001, %sysv_id_bottom
+	inc %sysv_id_bottom
+	mov %1002, %sysv_pool
+	pl_init_ex %1001, %1002, SYSV_SIZE, SYSV_HEAD
+	mov %1003, %sysv_curID:mov $1003, ""	;prev sysID
+	mov %1004, 0:mov $1004, ""	;trans time/trans method
+	mov %1005, %sysv_layer:mov $1005, ""	;bottom_layer/rule
+	mov %1006, 0:mov $1006, ""	;right action
+	mov %1007, 0:mov $1007, ""	;right action_param
+	mov %1008, 0:mov $1008, ""	;se_onover
+	mov %1009, 0:mov $1009, ""	;se_onclick
+	pl_add_head_ex %1001, 1003, 7
+	mov %sysv_curID, %1001
+	add %sysv_pool, SYSV_HEAD
+	return
+*sys_clear
+	btndef clear
+	pl_foreach_ex %sysv_curID, "*sys_clear_sub", 1011, 0, 1
+	return
+*sys_clear_sub
+	csp %1011
+	return
+*sys_end
+	pl_gethead %1001, %sysv_curID
+	mov %sysv_pool, %1001
+	mov %sysv_curID, %%1001
+	gvn %sysv_layer, %1001, 2
+	dec %sysv_id_bottom
+	mov %sysv_nobtndefclear, 0
+	return
+
+
+; layer, "type"; x, "file"; y, "action"; o, "param", "id"
+*sys_trans_action
+	startswith %1001, $1003, "*"
+	if %1001 = 0 startswith %1001, $1003, "!"
+	if %1001 = 0 mov $1003, "*syscall_"+$1003
+	return
+*sys_sp_add_ex
+	getparam $1002, %1002, %1003, %1004, $1001
+	mov $1001, "sp;"+$1001:skip 4
+*sys_sp_add
+	getparam $1002, %1002, %1003, %1004
+	mov $1001, "sp"
+	;
+	mov %1001, %sysv_layer:dec %sysv_layer
+	mov $1003, "":mov $1004, ""
+	pl_add_ex %sysv_curID, 1001, 4
+	add %sysv_pool, SYSV_SIZE
+	return
+*sys_btn_add_ex2
+	getparam %1002, %1003, %1005, %1006, $1003
+	mov $1002, "":mov $1001, "*":mov %1004, 255
+	btns %sysv_layer, %1002, %1003, %1005, %1006, %1002, %1003
+	skip 3
+*sys_btn_add_ex
+	getparam $1002, %1002, %1003, %1004, $1003, $1001
+	;
+	mov $1001, "btn;"+$1001:skip 4
+*sys_btn_add
+	getparam $1002, %1002, %1003, %1004, $1003
+	mov $1001, "btn"
+	;
+	splits $1003, ";", $1003, $1004
+	gosub *sys_trans_action
+	mov %1001, %sysv_layer:dec %sysv_layer
+	pl_add_ex %sysv_curID, 1001, 4
+	add %sysv_pool, SYSV_SIZE
+	return
+*sys_get_layer_by_id
+	getparam i%1001, $1001
+	mov %%1001, -1
+	pl_foreach_ex %sysv_curID, "*get_layer_by_id_sub", 1002, 0, 1
+	return
+*get_layer_by_id_sub
+	split $1002, ";", $1002, $1002
+	if $1002 = $1001 mov %%1001, %plv_addr:mov %plv_break, 1
+	return
+*sys_right_set
+	getparam $1003
+	splits $1003, ";", $1003, $1004
+	gosub *sys_trans_action
+	pl_gethead %1001, %sysv_curID
+	pvs $1003, %1001, 3
+	pvs $1004, %1001, 4
+	return
+*sys_trans_set
+	getparam $1001, %1002, $1002
+	pl_gethead %1001, %sysv_curID
+	pvs $1001, %1001, 1
+	pvn %1002, %1001, 1
+	pvs $1002, %1001, 2
+	return
+*sys_se_onover
+	getparam $1001
+	pl_gethead %1001, %sysv_curID
+	pvs $1001, %1001, 5
+	return
+*sys_se_onclick
+	getparam $1001
+	pl_gethead %1001, %sysv_curID
+	pvs $1001, %1001, 6
+	return
+
+	
+*sys_draw
+	;di2 sysv_layer, "sysv_layer"
+	pl_gethead_data 1001, %sysv_curID
+	; 1001-prev sysID
+	; 1002-trans time/trans method ; 1003-bottom_layer/rule
+	; 1004-right action ; 1005-right action_param
+	; 1006-se_onover ; 1007-se_onclick
+	pl_foreach_ex %sysv_curID, "*sys_draw_sub", 1011, 0, 4
+	; layer, "type"; x, "file"; y, "action"; o, "param"
+*sys_trans
+	if $1002 = ":slidein" gosub *systrans_slidein:skip 2
+	k_trans $1002, %1002, $1003
+*sys_defbtn
+	if %sysv_nobtndefclear = 0 btndef clear
+	pl_foreach_ex %sysv_curID, "*sys_defbtn_ex_sub", 1011, 0, 1
+*sys_loop
+	btnwait2 %0
+	if %0 = -10 mov %0, -1
+	if %0 = -1 mov $sysv_target, $1004:mov $sysv_param, $1005:skip 4
+	if %0 <= 0 goto *sys_loop
+		mov $sysv_target, "*sys_loop":mov $sysv_param, ""
+		pl_foreach_ex %sysv_curID, "*sys_clickbtn_sub", 1011, 0, 1
+	;
+	startswith %0, $sysv_target, "!"
+	if %0 > 0 right $sysv_target, $sysv_target, -1:mov $sysv_target, "*"+$sysv_target:gosub $sysv_target:goto *sys_draw
+	if $sysv_target != "" goto $sysv_target
+	goto *sys_loop
+
+	
+*sys_draw_sub
+	if $1012 != "" lsp %1011, $1012, %1012, %1013, %1014
+	return
+
+*sys_defbtn_sub
+	split $1011, ";", $1011, $1012
+	if $1011 != "btn" return
+	spbtn %1011, %1011
+	return
+
+*sys_defbtn_ex_sub
+	split $1011, ";", $1011, $1012
+	if $1011 != "btn" return
+	if $1012 = "*" return
+	if $1012 = "" spbtn %1011, %1011:return
+	exbtn %1011, %1011, $1012
+	return
+
+*sys_clickbtn_sub
+	if %1011 != %0 return
+	gvs $sysv_target, %plv_addr, 2
+	gvs $sysv_param, %plv_addr, 3
+	mov %plv_break, 1
+	return
+
+*systrans_slidein
+	str_find %1015, $1003, ";"
+	mov $1014, $1003 
+	pl_foreach_ex %sysv_curID, "*systrans_slidein_sub", 1011, 0, 1
+	movequeue_start
+	return
+*systrans_slidein_sub
+	if %1015 < 0 mov $1012, $1014:skip 2
+	splits $1014, ";", $1012, $1014
+	split $1012, ",", %1012, %1013, %1014
+	movequeue_add %1011, %1012, %1013, %1014, %1002
+	return
+
+*syscall_cg
+*syscall_save
+*syscall_load
+*syscall_dialog
+*syscall_clickse
+*syscall_clear
+*syscall_back
+	sys_clear
+	goto *sys_end
+
+*syscall_refresh
+	goto *sys_draw
+*syscall_redefbtn
+	goto *sys_defbtn
+
+*syscall_end_game
+	end
+
+*syscall_rmenu
+	systemcall rmenu
+	goto *sys_draw

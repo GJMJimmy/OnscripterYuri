@@ -1,0 +1,81 @@
+
+*custom_appendix
+	btndef clear:csp -1
+	lsp 1, ":a;sysgrp\SGExSlct990100"+FIX_SYSGRP, 0, 0, 255
+	btndef ":a;sysgrp\SGExSlct990200"+FIX_SYSGRP
+	btns 20, 1125, 680, 150, 40, 1125, 680
+	for %2 = 0 to 16
+		mov %3, 0
+		if %2 > 8 mov %3, 1
+		mov %4, %2-%3*9
+		mov %3, 55+400*%3:mov %4, 95+60*%4
+		gosub *custom_appendix_test
+		if %5 > 0 btns 21+%2,%3,%4,275,40,%3,%4
+	next
+	print 10, 200
+*custom_appendix_loop
+	btnwait2 %0
+	if %0 = -1 return
+	if %0 = -10 return
+	if %0 = 20 return
+	if %0 < 20 goto *custom_appendix_loop
+	if %0 > 37 goto *custom_appendix_loop
+	sub %0, 20
+	itoaex $1, %0, 2
+	mov $1, ":a;sysgrp\SGExSlct00"+$1+"00.grp.png"
+	mov %2, 870:mov %3, 100:geoconv %2:geoconv %3
+	lsp 0, $1, %2, %3, 255
+	print 10, 200
+	delay 1000
+	gosub *title_clear
+	print 10, 300
+	skip %0
+	gosub *aiy70110:goto *custom_appendix
+	gosub *aiy70120:goto *custom_appendix
+	gosub *aiy70130:goto *custom_appendix
+	gosub *aiy70210:goto *custom_appendix
+	gosub *aiy70220:goto *custom_appendix
+	gosub *aiy70310:goto *custom_appendix
+	gosub *aiy70410:goto *custom_appendix
+	gosub *aiy70420:goto *custom_appendix
+	gosub *aiy70520:goto *custom_appendix
+	gosub *aiy70510:goto *custom_appendix
+	gosub *aiy71410:goto *custom_appendix
+	gosub *aiy71510:goto *custom_appendix
+	gosub *aiy71610:goto *custom_appendix
+	gosub *aiy80010:goto *custom_appendix
+	gosub *aiy80020:goto *custom_appendix
+	gosub *aiy80030:goto *custom_appendix
+	gosub *aiy80040:goto *custom_appendix
+	goto *custom_appendix
+
+*custom_appendix_test
+	mov %5, 1
+	skip %2+1
+	mov %6, 111:jumpf
+	mov %6, 111:jumpf
+	mov %6, 111:jumpf
+	mov %6, 105:jumpf
+	mov %6, 105:jumpf
+	mov %6, 108:jumpf
+	mov %6, 110:jumpf
+	mov %6, 110:jumpf
+	mov %6, 103:jumpf
+	mov %6, 103:jumpf
+	mov %6, 0:jumpf
+	mov %6, 107:jumpf
+	mov %6, 110:jumpf
+	mov %6, 111:jumpf
+	mov %6, 111:jumpf
+	mov %6, 111:jumpf
+	mov %6, 111:jumpf
+	~
+	if %6 = 0 skip 4
+		b_f_0e7 %6
+		if %branch_flag = 0 mov %5, 1
+		return
+	notif fchk "image\aped_12.png" return
+	notif fchk "image\aped_13.png" return
+	mov %5, 1
+	return
+	

@@ -1,0 +1,111 @@
+*logo
+	;显示logo
+	return
+
+*title_ex
+	;标题系统开始
+	gosub *title_reset
+	b_f_0e7 111
+	if %branch_flag = 0 b_BgmNo 5, 401, 3:skip 2
+	bgm "bgm\bgm_0401_head.ogg":mov %cur_bgm_channel, 3
+	print 10, 200
+	mov %0, 0
+	if %game_started > 0 mov %0, 1
+	b_f_0e7 112	;b_f_0e7 103
+	if %branch_flag = 0 mov %0, 2
+	b_f_0e7 105
+	if %branch_flag = 0 mov %0, 3
+	b_f_0e7 107
+	if %branch_flag = 0 mov %0, 4
+	b_f_0e7 108
+	if %branch_flag = 0 mov %0, 4
+	b_f_0e7 110
+	if %branch_flag = 0 mov %0, 5
+	b_f_0e7 111
+	if %branch_flag = 0 mov %0, 6
+	itoa $0, %0
+	mov $0, ":c;sysgrp\SGTitle990"+$0
+	lsp 100, $0+"00"+FIX_SYSGRP, 0, 0, 255
+	btndef $0+"02"+FIX_SYSGRP
+	if %0 != 0 jumpf
+		btns 11, 500, 300, 280, 50, 500, 300	;start
+		btns 16, 500, 360, 280, 50, 500, 360	;configuration
+		btns 17, 500, 420, 280, 50, 500, 420	;exit
+		goto *title_loop
+	~
+	if %0 != 1 jumpf
+		btns 11, 500, 300, 280, 50, 500, 300	;start
+		btns 12, 500, 360, 280, 50, 500, 360	;continue
+		btns 13, 500, 420, 280, 50, 500, 420	;data load
+		btns 16, 500, 480, 280, 50, 500, 480	;configuration
+		btns 17, 500, 540, 280, 50, 500, 540	;exit
+		goto *title_loop
+	~
+	btns 11, 500, 300, 280, 50, 500, 300	;start
+	btns 12, 500, 360, 280, 50, 500, 360	;continue
+	btns 13, 500, 420, 280, 50, 500, 420	;data load
+	btns 14, 500, 480, 280, 50, 500, 480	;appendix
+	btns 15, 500, 540, 280, 50, 500, 540	;replay mode
+	btns 16, 500, 600, 280, 50, 500, 600	;configuration
+	btns 17, 500, 660, 280, 50, 500, 660	;exit
+	btns 18, 50, 540, 280, 50, 50, 540	;cg mode
+	btns 19, 950, 540, 280, 50, 950, 540	;music mode
+	b_f_0e7 114
+	if %branch_flag = 0 btns 20, 1145, 655, 135, 65, 1145, 655	;omake
+*title_loop
+	btnwait2 %1
+	if %1 = 11 gosub *title_clear:goto *custom_start
+	if %1 = 12 gosub *title_clear:gosub *custom_continue:goto *title_ex
+	if %1 = 13 gosub *title_clear:gosub *custom_load:goto *title_ex
+	if %1 = 14 gosub *title_clear:gosub *custom_appendix:goto *title_ex	;appendix
+	if %1 = 15 gosub *title_clear:gosub *custom_replay:goto *title_ex	;replay mode
+	if %1 = 16 gosub *title_clear:gosub *custom_system:goto *title_ex	;configuration
+	if %1 = 17 goto *custom_end
+	if %1 = 18 gosub *title_clear:gosub *custom_cg:goto *title_ex	;cg mode
+	if %1 = 19 gosub *title_clear:gosub *custom_music:goto *title_ex	;music mode
+	if %1 = 20 gosub *title_clear:gosub *custom_omake:goto *title_ex	;omake
+	goto *title_loop
+
+*title_reset
+	mov %is_in_scene, 0
+*title_clear
+	b_ClrFace 
+	b_Refresh 
+	b_Window 0
+	b_BgmStop 5, 1
+	b_BgmStop 5, 2
+	b_BgmStop 5, 3
+	b_SEStop 5, 1
+	b_SEStop 5, 2
+	b_SEStop 5, 3
+	b__soundstop 1
+	b__soundstop 2
+	b__soundstop 3
+	btndef clear
+	csp -1
+	return
+
+*custom_start
+	inc %game_started
+	;gosub *test_1
+	gosub *main
+	reset
+
+*custom_end
+	;<TODO> dialog
+	end
+
+*custom_omake
+	goto *aiy81010
+
+*custom_common_button
+	sys_btn_add_ex2 0, 680, 370,40, "*custom_go;cg"
+	sys_btn_add_ex2 370, 680, 360,40, "*custom_go;replay"
+	sys_btn_add_ex2 730, 680, 360,40, "*custom_go;music"
+	sys_btn_add_ex2 1125, 680, 150,40, "clear"
+	return
+
+*custom_go
+	gosub *syscall_back
+	mov $sysv_param, "*custom_"+$sysv_param
+	goto $sysv_param

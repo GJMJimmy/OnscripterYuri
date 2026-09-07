@@ -1,0 +1,152 @@
+; 基础变量函数
+; 使用临时变量: 501~505
+; 所有的push和pop要成对使用
+; - 注意：即使使用push和pop保护环境，
+; - 由于s%和i%的存在，仍然有不可作为此两者参数的变元，用
+; - <REJECT REFERENCE> 标注
+
+*di2
+	getparam %501, $502
+	itoa $501, %%501
+	skip 4
+*ds2
+	getparam %501, $502
+	mov $501, $%501
+	;
+	skip 4
+*di
+	getparam %501
+	mov $502, "":itoa $501, %%501
+	;
+	skip 4
+*ds
+	getparam %501
+	mov $502, "":mov $501, $%501
+	;
+	if DEBUG_MODE = 0 return
+	if $502 != "" mov $501, $502+": "+$501
+	lsp 1, $501, 0,0,0
+	return
+
+; push/pop一个范围内的所有数字及字符串变量
+; push/pop %start, %end (%start<=%end)
+; 带str和int分别表示push/pop一个字符串/数字变量
+; 带s和i分别表示push/pop一个范围内的所有字符串/数字变量
+; 带2的命令在push时会将地址一起push进去，因此pop的时候不需要重复输入范围
+
+*pushstr
+	getparam $501
+	mov $%VARS_SP, $501
+	dec %VARS_SP
+	return
+
+*pushint
+	getparam %501
+	mov %%VARI_SP, %501
+	dec %VARI_SP
+	return
+
+*popstr
+	getparam s%501
+	inc %VARS_SP
+	mov $%501, $%VARS_SP
+	return
+
+*popint
+	getparam i%501
+	inc %VARI_SP
+	mov %%501, %%VARI_SP
+	return
+
+*push
+	mov %502, 0
+	skip 3
+*push2
+	mov %502, 1
+	;
+	getparam %503, %504
+	for %505=%503 to %504
+		pushstr $%505
+		pushint %%505
+	next
+	if %502 > 0 pushint %503:pushint %504
+	return
+
+*pop2
+	popint %504
+	popint %503
+	skip 3
+*pop
+	getparam %503, %504
+	;
+	for %505=%504 to %503 step -1
+		popstr $%505
+		popint %%505
+	next
+	return
+
+*pushi
+	mov %502, 0
+	skip 3
+*pushi2
+	mov %502, 1
+	;
+	getparam %503, %504
+	for %505=%503 to %504
+		pushint %%505
+	next
+	if %502 > 0 pushint %503:pushint %504
+	return
+
+*popi2
+	popint %504
+	popint %503
+	skip 3
+*popi
+	getparam %503, %504
+	;
+	for %505=%504 to %503 step -1
+		popint %%505
+	next
+	return
+
+*pushs
+	mov %502, 0
+	skip 3
+*pushs2
+	mov %502, 1
+	;
+	getparam %503, %504
+	for %505=%503 to %504
+		pushstr $%505
+	next
+	if %502 > 0 pushint %503:pushint %504
+	return
+
+*pops2
+	popint %504
+	popint %503
+	skip 3
+*pops
+	getparam %503, %504
+	;
+	for %505=%504 to %503 step -1
+		popstr $%505
+	next
+	return
+
+;============
+
+; eg:
+; *k_image
+;     p_start
+;     ...(process)
+;     goto *p_end	;instead of return
+
+*p_start
+	push 1001, 1010
+	return
+
+*p_end
+	pop 1001, 1010
+	return

@@ -1,0 +1,35 @@
+*custom_save
+	systemcall save
+	return
+
+*custom_load
+	systemcall load
+	return
+
+*custom_back
+	systemcall lookback
+	return
+
+*custom_gesture
+*custom_windowerase
+	getspmode %601, L_FACE
+	getspmode %602, L_BTN
+	getspmode %603, L_DIALOG
+	getspmode %604, L_CURSOR
+	vsp L_FACE, 0:vsp L_BTN, 0:vsp L_DIALOG, 0:vsp L_CURSOR, 0:print 1
+	systemcall windowerase
+	vsp L_FACE, %601:vsp L_BTN, %602:vsp L_DIALOG, %603:vsp L_CURSOR, %604:print 1
+	return
+
+*custom_continue
+*custom_q_load
+	loadgame 998
+	return
+
+*custom_q_save
+	savegame 998
+	return
+
+*custom_system
+	systemcall rmenu
+	return

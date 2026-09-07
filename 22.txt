@@ -1,0 +1,114 @@
+*et
+	erasetextwindow 1
+	if %is_frame_btn_enable = 1 gosub *force_hide_frame_btn:mov %is_frame_btn_enable, 0:vsp L_BTN, 0:vsp L_FACE, 0:vsp L_DIALOG, 0
+	textoff
+	return
+
+*b__say
+	getparam $1001, %1002, %1003, %1004, %1005
+	qw
+	mov %TEMP_TATI, 0
+	if %h_textmode = 0 br
+	add $1001, "/"
+	$1001
+\
+	return
+
+*b__say_1
+	getparam $1001, $1002, %1003, %1004, %1005
+	qw
+	mov %TEMP_TATI, 0
+	mov %is_frame_btn_enable, 1
+	mov $1002, "【"+$1002+"】"
+	if %h_textmode = 1 mov $1001, $1002+"　"+$1001:skip 2
+	$1002
+	add $1001, "/"
+	$1001
+\
+	return
+
+*b__screenmsg
+	getparam %1001, $1001
+	; for backlog? uncertain
+	;qw
+	return
+	add $1001, "/"
+	$1001
+\
+	return
+
+*b__screenmsg_1
+	getparam $1001, $1002
+	print 1:click:return
+
+*b_Size
+	getparam %1001
+	if %1001 = 3 mov %1002, 10
+	if %1001 = 4 mov %1002, 18
+	if %1001 = 5 mov %1002, 28
+	if %1001 = 2 mov %1002, 40
+	if %1001 = 7 mov %1002, 50
+	mov %FONT_SIZE, %1002
+	geoconv %FONT_SIZE
+	gosub *refresh_textwin
+	return
+
+*b_Window
+	getparam %1001
+	gosub *refresh_textwin
+	et
+	return
+
+*b__hidetextwin
+*refresh_textwin
+	if %h_textmode = 1 mov $textwin_transparent, "2"
+	mov $textwin_head, ":a;sysgrp\SGMsgWnd"+$textwin_transparent+$textwin_style+"0"
+	mov $1001, $textwin_head+"000.grp.png"
+	getspsize2 $1001, %1002, %1003
+	mov %1001, 200
+	mov %1003, SCREEN_HEIGHT-%1003
+	mov %1004, (SCREEN_WIDTH-%1001-50)/%FONT_SIZE
+	if %h_textmode = 1 mov %1005, 145:geoconv %1005:setwindow 100,%1003+%1005,(SCREEN_WIDTH-180-50)/%FONT_SIZE,5,%FONT_SIZE,%FONT_SIZE,0,LINE_SPACE,20,1,1,#FFFFFF, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT:mov %frame_x, 624:mov %frame_y, 598:mov %frame_w, 59:mov %frame_h, 23:skip 3
+	setwindow %1001,%1003+%FONT_SIZE+LINE_SPACE,%1004,5,%FONT_SIZE,%FONT_SIZE,0,LINE_SPACE,20,1,1,#FFFFFF, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT;$1001, 0, %1003
+	mov %frame_x, 595:mov %frame_y, 678:mov %frame_w, 59:mov %frame_h, 23:if $textwin_transparent = "2" mov $textwin_transparent, "0"
+	;
+	mov %is_frame_btn_enable, 1
+	mov %is_frame_btn_show, 0
+	vsp L_BTN, 0:vsp L_DIALOG, 0:vsp L_FACE, 0
+	add %frame_y, BTNHEIGHT_FIX
+	print 1
+	return
+
+*b_f_15c
+	getparam %1001
+	itoa $textwin_style, %1001
+	gosub *refresh_textwin
+	return
+
+*b_f_14e
+	getparam %1001, %1002, %1003
+	;似乎是文字颜色，对应RGB
+	;已出现参数
+	; 124,20,24 255,255,255
+	if %1001 = 124 & %1002 = 20 & %1003 = 24 skip 3
+	#FFFFFF/
+	return
+	#7C1418/
+	return
+
+;======================================
+;msg
+;======================================
+
+*b_f_153
+	getparam %1001
+	;每个ED结束时出现一次，参数3000,对话框隐去？
+	return
+
+*b_f_15d
+	getparam %h_textmode
+	;H场景特有的对话框
+	itoa $textwin_style, 0
+	if %h_textmode = 0 mov $textwin_transparent, "0"
+	gosub *refresh_textwin
+	return

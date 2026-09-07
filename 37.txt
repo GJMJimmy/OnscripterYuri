@@ -1,0 +1,117 @@
+
+*b_f_301
+	getparam %1001, $1001, %1003, %1004, %1005, %1006, %1007, %1008, %1009, %1010, %1011, %1012, %1013, %1014, %1015, %1016, %1017, %1018, %1019
+	;b_f_301 1, "aiy20230mov.mpg", 4, 0, 0, 0, 0, 640, 360, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1
+	skip 3
+*b_f_1bf
+	getparam $1001, %1002
+	;
+	split $1001, ".", $1002, $1003
+	if $1002 = "aiy20230mov" return	; <FIXME>
+	if $1003 = "arc" mov $1001, $1002+".mpg"
+	mov $1001, "video\"+$1001
+	movie $1001, click
+	return
+
+*b_BgmNo
+*b_BgmPlay
+	; <TODO> 显示SGMusicTitle%1002.grp.png
+	getparam %1001, %1002, %1003
+	if %1002 = 0 return
+	fileconv_ex $1001, "bgm_", %1002, 4, "_loop.ogg"
+	bgm $1001
+	mov %cur_bgm_channel, %1003
+	return
+
+*b_BgmShow
+	getparam %1001
+	return
+
+*b_BgmStop
+	getparam %1001, %1002
+	if %1002 = %cur_bgm_channel mov %cur_bgm_channel, 0:bgmstop
+	return
+
+*b_BgmVol
+	getparam %1001, %1002
+	return
+
+*b_BgmX
+	getparam %1001, %1002
+	return
+
+*b_LoopSE
+	getparam %1001, %1002, %1003
+	itoaex $1002, %1002, 5
+	mov $1002, "se\"+$1002+"_loop.ogg"
+	dwaveloop %1003, $1002
+	return
+
+*b_SEPlay
+	getparam %1001, %1002, %1003
+	itoaex $1002, %1002, 5
+	mov $1002, "se\"+$1002+".ogg"
+	dwave %1003, $1002
+	return
+
+*b_SEStop
+	getparam %1001, %1002
+	dwavestop %1002
+	return
+
+*b__soundstop
+	getparam %1001
+	return
+
+*b_Voice
+	getparam $1001
+	mov $1001, "voice\"+$1001+".ogg"
+	dwave 0, $1001
+	return
+
+*b_f_181
+	;b_f_181 1, "bgm_0104_head", "bgm_0104_loop", 0, 128, 0
+	getparam %1001, $1002, $1003, %1004, %1005, %1006
+	mov $1001, "bgm\"+$1003+".ogg"
+	bgm $1001
+	return
+
+*b_f_185
+	getparam %1001, %1002, %1003
+	;两次 1,6000/3000,0
+	;bgm淡出？
+	bgmstop
+	return
+
+*b_f_195
+	getparam %1001, %1002, %1003
+	;只出现一次，圣女处刑前， 3,4000,0
+	dwavestop %1001
+	return
+
+*b_f_1a4
+	getparam %1001
+	;等待se结束？
+	;只出现一次，aiy80020中
+	wait 11000
+	return
+
+;======================================
+;snd
+;======================================
+
+*b_f_186
+	getparam %1001, %1002, %1003
+	;两处 2,64/100,0 均在圣女的竖琴后
+	return
+
+*b_f_196
+	getparam %1001, %1002, %1003
+	;调整se音量 channel,volume,time
+	return
+
+*b_f_1ac
+	getparam %1001
+	;等待语音结束
+	qw_limit
+	return
