@@ -101,15 +101,13 @@ class SyncHandler(BaseHTTPRequestHandler):
 def main():
     parser = argparse.ArgumentParser(description="onsyuri save-sync server")
     parser.add_argument("--port", type=int, default=8765)
-    parser.add_argument("--host", default="0.0.0.0",
-                        help="bind address; use 127.0.0.1 behind a reverse proxy")
     parser.add_argument("--dir", default="saves", help="directory to store save zips")
     args = parser.parse_args()
 
     SyncHandler.save_dir = args.dir
     os.makedirs(args.dir, exist_ok=True)
-    server = ThreadingHTTPServer((args.host, args.port), SyncHandler)
-    print("onsyuri save-sync server on %s:%d, storing zips in %s/" % (args.host, args.port, args.dir))
+    server = ThreadingHTTPServer(("0.0.0.0", args.port), SyncHandler)
+    print("onsyuri save-sync server on 0.0.0.0:%d, storing zips in %s/" % (args.port, args.dir))
     try:
         server.serve_forever()
     except KeyboardInterrupt:
