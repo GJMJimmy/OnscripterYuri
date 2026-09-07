@@ -133,14 +133,19 @@
                 return files;
             }
 
-            function em_export(_FS, paths, name="export.zip") {
+            // zip the given fs paths, return a promise of the zip bytes
+            function em_zip_paths(_FS, paths) {
                 var zip = new JSZip();
                 for (let i=0; i<paths.length; i++) {
                     var data = _FS.readFile(paths[i]);
                     zip.file(paths[i], data, {binary: true});
-                    console.log("## onsyuri_fs: em_export", paths[i]);
+                    console.log("## onsyuri_fs: em_zip_paths", paths[i]);
                 }
-                zip.generateAsync({type : "arraybuffer"})
+                return zip.generateAsync({type : "arraybuffer"});
+            }
+
+            function em_export(_FS, paths, name="export.zip") {
+                em_zip_paths(_FS, paths)
                 .then(function(data) {
                     download_data(name, data);
                 });
@@ -517,6 +522,66 @@
                 em_import(g_onsyuri_module.FS, data);
             }
 
+            // ---- save sync with a remote server ----
+            const ONSYURI_SYNC_SERVER = ""; // e.g. "http://192.168.1.10:8765"; empty asks at runtime
+
+            function sync_server_url() {
+                var url = (typeof ONSYURI_SYNC_SERVER == "string") ?
+                    ONSYURI_SYNC_SERVER.replace(/\/+$/, "") : "";
+                if(url == "") {
+                    url = localStorage.getItem("onsyuri_sync_server") || "";
+                    if(url == "") {
+                        url = prompt("同步服务器地址（例如 http://192.168.1.10:8765）", "") || "";
+                        url = url.trim().replace(/\/+$/, "");
+                        if(url == "") return "";
+                        localStorage.setItem("onsyuri_sync_server", url);
+                    }
+                }
+                return url;
+            }
+
+            function sync_slot() {
+                var slot = prompt("存档码（在服务器上标识这份存档）",
+                    localStorage.getItem("onsyuri_sync_slot") || "") || "";
+                slot = slot.trim();
+                if(slot != "") localStorage.setItem("onsyuri_sync_slot", slot);
+                return slot;
+            }
+
+            async function click_upload() {
+                try {
+                    var url = sync_server_url();
+                    if(url == "") return;
+                    var slot = sync_slot();
+                    if(slot == "") return;
+                    var files = em_lsfiles(g_onsyuri_module.FS, g_onsyuri_index.savedir);
+                    if(files.length == 0) { alert("没有可上传的存档"); return; }
+                    var data = await em_zip_paths(g_onsyuri_module.FS, files);
+                    var resp = await fetch(url + "/save/" + encodeURIComponent(slot),
+                        {method: "POST", body: data});
+                    if(!resp.ok) throw new Error("HTTP " + resp.status);
+                    alert("存档已上传到服务器（" + slot + "）");
+                }
+                catch(e) { alert("上传失败: " + e.message); }
+            }
+
+            async function click_download() {
+                try {
+                    var url = sync_server_url();
+                    if(url == "") return;
+                    var slot = sync_slot();
+                    if(slot == "") return;
+                    var resp = await fetch(url + "/save/" + encodeURIComponent(slot));
+                    if(resp.status == 404) { alert("服务器上没有 \"" + slot + "\" 的存档"); return; }
+                    if(!resp.ok) throw new Error("HTTP " + resp.status);
+                    var data = await resp.arrayBuffer();
+                    await em_import(g_onsyuri_module.FS, data);
+                    flush_save(); // persist the restored saves to IndexedDB
+                    alert("存档已从服务器恢复（" + slot + "）\n如游戏正在运行，刷新页面后读取列表才会更新");
+                }
+                catch(e) { alert("下载失败: " + e.message); }
+            }
+
             window.onresize = (event) => {
                 var canvas = document.getElementById('canvas');
                 var ratio = g_fullstrech ? window.innerWidth/window.innerHeight: g_screen_width/g_screen_height;
@@ -726,6 +791,8 @@
             <button onclick="toggle_skip()">skip[Ctrl]</button>
             <button onclick="click_export()">export[F3]</button>
             <button onclick="click_import()">import[F4]</button>
+            <button onclick="click_upload()">up[Server]</button>
+            <button onclick="click_download()">down[Server]</button>
             <button onclick="toggle_webinfo()">about[F2]</button>
             <button onclick="toggle_webmenu()">close[F9]</button>
         </div>
