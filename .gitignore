@@ -8,6 +8,7 @@ build_*/**
 thirdparty/**
 script/*.json
 save
+.zcode/
 
 # android
 local.properties
