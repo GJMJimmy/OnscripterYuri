@@ -330,8 +330,6 @@
         <script type="text/javascript"> // onsyuri ui
             var g_fullstrech = false;
             var g_screen_height, g_screen_width; // initial in onsyuri C code
-            var g_lastpressdown; // for longpress 
-            const LONG_CLICK_TIME = 1200;
 
             function toggle_stretchfull() {
                 g_fullstrech = !g_fullstrech;
@@ -417,12 +415,6 @@
             function menu_is_shown() {
                 var panel = document.getElementById("onsyuri_webrmenu");
                 return !!panel && panel.style.display != "none";
-            }
-
-            // presses on the fab or the popup panel should not count as canvas longpress
-            function in_onsmenu_ui(target) {
-                return !!(target && target.closest &&
-                    target.closest("#onsyuri_fab, #onsyuri_webrmenu"));
             }
 
             function fab_default_pos(fab) {
@@ -616,41 +608,10 @@
                 }
             }
 
-            window.onmousedown = (event) => {
-                if(in_onsmenu_ui(event.target)) return;
-                if(event.button==0){
-                    g_lastpressdown = event.timeStamp;
-                }
-            }
-
-            window.onmouseup = (event) => {
-                if(in_onsmenu_ui(event.target)) return;
-                if(event.button==0){
-                    if(menu_is_shown()) { // click outside closes the popup menu
-                        toggle_webmenu();
-                    }
-                    else if(event.timeStamp - g_lastpressdown > LONG_CLICK_TIME) {
-                        toggle_webmenu();
-                        g_lastpressdown = event.timeStamp;
-                    }
-                }
-            }
-
-            window.ontouchstart = (event) => {
-                if(in_onsmenu_ui(event.target)) return;
-                g_lastpressdown = event.timeStamp;
-            }
-
-            window.ontouchend = (event) => {
-                if(in_onsmenu_ui(event.target)) return;
-                if(menu_is_shown()) { // tap outside closes the popup menu
-                    toggle_webmenu();
-                }
-                else if(event.timeStamp - g_lastpressdown > LONG_CLICK_TIME) {
-                    toggle_webmenu();
-                    g_lastpressdown = event.timeStamp;
-                }
-            }
+            window.onmousedown = null; // menu toggling is fab/hotkey only, no canvas longpress
+            window.onmouseup = null;
+            window.ontouchstart = null;
+            window.ontouchend = null;
 
             window.onmessage = (evnet)=> {
                 console.log("## onsyuri: onmessage ", event.data);
@@ -778,7 +739,7 @@
             <p> Loading game resources ... </p>
             <p> Powered by <a href="https://github.com/YuriSizuku/OnscripterYuri" target="_blank"> Onscripter Yuri</a> v0.7.7</p>
             <hr>
-            <p> [Float Button|Long Click|F9]: show menu </p>
+            <p> [Float Button|F9]: show menu </p>
             <p> [F10]: stretch full; [F11]: screen full</p>
         </div>
 
