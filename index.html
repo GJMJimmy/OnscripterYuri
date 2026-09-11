@@ -153,20 +153,24 @@
             }
 
             function em_import(_FS, data) {
-                JSZip.loadAsync(data)
+                // must resolve only after every file is written, so callers can
+                // safely persist (syncfs) or reload right after awaiting it
+                return JSZip.loadAsync(data)
                 .then((zip) => {
+                    var writes = [];
                     zip.forEach((path, obj) => {
                         if(obj.dir) {
                             em_mkdirs(_FS, path);
                         }
                         else {
-                            obj.async("arraybuffer")
+                            writes.push(obj.async("arraybuffer")
                             .then((buf) => {
                                 _FS.writeFile(path, new Uint8Array(buf));
                                 console.log("## onsyuri_fs: em_import", path);
-                            });
+                            }));
                         }
                     });
+                    return Promise.all(writes);
                 })
             }
 
@@ -389,18 +393,18 @@
 
             function toggle_webmenu() {
                 var onsyuri_webrmenu = document.getElementById("onsyuri_webrmenu");
+                var fab = get_fab();
                 if(onsyuri_webrmenu.style.display=="none") {
-                    onsyuri_webrmenu.style.display = "flex";
+                    build_menu();
+                    onsyuri_webrmenu.style.display = "block";
                     menu_place_panel(); // measure after shown, position before paint
-                    var fab = get_fab();
-                    if(fab) fab.textContent = "✕";
+                    if(fab) fab.classList.add("open");
                 }
                 else {
                     var onsyuri_webinfo = document.getElementById("onsyuri_webinfo");
                     onsyuri_webinfo.style.display = "none";
                     onsyuri_webrmenu.style.display = "none";
-                    var fab = get_fab();
-                    if(fab) fab.textContent = "☰";
+                    if(fab) fab.classList.remove("open");
                 }
             }
 
@@ -474,6 +478,7 @@
             function fab_init() {
                 var fab = get_fab();
                 if(!fab) return;
+                theme_load();
                 fab_load_pos();
                 fab.addEventListener("pointerdown", (event)=>{
                     if(!event.isPrimary) return;
@@ -515,64 +520,220 @@
                 em_import(g_onsyuri_module.FS, data);
             }
 
-            // ---- save sync with a remote server ----
-            const ONSYURI_SYNC_SERVER = ""; // e.g. "http://192.168.1.10:8765"; empty asks at runtime
+            // ---- appearance customization ----
+            const ONS_THEME_KEY = "onsyuri_ui_theme";
+            const ONS_THEME_DEFAULT = {color: "#38bdf8", fabAlpha: 0.92, panelAlpha: 0.82};
 
-            function sync_server_url() {
-                var url = (typeof ONSYURI_SYNC_SERVER == "string") ?
-                    ONSYURI_SYNC_SERVER.replace(/\/+$/, "") : "";
-                if(url == "") {
-                    url = localStorage.getItem("onsyuri_sync_server") || "";
-                    if(url == "") {
-                        url = prompt("同步服务器地址（例如 http://192.168.1.10:8765）", "") || "";
-                        url = url.trim().replace(/\/+$/, "");
-                        if(url == "") return "";
-                        localStorage.setItem("onsyuri_sync_server", url);
-                    }
-                }
-                return url;
+            function apply_theme(theme) {
+                var root = document.documentElement.style;
+                root.setProperty("--ons-accent", theme.color);
+                root.setProperty("--ons-fab-alpha", String(theme.fabAlpha));
+                root.setProperty("--ons-panel-alpha", String(theme.panelAlpha));
             }
 
-            function sync_slot() {
-                var slot = prompt("存档码（在服务器上标识这份存档）",
-                    localStorage.getItem("onsyuri_sync_slot") || "") || "";
-                slot = slot.trim();
-                if(slot != "") localStorage.setItem("onsyuri_sync_slot", slot);
-                return slot;
-            }
-
-            async function click_upload() {
+            function theme_load() {
+                var theme = ONS_THEME_DEFAULT;
                 try {
-                    var url = sync_server_url();
-                    if(url == "") return;
-                    var slot = sync_slot();
-                    if(slot == "") return;
+                    var saved = JSON.parse(localStorage.getItem(ONS_THEME_KEY));
+                    if(saved && typeof saved.color == "string" &&
+                       typeof saved.fabAlpha == "number" && typeof saved.panelAlpha == "number")
+                        theme = saved;
+                } catch(e) {} // keep defaults on broken storage
+                apply_theme(theme);
+                return theme;
+            }
+
+            function theme_save(theme) {
+                try { localStorage.setItem(ONS_THEME_KEY, JSON.stringify(theme)); } catch(e) {}
+            }
+
+            function show_theme_view() {
+                var theme = theme_load();
+                var panel = document.getElementById("onsyuri_webrmenu");
+                panel.innerHTML =
+                    '<div class="ons-group">' +
+                        '<div class="ons-label">外观设置</div>' +
+                        '<div class="ons-field"><span>主色调</span>' +
+                        '<input id="ons_theme_color" class="ons-color" type="color" value="' + theme.color + '"></div>' +
+                        '<div class="ons-field"><span>悬浮球透明度 <b id="ons_fab_alpha_val">' + Math.round(theme.fabAlpha*100) + '%</b></span>' +
+                        '<input id="ons_theme_fab" class="ons-range" type="range" min="30" max="100" step="1" value="' + Math.round(theme.fabAlpha*100) + '"></div>' +
+                        '<div class="ons-field"><span>面板透明度 <b id="ons_panel_alpha_val">' + Math.round(theme.panelAlpha*100) + '%</b></span>' +
+                        '<input id="ons_theme_panel" class="ons-range" type="range" min="30" max="100" step="1" value="' + Math.round(theme.panelAlpha*100) + '"></div>' +
+                        '<div class="ons-row">' +
+                        '<button class="ons-btn ons-btn-ghost" id="ons_theme_reset">' + ONS_ICONS.sync + '<span>恢复默认</span></button>' +
+                        '</div>' +
+                        '<button class="ons-item" id="ons_theme_back">' + ONS_ICONS.back + '<span>返回</span></button>' +
+                    '</div>';
+                var color = document.getElementById("ons_theme_color");
+                var fab = document.getElementById("ons_theme_fab");
+                var panelAlpha = document.getElementById("ons_theme_panel");
+                var apply = ()=>{
+                    var t = {color: color.value, fabAlpha: fab.value/100, panelAlpha: panelAlpha.value/100};
+                    apply_theme(t);
+                    document.getElementById("ons_fab_alpha_val").textContent = Math.round(t.fabAlpha*100) + "%";
+                    document.getElementById("ons_panel_alpha_val").textContent = Math.round(t.panelAlpha*100) + "%";
+                    theme_save(t);
+                };
+                color.addEventListener("input", apply);
+                fab.addEventListener("input", apply);
+                panelAlpha.addEventListener("input", apply);
+                document.getElementById("ons_theme_reset").addEventListener("click", ()=>{
+                    localStorage.removeItem(ONS_THEME_KEY);
+                    apply_theme(ONS_THEME_DEFAULT);
+                    show_theme_view();
+                });
+                document.getElementById("ons_theme_back").addEventListener("click", build_menu);
+            }
+
+            // ---- save sync with a remote server ----
+            const ONSYURI_SYNC_SERVER = ""; // e.g. "http://192.168.1.10:8765"; empty asks in the panel
+
+            var g_toast_timer = 0;
+            function show_toast(msg, type="info", ms=2800) {
+                var t = document.getElementById("onsyuri_toast");
+                if(!t) {
+                    t = document.createElement("div");
+                    t.id = "onsyuri_toast";
+                    document.body.appendChild(t);
+                }
+                t.textContent = msg;
+                t.className = "ons-toast show " + type;
+                clearTimeout(g_toast_timer);
+                g_toast_timer = setTimeout(()=>{ t.className = "ons-toast " + type; }, ms);
+            }
+
+            var ONS_ICONS = {
+                menu: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M7 9h10"/><path d="M7 13h7"/></svg>',
+                skip: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 5 12 12 5 19"/><polyline points="13 5 20 12 13 19"/></svg>',
+                sync: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>',
+                up: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"/><polyline points="6 10 12 4 18 10"/><path d="M4 20h16"/></svg>',
+                down: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"/><polyline points="18 10 12 16 6 10"/><path d="M4 20h16"/></svg>',
+                export: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12h-8"/><polyline points="16 8 20 12 16 16"/><path d="M11 5H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h5"/></svg>',
+                import: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h8"/><polyline points="8 8 12 12 8 16"/><path d="M13 5h5a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-5"/></svg>',
+                stretch: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg>',
+                full: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M16 3h3a2 2 0 0 1 2 2v3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M21 16v3a2 2 0 0 1-2 2h-3"/></svg>',
+                about: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01"/><path d="M12 11v5"/></svg>',
+                close: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>',
+                back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>',
+                droplet: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6.3 6.6 6.3 11a6.3 6.3 0 0 1-12.6 0c0-4.4 6.3-11 6.3-11z"/></svg>',
+            };
+
+            function build_menu() {
+                var panel = document.getElementById("onsyuri_webrmenu");
+                panel.innerHTML = "";
+                var groups = [
+                    {label: "游戏", items: [
+                        {icon: "menu", label: "游戏菜单", onclick: toggle_onsmenu},
+                        {icon: "skip", label: "快进", badge: "Ctrl", onclick: toggle_skip},
+                    ]},
+                    {label: "云同步", items: [
+                        {icon: "sync", label: "上传 / 恢复存档", onclick: show_sync_view},
+                    ]},
+                    {label: "存档文件", items: [
+                        {icon: "export", label: "导出存档", badge: "F3", onclick: click_export},
+                        {icon: "import", label: "导入存档", badge: "F4", onclick: click_import},
+                    ]},
+                    {label: "外观", items: [
+                        {icon: "droplet", label: "外观设置", onclick: show_theme_view},
+                    ]},
+                    {label: "系统", items: [
+                        {icon: "stretch", label: "拉伸全屏", badge: "F10", onclick: toggle_stretchfull},
+                        {icon: "full", label: "全屏", badge: "F11", onclick: toggle_screenfull},
+                        {icon: "about", label: "关于", badge: "F2", onclick: toggle_webinfo},
+                        {icon: "close", label: "关闭面板", badge: "F9", onclick: toggle_webmenu},
+                    ]},
+                ];
+                groups.forEach((group)=>{
+                    var groupDiv = document.createElement("div");
+                    groupDiv.className = "ons-group";
+                    if(group.label) {
+                        var label = document.createElement("div");
+                        label.className = "ons-label";
+                        label.textContent = group.label;
+                        groupDiv.appendChild(label);
+                    }
+                    group.items.forEach((item)=>{
+                        var btn = document.createElement("button");
+                        btn.className = "ons-item";
+                        btn.innerHTML = ONS_ICONS[item.icon] +
+                            "<span>" + item.label + "</span>" +
+                            (item.badge ? '<span class="ons-badge">' + item.badge + '</span>' : "");
+                        btn.addEventListener("click", item.onclick);
+                        groupDiv.appendChild(btn);
+                    });
+                    panel.appendChild(groupDiv);
+                });
+            }
+
+            function show_sync_view() {
+                var panel = document.getElementById("onsyuri_webrmenu");
+                panel.innerHTML =
+                    '<div class="ons-group">' +
+                        '<div class="ons-label">云同步存档</div>' +
+                        '<div class="ons-field"><span>服务器链接</span>' +
+                        '<input id="ons_sync_server" class="ons-input" spellcheck="false" placeholder="http://192.168.1.10:8765"></div>' +
+                        '<div class="ons-field"><span>存档码</span>' +
+                        '<input id="ons_sync_slot" class="ons-input" spellcheck="false" placeholder="给这份存档起个名字"></div>' +
+                        '<div class="ons-row">' +
+                        '<button class="ons-btn ons-btn-primary" id="ons_sync_up">' + ONS_ICONS.up + '<span>上传</span></button>' +
+                        '<button class="ons-btn ons-btn-ghost" id="ons_sync_down">' + ONS_ICONS.down + '<span>恢复</span></button>' +
+                        '</div>' +
+                        '<button class="ons-item" id="ons_sync_back">' + ONS_ICONS.back + '<span>返回</span></button>' +
+                    '</div>';
+                var server = document.getElementById("ons_sync_server");
+                var slot = document.getElementById("ons_sync_slot");
+                server.value = (typeof ONSYURI_SYNC_SERVER == "string" && ONSYURI_SYNC_SERVER != "") ?
+                    ONSYURI_SYNC_SERVER : (localStorage.getItem("onsyuri_sync_server") || "");
+                slot.value = localStorage.getItem("onsyuri_sync_slot") || "";
+                document.getElementById("ons_sync_up").addEventListener("click", ()=>{ run_sync("upload"); });
+                document.getElementById("ons_sync_down").addEventListener("click", ()=>{ run_sync("download"); });
+                document.getElementById("ons_sync_back").addEventListener("click", build_menu);
+            }
+
+            function run_sync(mode) {
+                var server = document.getElementById("ons_sync_server").value.trim().replace(/\/+$/, "");
+                var slot = document.getElementById("ons_sync_slot").value.trim();
+                if(server == "") { show_toast("请先填写服务器链接", "warning"); return; }
+                if(slot == "") { show_toast("请先输入存档码", "warning"); return; }
+                localStorage.setItem("onsyuri_sync_server", server);
+                localStorage.setItem("onsyuri_sync_slot", slot);
+                hide_webmenu(); // toasts keep the user informed
+                if(mode == "upload") do_upload(server, slot);
+                else do_download(server, slot);
+            }
+
+            function hide_webmenu() {
+                document.getElementById("onsyuri_webrmenu").style.display = "none";
+                document.getElementById("onsyuri_webinfo").style.display = "none";
+                var fab = get_fab();
+                if(fab) fab.classList.remove("open");
+            }
+
+            async function do_upload(server, slot) {
+                try {
                     var files = em_lsfiles(g_onsyuri_module.FS, g_onsyuri_index.savedir);
-                    if(files.length == 0) { alert("没有可上传的存档"); return; }
+                    if(files.length == 0) { show_toast("没有可上传的存档", "warning"); return; }
                     var data = await em_zip_paths(g_onsyuri_module.FS, files);
-                    var resp = await fetch(url + "/save/" + encodeURIComponent(slot),
+                    var resp = await fetch(server + "/save/" + encodeURIComponent(slot),
                         {method: "POST", body: data});
                     if(!resp.ok) throw new Error("HTTP " + resp.status);
-                    alert("存档已上传到服务器（" + slot + "）");
+                    show_toast("存档已上传到云端（" + slot + "）", "success");
                 }
-                catch(e) { alert("上传失败: " + e.message); }
+                catch(e) { show_toast("上传失败: " + e.message, "error"); }
             }
 
-            async function click_download() {
+            async function do_download(server, slot) {
                 try {
-                    var url = sync_server_url();
-                    if(url == "") return;
-                    var slot = sync_slot();
-                    if(slot == "") return;
-                    var resp = await fetch(url + "/save/" + encodeURIComponent(slot));
-                    if(resp.status == 404) { alert("服务器上没有 \"" + slot + "\" 的存档"); return; }
+                    var resp = await fetch(server + "/save/" + encodeURIComponent(slot));
+                    if(resp.status == 404) { show_toast("云端没有 \"" + slot + "\" 的存档", "info"); return; }
                     if(!resp.ok) throw new Error("HTTP " + resp.status);
                     var data = await resp.arrayBuffer();
                     await em_import(g_onsyuri_module.FS, data);
                     flush_save(); // persist the restored saves to IndexedDB
-                    alert("存档已从服务器恢复（" + slot + "）\n如游戏正在运行，刷新页面后读取列表才会更新");
+                    show_toast("存档已从云端恢复（" + slot + "），即将刷新页面", "success");
+                    setTimeout(()=>{ window.location.reload(); }, 1600);
                 }
-                catch(e) { alert("下载失败: " + e.message); }
+                catch(e) { show_toast("下载失败: " + e.message, "error"); }
             }
 
             window.onresize = (event) => {
@@ -665,98 +826,305 @@
         </script>
 
         <style>
-            #onsyuri_webinfo {
-                position: fixed; 
-                display: block;
-                border-radius: 10px;
-                top: 17%;
-                left: 0;
-                right: 0; 
-                margin-left:auto;
-                margin-right: auto; 
-                min-width: 300px;
-                max-width: 400px;
-                text-align: left;
-                color: snow;    
-                background: cornflowerblue;
+            :root {
+                --ons-text: #eaf1f7;
+                --ons-muted: rgba(234, 241, 247, .55);
+                --ons-border: rgba(255, 255, 255, .09);
+                --ons-panel-alpha: .82;
+                --ons-panel: rgba(13, 21, 30, var(--ons-panel-alpha));
+                --ons-accent: #38bdf8;
+                --ons-fab-alpha: .92;
+                --ons-font: "Segoe UI", system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
             }
 
+            #onsyuri_webinfo {
+                position: fixed;
+                display: block;
+                top: 16%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: min(400px, 86vw);
+                padding: 18px 22px;
+                border-radius: 16px;
+                background: var(--ons-panel);
+                backdrop-filter: blur(18px) saturate(1.4);
+                -webkit-backdrop-filter: blur(18px) saturate(1.4);
+                border: 1px solid var(--ons-border);
+                box-shadow: 0 16px 48px rgba(0, 0, 0, .5);
+                color: var(--ons-text);
+                font-family: var(--ons-font);
+                text-align: left;
+            }
             #onsyuri_webinfo p {
-                margin-left: 10%; 
-                margin-right: 10%;
+                margin: 7px 0;
+                font-size: 13px;
+                color: var(--ons-muted);
+            }
+
+            #onsyuri_webinfo p:first-child {
+                font-size: 15px;
+                font-weight: 600;
+                color: var(--ons-text);
+            }
+
+            #onsyuri_webinfo hr {
+                border: 0;
+                border-top: 1px solid var(--ons-border);
+                margin: 10px 0;
+            }
+
+            #onsyuri_webinfo a {
+                color: var(--ons-accent);
+                text-decoration: none;
             }
 
             #onsyuri_fab {
                 position: fixed;
                 top: 16px;
                 right: 16px;
-                width: 48px;
-                height: 48px;
-                border-radius: 50%;
-                border: 1px solid rgba(255, 255, 255, 0.4);
-                background: rgba(0, 188, 212, 0.65);
-                color: white;
-                font-size: 24px;
-                line-height: 46px;
-                text-align: center;
+                width: 52px;
+                height: 52px;
+                border: 1px solid rgba(255, 255, 255, .22);
+                border-radius: 18px;
+                background: linear-gradient(135deg, var(--ons-accent), color-mix(in srgb, var(--ons-accent) 45%, #0c4a6e));
+                box-shadow: 0 6px 22px color-mix(in srgb, var(--ons-accent) 35%, transparent), inset 0 1px 0 rgba(255, 255, 255, .3);
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 cursor: pointer;
                 user-select: none;
                 touch-action: none; /* let pointer events drag the fab on touch too */
                 z-index: 1001;
+                opacity: var(--ons-fab-alpha);
+                transition: transform .15s ease, opacity .15s ease, box-shadow .15s ease;
             }
 
             #onsyuri_fab:hover {
-                background: rgba(22, 229, 255, 0.85);
+                opacity: 1;
+                transform: scale(1.07);
+                box-shadow: 0 8px 28px color-mix(in srgb, var(--ons-accent) 50%, transparent), inset 0 1px 0 rgba(255, 255, 255, .3);
             }
+
+            #onsyuri_fab:active {
+                transform: scale(.94);
+            }
+
+            #onsyuri_fab svg {
+                width: 24px;
+                height: 24px;
+                pointer-events: none;
+            }
+
+            #onsyuri_fab .ons-icon-close { display: none; }
+            #onsyuri_fab.open .ons-icon-menu { display: none; }
+            #onsyuri_fab.open .ons-icon-close { display: block; }
 
             #onsyuri_webrmenu {
                 position: fixed;
-                border-radius: 10px;
-                padding: 8px;
-                flex-direction: column;
-                gap: 8px;
-                width: max-content;
+                min-width: 216px;
+                max-height: min(540px, calc(100vh - 32px));
+                overflow-y: auto;
+                padding: 6px;
+                border-radius: 16px;
+                background: var(--ons-panel);
+                backdrop-filter: blur(18px) saturate(1.4);
+                -webkit-backdrop-filter: blur(18px) saturate(1.4);
+                border: 1px solid var(--ons-border);
+                box-shadow: 0 16px 48px rgba(0, 0, 0, .5);
+                color: var(--ons-text);
+                font-family: var(--ons-font);
                 z-index: 1000;
-                color: snow;
+                transform-origin: top right;
+                animation: ons-pop .16s cubic-bezier(.2, .9, .35, 1.18);
             }
 
-            #onsyuri_webrmenu button {
-                border: 1px solid;
-                border-radius: 0.3em;
-                background: #00bcd4;
-                border-color: #00bcd4;
-                color: white;
-                font-size: larger;
+            @keyframes ons-pop {
+                from { opacity: 0; transform: scale(.88) translateY(-6px); }
+                to { opacity: 1; transform: scale(1) translateY(0); }
+            }
+
+            .ons-group + .ons-group {
+                border-top: 1px solid rgba(255, 255, 255, .07);
+                margin-top: 4px;
+                padding-top: 4px;
+            }
+
+            .ons-label {
+                padding: 6px 10px 3px;
+                font-size: 10px;
+                letter-spacing: .14em;
+                color: var(--ons-muted);
+            }
+
+            .ons-item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 100%;
+                padding: 8px 10px;
+                border: 0;
+                border-radius: 10px;
+                background: transparent;
+                color: var(--ons-text);
+                font: inherit;
+                font-size: 13.5px;
+                text-align: left;
+                cursor: pointer;
+                transition: background .12s ease, transform .12s ease;
+            }
+
+            .ons-item:hover {
+                background: color-mix(in srgb, var(--ons-accent) 15%, transparent);
+                transform: translateX(2px);
+            }
+
+            .ons-item:active { transform: translateX(2px) scale(.98); }
+
+            .ons-item svg {
+                width: 18px;
+                height: 18px;
+                flex: none;
+                opacity: .92;
+            }
+
+            .ons-item .ons-badge {
+                margin-left: auto;
+                padding: 2px 7px;
+                border-radius: 6px;
+                background: rgba(255, 255, 255, .08);
+                border: 1px solid rgba(255, 255, 255, .09);
+                font-size: 10.5px;
+                color: var(--ons-muted);
+            }
+
+            .ons-field {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                padding: 6px 8px;
+                font-size: 12px;
+                color: var(--ons-muted);
+                text-align: left;
+            }
+
+            .ons-input {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 8px 10px;
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, .14);
+                background: rgba(255, 255, 255, .06);
+                color: var(--ons-text);
+                font: inherit;
+                font-size: 13px;
                 outline: none;
+                transition: border-color .15s ease;
             }
 
-            #onsyuri_webrmenu button:hover {
-                background: #16e5ff;
-                border-color: #16e5ff;
+            .ons-input:focus { border-color: var(--ons-accent); }
+
+            .ons-color {
+                width: 100%;
+                height: 36px;
+                padding: 3px 4px;
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, .14);
+                background: rgba(255, 255, 255, .06);
+                cursor: pointer;
             }
+
+            .ons-range {
+                width: 100%;
+                accent-color: var(--ons-accent);
+                cursor: pointer;
+            }
+
+            .ons-field b { color: var(--ons-accent); font-weight: 600; }
+
+            .ons-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+                padding: 8px 8px 4px;
+            }
+
+            .ons-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 7px;
+                padding: 9px 8px;
+                border-radius: 10px;
+                font: inherit;
+                font-size: 13px;
+                cursor: pointer;
+                transition: filter .15s ease, transform .12s ease, background .15s ease;
+            }
+
+            .ons-btn svg { width: 16px; height: 16px; }
+
+            .ons-btn-primary {
+                border: 0;
+                background: linear-gradient(135deg, var(--ons-accent), color-mix(in srgb, var(--ons-accent) 45%, #0c4a6e));
+                color: #fff;
+                font-weight: 600;
+                box-shadow: 0 4px 14px color-mix(in srgb, var(--ons-accent) 30%, transparent);
+            }
+
+            .ons-btn-primary:hover { filter: brightness(1.12); }
+            .ons-btn-primary:active { transform: scale(.97); }
+
+            .ons-btn-ghost {
+                border: 1px solid rgba(255, 255, 255, .18);
+                background: rgba(255, 255, 255, .06);
+                color: var(--ons-text);
+            }
+
+            .ons-btn-ghost:hover { background: rgba(255, 255, 255, .12); }
+            .ons-btn-ghost:active { transform: scale(.97); }
+
+            .ons-toast {
+                position: fixed;
+                left: 50%;
+                bottom: 36px;
+                transform: translateX(-50%) translateY(10px);
+                max-width: 86vw;
+                padding: 10px 18px;
+                border-radius: 12px;
+                background: rgba(13, 21, 30, .92);
+                backdrop-filter: blur(10px);
+                border: 1px solid var(--ons-border);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+                color: var(--ons-text);
+                font-family: var(--ons-font);
+                font-size: 13px;
+                z-index: 2000;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity .25s ease, transform .25s ease;
+            }
+
+            .ons-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+            .ons-toast.success { border-color: rgba(74, 222, 128, .55); }
+            .ons-toast.error { border-color: rgba(248, 113, 113, .55); }
+            .ons-toast.info { border-color: rgba(56, 189, 248, .55); }
+            .ons-toast.warning { border-color: rgba(251, 191, 36, .55); }
         </style>
         
         <div id="onsyuri_webinfo">
-            <p> Loading game resources ... </p>
-            <p> Powered by <a href="https://github.com/YuriSizuku/OnscripterYuri" target="_blank"> Onscripter Yuri</a> v0.7.7</p>
+            <p>游戏资源加载中 …</p>
+            <p>Powered by <a href="https://github.com/YuriSizuku/OnscripterYuri" target="_blank">Onscripter Yuri</a> v0.7.7</p>
             <hr>
-            <p> [Float Button|F9]: show menu </p>
-            <p> [F10]: stretch full; [F11]: screen full</p>
+            <p>悬浮球 / F9：显示菜单</p>
+            <p>F10 拉伸全屏；F11 全屏</p>
         </div>
 
-        <div id="onsyuri_fab" title="menu">☰</div>
-
-        <div id="onsyuri_webrmenu" style="display: none;">
-            <button onclick="toggle_stretchfull()">sfull[F10]</button>
-            <button onclick="toggle_screenfull()">full[F11]</button>
-            <button onclick="toggle_onsmenu()">menu[R-Click]</button>
-            <button onclick="toggle_skip()">skip[Ctrl]</button>
-            <button onclick="click_export()">export[F3]</button>
-            <button onclick="click_import()">import[F4]</button>
-            <button onclick="click_upload()">up[Server]</button>
-            <button onclick="click_download()">down[Server]</button>
-            <button onclick="toggle_webinfo()">about[F2]</button>
-            <button onclick="toggle_webmenu()">close[F9]</button>
+        <div id="onsyuri_fab" title="菜单">
+            <svg class="ons-icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+            <svg class="ons-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
         </div>
+
+        <div id="onsyuri_webrmenu" style="display: none;"></div>
     </body>
 </html>
